@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="P4">
+      <UniqueIdentifier>{185ea107-7523-4565-94ab-4aa033bf288a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fastmp3enclib\bit_cnt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\bitenc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\cfftl3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\channelelement.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\cmdct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\dyn_bits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\framctrl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\huff_cnt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\interface.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\is_stereo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\mp3bitbuf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\mp3bitmux.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\mp3crc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\mp3enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\ms_stereo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\pre_echo_control.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\psy_configuration.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\psy_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\qc_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\ratectrl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\sf_cmprs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\spreading.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\stprepro.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\time_buffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\transform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\p4\adj_thr_p4.c">
+      <Filter>P4</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\p4\band_nrg_p4.c">
+      <Filter>P4</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\p4\block_switch_p4.c">
+      <Filter>P4</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\p4\initSSE.c">
+      <Filter>P4</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\p4\line_pe_p4.c">
+      <Filter>P4</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\p4\polyana_p4.c">
+      <Filter>P4</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\p4\quantize_p4.c">
+      <Filter>P4</Filter>
+    </ClCompile>
+    <ClCompile Include="fastmp3enclib\p4\sf_estim_p4.c">
+      <Filter>P4</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fastmp3enclib\adj_thr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\band_nrg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\bit_cnt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\bitenc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\bitres.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\block_switch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\cfftl3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\channelelement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\cmdct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\dyn_bits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\framctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\huff_cnt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\is_stereo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\lean_psy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\libmp3Prefix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\line_pe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\mathmac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\mconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\mp3alloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\mp3bitbuf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\mp3bitmux.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\mp3crc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\mp3enc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\mp3ifc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\ms_stereo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\pe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\polyana.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\pre_echo_control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\psy_configuration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\psy_const.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\psy_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\psy_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\psy_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\qc_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\qc_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\quantize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\ratectrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\resort_spec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\scf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\sf_cmprs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\sf_estim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\spreading.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\stat_bits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\stprepro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\time_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmp3enclib\transport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

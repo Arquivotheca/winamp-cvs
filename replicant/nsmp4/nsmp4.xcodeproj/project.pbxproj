@@ -1,0 +1,828 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0099871D1520BAE2000AB02F /* nsmp4-prepare */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0099871E1520BAE2000AB02F /* Build configuration list for PBXAggregateTarget "nsmp4-prepare" */;
+			buildPhases = (
+				009987211520BB2E000AB02F /* Generate Version Info */,
+			);
+			dependencies = (
+				0039B373152A1F6700D96D3E /* PBXTargetDependency */,
+			);
+			name = "nsmp4-prepare";
+			productName = "nsmp4-version";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0099872A1520BD4C000AB02F /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 009987291520BD4C000AB02F /* version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00F2E6C61524E6FE00F64C17 /* nsmp4_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F2E6C51524E6FE00F64C17 /* nsmp4_config.h */; };
+		00F2E6C81524E72D00F64C17 /* nsmp4_config.h in Copy Mac OS X Public Headers */ = {isa = PBXBuildFile; fileRef = 00F2E6C51524E6FE00F64C17 /* nsmp4_config.h */; };
+		B128ED4F15003E500044DD69 /* 3gp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED2915003E500044DD69 /* 3gp.cpp */; };
+		B128ED5015003E500044DD69 /* 3gpmeta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED2A15003E500044DD69 /* 3gpmeta.cpp */; };
+		B128ED5115003E500044DD69 /* atoms.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED2B15003E500044DD69 /* atoms.h */; };
+		B128ED5215003E500044DD69 /* descriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED2C15003E500044DD69 /* descriptors.cpp */; };
+		B128ED5315003E500044DD69 /* descriptors.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED2D15003E500044DD69 /* descriptors.h */; };
+		B128ED5415003E500044DD69 /* isma.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED2E15003E500044DD69 /* isma.cpp */; };
+		B128ED5515003E500044DD69 /* mp4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED2F15003E500044DD69 /* mp4.cpp */; };
+		B128ED5615003E500044DD69 /* mp4array.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED3015003E500044DD69 /* mp4array.h */; };
+		B128ED5715003E500044DD69 /* mp4atom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED3115003E500044DD69 /* mp4atom.cpp */; };
+		B128ED5815003E500044DD69 /* mp4atom.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED3215003E500044DD69 /* mp4atom.h */; };
+		B128ED5915003E500044DD69 /* mp4common.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED3315003E500044DD69 /* mp4common.h */; };
+		B128ED5A15003E500044DD69 /* mp4container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED3415003E500044DD69 /* mp4container.cpp */; };
+		B128ED5B15003E500044DD69 /* mp4container.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED3515003E500044DD69 /* mp4container.h */; };
+		B128ED5C15003E500044DD69 /* mp4descriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED3615003E500044DD69 /* mp4descriptor.cpp */; };
+		B128ED5D15003E500044DD69 /* mp4descriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED3715003E500044DD69 /* mp4descriptor.h */; };
+		B128ED5E15003E500044DD69 /* mp4file_io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED3815003E500044DD69 /* mp4file_io.cpp */; };
+		B128ED5F15003E500044DD69 /* mp4file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED3915003E500044DD69 /* mp4file.cpp */; };
+		B128ED6015003E500044DD69 /* mp4file.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED3A15003E500044DD69 /* mp4file.h */; };
+		B128ED6115003E500044DD69 /* mp4info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED3B15003E500044DD69 /* mp4info.cpp */; };
+		B128ED6215003E500044DD69 /* mp4meta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED3C15003E500044DD69 /* mp4meta.cpp */; };
+		B128ED6315003E500044DD69 /* mp4property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED3D15003E500044DD69 /* mp4property.cpp */; };
+		B128ED6415003E500044DD69 /* mp4property.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED3E15003E500044DD69 /* mp4property.h */; };
+		B128ED6515003E500044DD69 /* mp4track.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED3F15003E500044DD69 /* mp4track.cpp */; };
+		B128ED6615003E500044DD69 /* mp4track.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED4015003E500044DD69 /* mp4track.h */; };
+		B128ED6715003E500044DD69 /* mp4util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED4115003E500044DD69 /* mp4util.cpp */; };
+		B128ED6815003E500044DD69 /* mp4util.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED4215003E500044DD69 /* mp4util.h */; };
+		B128ED6915003E500044DD69 /* nsmp4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED4315003E500044DD69 /* nsmp4.cpp */; };
+		B128ED6A15003E500044DD69 /* ocidescriptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED4415003E500044DD69 /* ocidescriptors.cpp */; };
+		B128ED6B15003E500044DD69 /* ocidescriptors.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED4515003E500044DD69 /* ocidescriptors.h */; };
+		B128ED6C15003E500044DD69 /* odcommands.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED4615003E500044DD69 /* odcommands.cpp */; };
+		B128ED6D15003E500044DD69 /* odcommands.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED4715003E500044DD69 /* odcommands.h */; };
+		B128ED6E15003E500044DD69 /* precomp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED4815003E500044DD69 /* precomp.cpp */; };
+		B128ED6F15003E500044DD69 /* precomp.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED4915003E500044DD69 /* precomp.h */; };
+		B128ED7015003E500044DD69 /* qosqualifiers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED4A15003E500044DD69 /* qosqualifiers.cpp */; };
+		B128ED7115003E500044DD69 /* qosqualifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED4B15003E500044DD69 /* qosqualifiers.h */; };
+		B128ED7215003E500044DD69 /* rtphint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED4C15003E500044DD69 /* rtphint.cpp */; };
+		B128ED7315003E500044DD69 /* rtphint.h in Headers */ = {isa = PBXBuildFile; fileRef = B128ED4D15003E500044DD69 /* rtphint.h */; };
+		B128EDA715003E580044DD69 /* atom_alac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7615003E580044DD69 /* atom_alac.cpp */; };
+		B128EDA815003E580044DD69 /* atom_amr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7715003E580044DD69 /* atom_amr.cpp */; };
+		B128EDA915003E580044DD69 /* atom_avc1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7815003E580044DD69 /* atom_avc1.cpp */; };
+		B128EDAA15003E580044DD69 /* atom_avcC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7915003E580044DD69 /* atom_avcC.cpp */; };
+		B128EDAB15003E580044DD69 /* atom_chpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7A15003E580044DD69 /* atom_chpl.cpp */; };
+		B128EDAC15003E580044DD69 /* atom_d263.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7B15003E580044DD69 /* atom_d263.cpp */; };
+		B128EDAD15003E580044DD69 /* atom_damr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7C15003E580044DD69 /* atom_damr.cpp */; };
+		B128EDAE15003E580044DD69 /* atom_dref.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7D15003E580044DD69 /* atom_dref.cpp */; };
+		B128EDAF15003E580044DD69 /* atom_elst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7E15003E580044DD69 /* atom_elst.cpp */; };
+		B128EDB015003E580044DD69 /* atom_enca.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED7F15003E580044DD69 /* atom_enca.cpp */; };
+		B128EDB115003E580044DD69 /* atom_encv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8015003E580044DD69 /* atom_encv.cpp */; };
+		B128EDB215003E580044DD69 /* atom_free.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8115003E580044DD69 /* atom_free.cpp */; };
+		B128EDB315003E580044DD69 /* atom_ftyp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8215003E580044DD69 /* atom_ftyp.cpp */; };
+		B128EDB415003E580044DD69 /* atom_gmin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8315003E580044DD69 /* atom_gmin.cpp */; };
+		B128EDB515003E580044DD69 /* atom_hdlr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8415003E580044DD69 /* atom_hdlr.cpp */; };
+		B128EDB615003E580044DD69 /* atom_hinf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8515003E580044DD69 /* atom_hinf.cpp */; };
+		B128EDB715003E580044DD69 /* atom_hnti.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8615003E580044DD69 /* atom_hnti.cpp */; };
+		B128EDB815003E580044DD69 /* atom_href.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8715003E580044DD69 /* atom_href.cpp */; };
+		B128EDB915003E580044DD69 /* atom_mdat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8815003E580044DD69 /* atom_mdat.cpp */; };
+		B128EDBA15003E580044DD69 /* atom_mdhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8915003E580044DD69 /* atom_mdhd.cpp */; };
+		B128EDBB15003E580044DD69 /* atom_meta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8A15003E580044DD69 /* atom_meta.cpp */; };
+		B128EDBC15003E580044DD69 /* atom_mp4s.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8B15003E580044DD69 /* atom_mp4s.cpp */; };
+		B128EDBD15003E580044DD69 /* atom_mp4v.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8C15003E580044DD69 /* atom_mp4v.cpp */; };
+		B128EDBE15003E580044DD69 /* atom_mvhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8D15003E580044DD69 /* atom_mvhd.cpp */; };
+		B128EDBF15003E580044DD69 /* atom_ohdr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8E15003E580044DD69 /* atom_ohdr.cpp */; };
+		B128EDC015003E580044DD69 /* atom_root.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED8F15003E580044DD69 /* atom_root.cpp */; };
+		B128EDC115003E580044DD69 /* atom_rtp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9015003E580044DD69 /* atom_rtp.cpp */; };
+		B128EDC215003E580044DD69 /* atom_s263.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9115003E580044DD69 /* atom_s263.cpp */; };
+		B128EDC315003E580044DD69 /* atom_sdp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9215003E580044DD69 /* atom_sdp.cpp */; };
+		B128EDC415003E580044DD69 /* atom_smi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9315003E580044DD69 /* atom_smi.cpp */; };
+		B128EDC515003E580044DD69 /* atom_sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9415003E580044DD69 /* atom_sound.cpp */; };
+		B128EDC615003E580044DD69 /* atom_standard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9515003E580044DD69 /* atom_standard.cpp */; };
+		B128EDC715003E580044DD69 /* atom_stbl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9615003E580044DD69 /* atom_stbl.cpp */; };
+		B128EDC815003E580044DD69 /* atom_stdp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9715003E580044DD69 /* atom_stdp.cpp */; };
+		B128EDC915003E580044DD69 /* atom_stsc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9815003E580044DD69 /* atom_stsc.cpp */; };
+		B128EDCA15003E580044DD69 /* atom_stsd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9915003E580044DD69 /* atom_stsd.cpp */; };
+		B128EDCB15003E580044DD69 /* atom_stsz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9A15003E580044DD69 /* atom_stsz.cpp */; };
+		B128EDCC15003E580044DD69 /* atom_stz2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9B15003E580044DD69 /* atom_stz2.cpp */; };
+		B128EDCD15003E580044DD69 /* atom_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9C15003E580044DD69 /* atom_text.cpp */; };
+		B128EDCE15003E580044DD69 /* atom_tfhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9D15003E580044DD69 /* atom_tfhd.cpp */; };
+		B128EDCF15003E580044DD69 /* atom_tkhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9E15003E580044DD69 /* atom_tkhd.cpp */; };
+		B128EDD015003E580044DD69 /* atom_treftype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128ED9F15003E580044DD69 /* atom_treftype.cpp */; };
+		B128EDD115003E580044DD69 /* atom_trun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128EDA015003E580044DD69 /* atom_trun.cpp */; };
+		B128EDD215003E580044DD69 /* atom_udta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128EDA115003E580044DD69 /* atom_udta.cpp */; };
+		B128EDD315003E580044DD69 /* atom_url.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128EDA215003E580044DD69 /* atom_url.cpp */; };
+		B128EDD415003E580044DD69 /* atom_urn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128EDA315003E580044DD69 /* atom_urn.cpp */; };
+		B128EDD515003E580044DD69 /* atom_video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128EDA415003E580044DD69 /* atom_video.cpp */; };
+		B128EDD615003E580044DD69 /* atom_vmhd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128EDA515003E580044DD69 /* atom_vmhd.cpp */; };
+		B128EDD715003E580044DD69 /* atom_wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B128EDA615003E580044DD69 /* atom_wave.cpp */; };
+		B128EDE115003E820044DD69 /* mp4.h in Headers */ = {isa = PBXBuildFile; fileRef = B128EDD915003E820044DD69 /* mp4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B128EDE215003E820044DD69 /* mpeg4ip_byteswap.h in Headers */ = {isa = PBXBuildFile; fileRef = B128EDDA15003E820044DD69 /* mpeg4ip_byteswap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B128EDE315003E820044DD69 /* mpeg4ip_getopt.h in Headers */ = {isa = PBXBuildFile; fileRef = B128EDDB15003E820044DD69 /* mpeg4ip_getopt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B128EDE415003E820044DD69 /* mpeg4ip_version.h in Headers */ = {isa = PBXBuildFile; fileRef = B128EDDC15003E820044DD69 /* mpeg4ip_version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B128EDE515003E820044DD69 /* mpeg4ip_win32.h in Headers */ = {isa = PBXBuildFile; fileRef = B128EDDD15003E820044DD69 /* mpeg4ip_win32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B128EDE615003E820044DD69 /* mpeg4ip.h in Headers */ = {isa = PBXBuildFile; fileRef = B128EDDE15003E820044DD69 /* mpeg4ip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B128EDE715003E820044DD69 /* nsmp4.h in Headers */ = {isa = PBXBuildFile; fileRef = B128EDDF15003E820044DD69 /* nsmp4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0039B372152A1F6700D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B128ED1915003D4A0044DD69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 009987191520BA3F000AB02F;
+			remoteInfo = "nsmp4-cleanup";
+		};
+		009987221520BC31000AB02F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B128ED1915003D4A0044DD69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 009987191520BA3F000AB02F;
+			remoteInfo = "nsmp4-cleanup";
+		};
+		009987241520BC32000AB02F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B128ED1915003D4A0044DD69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0099871D1520BAE2000AB02F;
+			remoteInfo = "nsmp4-version";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00F2E6C71524E71400F64C17 /* Copy Mac OS X Public Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx";
+			dstSubfolderSpec = 16;
+			files = (
+				00F2E6C81524E72D00F64C17 /* nsmp4_config.h in Copy Mac OS X Public Headers */,
+			);
+			name = "Copy Mac OS X Public Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		009987281520BCDB000AB02F /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		009987291520BD4C000AB02F /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = $PROJECT_DERIVED_FILE_DIR/version.h; sourceTree = "<absolute>"; };
+		00F2E6C51524E6FE00F64C17 /* nsmp4_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nsmp4_config.h; path = include/osx/nsmp4_config.h; sourceTree = "<group>"; };
+		B128ED2215003D4A0044DD69 /* libnsmp4.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnsmp4.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B128ED2915003E500044DD69 /* 3gp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = 3gp.cpp; path = src/3gp.cpp; sourceTree = "<group>"; };
+		B128ED2A15003E500044DD69 /* 3gpmeta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = 3gpmeta.cpp; path = src/3gpmeta.cpp; sourceTree = "<group>"; };
+		B128ED2B15003E500044DD69 /* atoms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = atoms.h; path = src/atoms.h; sourceTree = "<group>"; };
+		B128ED2C15003E500044DD69 /* descriptors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = descriptors.cpp; path = src/descriptors.cpp; sourceTree = "<group>"; };
+		B128ED2D15003E500044DD69 /* descriptors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = descriptors.h; path = src/descriptors.h; sourceTree = "<group>"; };
+		B128ED2E15003E500044DD69 /* isma.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = isma.cpp; path = src/isma.cpp; sourceTree = "<group>"; };
+		B128ED2F15003E500044DD69 /* mp4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4.cpp; path = src/mp4.cpp; sourceTree = "<group>"; };
+		B128ED3015003E500044DD69 /* mp4array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4array.h; path = src/mp4array.h; sourceTree = "<group>"; };
+		B128ED3115003E500044DD69 /* mp4atom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4atom.cpp; path = src/mp4atom.cpp; sourceTree = "<group>"; };
+		B128ED3215003E500044DD69 /* mp4atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4atom.h; path = src/mp4atom.h; sourceTree = "<group>"; };
+		B128ED3315003E500044DD69 /* mp4common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4common.h; path = src/mp4common.h; sourceTree = "<group>"; };
+		B128ED3415003E500044DD69 /* mp4container.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4container.cpp; path = src/mp4container.cpp; sourceTree = "<group>"; };
+		B128ED3515003E500044DD69 /* mp4container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4container.h; path = src/mp4container.h; sourceTree = "<group>"; };
+		B128ED3615003E500044DD69 /* mp4descriptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4descriptor.cpp; path = src/mp4descriptor.cpp; sourceTree = "<group>"; };
+		B128ED3715003E500044DD69 /* mp4descriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4descriptor.h; path = src/mp4descriptor.h; sourceTree = "<group>"; };
+		B128ED3815003E500044DD69 /* mp4file_io.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4file_io.cpp; path = src/mp4file_io.cpp; sourceTree = "<group>"; };
+		B128ED3915003E500044DD69 /* mp4file.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4file.cpp; path = src/mp4file.cpp; sourceTree = "<group>"; };
+		B128ED3A15003E500044DD69 /* mp4file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4file.h; path = src/mp4file.h; sourceTree = "<group>"; };
+		B128ED3B15003E500044DD69 /* mp4info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4info.cpp; path = src/mp4info.cpp; sourceTree = "<group>"; };
+		B128ED3C15003E500044DD69 /* mp4meta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4meta.cpp; path = src/mp4meta.cpp; sourceTree = "<group>"; };
+		B128ED3D15003E500044DD69 /* mp4property.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4property.cpp; path = src/mp4property.cpp; sourceTree = "<group>"; };
+		B128ED3E15003E500044DD69 /* mp4property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4property.h; path = src/mp4property.h; sourceTree = "<group>"; };
+		B128ED3F15003E500044DD69 /* mp4track.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4track.cpp; path = src/mp4track.cpp; sourceTree = "<group>"; };
+		B128ED4015003E500044DD69 /* mp4track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4track.h; path = src/mp4track.h; sourceTree = "<group>"; };
+		B128ED4115003E500044DD69 /* mp4util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mp4util.cpp; path = src/mp4util.cpp; sourceTree = "<group>"; };
+		B128ED4215003E500044DD69 /* mp4util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4util.h; path = src/mp4util.h; sourceTree = "<group>"; };
+		B128ED4315003E500044DD69 /* nsmp4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = nsmp4.cpp; path = src/nsmp4.cpp; sourceTree = "<group>"; };
+		B128ED4415003E500044DD69 /* ocidescriptors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ocidescriptors.cpp; path = src/ocidescriptors.cpp; sourceTree = "<group>"; };
+		B128ED4515003E500044DD69 /* ocidescriptors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ocidescriptors.h; path = src/ocidescriptors.h; sourceTree = "<group>"; };
+		B128ED4615003E500044DD69 /* odcommands.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = odcommands.cpp; path = src/odcommands.cpp; sourceTree = "<group>"; };
+		B128ED4715003E500044DD69 /* odcommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = odcommands.h; path = src/odcommands.h; sourceTree = "<group>"; };
+		B128ED4815003E500044DD69 /* precomp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = precomp.cpp; path = src/precomp.cpp; sourceTree = "<group>"; };
+		B128ED4915003E500044DD69 /* precomp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = precomp.h; path = src/precomp.h; sourceTree = "<group>"; };
+		B128ED4A15003E500044DD69 /* qosqualifiers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qosqualifiers.cpp; path = src/qosqualifiers.cpp; sourceTree = "<group>"; };
+		B128ED4B15003E500044DD69 /* qosqualifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qosqualifiers.h; path = src/qosqualifiers.h; sourceTree = "<group>"; };
+		B128ED4C15003E500044DD69 /* rtphint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtphint.cpp; path = src/rtphint.cpp; sourceTree = "<group>"; };
+		B128ED4D15003E500044DD69 /* rtphint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtphint.h; path = src/rtphint.h; sourceTree = "<group>"; };
+		B128ED7615003E580044DD69 /* atom_alac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_alac.cpp; sourceTree = "<group>"; };
+		B128ED7715003E580044DD69 /* atom_amr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_amr.cpp; sourceTree = "<group>"; };
+		B128ED7815003E580044DD69 /* atom_avc1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_avc1.cpp; sourceTree = "<group>"; };
+		B128ED7915003E580044DD69 /* atom_avcC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_avcC.cpp; sourceTree = "<group>"; };
+		B128ED7A15003E580044DD69 /* atom_chpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_chpl.cpp; sourceTree = "<group>"; };
+		B128ED7B15003E580044DD69 /* atom_d263.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_d263.cpp; sourceTree = "<group>"; };
+		B128ED7C15003E580044DD69 /* atom_damr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_damr.cpp; sourceTree = "<group>"; };
+		B128ED7D15003E580044DD69 /* atom_dref.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_dref.cpp; sourceTree = "<group>"; };
+		B128ED7E15003E580044DD69 /* atom_elst.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_elst.cpp; sourceTree = "<group>"; };
+		B128ED7F15003E580044DD69 /* atom_enca.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_enca.cpp; sourceTree = "<group>"; };
+		B128ED8015003E580044DD69 /* atom_encv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_encv.cpp; sourceTree = "<group>"; };
+		B128ED8115003E580044DD69 /* atom_free.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_free.cpp; sourceTree = "<group>"; };
+		B128ED8215003E580044DD69 /* atom_ftyp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_ftyp.cpp; sourceTree = "<group>"; };
+		B128ED8315003E580044DD69 /* atom_gmin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_gmin.cpp; sourceTree = "<group>"; };
+		B128ED8415003E580044DD69 /* atom_hdlr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_hdlr.cpp; sourceTree = "<group>"; };
+		B128ED8515003E580044DD69 /* atom_hinf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_hinf.cpp; sourceTree = "<group>"; };
+		B128ED8615003E580044DD69 /* atom_hnti.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_hnti.cpp; sourceTree = "<group>"; };
+		B128ED8715003E580044DD69 /* atom_href.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_href.cpp; sourceTree = "<group>"; };
+		B128ED8815003E580044DD69 /* atom_mdat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_mdat.cpp; sourceTree = "<group>"; };
+		B128ED8915003E580044DD69 /* atom_mdhd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_mdhd.cpp; sourceTree = "<group>"; };
+		B128ED8A15003E580044DD69 /* atom_meta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_meta.cpp; sourceTree = "<group>"; };
+		B128ED8B15003E580044DD69 /* atom_mp4s.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_mp4s.cpp; sourceTree = "<group>"; };
+		B128ED8C15003E580044DD69 /* atom_mp4v.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_mp4v.cpp; sourceTree = "<group>"; };
+		B128ED8D15003E580044DD69 /* atom_mvhd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_mvhd.cpp; sourceTree = "<group>"; };
+		B128ED8E15003E580044DD69 /* atom_ohdr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_ohdr.cpp; sourceTree = "<group>"; };
+		B128ED8F15003E580044DD69 /* atom_root.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_root.cpp; sourceTree = "<group>"; };
+		B128ED9015003E580044DD69 /* atom_rtp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_rtp.cpp; sourceTree = "<group>"; };
+		B128ED9115003E580044DD69 /* atom_s263.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_s263.cpp; sourceTree = "<group>"; };
+		B128ED9215003E580044DD69 /* atom_sdp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_sdp.cpp; sourceTree = "<group>"; };
+		B128ED9315003E580044DD69 /* atom_smi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_smi.cpp; sourceTree = "<group>"; };
+		B128ED9415003E580044DD69 /* atom_sound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_sound.cpp; sourceTree = "<group>"; };
+		B128ED9515003E580044DD69 /* atom_standard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_standard.cpp; sourceTree = "<group>"; };
+		B128ED9615003E580044DD69 /* atom_stbl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_stbl.cpp; sourceTree = "<group>"; };
+		B128ED9715003E580044DD69 /* atom_stdp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_stdp.cpp; sourceTree = "<group>"; };
+		B128ED9815003E580044DD69 /* atom_stsc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_stsc.cpp; sourceTree = "<group>"; };
+		B128ED9915003E580044DD69 /* atom_stsd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_stsd.cpp; sourceTree = "<group>"; };
+		B128ED9A15003E580044DD69 /* atom_stsz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_stsz.cpp; sourceTree = "<group>"; };
+		B128ED9B15003E580044DD69 /* atom_stz2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_stz2.cpp; sourceTree = "<group>"; };
+		B128ED9C15003E580044DD69 /* atom_text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_text.cpp; sourceTree = "<group>"; };
+		B128ED9D15003E580044DD69 /* atom_tfhd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_tfhd.cpp; sourceTree = "<group>"; };
+		B128ED9E15003E580044DD69 /* atom_tkhd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_tkhd.cpp; sourceTree = "<group>"; };
+		B128ED9F15003E580044DD69 /* atom_treftype.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_treftype.cpp; sourceTree = "<group>"; };
+		B128EDA015003E580044DD69 /* atom_trun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_trun.cpp; sourceTree = "<group>"; };
+		B128EDA115003E580044DD69 /* atom_udta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_udta.cpp; sourceTree = "<group>"; };
+		B128EDA215003E580044DD69 /* atom_url.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_url.cpp; sourceTree = "<group>"; };
+		B128EDA315003E580044DD69 /* atom_urn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_urn.cpp; sourceTree = "<group>"; };
+		B128EDA415003E580044DD69 /* atom_video.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_video.cpp; sourceTree = "<group>"; };
+		B128EDA515003E580044DD69 /* atom_vmhd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_vmhd.cpp; sourceTree = "<group>"; };
+		B128EDA615003E580044DD69 /* atom_wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = atom_wave.cpp; sourceTree = "<group>"; };
+		B128EDD915003E820044DD69 /* mp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mp4.h; path = include/mp4.h; sourceTree = "<group>"; };
+		B128EDDA15003E820044DD69 /* mpeg4ip_byteswap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mpeg4ip_byteswap.h; path = include/mpeg4ip_byteswap.h; sourceTree = "<group>"; };
+		B128EDDB15003E820044DD69 /* mpeg4ip_getopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mpeg4ip_getopt.h; path = include/mpeg4ip_getopt.h; sourceTree = "<group>"; };
+		B128EDDC15003E820044DD69 /* mpeg4ip_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mpeg4ip_version.h; path = include/mpeg4ip_version.h; sourceTree = "<group>"; };
+		B128EDDD15003E820044DD69 /* mpeg4ip_win32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mpeg4ip_win32.h; path = include/mpeg4ip_win32.h; sourceTree = "<group>"; };
+		B128EDDE15003E820044DD69 /* mpeg4ip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mpeg4ip.h; path = include/mpeg4ip.h; sourceTree = "<group>"; };
+		B128EDDF15003E820044DD69 /* nsmp4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nsmp4.h; path = include/nsmp4.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B128ED1F15003D4A0044DD69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		009987271520BCC3000AB02F /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				009987281520BCDB000AB02F /* VERSION */,
+				009987291520BD4C000AB02F /* version.h */,
+			);
+			name = Version;
+			sourceTree = "<group>";
+		};
+		00F2E6C31524E6EC00F64C17 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				00F2E6C51524E6FE00F64C17 /* nsmp4_config.h */,
+			);
+			name = osx;
+			sourceTree = "<group>";
+		};
+		B128ED1715003D4A0044DD69 = {
+			isa = PBXGroup;
+			children = (
+				B128EDD815003E730044DD69 /* include */,
+				B128ED7515003E580044DD69 /* boxes */,
+				B128ED2915003E500044DD69 /* 3gp.cpp */,
+				B128ED2A15003E500044DD69 /* 3gpmeta.cpp */,
+				B128ED2B15003E500044DD69 /* atoms.h */,
+				B128ED2C15003E500044DD69 /* descriptors.cpp */,
+				B128ED2D15003E500044DD69 /* descriptors.h */,
+				B128ED2E15003E500044DD69 /* isma.cpp */,
+				B128ED2F15003E500044DD69 /* mp4.cpp */,
+				B128ED3015003E500044DD69 /* mp4array.h */,
+				B128ED3115003E500044DD69 /* mp4atom.cpp */,
+				B128ED3215003E500044DD69 /* mp4atom.h */,
+				B128ED3315003E500044DD69 /* mp4common.h */,
+				B128ED3415003E500044DD69 /* mp4container.cpp */,
+				B128ED3515003E500044DD69 /* mp4container.h */,
+				B128ED3615003E500044DD69 /* mp4descriptor.cpp */,
+				B128ED3715003E500044DD69 /* mp4descriptor.h */,
+				B128ED3815003E500044DD69 /* mp4file_io.cpp */,
+				B128ED3915003E500044DD69 /* mp4file.cpp */,
+				B128ED3A15003E500044DD69 /* mp4file.h */,
+				B128ED3B15003E500044DD69 /* mp4info.cpp */,
+				B128ED3C15003E500044DD69 /* mp4meta.cpp */,
+				B128ED3D15003E500044DD69 /* mp4property.cpp */,
+				B128ED3E15003E500044DD69 /* mp4property.h */,
+				B128ED3F15003E500044DD69 /* mp4track.cpp */,
+				B128ED4015003E500044DD69 /* mp4track.h */,
+				B128ED4115003E500044DD69 /* mp4util.cpp */,
+				B128ED4215003E500044DD69 /* mp4util.h */,
+				B128ED4315003E500044DD69 /* nsmp4.cpp */,
+				B128ED4415003E500044DD69 /* ocidescriptors.cpp */,
+				B128ED4515003E500044DD69 /* ocidescriptors.h */,
+				B128ED4615003E500044DD69 /* odcommands.cpp */,
+				B128ED4715003E500044DD69 /* odcommands.h */,
+				B128ED4815003E500044DD69 /* precomp.cpp */,
+				B128ED4915003E500044DD69 /* precomp.h */,
+				B128ED4A15003E500044DD69 /* qosqualifiers.cpp */,
+				B128ED4B15003E500044DD69 /* qosqualifiers.h */,
+				B128ED4C15003E500044DD69 /* rtphint.cpp */,
+				B128ED4D15003E500044DD69 /* rtphint.h */,
+				009987271520BCC3000AB02F /* Version */,
+				B128ED2315003D4A0044DD69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B128ED2315003D4A0044DD69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B128ED2215003D4A0044DD69 /* libnsmp4.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B128ED7515003E580044DD69 /* boxes */ = {
+			isa = PBXGroup;
+			children = (
+				B128ED7615003E580044DD69 /* atom_alac.cpp */,
+				B128ED7715003E580044DD69 /* atom_amr.cpp */,
+				B128ED7815003E580044DD69 /* atom_avc1.cpp */,
+				B128ED7915003E580044DD69 /* atom_avcC.cpp */,
+				B128ED7A15003E580044DD69 /* atom_chpl.cpp */,
+				B128ED7B15003E580044DD69 /* atom_d263.cpp */,
+				B128ED7C15003E580044DD69 /* atom_damr.cpp */,
+				B128ED7D15003E580044DD69 /* atom_dref.cpp */,
+				B128ED7E15003E580044DD69 /* atom_elst.cpp */,
+				B128ED7F15003E580044DD69 /* atom_enca.cpp */,
+				B128ED8015003E580044DD69 /* atom_encv.cpp */,
+				B128ED8115003E580044DD69 /* atom_free.cpp */,
+				B128ED8215003E580044DD69 /* atom_ftyp.cpp */,
+				B128ED8315003E580044DD69 /* atom_gmin.cpp */,
+				B128ED8415003E580044DD69 /* atom_hdlr.cpp */,
+				B128ED8515003E580044DD69 /* atom_hinf.cpp */,
+				B128ED8615003E580044DD69 /* atom_hnti.cpp */,
+				B128ED8715003E580044DD69 /* atom_href.cpp */,
+				B128ED8815003E580044DD69 /* atom_mdat.cpp */,
+				B128ED8915003E580044DD69 /* atom_mdhd.cpp */,
+				B128ED8A15003E580044DD69 /* atom_meta.cpp */,
+				B128ED8B15003E580044DD69 /* atom_mp4s.cpp */,
+				B128ED8C15003E580044DD69 /* atom_mp4v.cpp */,
+				B128ED8D15003E580044DD69 /* atom_mvhd.cpp */,
+				B128ED8E15003E580044DD69 /* atom_ohdr.cpp */,
+				B128ED8F15003E580044DD69 /* atom_root.cpp */,
+				B128ED9015003E580044DD69 /* atom_rtp.cpp */,
+				B128ED9115003E580044DD69 /* atom_s263.cpp */,
+				B128ED9215003E580044DD69 /* atom_sdp.cpp */,
+				B128ED9315003E580044DD69 /* atom_smi.cpp */,
+				B128ED9415003E580044DD69 /* atom_sound.cpp */,
+				B128ED9515003E580044DD69 /* atom_standard.cpp */,
+				B128ED9615003E580044DD69 /* atom_stbl.cpp */,
+				B128ED9715003E580044DD69 /* atom_stdp.cpp */,
+				B128ED9815003E580044DD69 /* atom_stsc.cpp */,
+				B128ED9915003E580044DD69 /* atom_stsd.cpp */,
+				B128ED9A15003E580044DD69 /* atom_stsz.cpp */,
+				B128ED9B15003E580044DD69 /* atom_stz2.cpp */,
+				B128ED9C15003E580044DD69 /* atom_text.cpp */,
+				B128ED9D15003E580044DD69 /* atom_tfhd.cpp */,
+				B128ED9E15003E580044DD69 /* atom_tkhd.cpp */,
+				B128ED9F15003E580044DD69 /* atom_treftype.cpp */,
+				B128EDA015003E580044DD69 /* atom_trun.cpp */,
+				B128EDA115003E580044DD69 /* atom_udta.cpp */,
+				B128EDA215003E580044DD69 /* atom_url.cpp */,
+				B128EDA315003E580044DD69 /* atom_urn.cpp */,
+				B128EDA415003E580044DD69 /* atom_video.cpp */,
+				B128EDA515003E580044DD69 /* atom_vmhd.cpp */,
+				B128EDA615003E580044DD69 /* atom_wave.cpp */,
+			);
+			path = boxes;
+			sourceTree = "<group>";
+		};
+		B128EDD815003E730044DD69 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				B128EDD915003E820044DD69 /* mp4.h */,
+				B128EDDA15003E820044DD69 /* mpeg4ip_byteswap.h */,
+				B128EDDB15003E820044DD69 /* mpeg4ip_getopt.h */,
+				B128EDDC15003E820044DD69 /* mpeg4ip_version.h */,
+				B128EDDD15003E820044DD69 /* mpeg4ip_win32.h */,
+				B128EDDE15003E820044DD69 /* mpeg4ip.h */,
+				B128EDDF15003E820044DD69 /* nsmp4.h */,
+				00F2E6C31524E6EC00F64C17 /* osx */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B128ED2015003D4A0044DD69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B128ED5115003E500044DD69 /* atoms.h in Headers */,
+				B128ED5315003E500044DD69 /* descriptors.h in Headers */,
+				B128ED5615003E500044DD69 /* mp4array.h in Headers */,
+				B128ED5815003E500044DD69 /* mp4atom.h in Headers */,
+				B128ED5915003E500044DD69 /* mp4common.h in Headers */,
+				B128ED5B15003E500044DD69 /* mp4container.h in Headers */,
+				B128ED5D15003E500044DD69 /* mp4descriptor.h in Headers */,
+				B128ED6015003E500044DD69 /* mp4file.h in Headers */,
+				B128ED6415003E500044DD69 /* mp4property.h in Headers */,
+				B128ED6615003E500044DD69 /* mp4track.h in Headers */,
+				B128ED6815003E500044DD69 /* mp4util.h in Headers */,
+				B128ED6B15003E500044DD69 /* ocidescriptors.h in Headers */,
+				B128ED6D15003E500044DD69 /* odcommands.h in Headers */,
+				B128ED6F15003E500044DD69 /* precomp.h in Headers */,
+				B128ED7115003E500044DD69 /* qosqualifiers.h in Headers */,
+				B128ED7315003E500044DD69 /* rtphint.h in Headers */,
+				B128EDE115003E820044DD69 /* mp4.h in Headers */,
+				B128EDE215003E820044DD69 /* mpeg4ip_byteswap.h in Headers */,
+				B128EDE315003E820044DD69 /* mpeg4ip_getopt.h in Headers */,
+				B128EDE415003E820044DD69 /* mpeg4ip_version.h in Headers */,
+				B128EDE515003E820044DD69 /* mpeg4ip_win32.h in Headers */,
+				B128EDE615003E820044DD69 /* mpeg4ip.h in Headers */,
+				B128EDE715003E820044DD69 /* nsmp4.h in Headers */,
+				0099872A1520BD4C000AB02F /* version.h in Headers */,
+				00F2E6C61524E6FE00F64C17 /* nsmp4_config.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		009987191520BA3F000AB02F /* nsmp4-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode --libraries \"$(LIBRARY_PATH)\" \"$(PUBLIC_HEADERS_DIR)\" \"$(DWARF_DSYM_PATH)\" \"$(PROJECT_DERIVED_FILE_DIR)/version.*\"";
+			buildConfigurationList = 0099871A1520BA3F000AB02F /* Build configuration list for PBXLegacyTarget "nsmp4-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "nsmp4-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "nsmp4-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		B128ED2115003D4A0044DD69 /* nsmp4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B128ED2615003D4A0044DD69 /* Build configuration list for PBXNativeTarget "nsmp4" */;
+			buildPhases = (
+				B128ED1E15003D4A0044DD69 /* Sources */,
+				B128ED1F15003D4A0044DD69 /* Frameworks */,
+				B128ED2015003D4A0044DD69 /* Headers */,
+				00F2E6C71524E71400F64C17 /* Copy Mac OS X Public Headers */,
+				009987261520BC64000AB02F /* Install Public Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				009987231520BC31000AB02F /* PBXTargetDependency */,
+				009987251520BC32000AB02F /* PBXTargetDependency */,
+			);
+			name = nsmp4;
+			productName = nsmp4;
+			productReference = B128ED2215003D4A0044DD69 /* libnsmp4.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B128ED1915003D4A0044DD69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = B128ED1C15003D4A0044DD69 /* Build configuration list for PBXProject "nsmp4" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B128ED1715003D4A0044DD69;
+			productRefGroup = B128ED2315003D4A0044DD69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B128ED2115003D4A0044DD69 /* nsmp4 */,
+				009987191520BA3F000AB02F /* nsmp4-cleanup */,
+				0099871D1520BAE2000AB02F /* nsmp4-prepare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		009987211520BB2E000AB02F /* Generate Version Info */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/VERSION",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/lib-version.template.h",
+			);
+			name = "Generate Version Info";
+			outputPaths = (
+				"$(PROJECT_DERIVED_FILE_DIR)/version.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PRODUCT_VERSION=$(cat \"$SCRIPT_INPUT_FILE_0\")\n\nif [ ! -d \"$PROJECT_DERIVED_FILE_DIR\" ]; then\n    mkdir -p \"$PROJECT_DERIVED_FILE_DIR\"\nfi\n\nNVGTOOL=\"$NSBUILD_TOOLS_BIN_DIR/nvgtool\"\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_1\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+		009987261520BC64000AB02F /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B128ED1E15003D4A0044DD69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B128ED4F15003E500044DD69 /* 3gp.cpp in Sources */,
+				B128ED5015003E500044DD69 /* 3gpmeta.cpp in Sources */,
+				B128ED5215003E500044DD69 /* descriptors.cpp in Sources */,
+				B128ED5415003E500044DD69 /* isma.cpp in Sources */,
+				B128ED5515003E500044DD69 /* mp4.cpp in Sources */,
+				B128ED5715003E500044DD69 /* mp4atom.cpp in Sources */,
+				B128ED5A15003E500044DD69 /* mp4container.cpp in Sources */,
+				B128ED5C15003E500044DD69 /* mp4descriptor.cpp in Sources */,
+				B128ED5E15003E500044DD69 /* mp4file_io.cpp in Sources */,
+				B128ED5F15003E500044DD69 /* mp4file.cpp in Sources */,
+				B128ED6115003E500044DD69 /* mp4info.cpp in Sources */,
+				B128ED6215003E500044DD69 /* mp4meta.cpp in Sources */,
+				B128ED6315003E500044DD69 /* mp4property.cpp in Sources */,
+				B128ED6515003E500044DD69 /* mp4track.cpp in Sources */,
+				B128ED6715003E500044DD69 /* mp4util.cpp in Sources */,
+				B128ED6915003E500044DD69 /* nsmp4.cpp in Sources */,
+				B128ED6A15003E500044DD69 /* ocidescriptors.cpp in Sources */,
+				B128ED6C15003E500044DD69 /* odcommands.cpp in Sources */,
+				B128ED6E15003E500044DD69 /* precomp.cpp in Sources */,
+				B128ED7015003E500044DD69 /* qosqualifiers.cpp in Sources */,
+				B128ED7215003E500044DD69 /* rtphint.cpp in Sources */,
+				B128EDA715003E580044DD69 /* atom_alac.cpp in Sources */,
+				B128EDA815003E580044DD69 /* atom_amr.cpp in Sources */,
+				B128EDA915003E580044DD69 /* atom_avc1.cpp in Sources */,
+				B128EDAA15003E580044DD69 /* atom_avcC.cpp in Sources */,
+				B128EDAB15003E580044DD69 /* atom_chpl.cpp in Sources */,
+				B128EDAC15003E580044DD69 /* atom_d263.cpp in Sources */,
+				B128EDAD15003E580044DD69 /* atom_damr.cpp in Sources */,
+				B128EDAE15003E580044DD69 /* atom_dref.cpp in Sources */,
+				B128EDAF15003E580044DD69 /* atom_elst.cpp in Sources */,
+				B128EDB015003E580044DD69 /* atom_enca.cpp in Sources */,
+				B128EDB115003E580044DD69 /* atom_encv.cpp in Sources */,
+				B128EDB215003E580044DD69 /* atom_free.cpp in Sources */,
+				B128EDB315003E580044DD69 /* atom_ftyp.cpp in Sources */,
+				B128EDB415003E580044DD69 /* atom_gmin.cpp in Sources */,
+				B128EDB515003E580044DD69 /* atom_hdlr.cpp in Sources */,
+				B128EDB615003E580044DD69 /* atom_hinf.cpp in Sources */,
+				B128EDB715003E580044DD69 /* atom_hnti.cpp in Sources */,
+				B128EDB815003E580044DD69 /* atom_href.cpp in Sources */,
+				B128EDB915003E580044DD69 /* atom_mdat.cpp in Sources */,
+				B128EDBA15003E580044DD69 /* atom_mdhd.cpp in Sources */,
+				B128EDBB15003E580044DD69 /* atom_meta.cpp in Sources */,
+				B128EDBC15003E580044DD69 /* atom_mp4s.cpp in Sources */,
+				B128EDBD15003E580044DD69 /* atom_mp4v.cpp in Sources */,
+				B128EDBE15003E580044DD69 /* atom_mvhd.cpp in Sources */,
+				B128EDBF15003E580044DD69 /* atom_ohdr.cpp in Sources */,
+				B128EDC015003E580044DD69 /* atom_root.cpp in Sources */,
+				B128EDC115003E580044DD69 /* atom_rtp.cpp in Sources */,
+				B128EDC215003E580044DD69 /* atom_s263.cpp in Sources */,
+				B128EDC315003E580044DD69 /* atom_sdp.cpp in Sources */,
+				B128EDC415003E580044DD69 /* atom_smi.cpp in Sources */,
+				B128EDC515003E580044DD69 /* atom_sound.cpp in Sources */,
+				B128EDC615003E580044DD69 /* atom_standard.cpp in Sources */,
+				B128EDC715003E580044DD69 /* atom_stbl.cpp in Sources */,
+				B128EDC815003E580044DD69 /* atom_stdp.cpp in Sources */,
+				B128EDC915003E580044DD69 /* atom_stsc.cpp in Sources */,
+				B128EDCA15003E580044DD69 /* atom_stsd.cpp in Sources */,
+				B128EDCB15003E580044DD69 /* atom_stsz.cpp in Sources */,
+				B128EDCC15003E580044DD69 /* atom_stz2.cpp in Sources */,
+				B128EDCD15003E580044DD69 /* atom_text.cpp in Sources */,
+				B128EDCE15003E580044DD69 /* atom_tfhd.cpp in Sources */,
+				B128EDCF15003E580044DD69 /* atom_tkhd.cpp in Sources */,
+				B128EDD015003E580044DD69 /* atom_treftype.cpp in Sources */,
+				B128EDD115003E580044DD69 /* atom_trun.cpp in Sources */,
+				B128EDD215003E580044DD69 /* atom_udta.cpp in Sources */,
+				B128EDD315003E580044DD69 /* atom_url.cpp in Sources */,
+				B128EDD415003E580044DD69 /* atom_urn.cpp in Sources */,
+				B128EDD515003E580044DD69 /* atom_video.cpp in Sources */,
+				B128EDD615003E580044DD69 /* atom_vmhd.cpp in Sources */,
+				B128EDD715003E580044DD69 /* atom_wave.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0039B373152A1F6700D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 009987191520BA3F000AB02F /* nsmp4-cleanup */;
+			targetProxy = 0039B372152A1F6700D96D3E /* PBXContainerItemProxy */;
+		};
+		009987231520BC31000AB02F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 009987191520BA3F000AB02F /* nsmp4-cleanup */;
+			targetProxy = 009987221520BC31000AB02F /* PBXContainerItemProxy */;
+		};
+		009987251520BC32000AB02F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0099871D1520BAE2000AB02F /* nsmp4-prepare */;
+			targetProxy = 009987241520BC32000AB02F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0099871B1520BA3F000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		0099871C1520BA3F000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		0099871F1520BAE2000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Debug;
+		};
+		009987201520BAE2000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Release;
+		};
+		B128ED2415003D4A0044DD69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/precomp.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = HAVE_CONFIG_H;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				ONLY_ACTIVE_ARCH = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		B128ED2515003D4A0044DD69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/precomp.h";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = HAVE_CONFIG_H;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		B128ED2715003D4A0044DD69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Debug;
+		};
+		B128ED2815003D4A0044DD69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0099871A1520BA3F000AB02F /* Build configuration list for PBXLegacyTarget "nsmp4-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0099871B1520BA3F000AB02F /* Debug */,
+				0099871C1520BA3F000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0099871E1520BAE2000AB02F /* Build configuration list for PBXAggregateTarget "nsmp4-prepare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0099871F1520BAE2000AB02F /* Debug */,
+				009987201520BAE2000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B128ED1C15003D4A0044DD69 /* Build configuration list for PBXProject "nsmp4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B128ED2415003D4A0044DD69 /* Debug */,
+				B128ED2515003D4A0044DD69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B128ED2615003D4A0044DD69 /* Build configuration list for PBXNativeTarget "nsmp4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B128ED2715003D4A0044DD69 /* Debug */,
+				B128ED2815003D4A0044DD69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B128ED1915003D4A0044DD69 /* Project object */;
+}

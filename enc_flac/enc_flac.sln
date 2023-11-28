@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enc_flake", "enc_flac.vcproj", "{861F24D8-9B22-42FA-B056-7A86D6B4500C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{916E1756-A189-4661-9CA5-D00779E9C331} = {916E1756-A189-4661-9CA5-D00779E9C331}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libflake", "flake\win32\libflake.vcproj", "{916E1756-A189-4661-9CA5-D00779E9C331}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Debug|Win32.Build.0 = Debug|Win32
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Release|Win32.ActiveCfg = Release|Win32
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Release|Win32.Build.0 = Release|Win32
+		{916E1756-A189-4661-9CA5-D00779E9C331}.Debug|Win32.ActiveCfg = Debug|Win32
+		{916E1756-A189-4661-9CA5-D00779E9C331}.Debug|Win32.Build.0 = Debug|Win32
+		{916E1756-A189-4661-9CA5-D00779E9C331}.Release|Win32.ActiveCfg = Release|Win32
+		{916E1756-A189-4661-9CA5-D00779E9C331}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

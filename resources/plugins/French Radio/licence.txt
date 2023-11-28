@@ -1,0 +1,21 @@
+Plugin Winamp radio françaises
+
+dernière compilation
+3/07/11  (correction et ajout de radios)
+
+Clic droit dans Winamp et les radios apparaissent
+Au premier démarrage n'oubliez pas de redimensionner la fenêtre
+La pub permet de faire évoluer le plugin, pensez-y !
+
+
+
+
+
+Ce plug-in est livré tel quel sans aucune garantie.
+Il marche pour toute Winamp 5 correctement installé.
+Todae ne peut être tenu responsable quant à une éventuelle mauvaise utilisation de celui-ci.
+
+
+
+
+Traduction et distribution http://www.todae.fr/radio

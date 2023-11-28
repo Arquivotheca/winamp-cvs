@@ -1,0 +1,1772 @@
+#include "api.h"
+#include "main.h"
+#include "CloudDevice.h"
+#include "../Winamp/wa_ipc.h"
+#include "nx/nxstring.h"
+#include "nswasabi/ReferenceCounted.h"
+#include "../nu/AutoURL.h"
+#include <api/service/waServiceFactory.h>
+#include "../ml_cloud/ItemRecordMetadata.h"
+#include "../ml_cloud/shared.h"
+#include "../gen_ml/itemlist.h"
+#include "resource.h"
+#include <shlwapi.h>
+#include <strsafe.h>
+
+CloudDevice::CloudDevice(nx_string_t device_token, int device_id, SpecialDevice special_device, DevicePlatform platform_type) :
+						 special_device(special_device), platform_type(platform_type)
+{
+	device_name = 0;
+	transfer_db_connection = 0;
+	upload_waiter = 0;
+
+	this->out_ids = 0;
+	this->out_filenames = 0;
+
+	this->context = 0;
+	this->killswitch = 0;
+
+	db_connection = 0;
+	this->device_id = device_id;
+	this->device_token = device_token;
+	attributes.device_token = NXStringRetain(device_token);
+}
+
+CloudDevice::~CloudDevice()
+{
+	if (db_connection)
+		db_connection->Release();
+
+	if (transfer_db_connection)
+		transfer_db_connection->Release();
+
+	for (size_t i=0;i<value_cache.size();i++)
+	{
+		NXStringRelease(value_cache[i]);
+	}
+	value_cache.clear();
+	value_id_cache.clear();
+	int_cache.clear();
+	ids.Reset();
+		for (size_t i=0;i<cloud_files.size();i++)
+	{
+		NXStringRelease(cloud_files[i]);
+	}
+	cloud_files.clear();
+
+	if (out_ids)
+	{
+		free(out_ids);
+		out_ids = 0;
+	}
+	if (out_filenames)
+	{
+		free(out_filenames);
+		out_filenames = 0;
+	}
+
+	if (upload_waiter)
+		CloseHandle(upload_waiter);
+
+	NXStringRelease(device_name);
+}
+
+#define RegisterAttribute(x) db_connection->Attribute_Add(#x, &attributes. ## x)
+void CloudDevice::LazyLoad()
+{
+	if (!db_connection)
+	{
+		cloud_client->CreateDatabaseConnection(&db_connection);
+		db_connection->BeginTransaction();
+		RegisterAttribute(artist);
+		RegisterAttribute(album);
+		RegisterAttribute(trackno);
+		RegisterAttribute(albumartist);
+		RegisterAttribute(bpm);
+		RegisterAttribute(category);
+		RegisterAttribute(comment);
+		RegisterAttribute(composer);
+		RegisterAttribute(director);
+		RegisterAttribute(disc);
+		RegisterAttribute(discs);
+		RegisterAttribute(genre);
+		RegisterAttribute(producer);
+		RegisterAttribute(publisher);
+		RegisterAttribute(tracks);
+		RegisterAttribute(year);
+		RegisterAttribute(albumgain);
+		RegisterAttribute(trackgain);
+		RegisterAttribute(rating);
+		RegisterAttribute(type);
+		RegisterAttribute(lossless);
+
+		db_connection->Devices_GetName(device_id, &device_name, 0);
+		db_connection->Commit();
+	}
+}
+#undef RegisterAttribute
+
+__int64 CloudDevice::getDeviceCapacityAvailable()  // in bytes
+{
+	// in bytes
+	int64_t total_size = 0, used_size = 0, current_size = 0;
+	if (db_connection->Devices_GetCapacity(device_id, &total_size, &used_size) == NErr_Success)
+	{
+		// as we cannot rely on the last sizes for the device once we've been
+		// running for a while so attempt to get a more current size now used
+		if (db_connection->IDMap_GetDeviceSizeSum(device_id, &current_size) != NErr_Success)
+			current_size = used_size;
+
+		// some devices will have capacity used but none available
+		// so in those cases we indicate there is no available size
+		return (total_size > 0 ? total_size - current_size : 0);
+	}
+	return 0;
+}
+
+__int64 CloudDevice::getDeviceCapacityTotal()
+{
+	// in bytes
+	int64_t total_size = 0, used_size = 0, current_size = 0;
+	if (db_connection->Devices_GetCapacity(device_id, &total_size, &used_size) == NErr_Success)
+	{
+		// some devices will have capacity used but none available
+		// so if the total is zero then we use the used for things
+		if (total_size > 0)
+			return total_size;
+		else if (used_size > 0)
+		{
+			// as we cannot rely on the last sizes for the device once we've been
+			// running for a while so attempt to get a more current size now used
+			if (db_connection->IDMap_GetDeviceSizeSum(device_id, &current_size) == NErr_Success)
+				return current_size;
+			else
+				return used_size;
+		}
+	}
+	return 0;
+}
+
+void CloudDevice::Eject()
+{
+	wchar_t title[64];
+	WASABI_API_LNGSTRINGW_BUF(IDS_DEVICE_REMOVAL, title, 64);
+	if (special_device == DEVICE_HSS || special_device == DEVICE_LOCAL_LIBRARY)
+		MessageBox(plugin.hwndWinampParent, WASABI_API_LNGSTRINGW(IDS_DEVICE_REMOVE_NOT_SUPPORTED), title, MB_ICONASTERISK);
+	else
+	{
+		if (MessageBox(plugin.hwndWinampParent, WASABI_API_LNGSTRINGW(IDS_DEVICE_REMOVE_PROMPT), title, MB_YESNO | MB_ICONQUESTION) == IDYES)
+		{
+			RemoveStruct *remove = new RemoveStruct();
+			remove->device_id = device_id;
+			remove->device_token = NXStringRetain(device_token);
+			cloud_client->DeviceRemove(remove);
+		}
+	}
+	// if you ejected successfully, you MUST call PMP_IPC_DEVICEDISCONNECTED and delete this
+	// TODO: implement
+}
+
+void CloudDevice::Close()
+{
+	// save any changes, and call PMP_IPC_DEVICEDISCONNECTED AND delete this
+	SendMessage(plugin.hwndPortablesParent, WM_PMP_IPC, (intptr_t)this, PMP_IPC_DEVICEDISCONNECTED);
+	cloudDevices.erase(this);
+	delete this;
+}
+
+// return 0 for success, -1 for failed or cancelled
+int CloudDevice::transferTrackToDevice(const itemRecordW * track, // the track to transfer
+									   void * callbackContext, //pass this to the callback
+									   void (*callbackFunc)(void *callbackContext, wchar_t *status),  // call this every so often so the GUI can be updated. Including when finished!
+									   songid_t * songid, // fill in the songid when you are finished
+									   int * killswitch // if this gets set to anything other than zero, the transfer has been cancelled by the user
+									  )
+{
+	wchar_t msg[256];
+	this->context = callbackContext;
+	this->callback = callbackFunc;
+	this->killswitch = killswitch;
+
+	ReferenceCountedNXString nx_filename;
+	ReferenceCountedNXURI filename;
+
+	if (!transfer_db_connection)
+	{
+		if (cloud_client->CreateDatabaseConnection(&transfer_db_connection) != NErr_Success)
+		{
+			callback(callbackContext, WASABI_API_LNGSTRINGW_BUF(IDS_UNABLE_TO_OPEN_DB, msg, 256));
+			return -1;
+		}
+	}
+
+	NXStringCreateWithUTF16(&nx_filename, track->filename);
+	NXURICreateWithNXString(&filename, nx_filename);
+
+	int internal_id = 0, is_ignored = 0;
+	transfer_db_connection->Media_FindByFilename(filename, local_device_id, &internal_id, &is_ignored);
+
+	if (internal_id <= 0)
+	{
+		callback(callbackContext, WASABI_API_LNGSTRINGW_BUF(is_ignored ? IDS_SONG_NOT_COMPATIBLE_SKIPPING : IDS_SONG_NOT_PART_OF_CLOUD_LIBRARY, msg, 256));
+		return -1;
+	}
+
+	ReferenceCountedNXString media_hash;
+	if (transfer_db_connection->IDMap_GetMediaHash(internal_id, &media_hash) != NErr_Success)
+	{
+		ReferenceCountedNXString meta_hash, media_hash, id_hash;
+		if (ComputeMediaHash(track->filename, &media_hash) == NErr_Success)
+		{
+			MediaHashMetadata metadata(media_hash);
+			transfer_db_connection->Media_Update(internal_id, &metadata, ifc_clouddb::DIRTY_LOCAL|ifc_clouddb::DIRTY_LOCAL);			
+		}
+		else
+		{
+			callback(callbackContext, WASABI_API_LNGSTRINGW_BUF(IDS_SONG_NOT_COMPATIBLE_SKIPPING, msg, 256));
+			return -1;
+		}
+	}
+
+	int64_t cloud_id = 0;
+	if (transfer_db_connection->IDMap_Get(internal_id, &cloud_id) != NErr_Success || !cloud_id)
+	{
+		// force an announcement
+		cloud_client->MetadataAnnounce1(transfer_db_connection, internal_id);
+	}
+
+	if (!upload_waiter)
+		upload_waiter = CreateEvent(0, FALSE, FALSE, 0);	
+
+	cloud_client->Upload(filename, attributes.device_token, internal_id, this);
+	WaitForSingleObject(upload_waiter, INFINITE);
+
+	// TODO need to get this to refresh the cache status of the cloud icon
+
+	*songid = 0;
+	return 0;
+}
+
+int CloudDevice::trackAddedToTransferQueue(const itemRecordW *track)
+{
+	ReferenceCountedNXString nx_filename;
+	ReferenceCountedNXURI filename;
+
+	if (!transfer_db_connection)
+	{
+		if (cloud_client->CreateDatabaseConnection(&transfer_db_connection) != NErr_Success)
+		{
+			return 0;
+		}
+	}
+
+	NXStringCreateWithUTF16(&nx_filename, track->filename);
+	NXURICreateWithNXString(&filename, nx_filename);
+
+	int internal_id = 0, is_ignored = 0;
+	transfer_db_connection->Media_FindByFilename(filename, local_device_id, &internal_id, &is_ignored);
+
+	// if an invalid internal_id or appears to have been deleted / ignored then attempt to add as new
+	if (internal_id <= 0 || is_ignored != 0)
+	{
+		ItemRecordMetadata metadata(track);
+		if (transfer_db_connection->Media_Add(filename, &metadata, ifc_clouddb::DIRTY_LOCAL|ifc_clouddb::DIRTY_FULL, &internal_id) != NErr_Success)
+		{
+			return 1;
+		}
+	}
+
+	ReferenceCountedNXString media_hash;
+	if (transfer_db_connection->IDMap_GetMediaHash(internal_id, &media_hash) != NErr_Success)
+	{
+		ReferenceCountedNXString meta_hash, media_hash, id_hash;
+		if (ComputeMediaHash(track->filename, &media_hash) == NErr_Success)
+		{
+			MediaHashMetadata metadata(media_hash);
+			transfer_db_connection->Media_Update(internal_id, &metadata, ifc_clouddb::DIRTY_LOCAL|ifc_clouddb::DIRTY_LOCAL);						
+		}
+		else
+		{
+			return -2;
+		}
+	}
+
+	// give things a head-start by announcing the file if it has not already been
+	int64_t cloud_id = 0;
+	if (transfer_db_connection->IDMap_Get(internal_id, &cloud_id) != NErr_Success || !cloud_id)
+	{
+		// force an announcement
+		cloud_client->MetadataAnnounce1(transfer_db_connection, internal_id);
+	}
+
+	// return 0 to accept, -1 for "not enough space", -2 for "incorrect format"
+	return 0;
+}
+
+void CloudDevice::trackRemovedFromTransferQueue(const itemRecordW *track)
+{
+	// TODO: implement
+}
+
+// return the amount of space that will be taken up on the device by the track (once it has been tranferred)
+// or 0 for incompatable. This is usually the filesize, unless you are transcoding. An estimate is acceptable.
+__int64 CloudDevice::getTrackSizeOnDevice(const itemRecordW *track)
+{
+	// TODO: implement - used by auto-fill
+	return 0;
+} 
+
+void CloudDevice::deleteTrack(songid_t songid)
+{
+	size_t position=ids.size();
+	for (size_t i=0;i<position;i++)
+	{
+		if (ids[i] == songid)
+		{
+			ids.eraseAt(i);
+			break;
+		}
+	}
+	db_connection->BeginTransaction();
+	db_connection->Media_Delete(songid);
+	db_connection->IDMap_Remove(songid);
+	db_connection->Commit();
+	if (cloud_client) cloud_client->Flush();
+
+	// TODO: Be sure to remove it from all the playlists!	
+} 
+
+void CloudDevice::commitChanges()
+{
+	// optional. Will be called at a good time to save changes
+}
+
+int CloudDevice::getPlaylistCount()
+{
+	// TODO: implement
+	// always at least 1. playlistnumber 0 is the Master Playlist containing all tracks.
+	return 1;
+}
+
+// PlaylistName(0) should return the name of the device.
+void CloudDevice::getPlaylistName(int playlistnumber, wchar_t *buf, int len)
+{
+	LazyLoad();
+	if (playlistnumber == 0)
+	{
+		if (special_device == DEVICE_LOCAL_LIBRARY)
+			WASABI_API_LNGSTRINGW_BUF(IDS_LOCAL_LIBRARY, buf, len);
+		else if (device_name)
+			StringCchCopy(buf, len, device_name->string);
+		else if (special_device == DEVICE_HSS)
+			StringCchCopy(buf, len, L"Winamp Cloud");
+		else if (special_device == DEVICE_DROPBOX)
+			StringCchCopy(buf, len, L"DropBox");
+		else
+			StringCchCopy(buf, len, attributes.device_token->string);
+	}
+}
+
+int CloudDevice::getPlaylistLength(int playlistnumber)
+{
+	LazyLoad();
+	if (playlistnumber == 0)
+	{
+		return UpdateCaches();
+	}
+
+	return 0;
+}
+
+songid_t CloudDevice::getPlaylistTrack(int playlistnumber, int songnum)
+{
+	if (playlistnumber == 0)
+	{
+		if (songnum >= (int)ids.size())
+			return 0;
+
+		return (songid_t)ids[songnum];
+	}
+	// returns a songid
+	// TODO: implement
+	return 0;
+}
+
+// with playlistnumber==0, set the name of the device.
+void CloudDevice::setPlaylistName(int playlistnumber, const wchar_t *buf)
+{
+	// need to exclude setting the name for the 'local library' device
+	// as we set a specific name for it to make it obvious in the list
+	if (special_device != DEVICE_LOCAL_LIBRARY)
+	{
+		// also no need to do a rename update if it's the same as before
+		if (wcscmp(buf, device_name->string))
+		{
+			LazyLoad();
+			if (playlistnumber == 0)
+			{
+				ReferenceCountedNXString new_name;
+				if (NXStringCreateWithUTF16(&new_name, buf) == NErr_Success)
+				{
+					RenameStruct *rename = new RenameStruct();
+					rename->name = NXStringRetain(new_name);
+					rename->old_name = NXStringRetain(device_name);
+					rename->device = NXStringRetain(device_token);
+					cloud_client->DeviceRename(rename);
+				}
+			}
+		}
+	}
+	// TODO: implement
+}
+
+void CloudDevice::playlistSwapItems(int playlistnumber, int posA, int posB)
+{
+	// swap the songs at position posA and posB
+	// TODO: implement
+}
+
+void CloudDevice::sortPlaylist(int playlistnumber, int sortBy)
+{
+	// TODO: implement
+}
+
+void CloudDevice::addTrackToPlaylist(int playlistnumber, songid_t songid)
+{
+	if (songid != 0) // songid of 0 is a special notation
+	{
+
+	}
+
+	// TODO: implement
+	// adds songid to the end of the playlist
+}
+
+void CloudDevice::removeTrackFromPlaylist(int playlistnumber, int songnum)
+{
+	// TODO: implement
+	//where songnum is the position of the track in the playlist
+}
+
+void CloudDevice::deletePlaylist(int playlistnumber)
+{
+	// TODO: implement
+}
+
+int CloudDevice::newPlaylist(const wchar_t *name)
+{
+	// TODO: implement
+	// create empty playlist, returns playlistnumber. -1 for failed.
+	MessageBox(0, L"Playlist creation not currently implemented.", name, MB_OK | MB_ICONINFORMATION);
+	return -1;
+}
+
+enum
+{
+	IDMAP_DURATION=80,
+	IDMAP_PLAYCOUNT=81,
+	IDMAP_LASTPLAYED=82,
+	IDMAP_LASTUPDATED=83,
+	IDMAP_FILESIZE=84,
+	IDMAP_BITRATE=85,
+	IDMAP_MEDIAHASH=86,
+	IDMAP_TITLE=87,
+	IDMAP_MIMETYPE=88,
+};
+
+void CloudDevice::CacheLookupTitle(songid_t songid, wchar_t *buf, int len)
+{
+	int key = songid*100 + IDMAP_TITLE;
+	nx_string_t value = 0;
+
+	ValueCache::iterator found = value_cache.find(key);
+	if (found == value_cache.end())
+	{
+		if (db_connection->IDMap_GetTitle(songid, &value) != NErr_Success)
+		{
+			value = 0;
+		}
+		value_cache[key] = value;
+	}
+	else
+	{
+		value = found->second;
+	}
+
+	if (!value || NXStringGetBytes(0, value, buf, len*2, nx_charset_utf16le, nx_string_get_bytes_size_null_terminate) != NErr_Success)
+			buf[0] = 0;
+}
+
+void CloudDevice::CacheLookupMediaHash(songid_t songid, nx_string_t *media_hash)
+{
+	int key = songid*100 + IDMAP_MEDIAHASH;
+	nx_string_t value = 0;
+
+	ValueCache::iterator found = value_cache.find(key);
+	if (found == value_cache.end())
+	{
+		if (db_connection->IDMap_GetMediaHash(songid, &value) != NErr_Success)
+		{
+			value = 0;
+		}
+		value_cache[key] = value;
+		*media_hash = NXStringRetain(value);
+	}
+	else
+	{
+		value = found->second;
+		*media_hash = NXStringRetain(value);
+	}
+}
+
+void CloudDevice::CacheLookupMIME(songid_t songid, wchar_t *buf, int len)
+{
+	int key = songid*100 + IDMAP_MIMETYPE;
+	nx_string_t value = 0;
+
+	ValueCache::iterator found = value_cache.find(key);
+	if (found == value_cache.end())
+	{
+		if (db_connection->IDMap_GetMIME(songid, &value) != NErr_Success)
+		{
+			value = 0;
+		}
+		value_cache[key] = value;
+	}
+	else
+	{
+		value = found->second;
+	}
+
+	if (!value || NXStringGetBytes(0, value, buf, len*2, nx_charset_utf16le, nx_string_get_bytes_size_null_terminate) != NErr_Success)
+			buf[0] = 0;
+}
+
+void CloudDevice::CacheLookup(songid_t songid, int attributeid, wchar_t *buf, int len)
+{
+	int key = songid*100 + attributeid;
+	int value_id=0;
+
+	ValueIDCache::iterator found = value_id_cache.find(key);
+	if (found == value_id_cache.end())
+	{
+		if (db_connection->Media_GetAttributeValue(songid, attributeid, &value_id) != NErr_Success)
+			value_id=0;
+		value_id_cache[key]=value_id;
+	}
+	else
+	{
+		value_id=found->second;
+	}
+
+	if (!value_id)
+	{
+		buf[0]=0;
+	}
+	else
+	{
+		nx_string_t value=0;
+		ValueCache::iterator found = value_cache.find(value_id);
+		if (found == value_cache.end())
+		{
+			if (db_connection->Media_GetAttribute(songid, attributeid, &value) != NErr_Success)
+				value=0;
+			value_cache[value_id] = value;
+		}
+		else
+		{
+			value = found->second;
+		}
+
+		if (!value || NXStringGetBytes(0, value, buf, len*2, nx_charset_utf16le, nx_string_get_bytes_size_null_terminate) != NErr_Success)
+			buf[0] = 0;
+	}
+}
+
+int64_t CloudDevice::CacheLookup(songid_t songid, int attributeid)
+{
+	int key = songid * 100 + attributeid;
+	int64_t value = -1;
+
+	IntCache::iterator found = int_cache.find(key);
+
+	if (found == int_cache.end())
+	{
+		if (db_connection->Media_GetAttributeInteger(songid, attributeid, &value) != NErr_Success)
+			value = -1;
+		int_cache[key] = value;
+	}
+	else
+	{
+		value = found->second;
+	}
+
+	return value;
+}
+
+int64_t CloudDevice::CacheLookupIDMap(songid_t songid, int attributeid)
+{
+	int key = songid * 100 + attributeid;
+	int64_t value = -1;
+
+	IntCache::iterator found = int_cache.find(key);
+
+	if (found == int_cache.end())
+	{
+		// these are all stored in [idmap] instead of [media] as of build #42
+		int64_t playcount = 0, lastplayed = 0, lastupdated = 0, filetime = 0, filesize = 0, bitrate = 0;
+		double duration = 0;
+		if (db_connection->IDMap_GetProperties(songid, &playcount, &lastplayed, &lastupdated, &filetime, &filesize, &bitrate, &duration) != NErr_Success)
+			int_cache[key] = (value = -1);
+		else
+		{
+			// TODO if we add other things to [idmap], we need to update this mapping
+			switch (attributeid)
+			{
+				case IDMAP_DURATION: value = int_cache[key] = (int64_t)(duration*1000.0); break;
+				case IDMAP_PLAYCOUNT: value = int_cache[key] = playcount; break;
+				case IDMAP_LASTPLAYED: value = int_cache[key] = lastplayed; break;
+				case IDMAP_LASTUPDATED: value = int_cache[key] = lastupdated; break;
+				case IDMAP_FILESIZE: value = int_cache[key] = filesize; break;
+				case IDMAP_BITRATE: value = int_cache[key] = (bitrate / 1000); break;
+				default: int_cache[key] = (value = -1); break;
+			}
+		}
+	}
+	else
+	{
+		value = found->second;
+	}
+
+	return value;
+}
+
+void CloudDevice::getTrackArtist(songid_t songid, wchar_t *buf, int len)
+{
+	CacheLookup(songid, attributes.artist, buf, len);
+}
+
+void CloudDevice::getTrackAlbum(songid_t songid, wchar_t *buf, int len)
+{
+	CacheLookup(songid, attributes.album, buf, len);
+}
+
+void CloudDevice::getTrackTitle(songid_t songid, wchar_t *buf, int len)
+{
+	CacheLookupTitle(songid, buf, len);
+}
+
+int CloudDevice::getTrackTrackNum(songid_t songid)
+{
+	return (int)CacheLookup(songid, attributes.trackno);
+}
+
+int CloudDevice::getTrackDiscNum(songid_t songid)
+{
+	return (int)CacheLookup(songid, attributes.disc);
+}
+
+void CloudDevice::getTrackGenre(songid_t songid, wchar_t * buf, int len)
+{
+	CacheLookup(songid, attributes.genre, buf, len);
+}
+
+int CloudDevice::getTrackYear(songid_t songid)
+{
+	return (int)CacheLookup(songid, attributes.year);
+}
+
+__int64 CloudDevice::getTrackSize(songid_t songid)
+{
+	return CacheLookupIDMap(songid, IDMAP_FILESIZE);
+}
+
+int CloudDevice::getTrackLength(songid_t songid)
+{
+	return (int)CacheLookupIDMap(songid, IDMAP_DURATION);
+}
+
+int CloudDevice::getTrackBitrate(songid_t songid)
+{
+	return (int)CacheLookupIDMap(songid, IDMAP_BITRATE);
+}
+
+int CloudDevice::getTrackPlayCount(songid_t songid)
+{
+	return (int)CacheLookupIDMap(songid, IDMAP_PLAYCOUNT);
+}
+
+int CloudDevice::getTrackRating(songid_t songid)
+{
+	return (int)CacheLookup(songid, attributes.rating);
+}
+
+__time64_t CloudDevice::getTrackLastPlayed(songid_t songid)
+{
+	// in unix time format
+	return CacheLookupIDMap(songid, IDMAP_LASTPLAYED);
+}
+
+__time64_t CloudDevice::getTrackLastUpdated(songid_t songid)
+{
+	// in unix time format
+	return CacheLookupIDMap(songid, IDMAP_LASTUPDATED);
+}
+
+void CloudDevice::getTrackAlbumArtist(songid_t songid, wchar_t *buf, int len)
+{
+	CacheLookup(songid, attributes.albumartist, buf, len);
+}
+
+void CloudDevice::getTrackPublisher(songid_t songid, wchar_t *buf, int len)
+{
+	CacheLookup(songid, attributes.publisher, buf, len);
+}
+
+void CloudDevice::getTrackComposer(songid_t songid, wchar_t *buf, int len)
+{
+	CacheLookup(songid, attributes.composer, buf, len);
+}
+
+void CloudDevice::getTrackMimeType(songid_t songid, wchar_t * buf, int len)
+{
+	CacheLookupMIME(songid, buf, len);
+}
+
+int CloudDevice::getTrackType(songid_t songid)
+{
+	return (int)CacheLookup(songid, attributes.type);
+}
+
+void CloudDevice::getTrackExtraInfo(songid_t songid, const wchar_t *field, wchar_t *buf, int len)
+{
+	if (!_wcsicmp(L"cloud", field))
+	{
+		int key = songid * 100 + 99;
+		int value_id = 0;
+
+		ValueIDCache::iterator found = value_id_cache.find(key);
+		if (found == value_id_cache.end())
+		{
+			if (special_device == DEVICE_HSS || special_device == DEVICE_DROPBOX)
+			{
+				// deals with known sources available to all devices
+				value_id = value_id_cache[key] = 1;
+			}
+			else
+			{
+				// will determines if the file is also available on a cloud location
+				// and will then set the icon appropriately as needed for the device
+				/*ReferenceCountedNXString media_hash;
+				CacheLookupMediaHash(songid, media_hash);
+
+				bool has_uploads = false;
+				int *out_device_ids = 0;
+				size_t num_device_ids = 0;
+				db_connection->IDMap_Get_Devices_From_MediaHash(media_hash, &out_device_ids, &num_device_ids, 0);
+				if (num_device_ids > 0)
+				{
+					for (size_t i = 0; i < cloudDevices.size(); i++)
+					{
+						for (size_t j = 0; j < num_device_ids; j++)
+						{
+							if(cloudDevices[i]->device_id == out_device_ids[j])
+							{
+								SpecialDevice special = cloudDevices[i]->special_device;
+								if (special == DEVICE_HSS || special == DEVICE_DROPBOX)
+								{
+									has_uploads = true;
+									break;
+								}
+							}
+						}
+					}
+				}
+
+				if (out_device_ids)
+					free(out_device_ids);
+
+				if (special_device == DEVICE_LOCAL_LIBRARY)
+				{
+					value_id = value_id_cache[key] = (has_uploads ? 0 : 4);
+				}
+				else
+				{
+					value_id = value_id_cache[key] = (has_uploads ? 1 : 3);
+				}*/
+
+				bool has_uploads = (cloud_files.find(songid) != cloud_files.end());
+				if (special_device == DEVICE_LOCAL_LIBRARY)
+				{
+					value_id = value_id_cache[key] = (has_uploads ? 0 : 4);
+				}
+				else
+				{
+					value_id = value_id_cache[key] = (has_uploads ? 1 : 3);
+				}
+			}
+		}
+		else
+		{
+			value_id = found->second;
+		}
+
+		if (buf) StringCchPrintfW(buf, len, L"%d", value_id);
+	}
+	else if (!_wcsicmp(L"cloud_status", field))
+	{
+		int64_t last_seen = 0;
+		int on = 0;
+		if (db_connection->Devices_GetLastSeen(device_id, &last_seen, &on) == NErr_Success)
+		{
+			// TODO need to come back and do this more appropriately to 'match' other clients
+			wchar_t time_str[64] = {0};
+			time_t now = time(0) - last_seen;
+			if (now <= 5)
+			{
+				lstrcpyn(time_str, L"a few seconds ago", ARRAYSIZE(time_str));
+			}
+			else if (now < 60)
+			{
+				StringCchPrintfW(time_str, ARRAYSIZE(time_str), (now == 1 ? L"%d second ago" : L"%d seconds ago"), now);
+			}
+			else
+			{
+				now /= 60;
+				if (now < 60)
+				{
+					StringCchPrintfW(time_str, ARRAYSIZE(time_str), (now == 1 ? L"%d minute ago" : L"%d minutes ago"), now);
+				}
+				else
+				{
+					now /= 60;
+					if (now < 60)
+					{
+						StringCchPrintfW(time_str, ARRAYSIZE(time_str), (now == 1 ? L"%d hour ago" : L"%d hours ago"), now);
+					}
+					else
+					{
+						now /= 24;
+						StringCchPrintfW(time_str, ARRAYSIZE(time_str), (now == 1 ? L"%d day ago" : L"%d days ago"), now);
+					}
+				}
+			}
+			StringCchPrintfW(buf, len, L"%s: Last seen %s", (on ? L"Online" : L"Offline"), time_str);
+		}
+		else
+		{
+			buf[0] = 0;
+		}
+	}
+	else if (!_wcsicmp(L"filepath", field))
+	{
+		ReferenceCountedNXURI filepath;
+		db_connection->IDMap_Get_Filepath(songid, &filepath);
+		lstrcpyn(buf, filepath->string, len);
+	}
+	// TODO: implement
+	//optional
+}
+
+static void setMetadata(itemRecordW *item, const char *field_name, wchar_t *&update_field, const wchar_t *value)
+{
+	// TODO
+}
+
+// feel free to ignore any you don't support
+void CloudDevice::setTrackArtist(songid_t songid, const wchar_t *value)
+{
+	// TODO
+}
+
+void CloudDevice::setTrackAlbum(songid_t songid, const wchar_t *value)
+{
+	// TODO
+}
+
+void CloudDevice::setTrackTitle(songid_t songid, const wchar_t *value)
+{
+	// TODO
+}
+
+void CloudDevice::setTrackTrackNum(songid_t songid, int value)
+{
+	// TODO: implement
+}
+
+void CloudDevice::setTrackDiscNum(songid_t songid, int value)
+{
+	// TODO: implement
+}
+
+void CloudDevice::setTrackGenre(songid_t songid, const wchar_t *value)
+{
+	// TODO
+}
+
+void CloudDevice::setTrackYear(songid_t songid, int year)
+{
+	// TODO: implement
+}
+
+void CloudDevice::setTrackPlayCount(songid_t songid, int value)
+{
+	// TODO: implement
+}
+
+void CloudDevice::setTrackRating(songid_t songid, int value)
+{
+	// TODO: implement
+}
+
+void CloudDevice::setTrackLastPlayed(songid_t songid, __time64_t value)
+{
+	// TODO: implement
+} // in unix time format
+
+void CloudDevice::setTrackLastUpdated(songid_t songid, __time64_t value)
+{
+	// TODO: implement
+} // in unix time format
+
+void CloudDevice::setTrackAlbumArtist(songid_t songid, const wchar_t *value)
+{
+	// TODO
+}
+
+void CloudDevice::setTrackPublisher(songid_t songid, const wchar_t *value)
+{
+	// TODO
+}
+
+void CloudDevice::setTrackComposer(songid_t songid, const wchar_t *value)
+{
+	// TODO
+}
+
+void CloudDevice::setTrackExtraInfo(songid_t songid, const wchar_t *field, const wchar_t *value) 
+{
+	// TODO: implement
+} //optional
+
+typedef struct { songid_t song; CloudDevice * dev; const wchar_t * filename; } tagItem;
+
+wchar_t * tagFunc(const wchar_t * tag, void * p) { //return 0 if not found, -1 for empty tag
+	tagItem * s = (tagItem *)p;
+	int len = 2048;
+	wchar_t * buf = (wchar_t *)malloc(sizeof(wchar_t)*len);
+	buf[0]=0;
+	// TODO check we're supporting everything we know about!!
+	// TODO flesh out to support more values where appropriate
+	if (!_wcsicmp(tag, L"artist"))	s->dev->getTrackArtist(s->song, buf, len);
+	else if (!_wcsicmp(tag, L"album"))	s->dev->getTrackAlbum(s->song,buf,len);
+	else if (!_wcsicmp(tag, L"title"))	s->dev->getTrackTitle(s->song,buf,len);
+	else if (!_wcsicmp(tag, L"genre"))	s->dev->getTrackGenre(s->song,buf,len);
+	else if (!_wcsicmp(tag, L"year"))	wsprintf(buf,L"%d",s->dev->getTrackYear(s->song));
+	else if (!_wcsicmp(tag, L"tracknumber") || !_wcsicmp(tag, L"track"))	wsprintf(buf,L"%d",s->dev->getTrackTrackNum(s->song));
+	else if (!_wcsicmp(tag, L"discnumber"))	wsprintf(buf,L"%d",s->dev->getTrackDiscNum(s->song));
+	else if (!_wcsicmp(tag, L"bitrate"))	wsprintf(buf,L"%d",s->dev->getTrackBitrate(s->song));
+	else if (!_wcsicmp(tag, L"filename"))	lstrcpyn(buf,s->filename,len);
+	else if (!_wcsicmp(tag, L"albumartist"))	s->dev->getTrackAlbumArtist(s->song,buf,len);
+	else if (!_wcsicmp(tag, L"composer"))	s->dev->getTrackComposer(s->song,buf,len);
+	else if (!_wcsicmp(tag, L"publisher"))	s->dev->getTrackPublisher(s->song,buf,len);
+	return buf;
+}
+
+void tagFreeFunc(wchar_t * tag, void * p) { if(tag) free(tag); }
+
+bool getTitle(CloudDevice * dev, songid_t song, const wchar_t * filename, wchar_t * buf, int len) {
+	buf[0]=0; buf[len-1]=0;
+	tagItem item = {song,dev,filename};
+	waFormatTitleExtended fmt={filename,0,NULL,&item,buf,len,tagFunc,tagFreeFunc};
+	SendMessage(plugin.hwndWinampParent, WM_WA_IPC, (WPARAM)&fmt, IPC_FORMAT_TITLE_EXTENDED);
+	return (buf[0] != 0);
+}
+
+static const char *GetExtensionForMIME(nx_string_t mime_type)
+{
+	if (!mime_type)
+		return 0;
+
+	if (!NXStringKeywordCompareWithCString(mime_type, "audio/mp4"))
+		return "m4a";
+	else if (!NXStringKeywordCompareWithCString(mime_type, "audio/mpeg"))
+		return "mp3";
+	else if (!NXStringKeywordCompareWithCString(mime_type, "audio/x-ms-wma"))
+		return "wma";
+	else if (!NXStringKeywordCompareWithCString(mime_type, "application/ogg") || !NXStringKeywordCompareWithCString(mime_type, "audio/ogg"))
+		return "ogg";
+	else if (!NXStringKeywordCompareWithCString(mime_type, "audio/flac"))
+		return "flac";
+
+	return 0;	
+}
+
+bool CloudDevice::playTracks(songid_t * songidList, int listLength, int startPlaybackAt, bool enqueue)
+{
+	if(!enqueue) //clear playlist
+	{ 
+		SendMessage(plugin.hwndWinampParent,WM_WA_IPC,0,IPC_DELETE);
+	}
+
+	ReferenceCountedNXString url, username;
+	// gets us the http version instead of https
+	REPLICANT_API_CLOUD->GetAPIURL(&url, /*http=*/NErr_True);
+	REPLICANT_API_CLOUD->GetCredentials(&username, 0, 0);
+
+	bool errors = false;
+	for(int i = 0; i < listLength; i++)
+	{
+		int curSong = songidList[i];
+		if (curSong)
+		{
+			int64_t id = 0;
+			if (db_connection->IDMap_Get(curSong, &id) == NErr_Success && id > 0)
+			{
+				wchar_t fn[1024];
+				ReferenceCountedNXURI filepath;
+
+				enqueueFileWithMetaStructW s={0};
+				if (special_device != DEVICE_LOCAL_LIBRARY)
+				{
+					// see if we have a local track with a matching media hash and use that
+					// otherwise we'll have to go the streaming attempt for playing the file
+					ReferenceCountedNXString media_hash;
+					CacheLookupMediaHash(curSong, &media_hash);
+					if (db_connection->Media_FindFilepathByMediahash(local_device_id, media_hash, &filepath) == NErr_Success)
+					{
+						s.filename = filepath->string;
+					}
+
+					if (!s.filename || !PathFileExistsW(s.filename))
+					{
+						ReferenceCountedNXString mime_type;
+
+						const char *ext=0;
+						if (db_connection->IDMap_GetMIME(curSong, &mime_type) == NErr_Success)
+							ext = GetExtensionForMIME(mime_type);
+
+						if (ext)
+							StringCbPrintf(fn, sizeof(fn), L"%sdemostream/%S/%llu/%s.%S", url->string, AutoUrl(username->string), id, media_hash->string, ext);
+						else
+							StringCbPrintf(fn, sizeof(fn), L"%sdemostream/%S/%llu/%s", url->string, AutoUrl(username->string), id, media_hash->string);
+
+						s.filename = fn;
+					}
+				}
+				else
+				{
+					db_connection->IDMap_Get_Filepath(curSong, &filepath);
+					s.filename = filepath->string;
+				}
+
+				// attempt where possible to fill enqueueFileWithMetaStructW with enough to make the
+				// playlist entry more like a 'local' playlist entry so it is like from our library.
+				double duration = 0;
+				if (db_connection->IDMap_GetProperties(curSong, 0, 0, 0, 0, 0, 0, &duration) == NErr_Success)
+				{
+					s.length = (int)duration;
+				}
+
+				// if we can get a formatted title then use it otherwise
+				// set the title as the filename so the time can show up
+				static wchar_t buf[2048];
+				if (getTitle(this, curSong, s.filename, buf, 2048))
+				{
+					s.title = buf;
+				}
+				else
+				{
+					s.title = s.filename;
+				}
+
+				SendMessage(plugin.hwndWinampParent, WM_WA_IPC, (WPARAM)&s, IPC_PLAYFILEW);
+			}
+			else
+			{
+				errors = true;
+			}
+		}
+	}
+
+	if(!errors && !enqueue) 
+	{ 
+		//play item startPlaybackAt
+		SendMessage(plugin.hwndWinampParent,WM_WA_IPC,startPlaybackAt,IPC_SETPLAYLISTPOS);
+		SendMessage(plugin.hwndWinampParent,WM_COMMAND,40047,0); //stop
+		SendMessage(plugin.hwndWinampParent,WM_COMMAND,40045,0); //play
+	}
+	else if (errors)
+	{
+		MessageBox(plugin.hwndLibraryParent, L"Some of the requested files could not be added to the playlist", L"Error adding files", MB_ICONWARNING);
+	}
+	return true;
+}
+
+BOOL FormatResProtocol(const wchar_t *resourceName, const wchar_t *resourceType, wchar_t *buffer, size_t bufferMax)
+{
+	unsigned long filenameLength;
+
+	if (NULL == resourceName)
+		return FALSE;
+
+	if (FAILED(StringCchCopyExW(buffer, bufferMax, L"res://", &buffer, &bufferMax, 0)))
+		return FALSE;
+
+	filenameLength = GetModuleFileNameW(plugin.hDllInstance, buffer, bufferMax);
+	if (0 == filenameLength || bufferMax == filenameLength)
+		return FALSE;
+
+	buffer += filenameLength;
+	bufferMax -= filenameLength;
+
+	if (NULL != resourceType)
+	{
+		if (FALSE != IS_INTRESOURCE(resourceType))
+		{
+			if (FAILED(StringCchPrintfExW(buffer, bufferMax, &buffer, &bufferMax, 0, L"/#%d", (int)(INT_PTR)resourceType)))
+				return FALSE;
+		}
+		else
+		{
+			if (FAILED(StringCchPrintfExW(buffer, bufferMax, &buffer, &bufferMax, 0, L"/%s", resourceType)))
+				return FALSE;
+		}
+	}
+
+	if (FALSE != IS_INTRESOURCE(resourceName))
+	{
+		if (FAILED(StringCchPrintfExW(buffer, bufferMax, &buffer, &bufferMax, 0, L"/#%d", (int)(INT_PTR)resourceName)))
+			return FALSE;
+	}
+	else
+	{
+		if (FAILED(StringCchPrintfExW(buffer, bufferMax, &buffer, &bufferMax, 0, L"/%s", resourceName)))
+			return FALSE;
+	}
+
+	return TRUE;
+}
+
+int CloudDevice::UpdateCaches()
+{
+	for (size_t i=0;i<value_cache.size();i++)
+	{
+		NXStringRelease(value_cache[i]);
+	}
+	value_cache.clear();
+	value_id_cache.clear();
+	int_cache.clear();
+	ids.Reset();
+	for (size_t i=0;i<cloud_files.size();i++)
+	{
+		NXStringRelease(cloud_files[i]);
+	}
+	cloud_files.clear();
+
+	int *media_ids = 0;
+	size_t num_ids = 0;
+	db_connection->Media_GetIDs(device_id, &media_ids, &num_ids);
+	this->ids.set(media_ids, num_ids);
+
+	size_t num_files = 0;
+	if (out_ids)
+	{
+		free(out_ids);
+		out_ids = 0;
+	}
+	if (out_filenames)
+	{
+		free(out_filenames);
+		out_filenames = 0;
+	}
+	db_connection->IDMap_GetDeviceCloudFiles(device_id, &out_filenames, &out_ids, &num_files);
+	for (size_t i = 0; i < num_files; i++)
+	{
+		cloud_files[out_ids[i]] = out_filenames[i];
+	}
+
+	return num_ids;
+}
+
+intptr_t CloudDevice::extraActions(intptr_t param1, intptr_t param2, intptr_t param3,intptr_t param4)
+{
+	switch(param1) 
+	{
+		case DEVICE_NOT_READY_TO_VIEW:
+			return (!network_fail ? !firstpull : 0);
+		case DEVICE_GET_CLOUD_SOURCES_MENU:
+		{
+			if (!firstpull)
+			{
+				HMENU menu = CreatePopupMenu();
+				InsertMenu(menu, 0, MF_BYPOSITION | MF_GRAYED, CLOUD_SOURCE_MENUS + 1,
+						   WASABI_API_LNGSTRINGW(IDS_UNABLE_DETERMINE_CLOUD_SOURCES));
+				return (intptr_t)menu;
+			}
+
+			int* count = (int *)param2;
+			C_ItemList * items = (C_ItemList *)param4;
+			if (!items->GetSize()) return 0;
+
+			HMENU menu = CreatePopupMenu();
+			int multiple = (items->GetSize() > 1);
+			*count = cloudDevices.size();
+
+			for (size_t i = 0, j = 0; i < cloudDevices.size(); i++)
+			{
+				// TODO when further device <-> device support happens then this can be changed to allow the menu items, etc
+				bool supports_uploads = (cloudDevices[i]->special_device == DEVICE_HSS || cloudDevices[i]->special_device == DEVICE_DROPBOX);
+				InsertMenu(menu, (cloudDevices[i]->special_device == DEVICE_LOCAL_LIBRARY ? 0 : ++j),
+						   MF_BYPOSITION | (multiple || !supports_uploads ? MF_GRAYED : 0), CLOUD_SOURCE_MENUS + (cloudDevices[i]->device_id),
+						   (cloudDevices[i]->special_device == DEVICE_LOCAL_LIBRARY ? WASABI_API_LNGSTRINGW(IDS_LOCAL_LIBRARY) :
+																					  cloudDevices[i]->device_name->string));
+			}
+
+			// loop over the items and check every device it is known on
+			/*for (int it = 0; it < items->GetSize(); it++)
+			{*/
+				// see if we have a local track with a matching media hash and use that
+				// otherwise we'll have to go the streaming attempt for playing the file
+				ReferenceCountedNXString media_hash;
+				CacheLookupMediaHash((songid_t)items->Get(0), &media_hash);
+
+				int *out_device_ids = 0;
+				size_t num_device_ids = 0;
+				db_connection->IDMap_Get_Devices_From_MediaHash(media_hash, &out_device_ids, &num_device_ids, 0);
+				if (num_device_ids > 0)
+				{
+					for (size_t i = 0; i < num_device_ids; i++)
+					{
+						CheckMenuItem(menu, CLOUD_SOURCE_MENUS + (out_device_ids[i]), MF_CHECKED);
+						// if we have availability, then we need to allow for removes even if adds are not supported
+						EnableMenuItem(menu, CLOUD_SOURCE_MENUS + (out_device_ids[i]), MF_ENABLED);
+					}
+				}
+
+				if (out_device_ids) free(out_device_ids);
+			//}
+
+			return (intptr_t)menu;
+		}
+		case DEVICE_DO_CLOUD_SOURCES_MENU:
+		{
+			if (!firstpull) return 0;
+
+			int ret = 0;
+			C_ItemList * items = (C_ItemList *)param4;
+			if (items->GetSize() == 1)
+			{
+				// see if we have a local track with a matching media hash and use that
+				// otherwise we'll have to go the streaming attempt for playing the file
+				ReferenceCountedNXString media_hash;
+				CacheLookupMediaHash((songid_t)items->Get(0), &media_hash);
+
+				int found = 0, device = (param2 - CLOUD_SOURCE_MENUS);
+				int *out_device_ids = 0, *out_media_ids = 0;
+				size_t num_device_ids = 0;
+				db_connection->IDMap_Get_Devices_From_MediaHash(media_hash, &out_device_ids, &num_device_ids, &out_media_ids);
+				if (num_device_ids > 0)
+				{
+					for (size_t i = 0; i < num_device_ids; i++)
+					{
+						if (device == out_device_ids[i])
+						{
+							ReferenceCountedNXString name;
+							if (db_connection->Devices_GetName(out_device_ids[i], &name, 0) == NErr_Success)
+							{
+								found = out_device_ids[i];
+								wchar_t buf[256];
+								StringCchPrintfW(buf, ARRAYSIZE(buf), WASABI_API_LNGSTRINGW((device == local_device_id) ? IDS_REMOVE_FROM_LOCAL_CLOUD_DEVICE : IDS_REMOVE_FROM_CLOUD_DEVICE), name->string);
+								if (MessageBox(0, buf, WASABI_API_LNGSTRINGW(IDS_REMOVE_FROM_DEVICE), MB_YESNO | MB_ICONQUESTION) == IDYES)
+								{
+									if (device == local_device_id)
+									{
+										deleteTrack(out_media_ids[i]);
+									}
+									else
+									{
+										db_connection->BeginTransaction();
+										db_connection->Media_Delete(out_media_ids[i]);
+										db_connection->IDMap_Remove(out_media_ids[i]);
+										db_connection->Commit();
+										if (cloud_client) cloud_client->Flush();
+									}
+
+									// if we're removing and it's in the current view, say it's ok to remove
+									// but only if this is going to be the last viable option to choose from
+									if (num_device_ids == 1 || (out_media_ids[i] == (songid_t)items->Get(0)))
+									{
+										ret = 1;
+									}
+								}
+								break;
+							}
+						}
+					}
+				}
+
+				if (!found)
+				{
+					// TODO use token as needed
+					nx_string_t name, token;
+					if (db_connection->Devices_GetName(device, &name, &token) == NErr_Success)
+					{
+						wchar_t buf[1024];
+						bool supports_uploads = (!NXStringKeywordCompareWithCString(token, HSS_CLIENT) ||
+												 !NXStringKeywordCompareWithCString(token, DROPBOX_CLIENT));
+
+						// local add - currently no way to really hit this so not coded for it, etc
+						/*if (device == local_device_id)
+						{
+							StringCchPrintfW(buf, ARRAYSIZE(buf), L"Are you sure you want to add this song to the 'Local Library' device?");
+							if (MessageBox(0, buf, WASABI_API_LNGSTRINGW(IDS_ADD_TO_CLOUD_DEVICE), MB_YESNO | MB_ICONQUESTION) == IDYES)
+							{
+								ReferenceCountedNXString filepath;
+								if (db_connection->Media_FindFilepathByMediahash(device, media_hash, &filepath) == NErr_Success)
+								{
+									// TODO
+									//this->OnFileAdded(filename);
+								}
+							}
+						}
+						// uploads (hss / dropbox) from the local device
+						else*/
+						if (supports_uploads)
+						{
+							StringCchPrintfW(buf, ARRAYSIZE(buf), L"Are you sure you want to upload this song to '%s' so it will be available on your other Cloud sources?", name->string);
+							if (MessageBox(0, buf, WASABI_API_LNGSTRINGW(IDS_ADD_TO_CLOUD_DEVICE), MB_YESNO | MB_ICONQUESTION) == IDYES)
+							{
+								HWND ml_pmp_window = FindWindow(L"ml_pmp_window", L"ml_pmp_window");
+								if (IsWindow(ml_pmp_window))
+								{
+									ReferenceCountedNXURI filepath;
+									if (db_connection->Media_FindFilepathByMediahash(local_device_id, media_hash, &filepath) == NErr_Success)
+									{
+										// do +1 as need a double-null char
+										wchar_t buffer[MAX_PATH+1] = {0};
+										cloudDeviceTransfer transfer = {0};
+										lstrcpyn(buffer, filepath->string, MAX_PATH);
+										transfer.filenames = buffer;
+										transfer.device_token = NXStringRetain(token);
+										SendMessage(ml_pmp_window, WM_PMP_IPC, (WPARAM)&transfer, PMP_IPC_DEVICECLOUDTRANSFER);
+										NXStringRelease((nx_string_t)transfer.device_token);
+									}
+									else
+									{
+										// TODO possibly try to find a file from the local library / main playlist ???
+										StringCchPrintfW(buf, ARRAYSIZE(buf), WASABI_API_LNGSTRINGW(IDS_UNABLE_TO_FIND_FILE), name->string);
+										MessageBox(0, buf, WASABI_API_LNGSTRINGW(IDS_ADD_TO_CLOUD_DEVICE), MB_OK | MB_ICONWARNING);
+									}
+								}
+							}
+						}
+						// TODO device <-> device
+						else
+						{
+							/*StringCchPrintfW(buf, ARRAYSIZE(buf), L"Are you sure you want to add this song to the '%s' device so it can be accessed directly on it?", name->string);
+							if (MessageBox(0, buf, WASABI_API_LNGSTRINGW(IDS_ADD_TO_CLOUD_DEVICE), MB_YESNO | MB_ICONQUESTION) == IDYES)
+							{
+							}*/
+						}
+					}
+				}
+
+				if (out_device_ids) free(out_device_ids);
+				if (out_media_ids) free(out_media_ids);
+			}
+			else
+				MessageBox(0, L"multiple selection support not implemented", 0, 0);
+
+			return ret;
+		}
+		case DEVICE_SYNC_UNSUPPORTED:
+			// prevent the sync actions on anything other than the local view
+			// TODO change this when device<->device support is sorted out...
+			return (!firstpull || special_device == CloudDevice::DEVICE_CLIENT);
+		case DEVICE_IS_CLOUD_TX_DEVICE:
+			return !NXStringKeywordCompare(device_token, (nx_string_t)param2);
+		case DEVICE_GET_CLOUD_DEVICE_ID:
+			return device_id;
+		case DEVICE_SUPPORTS_PODCASTS:
+			// prevent podcast sync functionality since we're doing it via other means
+			return 1;
+		case DEVICE_DOES_NOT_SUPPORT_EDITING_METADATA:
+			// TODO when we support then re-enable
+			return 1;
+		case DEVICE_CAN_RENAME_DEVICE:
+			// make the local device be a specical case we only do via the preferences
+			return (special_device != DEVICE_LOCAL_LIBRARY);
+		case DEVICE_REFRESH:
+		{
+			return (UpdateCaches() > 0);
+		}
+		case DEVICE_SUPPORTED_METADATA:
+		{
+			// notes:
+			// - not shown on webview - SUPPORTS_DISCNUM, SUPPORTS_LASTUPDATED, SUPPORTS_ALBUMARTIST, SUPPORTS_COMPOSER, SUPPORTS_PUBLISHER
+			// - supported by pmp but not used -  SUPPORTS_ALBUMART
+			intptr_t supported = SUPPORTS_ARTIST | SUPPORTS_ALBUM | SUPPORTS_TITLE | SUPPORTS_TRACKNUM | SUPPORTS_DISCNUM |
+								 SUPPORTS_GENRE | SUPPORTS_YEAR | SUPPORTS_SIZE | SUPPORTS_LENGTH | SUPPORTS_BITRATE |
+								 SUPPORTS_PLAYCOUNT | SUPPORTS_LASTPLAYED | SUPPORTS_LASTUPDATED | SUPPORTS_ALBUMARTIST |
+								 SUPPORTS_COMPOSER | SUPPORTS_PUBLISHER | SUPPORTS_RATING |
+								 // additions from the 5.7 support
+								 SUPPORTS_MIMETYPE;
+			return supported;
+		}
+		case DEVICE_SENDTO_UNSUPPORTED:
+			// only allow once we've done a first pull, otherwise block to prevent issues
+			// TODO: allow clients to say whether or not they support cloud sync
+			// NOTE: changed back to limiting to just HSS and Dropbox until above is done
+			//return (!firstpull && special_device != CloudDevice::DEVICE_LOCAL_LIBRARY || (firstpull && special_device != CloudDevice::DEVICE_HSS && special_device != CloudDevice::DEVICE_DROPBOX));
+			return (!firstpull || special_device == CloudDevice::DEVICE_LOCAL_LIBRARY);
+			//return (!firstpull && special_device != CloudDevice::DEVICE_LOCAL_LIBRARY);// || (firstpull && special_device != CloudDevice::DEVICE_HSS && special_device != CloudDevice::DEVICE_DROPBOX));
+		case DEVICE_GET_UNIQUE_ID:
+			if (special_device == DEVICE_HSS)
+			{
+				lstrcpynA((char*)param2, HSS_CLIENT, param3);
+			}
+			else if (special_device == DEVICE_DROPBOX)
+			{
+				lstrcpynA((char*)param2, DROPBOX_CLIENT, param3);
+			}
+			else
+			{
+				if (special_device == DEVICE_LOCAL_LIBRARY)
+				{
+					lstrcpynA((char*)param2,"local_desktop",param3);
+				}
+				else
+				{
+					StringCchPrintfA((char*)param2,param3,"device_%d",device_id);
+				}
+			}
+			return 1;
+		case DEVICE_GET_INI_FILE:
+		{
+			// we use this to store the pmp view settings in the cloud folder
+			// instead of cluttering up the root of the Plugins\ml folder
+			wchar_t name[256] = {0};
+			if (special_device == DEVICE_HSS)
+			{
+				lstrcpyn(name, local_device_token->string, MAX_PATH);
+			}
+			else if (special_device == DEVICE_DROPBOX)
+			{
+				lstrcpyn(name, L"dropbox", MAX_PATH);
+			}
+			else
+			{
+				if (special_device == DEVICE_LOCAL_LIBRARY)
+				{
+					lstrcpyn(name, L"local", MAX_PATH);
+				}
+				else
+				{
+					StringCchPrintf(name, MAX_PATH, L"device_%d", device_id);
+				}
+			}
+
+			// build this slow so we make sure each directory exists
+			PathCombine((wchar_t*)param2, WASABI_API_APP->path_getUserSettingsPath(), L"Cloud");
+			CreateDirectory((wchar_t*)param2, NULL);
+			PathAppend((wchar_t*)param2, L"views");
+			CreateDirectory((wchar_t*)param2, NULL);
+			wchar_t ini_filespec[MAX_PATH];
+			StringCchPrintf(ini_filespec, MAX_PATH, L"cloud_device_%s.ini", name);
+			PathAppend((wchar_t*)param2, ini_filespec);
+			return 1;
+		}
+		case DEVICE_GET_CONNECTION_TYPE:
+		{
+			const char **type = (const char **)param2;
+			*type = "cloud";
+			return 1;
+		}
+		case DEVICE_GET_DISPLAY_TYPE:
+		{
+			const char **display_type = (const char **)param2;
+
+			if (special_device == DEVICE_HSS)
+				*display_type = "Cloud Storage";
+			else if (special_device == DEVICE_DROPBOX)
+				*display_type = "Dropbox Storage";
+			else
+			{
+				if (special_device == DEVICE_LOCAL_LIBRARY)
+					*display_type = "Local Library Client";
+				else
+					*display_type = "Remote Cloud Client";
+			}
+			return 1;
+		}
+		case DEVICE_GET_MODEL:
+		{
+			if (special_device == DEVICE_LOCAL_LIBRARY)
+				WASABI_API_LNGSTRINGW_BUF(IDS_LOCAL_LIBRARY, (wchar_t*)param2, param3);
+			else if (device_name)
+				StringCchCopy((wchar_t*)param2, param3, device_name->string);		
+			else if (special_device == DEVICE_HSS)
+				StringCchCopy((wchar_t*)param2, param3, L"Winamp Cloud");
+			else if (special_device == DEVICE_DROPBOX)
+				StringCchCopy((wchar_t*)param2, param3, L"DropBox");
+			else
+				StringCchCopy((wchar_t*)param2, param3, attributes.device_token->string);
+			return 1;
+		}
+		case DEVICE_GET_ICON:
+			if (param2 <= 16 && param3 <= 16)
+			{
+				wchar_t *buffer = (wchar_t *)param4;
+				if (NULL != buffer && 
+					FALSE == FormatResProtocol(MAKEINTRESOURCE((special_device == DEVICE_HSS ? IDB_DEVICE_CLOUD :
+																(special_device == DEVICE_DROPBOX ? IDB_DEVICE_DROPBOX :
+																 (platform_type == PLATFORM_ANDROID ? IDB_DEVICE_ANDROID :
+																  (platform_type == PLATFORM_WINDOWS_LAPTOP ? IDB_DEVICE_LAPTOP_CLIENT :
+																   IDB_DEVICE_PC_CLIENT))))), RT_BITMAP, buffer, 260))
+				{
+					buffer[0] = L'\0';
+				}
+			}
+			return 1;
+
+		case DEVICE_VETO_ENCODER:
+		case DEVICE_VETO_TRANSCODING:
+			// TODO when we support transcoding then disable this as needed
+			return 1;
+
+		case DEVICE_GET_PREFS_PARENT:
+			{
+				if (cloud_hinst && cloud_hinst != (HINSTANCE)1)
+				{
+					winampMediaLibraryPlugin *(*gp)();
+					gp = (winampMediaLibraryPlugin * (__cdecl *)(void))GetProcAddress(cloud_hinst, "winampGetMediaLibraryPlugin");
+					if (!gp)
+					{
+						return 0;
+					}
+					winampMediaLibraryPlugin *mlplugin = gp();
+					if (!mlplugin || (mlplugin->version != MLHDR_VER && mlplugin->version != MLHDR_VER_OLD))
+					{
+						return 0;
+					}
+					else
+					{
+						return mlplugin->MessageProc(0x402, 0, 0, 0);
+					}
+				}
+			}
+			return 0;
+		case DEVICE_GET_NODE_ICON_ID:
+		{
+			int icon_id = 103;
+			if (special_device == DEVICE_HSS)
+			{
+				icon_id = 101;
+			}
+			else if (special_device == DEVICE_DROPBOX)
+			{
+				icon_id = 102;
+			}
+			else if (special_device == DEVICE_CLIENT)
+			{
+				if (platform_type == PLATFORM_ANDROID)
+				{
+					icon_id = 104;
+				}
+				else if (platform_type == PLATFORM_WINDOWS_LAPTOP)
+				{
+					icon_id = 106;
+				}
+			}
+			return icon_id;
+		}
+	}
+
+	return 0;
+}
+
+bool CloudDevice::copyToHardDriveSupported()
+{
+	// TODO: benski> revisit
+	/*if (special_device == DEVICE_HSS)
+		return true;
+	else*/
+		return false;	
+}
+
+__int64 CloudDevice::songSizeOnHardDrive(songid_t song)
+{
+	return CacheLookupIDMap(song, IDMAP_FILESIZE);
+}
+
+int CloudDevice::copyToHardDrive(songid_t song, // the song to copy
+								 wchar_t * path, // path to copy to, in the form "c:\directory\song". The directory will already be created, you must append ".mp3" or whatever to this string! (there is space for at least 10 new characters).
+								 void * callbackContext, //pass this to the callback
+								 void (*callbackFunc)(void * callbackContext, wchar_t * status),  // call this every so often so the GUI can be updated. Including when finished!
+								 int * killswitch) // if this gets set to anything other than zero, the transfer has been cancelled by the user
+{
+	if (!transfer_db_connection)
+	{
+		if (cloud_client->CreateDatabaseConnection(&transfer_db_connection) != NErr_Success)
+		{
+			wchar_t msg[256];
+			callback(callbackContext, WASABI_API_LNGSTRINGW_BUF(IDS_UNABLE_TO_OPEN_DB, msg, 256));
+			return -1;
+		}
+	}
+
+	ReferenceCountedNXString mime_type;
+
+	const char *ext=0;
+	if (transfer_db_connection->IDMap_GetMIME(song, &mime_type) == NErr_Success)
+		ext = GetExtensionForMIME(mime_type);
+
+	if (!ext)
+	{
+		// TODO: not sure what to tell the user here
+		return -1;
+	}
+
+	wchar_t destination[MAX_PATH];
+	StringCbPrintf(destination, sizeof(destination), L"%s.%S", path, ext);
+	wcscpy(path, destination); // i think ml_pmp wants this to be modified
+
+	this->context = callbackContext;
+	this->callback = callbackFunc;
+	this->killswitch = killswitch;
+
+	if (!upload_waiter)
+		upload_waiter = CreateEvent(0, FALSE, FALSE, 0);
+
+	ReferenceCountedNXURI filename;
+	NXURICreateWithUTF8(&filename, AutoChar(destination, CP_UTF8));
+	cloud_client->Download(filename, song, this);
+	WaitForSingleObject(upload_waiter, INFINITE);
+
+	// TODO: implement
+	// // -1 for failed/not supported. 0 for success.
+	return 0;
+} 
+
+// art functions
+void CloudDevice::setArt(songid_t songid, void *buf, int w, int h)
+{
+	// TODO:
+}
+
+pmpart_t CloudDevice::getArt(songid_t songid)
+{
+	// TODO: implement
+	return 0;
+}
+
+void CloudDevice::releaseArt(pmpart_t art)
+{
+	// TODO: implement
+}
+
+int CloudDevice::drawArt(pmpart_t art, HDC dc, int x, int y, int w, int h)
+{
+	// TODO: implement
+	return 0;
+}
+
+void CloudDevice::getArtNaturalSize(pmpart_t art, int *w, int *h)
+{
+	// TODO: implement
+}
+
+void CloudDevice::setArtNaturalSize(pmpart_t art, int w, int h)
+{
+	// TODO: implement
+}
+
+void CloudDevice::getArtData(pmpart_t art, void* data)
+{
+	// data ARGB32* is at natural size
+	// TODO: implement
+}
+
+bool CloudDevice::artIsEqual(pmpart_t a, pmpart_t b)
+{
+	// TODO: implement
+	return false;
+}
+
+int CloudDevice::CloudUploadCallback_OnProgress(uint64_t bytes, uint64_t total)
+{
+	int percent = MulDiv(100, (int)bytes, (int)total);
+	wchar_t msg[128] = {0}, buf[64] = {0};
+	StringCbPrintfW(msg, sizeof(msg), WASABI_API_LNGSTRINGW_BUF(IDS_UPLOADING, buf, 64), percent);
+	if (context) callback(context, msg);
+	if (this->killswitch && *this->killswitch)
+	{
+		if (upload_waiter)
+		{
+			SetEvent(upload_waiter);
+			CloseHandle(upload_waiter);
+		}
+	}
+	return (this->killswitch && *this->killswitch);
+}
+
+void CloudDevice::CloudUploadCallback_OnFinished(int ret)
+{
+	wchar_t msg[128] = {0};
+
+	if (ret == NErr_Success)
+	{
+		if (context) callback(context, WASABI_API_LNGSTRINGW_BUF(IDS_UPLOADED, msg, 128));
+	}
+	else
+	{
+		wchar_t temp[128] = {0};
+		switch (ret)
+		{
+			case NErr_Unknown:
+				swprintf(temp, 128, WASABI_API_LNGSTRINGW_BUF(IDS_FAILED_MISSING_CLOUD_ID, msg, 128), ret);
+				break;
+			case NErr_ConnectionFailed:
+				swprintf(temp, 128, WASABI_API_LNGSTRINGW_BUF(IDS_FAILED_SERVER_CONNECTION, msg, 128));
+				break;
+			case NErr_Unauthorized:
+				swprintf(temp, 128, WASABI_API_LNGSTRINGW_BUF(IDS_FAILED_LOGIN_DETAILS, msg, 128), ret);
+				break;
+			case NErr_Aborted:
+				WASABI_API_LNGSTRINGW_BUF(IDS_UPLOAD_CANCELLED, temp, 128);
+				break;
+			default:
+				swprintf(temp, 128, WASABI_API_LNGSTRINGW_BUF(IDS_FAILED_X, msg, 128), ret);
+				break;
+		}
+		if (context) callback(context, temp);
+	}
+	SetEvent(upload_waiter);
+}
+
+void CloudDevice::CloudUploadCallback_OnError(nx_string_t action, nx_string_t code, nx_string_t message, nx_string_t field)
+{
+	wchar_t temp[512] = {0};
+	if (field && field->len)
+	{
+		StringCchPrintf(temp, ARRAYSIZE(temp), WASABI_API_LNGSTRINGW(IDS_UPLOAD_FAILED_FULL), code->string, message->string, field->string);
+	}
+	else
+	{
+		if (code && code->len)
+		{
+			StringCchPrintf(temp, ARRAYSIZE(temp), WASABI_API_LNGSTRINGW(IDS_UPLOAD_FAILED_REDUCED), code->string, message->string);
+		}
+		else
+		{
+			StringCchPrintf(temp, ARRAYSIZE(temp), WASABI_API_LNGSTRINGW(IDS_UPLOAD_FAILED_SLIM), message->string);
+		}
+	}
+	if (context) callback(context, temp);
+}
+
+int CloudDevice::CloudUploadCallback_IsKilled()
+{
+	return (this->killswitch ? *this->killswitch : 0);
+}

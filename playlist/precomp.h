@@ -1,0 +1,9 @@
+#pragma once
+#include "main.h"
+#include "api.h"
+#include "Playlists.h"
+#include "ScriptObjectFactory.h"
+#include "JSAPI2_Creator.h"
+#include "../Winamp/JSAPI.h"
+#include <bfc/std.h>
+#include <bfc/string/stringw.h>

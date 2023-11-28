@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8C01C561-FC21-4380-B879-ABA8929E49C6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>file</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.w6c</TargetExt>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.w6c</TargetExt>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FILE_EXPORTS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy "$(TargetPath)" "$(ProgramFiles)\Replicant\$(TargetName)$(TargetExt)"</Command>
+      <Outputs>$(ProgramFiles)\Replicant\$(TargetName)$(TargetExt)</Outputs>
+      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FILE_EXPORTS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy "$(TargetPath)" "$(ProgramFiles)\Replicant\$(TargetName)$(TargetExt)"</Command>
+      <Outputs>$(ProgramFiles)\Replicant\$(TargetName)$(TargetExt)</Outputs>
+      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="FileDecoder.cpp" />
+    <ClCompile Include="FileMetadata.cpp" />
+    <ClCompile Include="FileMetadataRead.cpp" />
+    <ClCompile Include="FileMetadataService.cpp" />
+    <ClCompile Include="FileMetadataWrite.cpp" />
+    <ClCompile Include="FilePlayback.cpp" />
+    <ClCompile Include="FileRawReader.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileDecoder.h" />
+    <ClInclude Include="FileMetadata.h" />
+    <ClInclude Include="FilePlayback.h" />
+    <ClInclude Include="FileRawReader.h" />
+    <ClInclude Include="ifc_filemetadata_editor.h" />
+    <ClInclude Include="ifc_fileplayback.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="svc_filedecode.h" />
+    <ClInclude Include="svc_filemetadata.h" />
+    <ClInclude Include="svc_fileplayback.h" />
+    <ClInclude Include="svc_filerawreader.h" />
+    <ClInclude Include="svc_file_raw_media_reader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nsapev2\nsapev2.vcxproj">
+      <Project>{b1a36ad2-d17f-467e-a93f-8b75ce0db156}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nsid3v1\nsid3v1.vcxproj">
+      <Project>{277dbdac-60e0-4aec-94d3-60aea006a327}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nsid3v2\nsid3v2.vcxproj">
+      <Project>{e049b5ce-b462-41aa-85db-0b8b28de5aa0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nswasabi\nswasabi.vcxproj">
+      <Project>{480502a0-71da-4bf0-bf99-2720d69a526b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nu\nu.vcxproj">
+      <Project>{f1f5cd60-0d5b-4cea-9eeb-2f87ff9aa915}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nx\nx.vcxproj">
+      <Project>{2851cf33-337d-44d9-ba6d-30547b1cdef0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\zlib\zlib.vcxproj">
+      <Project>{b33ae14a-c8ec-46e0-803b-4587c8c4897f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

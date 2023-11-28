@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "faac_ifc", "faac_ifc.vcproj", "{27B8DCA3-752C-440A-9A56-E9FFE923373D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{27B8DCA3-752C-440A-9A56-E9FFE923373D}.Debug.ActiveCfg = Debug|Win32
+		{27B8DCA3-752C-440A-9A56-E9FFE923373D}.Debug.Build.0 = Debug|Win32
+		{27B8DCA3-752C-440A-9A56-E9FFE923373D}.Release.ActiveCfg = Release|Win32
+		{27B8DCA3-752C-440A-9A56-E9FFE923373D}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

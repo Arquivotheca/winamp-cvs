@@ -1,0 +1,179 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTH DIALOGEX 0, 0, 213, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Login"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "E-mail or Screen Name",IDC_STATIC,7,20,79,14,SS_CENTERIMAGE,WS_EX_RIGHT
+    LTEXT           "Password",IDC_STATIC,54,54,32,14,SS_CENTERIMAGE,WS_EX_RIGHT
+    LTEXT           "SecurID",IDC_STATIC_SECURID,96,86,26,14,SS_CENTERIMAGE | NOT WS_VISIBLE
+    EDITTEXT        IDC_USERNAME,97,20,108,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,98,54,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_SECURID,134,86,71,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    CONTROL         "",IDC_AGREE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,83,119,16,8
+    DEFPUSHBUTTON   "Login",IDC_LOGIN,97,132,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,155,132,50,14
+    LTEXT           "",IDC_STATUS,81,104,125,8,0,WS_EX_RIGHT
+    CONTROL         "Create Account",IDC_CREATE_ACCOUNT,"NullsoftCommandLink",WS_TABSTOP | 0x18,97,36,108,14
+    CONTROL         "Forgot Password",IDC_FORGOT_PASSWORD,
+                    "NullsoftCommandLink",WS_TABSTOP | 0x18,98,70,108,14
+    CONTROL         "I agree that these terms apply",IDC_TOS,
+                    "NullsoftCommandLink",WS_TABSTOP | 0x18,98,119,108,8
+    LTEXT           "Login with your winamp.com account or an AOL/AIM account.",IDC_STATIC,6,4,200,8
+END
+
+IDD_PREFS DIALOGEX 0, 0, 272, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Sign In",IDC_STATIC,0,2,271,40
+    LTEXT           "Status:",IDC_STATIC,9,16,24,14,SS_CENTERIMAGE
+    CONTROL         "",IDC_LOGIN_STATUS,"Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,38,16,164,14
+    PUSHBUTTON      "Login",IDC_LOGIN,212,10,50,14
+    CONTROL         "Create Account",IDC_CREATE_ACCOUNT,"NullsoftCommandLink",WS_TABSTOP | 0x18,208,24,58,14
+    GROUPBOX        "Orgler",IDC_STATIC,0,43,271,203
+    CONTROL         "Share what I’m currently listening to with AOL Music",IDC_AVTRACK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,57,181,10
+    CONTROL         "Collect (orgle) your Winamp playback.",IDC_COLLECT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,74,137,10
+    CONTROL         "Privacy Setting",IDC_MANAGE_PROFILE,"NullsoftCommandLink",WS_TABSTOP | 0x18,211,71,50,14
+    CONTROL         "Collect all tracks.",IDC_COLLECT_ALL,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,85,70,10
+    CONTROL         "Only collect tracks that are in your Media Library.",IDC_COLLECT_MEDIA_LIBRARY,
+                    "Button",BS_AUTORADIOBUTTON,16,95,173,10
+    CONTROL         "Only collect tracks that are in these directories:",IDC_COLLECT_DIRECTORIES,
+                    "Button",BS_AUTORADIOBUTTON,16,106,167,10
+    CONTROL         "",IDC_DIRECTORIES,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,118,254,62
+    PUSHBUTTON      "Add",IDC_ADD,95,182,50,14
+    PUSHBUTTON      "Edit",IDC_EDIT,153,182,50,14
+    PUSHBUTTON      "Remove",IDC_REMOVE,211,182,50,14
+    CONTROL         "Only collect audio tracks (ignore video).",IDC_VIDEO,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,199,143,10
+    CONTROL         "Collect usage when playback reaches:",IDC_CHECK_SONGLENGTH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,210,138,10
+    CONTROL         "",IDC_SONGLENGTH,"msctls_trackbar32",TBS_NOTICKS | WS_TABSTOP,8,220,253,15
+    LTEXT           "Half of song",IDC_STATIC4,8,235,40,8
+    LTEXT           "Whole Song",IDC_STATIC5,222,235,39,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PREFS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    65535                   "{0233DC7B-7060-43e5-8354-D2F2C7C7611D}"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PLUGIN_NAME         "Nullsoft Music Usage Database"
+    IDS_PREFERENCE_NAME     "Sign In - Orgler"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_ENABLE         "Enable"
+    IDS_MENU_OPTIONS        "Options"
+    IDS_MENU_LOGIN          "Login"
+    IDS_MENU_ORGLER         "Orgler"
+    IDS_MENU_LOGOUT         "Logout"
+    IDS_STATUS_LOGGEDIN_TEMPLATE "Logged in as %s."
+    IDS_STATUS_NOTLOGGEDIN  "Not logged in."
+    IDS_STATUS_EXPIRING     "Login expires soon, please reauthenticate."
+    IDS_STATUS_EXPIRED      "Login credentials expired."
+    IDS_BROWSEFOLDER_TITLE  "Choose a directory"
+    IDS_MESSAGE_ENABLEORGLING 
+                            "You have logged in, but orgling is not enabled, would you like to enable it now?"
+    IDS_MESSAGE_ENABLEORGLING_TITLE "Winamp Orgler"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

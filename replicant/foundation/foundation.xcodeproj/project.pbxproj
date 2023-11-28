@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0088424E150716D200625F51 /* foundation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0088424F150716D200625F51 /* Build configuration list for PBXAggregateTarget "foundation" */;
+			buildPhases = (
+				00884252150716E200625F51 /* CopyFiles */,
+				00DC12C41507197C007F9D73 /* CopyFiles */,
+				00DC12C51507198F007F9D73 /* CopyFiles */,
+				002FD3831518F24200857D4F /* Install Public Headers */,
+			);
+			dependencies = (
+				002FD38E15197ADB00857D4F /* PBXTargetDependency */,
+			);
+			name = foundation;
+			productName = foundation1;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00B732B2151A622200A8251C /* foundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00B732B0151A620700A8251C /* foundation.h */; };
+		00DC12B715071763007F9D73 /* align.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5314B61B3700E813FC /* align.h */; };
+		00DC12B815071763007F9D73 /* atomics.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5414B61B3700E813FC /* atomics.h */; };
+		00DC12B915071763007F9D73 /* dispatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5514B61B3700E813FC /* dispatch.h */; };
+		00DC12BA15071763007F9D73 /* endian.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5614B61B3700E813FC /* endian.h */; };
+		00DC12BB15071763007F9D73 /* error.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5714B61B3700E813FC /* error.h */; };
+		00DC12BC15071763007F9D73 /* export.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5814B61B3700E813FC /* export.h */; };
+		00DC12BD15071763007F9D73 /* guid.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5914B61B3700E813FC /* guid.h */; };
+		00DC12BE15071763007F9D73 /* mkncc.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5A14B61B3700E813FC /* mkncc.h */; };
+		00DC12BF1507194B007F9D73 /* types.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5B14B61B3700E813FC /* types.h */; };
+		00DC12C6150719A5007F9D73 /* atomics.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5C14B61B4100E813FC /* atomics.h */; };
+		00DC12C7150719A5007F9D73 /* types.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5D14B61B4100E813FC /* types.h */; };
+		00DC12C8150719B3007F9D73 /* atomics.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5E14B61B4A00E813FC /* atomics.h */; };
+		00DC12C9150719B3007F9D73 /* types.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD7FC5F14B61B4A00E813FC /* types.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		002FD38D15197ADB00857D4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CD7FC4714B61B0500E813FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 002FD3891518F85800857D4F;
+			remoteInfo = "foundation-cleanup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00884252150716E200625F51 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				00B732B2151A622200A8251C /* foundation.h in CopyFiles */,
+				00DC12B715071763007F9D73 /* align.h in CopyFiles */,
+				00DC12B815071763007F9D73 /* atomics.h in CopyFiles */,
+				00DC12B915071763007F9D73 /* dispatch.h in CopyFiles */,
+				00DC12BA15071763007F9D73 /* endian.h in CopyFiles */,
+				00DC12BB15071763007F9D73 /* error.h in CopyFiles */,
+				00DC12BC15071763007F9D73 /* export.h in CopyFiles */,
+				00DC12BD15071763007F9D73 /* guid.h in CopyFiles */,
+				00DC12BE15071763007F9D73 /* mkncc.h in CopyFiles */,
+				00DC12BF1507194B007F9D73 /* types.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DC12C41507197C007F9D73 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH_X86)";
+			dstSubfolderSpec = 16;
+			files = (
+				00DC12C6150719A5007F9D73 /* atomics.h in CopyFiles */,
+				00DC12C7150719A5007F9D73 /* types.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DC12C51507198F007F9D73 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH_AMD64)";
+			dstSubfolderSpec = 16;
+			files = (
+				00DC12C8150719B3007F9D73 /* atomics.h in CopyFiles */,
+				00DC12C9150719B3007F9D73 /* types.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00B732B0151A620700A8251C /* foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = foundation.h; sourceTree = "<group>"; };
+		0CD7FC5314B61B3700E813FC /* align.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = align.h; sourceTree = "<group>"; };
+		0CD7FC5414B61B3700E813FC /* atomics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = atomics.h; sourceTree = "<group>"; };
+		0CD7FC5514B61B3700E813FC /* dispatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dispatch.h; sourceTree = "<group>"; };
+		0CD7FC5614B61B3700E813FC /* endian.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
+		0CD7FC5714B61B3700E813FC /* error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
+		0CD7FC5814B61B3700E813FC /* export.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = export.h; sourceTree = "<group>"; };
+		0CD7FC5914B61B3700E813FC /* guid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = guid.h; sourceTree = "<group>"; };
+		0CD7FC5A14B61B3700E813FC /* mkncc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mkncc.h; sourceTree = "<group>"; };
+		0CD7FC5B14B61B3700E813FC /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		0CD7FC5C14B61B4100E813FC /* atomics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = atomics.h; path = "osx-x86/atomics.h"; sourceTree = "<group>"; };
+		0CD7FC5D14B61B4100E813FC /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = types.h; path = "osx-x86/types.h"; sourceTree = "<group>"; };
+		0CD7FC5E14B61B4A00E813FC /* atomics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = atomics.h; path = "osx-amd64/atomics.h"; sourceTree = "<group>"; };
+		0CD7FC5F14B61B4A00E813FC /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = types.h; path = "osx-amd64/types.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0CD7FC4514B61B0500E813FC = {
+			isa = PBXGroup;
+			children = (
+				0CD7FC5314B61B3700E813FC /* align.h */,
+				0CD7FC5414B61B3700E813FC /* atomics.h */,
+				0CD7FC5514B61B3700E813FC /* dispatch.h */,
+				0CD7FC5614B61B3700E813FC /* endian.h */,
+				0CD7FC5714B61B3700E813FC /* error.h */,
+				0CD7FC5814B61B3700E813FC /* export.h */,
+				00B732B0151A620700A8251C /* foundation.h */,
+				0CD7FC5914B61B3700E813FC /* guid.h */,
+				0CD7FC5A14B61B3700E813FC /* mkncc.h */,
+				0CD7FC5B14B61B3700E813FC /* types.h */,
+				0CD7FC5114B61B1D00E813FC /* amd64 */,
+				0CD7FC5214B61B2300E813FC /* x86 */,
+			);
+			sourceTree = "<group>";
+		};
+		0CD7FC5114B61B1D00E813FC /* amd64 */ = {
+			isa = PBXGroup;
+			children = (
+				0CD7FC5E14B61B4A00E813FC /* atomics.h */,
+				0CD7FC5F14B61B4A00E813FC /* types.h */,
+			);
+			name = amd64;
+			sourceTree = "<group>";
+		};
+		0CD7FC5214B61B2300E813FC /* x86 */ = {
+			isa = PBXGroup;
+			children = (
+				0CD7FC5C14B61B4100E813FC /* atomics.h */,
+				0CD7FC5D14B61B4100E813FC /* types.h */,
+			);
+			name = x86;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		002FD3891518F85800857D4F /* foundation-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(PUBLIC_HEADERS_DIR)\"";
+			buildConfigurationList = 002FD38A1518F85800857D4F /* Build configuration list for PBXLegacyTarget "foundation-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "foundation-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = cleanup;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		0CD7FC4714B61B0500E813FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 0CD7FC4A14B61B0500E813FC /* Build configuration list for PBXProject "foundation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0CD7FC4514B61B0500E813FC;
+			productRefGroup = 0CD7FC4514B61B0500E813FC;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0088424E150716D200625F51 /* foundation */,
+				002FD3891518F85800857D4F /* foundation-cleanup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		002FD3831518F24200857D4F /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		002FD38E15197ADB00857D4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 002FD3891518F85800857D4F /* foundation-cleanup */;
+			targetProxy = 002FD38D15197ADB00857D4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		002FD38B1518F85800857D4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		002FD38C1518F85800857D4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		00884250150716D200625F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Debug;
+		};
+		00884251150716D200625F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Release;
+		};
+		0CD7FC4C14B61B0600E813FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		0CD7FC4D14B61B0600E813FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		002FD38A1518F85800857D4F /* Build configuration list for PBXLegacyTarget "foundation-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002FD38B1518F85800857D4F /* Debug */,
+				002FD38C1518F85800857D4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0088424F150716D200625F51 /* Build configuration list for PBXAggregateTarget "foundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00884250150716D200625F51 /* Debug */,
+				00884251150716D200625F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CD7FC4A14B61B0500E813FC /* Build configuration list for PBXProject "foundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CD7FC4C14B61B0600E813FC /* Debug */,
+				0CD7FC4D14B61B0600E813FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CD7FC4714B61B0500E813FC /* Project object */;
+}

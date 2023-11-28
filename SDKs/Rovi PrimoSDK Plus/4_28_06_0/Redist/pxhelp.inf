@@ -1,0 +1,115 @@
+;/*++
+;
+;Copyright (c) 2006, Sonic Solutions.  All rights reserved.
+;
+;Module Name:
+;
+;    PXHELP.INF
+;
+;Abstract:
+;    INF file for installing Roxio PX Engine Kernel Driver
+;
+;--*/
+ 
+ 
+[Version] 
+Signature = "$Windows NT$" 
+Class=CDROM
+ClassGUID={4d36e965-e325-11ce-bfc1-08002be10318} 
+Provider=%Roxio% 
+CatalogFile.NTx86=Pxhlpx86.cat
+CatalogFile.NTamd64=Pxhlpa64.cat
+DriverVer= 02/02/2007, 3.0.56.0
+
+[DestinationDirs] 
+DefaultDestDir = 12
+
+[SourceDisksNames.x86]
+0=%Desc_x86%
+
+[SourceDisksNames.amd64]
+0=%Desc_amd64%
+
+[SourceDisksFiles.x86]
+pxhelp20.sys=0,, 
+
+[SourceDisksFiles.amd64]
+PxHlpa64.sys=0,, 
+
+[Manufacturer] 
+%ROXIOX86%=Roxio,NTx86
+%ROXIOX64%=Roxio,NTamd64
+
+[Roxio.NTx86]
+%PxHelpDesc%=PxHelp_Inst.NTx86,GenCdRom
+
+[Roxio.NTamd64]
+%PxHelpDesc%=PxHelp_Inst.NTamd64,GenCdRom
+
+[PxHelp_Inst.NTx86] 
+CopyFiles = PxHelp.Files.x86_12 
+AddReg = PxHelp.HW.AddReg.x86 
+
+[PxHelp_Inst.NTamd64] 
+CopyFiles = PxHelp.Files.amd64_12 
+AddReg = PxHelp.HW.AddReg.amd64 
+
+[PxHelp_Inst.NTx86.Services] 
+AddService = pxhelp20,0,PxHelp_Service_Instx86, 
+
+[PxHelp_Inst.NTamd64.Services] 
+AddService = pxhlpa64,0,PxHelp_Service_Instamd64, 
+
+[PxHelp_Service_Instx86] 
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_BOOT_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %12%\PXHELP20.SYS
+LoadOrderGroup = "Filter"
+
+[PxHelp_Service_Instamd64] 
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_BOOT_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %12%\PXHLPA64.SYS
+LoadOrderGroup = "Filter"
+
+[PxHelp.HW.AddReg.x86] 
+HKR,,"LowerFilters",0x00010008,"Pxhelp20"
+
+[PxHelp.HW.AddReg.amd64] 
+HKR,,"LowerFilters",0x00010008,"Pxhlpa64"
+
+[PxHelp.Files.x86_12] 
+pxhelp20.sys
+
+[PxHelp.Files.amd64_12]
+PxHlpa64.sys
+
+
+[Strings] 
+
+;  *******Localizable Strings******* 
+Roxio= "Roxio" 
+ROXIOX86="Roxio 32 bit"
+ROXIOX64="Roxio 64 bit"
+Desc_x86= "Roxio PX Engine 32 bit Kernel Driver" 
+Desc_amd64= "Roxio PX Engine 64 bit Kernel Driver" 
+PxHelpDesc= "Roxio PxHelp" 
+
+;  *******Non Localizable Strings******* 
+
+SERVICE_BOOT_START = 0x0 
+SERVICE_SYSTEM_START = 0x1 
+SERVICE_AUTO_START = 0x2 
+SERVICE_DEMAND_START = 0x3 
+SERVICE_DISABLED = 0x4 
+
+SERVICE_KERNEL_DRIVER = 0x1 
+SERVICE_ERROR_IGNORE = 0x0 
+SERVICE_ERROR_NORMAL = 0x1 
+SERVICE_ERROR_SEVERE = 0x2 
+SERVICE_ERROR_CRITICAL = 0x3 
+
+REG_EXPAND_SZ = 0x00020000 
+REG_DWORD = 0x00010001 

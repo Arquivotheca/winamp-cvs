@@ -1,0 +1,445 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DEBUG_CONSOLE DIALOGEX 0, 0, 272, 247
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB1,"SysTabControl32",WS_TABSTOP,0,0,271,246
+    COMBOBOX        IDC_DEV_MODE,200,0,70,49,CBS_DROPDOWNLIST | NOT WS_VISIBLE | WS_TABSTOP
+END
+
+IDD_STATUS_DIALOG DIALOGEX 0, 0, 278, 80
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Winamp Cloud"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "",IDC_STATUS_TEXT,7,6,264,34
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",0x0,7,43,264,12
+    CTEXT           "",IDC_STATUS_X_OF_X,7,63,210,10,NOT WS_VISIBLE
+    DEFPUSHBUTTON   "&Hide",IDCANCEL,221,61,50,14
+END
+
+IDD_DEBUG_CONSOLE2 DIALOGEX 0, 0, 260, 226
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Logging",IDC_STATIC,4,3,256,54
+    CONTROL         "Enable Logging",IDC_LOGGING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,16,64,10
+    CONTROL         "Keep only failed requests",IDC_LOGFAILEDONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,28,97,10
+    CONTROL         "Clear logs on plug-in start-up",IDC_LOGCLEARSTARTUP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,41,109,10
+    PUSHBUTTON      "Open Log Folder...",IDC_LOGFOLDER,176,13,76,14
+    PUSHBUTTON      "Clear Logs...",IDC_CLEAR_LOGS,176,37,76,14
+    GROUPBOX        "Messages",IDC_STATIC,4,60,256,165
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",NOT WS_VISIBLE,48,60,206,7
+    LTEXT           "Shows actions to and from the Cloud server, interactions with the local library including errors and actions needing attention.",IDC_STATIC,10,72,201,16
+    PUSHBUTTON      "Save...",IDC_SAVE_LOG,215,72,38,16
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_OWNERDATA | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,10,93,243,126
+    CONTROL         "Include binary portion of file uploads",IDC_LOGBINARY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,267,10,133,10
+END
+
+IDD_DEBUG_CONSOLE3 DIALOGEX 0, 0, 260, 226
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Playlists",IDC_EXCLUDED_COUNT,4,3,256,45
+    CONTROL         "Always add new Library playlists to the Cloud",IDC_ADD_PL_TO_CLOUD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,16,161,10
+    LTEXT           "When notified of a removal by another source:",IDC_STATIC,10,31,151,8
+    COMBOBOX        IDC_REMOVE_PL_MODE,165,29,89,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DEBUG_CONSOLE1 DIALOGEX 0, 0, 260, 226
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Cloud Account",IDC_CLOUD_ACCOUNT,4,3,256,28
+    LTEXT           "You are not currently logged in to your Cloud account. Click here to login.",IDC_NOT_LOGGED_IN,10,16,243,10,NOT WS_VISIBLE
+    CONTROL         "here",IDC_LOGIN_HERE,"Button",BS_OWNERDRAW | WS_TABSTOP,201,15,17,11
+    LTEXT           "You are currently logged in to your Cloud account. Click here to manage it.",IDC_LOGGED_IN,10,16,243,10,NOT WS_VISIBLE
+    CONTROL         "here",IDC_MANAGE_HERE,"Button",BS_OWNERDRAW | WS_TABSTOP,188,15,17,11
+    GROUPBOX        "Local Library",-1,4,34,256,75
+    LTEXT           "Enable this to show the 'Local Library' source which represents a copy of all files reported by this source to the Cloud. (This is disabled by default.)",-1,10,46,244,16
+    CONTROL         "Show 'Local Library' source",IDC_SHOW_LOCAL_DEVICE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,66,101,10
+    LTEXT           "Alter the name of the 'Local Library' source as seen on your other sources.",-1,10,79,243,10
+    LTEXT           "Name:",-1,10,93,22,8,SS_CENTERIMAGE,WS_EX_RIGHT
+    EDITTEXT        IDC_CURRENT_NAME,36,91,173,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Apply",IDC_SET_NAME,213,90,40,13,WS_DISABLED
+    GROUPBOX        "Rescan Local Library",-1,4,112,256,43
+    LTEXT           "This will rescan your local library for any changes like the adding or removing of files which have not been automatically recognized. This may take a while to run.",-1,10,123,179,26
+    PUSHBUTTON      "Rescan Local Library Now",IDC_RESCAN,193,123,60,26,BS_MULTILINE
+    GROUPBOX        "Reset Cloud Library",-1,4,158,256,50
+    LTEXT           "This will reset your Cloud library and all known sources back to that of a fresh install. This will also remove any files which have been uploaded to the Cloud Library or associated with other storage platforms e.g. Dropbox.",-1,10,169,179,34
+    PUSHBUTTON      "Reset Cloud Library...",IDC_RESET,193,169,60,32,BS_MULTILINE
+END
+
+IDD_DEBUG_CONSOLE4 DIALOGEX 0, 0, 260, 226
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Incompatible Files",IDC_EXCLUDED_COUNT,4,3,256,222
+    LTEXT           "These are all files which were attempted to be added to your Cloud library which are incompatible or cannot be processed. Select specific files to remove them or use 'Reset' to clear all.",IDC_STATIC,10,15,200,24
+    PUSHBUTTON      "Reset...",IDC_RESET_IGNORED,213,15,40,16,BS_CENTER | BS_VCENTER | WS_DISABLED
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_OWNERDATA | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,10,43,243,175
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_STATUS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_DEBUG_CONSOLE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+    END
+
+    IDD_DEBUG_CONSOLE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+    END
+
+    IDD_DEBUG_CONSOLE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+    END
+
+    IDD_DEBUG_CONSOLE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TREEITEM_CLOUD      BITMAP                  "resources\\ti_cloud_16x16x16.bmp"
+IDB_TREEITEM_SIGN_IN    BITMAP                  "resources\\ti_sign_in_16x16x16.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_CONTEXTMENUS MENU 
+BEGIN
+    POPUP "Navigation"
+    BEGIN
+        MENUITEM "Toggle &Status Window",       ID_NAVIGATION_TOGGLESTATUSWINDOW
+        MENUITEM "Show 'Local Library' Source", ID_NAVIGATION_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "&Preferences",                ID_NAVIGATION_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "&Terms",                      ID_SIGN_TOS
+        MENUITEM "&Help",                       ID_NAVIGATION_HELP
+    END
+    POPUP "Sign_in"
+    BEGIN
+        MENUITEM "&Account",                    ID_NAVIGATION_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "&Help",                       ID_NAVIGATION_HELP, INACTIVE
+        MENUITEM "&Terms",                      ID_SIGN_TOS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,85,0,0
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Nullsoft, Inc."
+            VALUE "FileDescription", "Winamp Media Library Plug-in"
+            VALUE "FileVersion", "0, 85, 0, 0"
+            VALUE "InternalName", "Nullsoft Cloud"
+            VALUE "LegalCopyright", "Copyright © 2012-2013 Nullsoft, Inc."
+            VALUE "LegalTrademarks", "Nullsoft and Winamp are trademarks of Nullsoft, Inc."
+            VALUE "OriginalFilename", "ml_cloud.dll"
+            VALUE "ProductName", "Winamp"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_NULLSOFT_CLOUD      "Nullsoft Cloud v%s"
+    65535                   "{0253CD84-4BB1-415b-B95B-B13EBD7EA6FD}"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CLOUD_SOURCES       "Cloud Library"
+    IDS_SIGN_IN             "Sign In"
+    IDS_CLOUD_RESET         "Cloud Reset"
+    IDS_RESET_SUCCEEDED     "Reset Succeeded\r\nWill start re-adding files shortly."
+    IDS_RESET_FAILED        "Reset Failed\r\nSee logs for more details."
+    IDS_ERROR_MESSAGE_ALL   "Error - Action: %s, Code: %s, Message: %s, Field: %s"
+    IDS_ERROR_MESSAGE_LESS  "Error - Action: %s, Code: %s, Message: %s"
+    IDS_ERROR_MESSAGE_SLIM  "Error - Action: %s, Message: %s"
+    IDS_REMOVE_ERROR_MESSAGE 
+                            "The source could not be removed.\n\nError Code: %s\nMessage: %s\nField: %s"
+    IDS_NOT_SPECIFIED       "not specified"
+    IDS_N_A                 "n/a"
+    IDS_DEVICE_REMOVAL      "Source Removal"
+    IDS_FIRST_PULL_COMPLETED "First Pull Completed"
+    IDS_CRITICAL_ERROR      "Critical Error Initializing - Missing Required Components"
+    IDS_INIT_DB             "Initializing Database"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CALCULATING_MEDIA_HASH "Calculating Media Hash: %s"
+    IDS_ANNOUNCE_METADATA   "Announcing Metadata"
+    IDS_CALUCATING_MEDIA_HASH_FAILED "Calculating Media Hash Failed: %d [%s]"
+    IDS_SET_IGNORE_FAILED   "Setting Ignore State Failed"
+    IDS_CALCULATING_MEDIA_HASH_FOR_FILES "Calculating Media Hash For %d Files"
+    IDS_PULLING             "Pulling"
+    IDS_WAITING_LOGIN       "Waiting for Login"
+    IDS_DEVICES_LIST        "Sources List"
+    IDS_FIRST_PULL          "First Pull..."
+    IDS_REFRESH_DEVICES_LIST "Refreshing Sources List"
+    IDS_STARTING_BG_THREAD  "Starting Background Thread"
+    IDS_METADATA_CHANGED    "Metadata Changed [%s]"
+    IDS_FROM_LIBRARY        "library"
+    IDS_EXTERNAL            "external"
+    IDS_IGNORE_METADATA_CHANGE "Ignoring Metadata Change [%s]"
+    IDS_ERROR_QUERYING_IGNORED "Unable to query ignored files"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CLOUD_IGNORED_FILES "Reset Ignored Files"
+    IDS_FILES_NOT_COMPATIBLE "Incompatible Files (%d)"
+    IDS_CLEARED_LOGS        "Cleared Logs"
+    IDS_ERROR_CLEARING_LOGS "Error Clearing Logs"
+    IDS_TIME                "Time"
+    IDS_MESSAGE             "Message"
+    IDS_CALUCATING_MEDIA_HASH_SKIPPED 
+                            "Calculating Media Hash Skipped: File Does Not Exist [%s]"
+    IDS_FILEPATH            "Filepath"
+    IDS_RESET_LIBRARY_MESSAGE 
+                            "This will clear your entire cloud library.\r\nAre you sure?"
+    IDS_UNABLE_DO_RESET     "Unable to initiate reset"
+    IDS_LOCAL_LIBRARY       "Local Library"
+    IDS_RESET               "Reset Requested"
+    IDS_RESET_IGNORED_FAILED "Reset Ignored Files Failed"
+    IDS_RESET_IGNORED_MESSAGE 
+                            "This will reset the ignored flag on any files which have been\nignored as shown in the list (if there are any applicable files).\n\nDo you want to rescan the library after this is completed?"
+    IDS_OPTIONS             "Options"
+    IDS_LOGGING             "Logging"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EXCLUSIONS          "Exclusions"
+    IDS_START_LOCAL_LIBRARY_RESCAN "Starting Local Library Rescan..."
+    IDS_UPDATING_LOCAL_DEVICE_NAME "Updating Local Source Name"
+    IDS_NO_FILES_INCOMPATIBLE "There are no files incompatible with the Cloud"
+    IDS_FILES_NOT_COMPATIBLE_LOADING "Incompatible Files (Loading...)"
+    IDS_ABORT_ADD_NEW_FILES "Aborting Adding New Files"
+    IDS_CHECKING_FOR_NEW_FILES "Checking For New Files"
+    IDS_SCANNING_DETECTED_X_FILES "Scanning %d Detected Files"
+    IDS_ADDING_X            "Adding %s"
+    IDS_FOUND_X_FILES_TO_PROCESS "Found %d Files To Process"
+    IDS_NO_NEW_FILES_FOUND  "No New Files Found"
+    IDS_CHECKING_FOR_MISSING_REMOVED_FILES 
+                            "Checking For Missing And Removed Files..."
+    IDS_FOUND_X_TO_REMOVE   "Found %d Files To Remove"
+    IDS_UPDATING_LOCAL_DEVICE "Updating Local Source Details"
+    IDS_RESTORE_STATUS_WINDOW 
+                            "Restore this by right-clicking the 'Cloud Sources' item in the Media Library window and selecting the 'Toggle Status Window' option."
+    IDS_REMOVE_FROM_DEVICE  "Remove From Cloud Source"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REMOVE_FROM_LOCAL_CLOUD_DEVICE 
+                            "Are you sure you want to remove this song from being seen as available from the 'Local Library' on your other Cloud sources?"
+    IDS_REMOVE_FROM_CLOUD_DEVICE 
+                            "Are you sure you want to remove this song from being seen as available from '%s' on your other Cloud sources?"
+    IDS_ADD_FAILED          "Add Failed [Code: %d] - %s"
+    IDS_ADD_TO_CLOUD_DEVICE "Add To Cloud Source"
+    IDS_UNABLE_DETERMINE_CLOUD_SOURCES 
+                            "Unable to determine related Cloud sources"
+    IDS_STATUS_NORMAL       "\nThe plug-in is running normally. There are no long running Cloud tasks in progress."
+    IDS_STATUS_FIRST_PULL   "Synchronizing with the Cloud server to ensure your Cloud Library is up to date.\n\nThis may take a while depending on the number of changes since you last ran this Winamp install or if it is the first-time and you have other clients on your account."
+    IDS_STATUS_SCANNING     "Scanning your local library for any files compatible for use with your Cloud Library.\n\nThis may take a while depending on the number of files and the speed of your PC."
+    IDS_STATUS_CALCULATING_MEDIA_HASH 
+                            "Processing newly added files so they can be used as part of your Cloud Library.\n\nThis may take a while depending on the number of files and the speed of your PC."
+    IDS_STATUS_PROCESSING_X_OF_X "Processing %d of %d [%d%%]"
+    IDS_FORCED_PULLING      "Forced Pull Starting Due To Revision Mis-Match"
+    IDS_FORCED_PULL_COMPLETED "Forced Pull Completed"
+    IDS_ALL_FILES           "All Files (*.*)|*.*||"
+    IDS_STATUS_WAITING_LOGIN 
+                            "\nWaiting for login to complete for your Cloud account.\nIf this does not change, goto to the 'Cloud Sources' node to login."
+    IDS_STATUS_NETWORK_FAILURE 
+                            "\nUnable to contact the Cloud server. Check you have Internet access.\nCloud features will run in a read-only mode until this issue is resolved."
+    IDS_CHECKING_FOR_MISSING_FILES_ONLY "Checking For Missing Files..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DEV_MODE            "--== Running In Dev Mode ==--"
+    IDS_INCOMPATIBLE_FILES  "Incompatible Files"
+    IDS_RESET_IGNORED_FILES "Resetting Ignored Files"
+    IDS_UNAUTHORIZED        "\nYour Cloud account is not currently authorized for use in this Winamp install.\nUse the 'Cloud Sources' node to login to your account to try to resolve this."
+    IDS_UNAUTHORIZED_LOG    "Account Not Authorized. Use Cloud Sources Node To Fix"
+    IDS_GETTING_USER_PROFILE "Getting User Profile Details"
+    IDS_CUSTOM_API_URL      "Using Custom API URL: %s"
+    IDS_CUSTOM_WEB_URL      "Using Custom Web URL: %s"
+    IDS_GETTING_PLAYLISTS   "Getting Playlist Updates"
+    IDS_REMOVE_PLAYLIST     "Removing Playlist: '%s'"
+    IDS_ADD_PLAYLIST        "Adding Playlist: '%s' [%d items]"
+    IDS_QA_MODE             "--== Running In QA Mode ==--"
+    IDS_STAGE_MODE          "--== Running in Stage Mode ==--"
+    IDS_ANNOUNCE_ALL_PLAYLISTS 
+                            "There are %d Library playlists not known to the Cloud. Would you like to make all of these playlists available in your Cloud account?\n\nIf you choose 'No', you can upload the playlist(s) later via the 'Send to' menu or by clicking on the Cloud column in the main 'Playlists' view."
+    IDS_ANNOUNCE_PARTIAL_PLAYLISTS 
+                            "There are %d out of the %d Library playlists not known to the Cloud. Would you like to make all of these playlists available in your Cloud account?\n\nIf you choose 'No', you can upload the playlist(s) later via the 'Send to' menu or by clicking on the Cloud column in the main 'Playlists' view."
+    IDS_ADD_PL_TO_CLOUD     "Add Library Playlists to the Cloud?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CLOUD_PL_REMOVAL    "The '%s' playlist has been removed from the Cloud.\nDo you also want to remove this from your local playlists?"
+    IDS_CLOUD_PL_REMOVAL_TITLE "Cloud Playlist Removal"
+    IDS_UPDATE_PLAYLIST     "Updating Playlist: '%s' [%d items]"
+    IDS_CALCULATING_ALBUMART_HASH "Calculating Album Art Hash: %s"
+    IDS_ANNOUNCE_ALBUMART   "Announcing Album Art"
+    IDS_STATUS_CALCULATING_ALBUMART_HASH 
+                            "Processing newly added files so they can be used as part of your Cloud Library.\n\nThis may take a while depending on the number of files and the speed of your PC."
+    IDS_PLAYLISTS           "Playlists"
+    IDS_ALREADY_ADDED       "Already Added [Matches Existing Item]: %s"
+    IDS_FINISHED_PL_UPDATES "Finished Getting Playlist Updates"
+    IDS_ALWAYS_PROMPT       "Always prompt"
+    IDS_KEEP_PLAYLIST       "Keep the playlist"
+    IDS_REMOVE_THE_PLAYLIST "Remove the playlist"
+    IDS_CLOUD_ACCOUNT       "Cloud Account"
+    IDS_CLOUD_ACCOUNT_USER  "Cloud Account (%s)"
+    IDS_ADD_SOURCE          "Add Source"
+    IDS_WINAMP_ACCOUNT      "Winamp Account"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_VIEW                "View"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

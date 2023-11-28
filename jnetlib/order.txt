@@ -1,0 +1,15 @@
+_DllMainCRTStartup@12
+??_7WA5_JNetLib@@6B@
+?_dispatch@WA5_JNetLib@@MAEHHPAXPAPAXH@Z
+malloc
+?RegisterServices@WA5_JNetLib@@QAEXPAVapi_service@@@Z
+?DeregisterServices@WA5_JNetLib@@QAEXPAVapi_service@@@Z
+
+??_7JNL_HTTPGetFactory@@6B@
+?_dispatch@JNL_HTTPGetFactory@@MAEHHPAXPAPAXH@Z
+??$cb@VJNL_HTTPGetFactory@@U_GUID@@@Dispatchable@@IAEXP8JNL_HTTPGetFactory@@AE?AU_GUID@@XZPAXPAPAX@Z
+??$cb@VJNL_HTTPGetFactory@@HHHH@Dispatchable@@IAEXP8JNL_HTTPGetFactory@@AEHHHH@ZPAXPAPAX@Z
+?GetGUID@JNL_HTTPGetFactory@@QAE?AU_GUID@@XZ 
+?GetInterface@JNL_HTTPGetFactory@@QAEPAXH@Z
+?ReleaseInterface@JNL_HTTPGetFactory@@QAEHPAX@Z
+?ServiceNotify@JNL_HTTPGetFactory@@QAEHHHH@Z

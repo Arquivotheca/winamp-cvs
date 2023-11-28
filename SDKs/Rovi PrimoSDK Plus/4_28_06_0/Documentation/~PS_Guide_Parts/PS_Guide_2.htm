@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>PrimoSDK Guide - Chapter 2</TITLE>
+<!-- PrimoSDK version 2 -->
+<!-- (c) Sonic Solutions. All Rights Reserved. -->
+<LINK REL=STYLESHEET TYPE="text/css" HREF="PS_Styles-MAIN.css">
+</HEAD>
+<BODY>
+<A ID="chapter"><IMG SRC="PS_Images/PS_Banner.jpg" WIDTH=520 HEIGHT=72></A>
+<P CLASS="IndentSans" ALIGN="Right">&#169; Sonic Solutions<SUP>&#153;</SUP>. All Rights Reserved.</P>
+<P CLASS="Heading1"><A ID="Requirements and Installation">2 &nbsp;Requirements and Installation</A></P>
+<P CLASS="IndentSerif">This chapter covers the technical requirements for using PrimoSDK, as well as PrimoSDK installation:</P>
+<UL CLASS="IndentSerif_List"><LI><A HREF="#PrimoSDK System Requirements">PrimoSDK System Requirements</A></LI>
+<LI><A HREF="#PrimoSDK Installation">PrimoSDK Installation</A></LI>
+<LI><A HREF="#Example Applications">Example Applications</A></LI>
+<LI><A HREF="#Updating Px Engine">Updating Px Engine</A></LI></UL>
+<HR SIZE=2 WIDTH="93%"><TABLE width="93%" align=center border=0><TBODY><col><col width=50><TR><TD CLASS="Heading2"><A ID="PrimoSDK System Requirements">2.1 &nbsp;PrimoSDK System Requirements</A></TD><TD class="IndentSansVisited">go: &nbsp;<A HRef="#chapter">top</A></TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif">A host system running PrimoSDK must meet the following requirements in order for the API libraries to function properly:</P>
+<TABLE ALIGN="center" WIDTH="95%" BORDER="1" CELLSPACING="0" CELLPADDING="5" CLASS="TableSans"><TBODY VALIGN="top">
+<TR><TD CLASS="TableSansHead">Operating System</TD>
+<TD>Windows 98SE, Windows NT 4 (Service Pack 4 or later), Windows Me, Windows 2000, Windows XP&#47;XP Media Center Edition, and Microsoft Vista</TD></TR>
+<TR><TD CLASS="TableSansHead">Processor</TD>
+<TD>300 MHz or faster Pentium II (or equivalent)</TD></TR>
+<TR><TD CLASS="TableSansHead">RAM</TD>
+<TD>128MB Minimum</TD></TR>
+<TR><TD CLASS="TableSansHead">Disk Space</TD>
+<TD>4MB for the PrimoSDK libraries </TD></TR></TBODY></TABLE>
+<HR SIZE=2 WIDTH="93%"><TABLE width="93%" align=center border=0><TBODY><col><col width=50><TR><TD CLASS="Heading2"><A ID="PrimoSDK Installation">2.2 &nbsp;PrimoSDK Installation</A></TD><TD class="IndentSansVisited">go: &nbsp;<A HRef="#chapter">top</A></TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif">The PrimoSDK API is contained in only one DLL (<SPAN CLASS="Courier_New_Inline">PrimoSDK.dll</SPAN>), which is called using the linking library <SPAN CLASS="Courier_New_Inline">PrimoSDK.lib </SPAN>and the include file <SPAN CLASS="Courier_New_Inline">PrimoSDK.h</SPAN>. When using Visual Basic, the programmer will need <SPAN CLASS="Courier_New_Inline">PrimoSDK.bas</SPAN>, which contains all the constants and function definitions.<BR>
+<BR>
+Because <SPAN CLASS="Courier_New_Inline">PrimoSDK.dll </SPAN>is a layer over the Px Engine, when you install an application that uses PrimoSDK, you also need to install all components required for successful operation of Px Engine. <SPAN CLASS="Courier_New_Inline">PrimoSDK.dll </SPAN>will not load if the Px Engine is not installed.<BR>
+<BR>
+Two distinct installation scenarios are covered below:</P>
+<UL CLASS="IndentSerif_List"><LI>Files installed for development environments</LI>
+<LI>Files installed for end-user environments</LI></UL>
+<P CLASS="IndentSerif"><B>Note for Vista:</B>  The default install options should allow for full Vista support without any special handling.  Customers wishing to override the default install options for Vista should carefully review sections 2.2.1 and 2.2.2.
+<HR noshade SIZE=1 WIDTH="93%"><TABLE width="93%" align=center border=0><TBODY><col><col width=110><TR><TD CLASS="Heading3"><A ID="Development Environment Install">2.2.1 &nbsp;Development Environment Install</A></TD><TD class="IndentSansVisited">go: &nbsp;<A HRef="#chapter">top</A> &nbsp; &nbsp;| &nbsp; &nbsp;<A HRef="#PrimoSDK Installation">section</A></TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif">Installation in a development environment involves installing all files required to run PrimoSDK itself (as if in an end-user setting) plus an additional set of files that are of use only to developers.</P>
+<P CLASS="SubHead_Sans12"><A ID="PrimoSDK components">PrimoSDK components</A></P>
+<P CLASS="IndentSerif">The following files should be placed in the same directory as the host application:</P>
+<TABLE ALIGN="center" WIDTH="95%" BORDER="1" CELLSPACING="0" CELLPADDING="5" CLASS="TableSans"><TBODY VALIGN="top">
+<TR CLASS="TableSansHead"><TD>Name</TD>
+<TD>Comments</TD></TR>
+<TR><TD>PrimoSDK.DLL<BR>
+or<BR>
+PXSDKPLS.DLL</TD>
+<TD>PrimoSDK<BR>
+<BR>
+PrimoSDKPlus</TD></TR>
+<TR><TD>VCD.DTA</TD>
+<TD>Template (used only for basic Video CDs) </TD></TR>
+<TR><TD>Pconfig.dcf</TD>
+<TD>Configuration file</TD></TR></TBODY></TABLE>
+<P CLASS="SubHead_Sans12"><A ID="Px Engine components">Px Engine components</A></P>
+<P CLASS="IndentSerif">The following files should be placed in a temporary directory:</P>
+<TABLE ALIGN="center" WIDTH="95%" BORDER="1" CELLSPACING="0" CELLPADDING="5" CLASS="TableSans"><TBODY VALIGN="top">
+<TR CLASS="TableSansHead"><TD>Name</TD>
+<TD>Comments</TD></TR>
+<TR><TD>PXSETUP.EXE</TD>
+<TD>PxEngine install application.  See below for usage.</TD></TR>
+<TR><TD COLSPAN=2><B>Mandatory files</B> (must be installed for all PrimoSDK applications):</TD></TR>
+<TR><TD>Pxhpinst.exe</TD>
+<TD>Executable needed by PxSetup.exe to install Px Engine</TD></TR>
+<TR><TD>PX.DLL</TD>
+<TD>Px Engine file</TD></TR>
+<TR><TD>PXMAS.DLL</TD>
+<TD>Px Engine file</TD></TR>
+<TR><TD>PXWAVE.DLL</TD>
+<TD>Px Engine file</TD></TR>
+<TR><TD>PXDRV.DLL</TD>
+<TD>Px Engine file</TD></TR>
+<TR><TD>PXAFS.DLL</TD>
+<TD>Px Engine file</TD></TR>
+<TR><TD>VXBLOCK.DLL</TD>
+<TD>Service DLL for unique drive access</TD></TR>
+<TR><TD>PXSFS.DLL</TD>
+<TD>Px Engine file</TD></TR>
+<TR><TD COLSPAN=2><B>Platform-specific files</B> (installation depends on the target environment; recommended procedure is to include all files and allow the setup application to determine the install requirements):</TD></TR>
+<TR><TD>Pxhelper.vxd</TD>
+<TD>Windows 95&#47;98&#47;Me driver (optional if Windows 95&#47;98&#47;Me or derivative is not a target platform)</TD></TR>
+<TR><TD>Pxhelper.sys</TD>
+<TD>Windows NT 4.0 driver (optional if Windows NT 4 is not a target platform)</TD></TR>
+<TR><TD>Pxhelper.inf</TD>
+<TD>Windows NT 4.0 driver information file (optional if Windows NT 4 is not a target platform)</TD></TR>
+<TR><TD>PXHELP20.SYS</TD>
+<TD>Windows 2000, Windows XP driver (optional if Windows 2000&#47;XP or derivative is not a target platform)</TD></TR>
+<TR><TD>PxCpyI64.exe</TD>
+<TD>Intel64 specific (optional if Intel64 is not a target platform)</TD></TR>
+<TR><TD>PxInsI64.exe</TD>
+<TD>Intel64 specific (optional if Intel64 is not a target platform)</TD></TR>
+<TR><TD>PxHelp64.sys</TD>
+<TD>Windows XP driver, Intel64 specific (optional if Windows XP for Itanium-based Systems is not a target)</TD></TR>
+<TR><TD>PxCpyA64.exe</TD>
+<TD>AMD64 specific (optional if AMD64 is not a target platform)</TD></TR>
+<TR><TD>PxInsA64.exe</TD>
+<TD>AMD64 specific (optional if AMD64 is not a target platform)</TD></TR>
+<TR><TD>PxHlpa64.sys</TD>
+<TD>Windows XP driver, AMD64 specific (optional if Windows XP x64 Edition is not a target)</TD></TR>
+<TR><TD>Cdr4_2k.sys</TD>
+<TD>Compatibility file for Windows 2000 (optional if Windows 2000 is not a target platform)</TD></TR>
+<TR><TD>Cdr4_xp.sys</TD>
+<TD>Compatibility file for Windows XP (optional if Windows XP is not a target platform)</TD></TR>
+<TR><TD>Cdr4xp.64</TD>
+<TD>Compatibility file for Windows XP x64 Edition (optional if Windows XP x64 Edition is not a target platform)</TD></TR>
+<TR><TD>Cdralw2k.sys</TD>
+<TD>Compatibility file for Windows 2000/XP (optional if Windows 2000 or Windows XP is not a target platform)</TD></TR>
+<TR><TD>Cdralw2k.64</TD>
+<TD>Compatibility file for Windows XP x64 Edition (optional if Windows XP x64 Edition is not a target platform)</TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif">After placing the files in the directories indicated above, run the provided setup application <SPAN CLASS="Courier_New_Inline">PXSETUP.EXE</SPAN>, which will return one of the following application error codes:</P>
+<TABLE ALIGN="center" WIDTH="95%" BORDER="1" CELLSPACING="0" CELLPADDING="5" CLASS="TableSans"><TBODY VALIGN="top">
+<TR CLASS="TableSansHead"><TD>Value</TD>
+<TD>Definition</TD></TR>
+<TR><TD>0</TD>
+<TD>Installation was successful.</TD></TR>
+<TR><TD>3010</TD>
+<TD>Installation was successful; restart needed.</TD></TR>
+<TR><TD>-1</TD>
+<TD>Installation failed.</TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif"><SPAN CLASS="Courier_New_Inline">PXSETUP.EXE</SPAN> accepts the following command-line parameters:</P>
+<TABLE ALIGN="center" WIDTH="95%" BORDER="1" CELLSPACING="0" CELLPADDING="5" CLASS="TableSans"><TBODY VALIGN="top">
+<TR CLASS="TableSansHead"><TD>Name</TD>
+<TD>Comments</TD></TR>
+<TR><TD>PXHELPONVISTA</TD>
+<TD>Installs PxHelp drivers on Vista (disabled by default)</TD></TR>
+<TR><TD>VIOLATEVISTALOGO</TD>
+<TD>Install PxEngine components to system directory on Vista</TD></TR>
+<TR><TD>STARTSERVICE</TD>
+<TD>Attempts to start the PxHELP service without a reboot.</TD></TR>
+<TR><TD>UNINSTALL</TD>
+<TD>Uninstall the engine.</TD></TR><TBODY></TABLE>
+<P CLASS="IndentSerif"><B>NOTE</B>: The Windows user account type must be set to &quot;Computer administrator&quot; when running <SPAN CLASS="Courier_New_Inline">PXSETUP.EXE</SPAN>.</P>
+<P CLASS="SubHead_Sans12"><A ID="Additional developer-only components">Additional developer-only components</A></P>
+<P CLASS="IndentSerif">The following files are used only in a development environment (not redistributed to end-users):</P>
+<TABLE ALIGN="center" WIDTH="95%" BORDER="1" CELLSPACING="0" CELLPADDING="5" CLASS="TableSans"><TBODY VALIGN="top">
+<TR CLASS="TableSansHead"><TD>Name</TD>
+<TD>Comments</TD></TR>
+<TR><TD>Block.h</TD>
+<TD>VxBlock header file</TD></TR>
+<TR><TD>PrimoSDK.bas</TD>
+<TD>Visual basic header file.</TD></TR>
+<TR><TD>PrimoSDK.h</TD>
+<TD>C or C++ header file.</TD></TR>
+<TR><TD>PrimoSDK.lib</TD>
+<TD>C import lib</TD></TR>
+<TR><TD>PxEngine*.exe</TD>
+<TD>Px Engine updater (&quot;*&quot; stands for version number)</TD></TR>
+<TR><TD>pxSample_C.exe</TD>
+<TD>Sample application</TD></TR>
+<TR><TD COLSPAN=2><B>Sample_C source:</B></TD></TR>
+<TR><TD>Functions.c</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>PxSample_C.c</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>PxSample_C.dsp</TD>
+<TD>VC 6.0 project file</TD></TR>
+<TR><TD>PxSample_C.dsw</TD>
+<TD>VC 6.0 workspace</TD></TR>
+<TR><TD>PxSample_C.h</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>PxSample_C.ico</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>PxSample_C.rc</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>Record.c</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>Resource.h</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>Save.c</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>Verify.c</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>Init.c</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>Misc.c</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD>Misc.h</TD>
+<TD>&nbsp;</TD></TR>
+<TR><TD COLSPAN=2><B>Sample_VB source:</B></TD></TR>
+<TR><TD>Sample_VB.frm</TD>
+<TD>VB Form file</TD></TR>
+<TR><TD>Sample_VB.frx</TD>
+<TD>VB Form Extension file</TD></TR>
+<TR><TD>Sample_VB.vbp</TD>
+<TD>Visual Basic Project file</TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif"><B><FONT COLOR="ff0000">!</FONT></B> <B>NOTE</B>: Do not use PxEngine.exe to install Px Engine (see <A HREF="#Updating Px Engine"><SPAN CLASS="Arial_Inline"><B>Updating Px Engine</B></SPAN></A>).</P>
+<HR noshade SIZE=1 WIDTH="93%"><TABLE width="93%" align=center border=0><TBODY><col><col width=110><TR><TD CLASS="Heading3"><A ID="End-user Install">2.2.2 &nbsp;End-user Install</A></TD><TD class="IndentSansVisited">go: &nbsp;<A HRef="#chapter">top</A> &nbsp; &nbsp;| &nbsp; &nbsp;<A HRef="#PrimoSDK Installation">section</A></TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif">PrimoSDK supports several different options for the installation of files required to run in an end-user setting. In all cases, the PrimoSDK-specific components are placed into the host application directory as outlined <A HREF="#PrimoSDK components"><SPAN CLASS="Arial_Inline"><B>PrimoSDK components</B></SPAN></A> above.<BR>
+<BR>
+Px Engine components may either be installed by following the installation procedures utilizing PXSETUP.EXE as outlined in <A HREF="#Px Engine components"><SPAN CLASS="Arial_Inline"><B>Px Engine components</B></SPAN></A> above or via the Microsoft Install Engine installer. The following files have been provided for use with Microsoft Install Engine:</P>
+<TABLE ALIGN="center" WIDTH="95%" BORDER="1" CELLSPACING="0" CELLPADDING="5" CLASS="TableSans"><TBODY VALIGN="top">
+<TR CLASS="TableSansHead"><TD>Name</TD>
+<TD>Comments</TD></TR>
+<TR><TD>bl.msm </TD>
+<TD>Installs VxBlock.dll.</TD></TR>
+<TR><TD>phsi.msm</TD>
+<TD>Installs PxHelp transport driver.</TD></TR>
+<TR><TD>px.msm</TD>
+<TD>Installs Px Engine DLL files.</TD></TR>
+<TR><TD>pxdrv.msm</TD>
+<TD>Installs PxDrv.dll.</TD></TR>
+<TR><TD>pxsfs.msm</TD>
+<TD>Installs Pxsfs.dll.</TD></TR>
+<TR><TD COLSPAN=2><B>Optional files</B>:</TD></TR>
+<TR><TD>pxafs.msm</TD>
+<TD>Installs Pxafs.dll.  Required if any Audio WSC APIs are used.</TD></TR>
+<TR><TD>ph.msm</TD>
+<TD>Should be used as a <u>replacement</u> for phsi when PxHelp transport driver is required on Vista.</TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif">The usage of these Microsoft Install Engine files depends on how Px Engine is to be installed:</P>
+<UL CLASS="IndentSerif_List"><LI>The merge module files are used when installation of Px Engine is to be incorporated into a Microsoft Install Engine installation for the host application (the preferred installation approach). The inclusion of all necessary files in the host application&#39;s installer package (<SPAN CLASS="Courier_New_Inline">.msi</SPAN>) file will enable full install, uninstall, and repair of Px Engine.</LI>
+<LI>Customers must use <u>either</u> phsi.msm <u>or</u> ph.msm.  Installers utilizing phsi.msm will put the PxHelp transport driver on all Windows operating systems except Vista (where it is optional).  Users that require PxHelp on Vista, should use ph.msm instead of phsi.msm.</LI></UL>
+<P CLASS="IndentSerif"><B>NOTE</B>: For further information on building MSI files, see <A HREF="http:&#47;&#47;msdn.microsoft.com&#47;library&#47;default.asp?url=&#47;library&#47;en-us&#47;vsinstal&#47;html&#47;veovrusingvisualstudioinstaller.asp">http:&#47;&#47;msdn.microsoft.com&#47;library&#47;default.asp?url=&#47;library&#47;en-us&#47;vsinstal&#47;html&#47;veovrusingvisualstudioinstaller.asp</A>.</P>
+<HR noshade SIZE=1 WIDTH="93%"><TABLE width="93%" align=center border=0><TBODY><col><col width=110><TR><TD CLASS="Heading3"><A ID="Px Engine Uninstall">2.2.3 &nbsp;Px Engine Uninstall</A></TD><TD class="IndentSansVisited">go: &nbsp;<A HRef="#chapter">top</A> &nbsp; &nbsp;| &nbsp; &nbsp;<A HRef="#PrimoSDK Installation">section</A></TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif">After installation, a copy of <SPAN CLASS="Courier_New_Inline">PXSETUP.EXE </SPAN>should be kept in the application folder to run an uninstall if needed. Px Engine is uninstalled by launching <SPAN CLASS="Courier_New_Inline">PXSETUP.EXE </SPAN>with the &quot;&#47;<SPAN CLASS="Courier_New_Inline">UNINSTALL</SPAN>&quot; parameter.</P>
+<HR SIZE=2 WIDTH="93%"><TABLE width="93%" align=center border=0><TBODY><col><col width=50><TR><TD CLASS="Heading2"><A ID="Example Applications">2.3 &nbsp;Example Applications</A></TD><TD class="IndentSansVisited">go: &nbsp;<A HRef="#chapter">top</A></TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif">PrimoSDK includes an example application in C (&quot;<SPAN CLASS="Courier_New_Inline">pxSample_C.exe</SPAN>&quot;) that may be used to explore the capabilities of PrimoSDK. The application gives working examples of the usage of PrimoSDK calls, and comes with complete source code to aid understanding of how to perform the most common functions, including making copies, mastering data and audio discs, and creating and recording Global Images.<BR>
+<BR>
+Also included is a Sample_VB directory containing everything needed to create a Visual Basic application (Sample_VB) that is similar to pxSample_C (though without as many features).</P>
+<HR SIZE=2 WIDTH="93%"><TABLE width="93%" align=center border=0><TBODY><col><col width=50><TR><TD CLASS="Heading2"><A ID="Updating Px Engine">2.4 &nbsp;Updating Px Engine</A></TD><TD class="IndentSansVisited">go: &nbsp;<A HRef="#chapter">top</A></TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif">Px Engine is a common component that may be updated to provide currently-installed products with bug fixes or support for new drives. For information on obtaining a free update to the latest Px Engine version, please ask your Sonic representative.<BR>
+<BR>
+When updates are available, they are distributed in a <SPAN CLASS="Courier_New_Inline">PxEngine*.exe </SPAN>file (with &quot;*&quot; indicating version number). <SPAN CLASS="Courier_New_Inline">PxEngine*.exe </SPAN>is a combination installer&#47;self extracting zip file that installs all of the files that are listed in <A HREF="#Px Engine components"><SPAN CLASS="Arial_Inline"><B>Px Engine components</B></SPAN></A> above as being installed with <SPAN CLASS="Courier_New_Inline">PXSETUP.EXE</SPAN>. However, <SPAN CLASS="Courier_New_Inline">PxEngine.exe </SPAN>does not install the PrimoSDK files that reside in the host application directory (e.g. <SPAN CLASS="Courier_New_Inline">PrimoSDK.DLL </SPAN>and <SPAN CLASS="Courier_New_Inline">Pconfig.dcf</SPAN>), and it is not intended as an alternative to the installation process described in <A HREF="#PrimoSDK Installation"><SPAN CLASS="Arial_Inline"><B>PrimoSDK Installation</B></SPAN></A> above.<BR>
+ <BR>
+To update Px Engine, copy the <SPAN CLASS="Courier_New_Inline">PxEngine*.exe </SPAN>file from which you are updating into a temporary folder, then spawn it with the parameter &quot;&#47;H&quot;, which forces a silent installation. The operation will return one of the following application error codes:</P>
+<TABLE ALIGN="center" WIDTH="95%" BORDER="1" CELLSPACING="0" CELLPADDING="5" CLASS="TableSans"><TBODY VALIGN="top">
+<TR CLASS="TableSansHead"><TD>Value</TD>
+<TD>Definition</TD></TR>
+<TR><TD>0</TD>
+<TD>Installation was successful.</TD></TR>
+<TR><TD>3010</TD>
+<TD>Installation was successful; restart needed.</TD></TR>
+<TR><TD>-1</TD>
+<TD>Installation failed.</TD></TR></TBODY></TABLE>
+<P CLASS="IndentSerif"><B>NOTES</B>:<BR>
+<B>&#187;</B> The Windows user account type must be set to &quot;Computer administrator&quot; when running <SPAN CLASS="Courier_New_Inline">PxEngine*.exe</SPAN>.<BR>
+<B>&#187;</B> Because Px Engine is a common component, it may also be updated by other applications such as Sonic RecordNow.<BR>
+<P CLASS="IndentSans"><A HRef= "#chapter">Top</A></P>
+</BODY>
+</HTML>

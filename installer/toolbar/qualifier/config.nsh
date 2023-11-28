@@ -1,0 +1,9 @@
+﻿!ifndef NULLSOFT_WINAMP_TOOLBAR_QUALIFIER_CONFIG_HEADER
+!define NULLSOFT_WINAMP_TOOLBAR_QUALIFIER_CONFIG_HEADER
+	
+	!define TOOLBAR_QUALIFIER_OUTPUT_FILE		"toolbar_qualifier.exe"
+	
+	!define TOOLBAR_QUALIFIER_UI_PATH			"..\..\shared\ui\miniui\miniui.exe"
+	!define TOOLBAR_QUALIFIER_ICON_PATH		"..\..\shared\icons\install.ico"
+		
+!endif ; NULLSOFT_WINAMP_TOOLBAR_QUALIFIER_CONFIG_HEADER

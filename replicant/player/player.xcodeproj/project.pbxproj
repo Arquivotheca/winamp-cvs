@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		00DC131F1507235E007F9D73 /* player */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00DC13201507235E007F9D73 /* Build configuration list for PBXAggregateTarget "player" */;
+			buildPhases = (
+				00DC13231507237F007F9D73 /* CopyFiles */,
+				00B7337D151B66BA00A8251C /* Install Public Headers */,
+			);
+			dependencies = (
+				00B73383151B673B00A8251C /* PBXTargetDependency */,
+			);
+			name = player;
+			productName = player;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00DC13241507238E007F9D73 /* cb_playerevents.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FC11505490700625F51 /* cb_playerevents.h */; };
+		00DC13251507238E007F9D73 /* ifc_output.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FC21505490700625F51 /* ifc_output.h */; };
+		00DC13261507238E007F9D73 /* ifc_playback_parameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FC31505490700625F51 /* ifc_playback_parameters.h */; };
+		00DC13271507238E007F9D73 /* ifc_playback.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FC41505490700625F51 /* ifc_playback.h */; };
+		00DC13281507238E007F9D73 /* ifc_player.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FC51505490700625F51 /* ifc_player.h */; };
+		00DC13291507238E007F9D73 /* ifc_transport.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FC61505490700625F51 /* ifc_transport.h */; };
+		00DC132A1507238E007F9D73 /* svc_output.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FC71505490700625F51 /* svc_output.h */; };
+		00DC132B1507238E007F9D73 /* svc_playback.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FC81505490700625F51 /* svc_playback.h */; };
+		00DC132C1507238E007F9D73 /* types.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FC91505490700625F51 /* types.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00B73382151B673B00A8251C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00883FAB150548B300625F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B7337E151B670500A8251C;
+			remoteInfo = "player-cleanup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00DC13231507237F007F9D73 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				00DC13241507238E007F9D73 /* cb_playerevents.h in CopyFiles */,
+				00DC13251507238E007F9D73 /* ifc_output.h in CopyFiles */,
+				00DC13261507238E007F9D73 /* ifc_playback_parameters.h in CopyFiles */,
+				00DC13271507238E007F9D73 /* ifc_playback.h in CopyFiles */,
+				00DC13281507238E007F9D73 /* ifc_player.h in CopyFiles */,
+				00DC13291507238E007F9D73 /* ifc_transport.h in CopyFiles */,
+				00DC132A1507238E007F9D73 /* svc_output.h in CopyFiles */,
+				00DC132B1507238E007F9D73 /* svc_playback.h in CopyFiles */,
+				00DC132C1507238E007F9D73 /* types.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00883FC11505490700625F51 /* cb_playerevents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cb_playerevents.h; sourceTree = "<group>"; };
+		00883FC21505490700625F51 /* ifc_output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_output.h; sourceTree = "<group>"; };
+		00883FC31505490700625F51 /* ifc_playback_parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_playback_parameters.h; sourceTree = "<group>"; };
+		00883FC41505490700625F51 /* ifc_playback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_playback.h; sourceTree = "<group>"; };
+		00883FC51505490700625F51 /* ifc_player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_player.h; sourceTree = "<group>"; };
+		00883FC61505490700625F51 /* ifc_transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_transport.h; sourceTree = "<group>"; };
+		00883FC71505490700625F51 /* svc_output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svc_output.h; sourceTree = "<group>"; };
+		00883FC81505490700625F51 /* svc_playback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svc_playback.h; sourceTree = "<group>"; };
+		00883FC91505490700625F51 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00883FA9150548B300625F51 = {
+			isa = PBXGroup;
+			children = (
+				00883FC11505490700625F51 /* cb_playerevents.h */,
+				00883FC21505490700625F51 /* ifc_output.h */,
+				00883FC31505490700625F51 /* ifc_playback_parameters.h */,
+				00883FC41505490700625F51 /* ifc_playback.h */,
+				00883FC51505490700625F51 /* ifc_player.h */,
+				00883FC61505490700625F51 /* ifc_transport.h */,
+				00883FC71505490700625F51 /* svc_output.h */,
+				00883FC81505490700625F51 /* svc_playback.h */,
+				00883FC91505490700625F51 /* types.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		00B7337E151B670500A8251C /* player-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(PUBLIC_HEADERS_DIR)\"";
+			buildConfigurationList = 00B7337F151B670500A8251C /* Build configuration list for PBXLegacyTarget "player-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "player-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "player-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		00883FAB150548B300625F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 00883FAE150548B300625F51 /* Build configuration list for PBXProject "player" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 00883FA9150548B300625F51;
+			productRefGroup = 00883FA9150548B300625F51;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00DC131F1507235E007F9D73 /* player */,
+				00B7337E151B670500A8251C /* player-cleanup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00B7337D151B66BA00A8251C /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00B73383151B673B00A8251C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B7337E151B670500A8251C /* player-cleanup */;
+			targetProxy = 00B73382151B673B00A8251C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00883FB6150548B300625F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		00883FB7150548B300625F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		00B73380151B670500A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		00B73381151B670500A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		00DC13211507235E007F9D73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		00DC13221507235E007F9D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00883FAE150548B300625F51 /* Build configuration list for PBXProject "player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00883FB6150548B300625F51 /* Debug */,
+				00883FB7150548B300625F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B7337F151B670500A8251C /* Build configuration list for PBXLegacyTarget "player-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B73380151B670500A8251C /* Debug */,
+				00B73381151B670500A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00DC13201507235E007F9D73 /* Build configuration list for PBXAggregateTarget "player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DC13211507235E007F9D73 /* Debug */,
+				00DC13221507235E007F9D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00883FAB150548B300625F51 /* Project object */;
+}

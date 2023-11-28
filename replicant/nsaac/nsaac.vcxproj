@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aacdec\aacdecoder.c" />
+    <ClCompile Include="aacdec\aac_ram.c" />
+    <ClCompile Include="aacdec\aac_rom.c" />
+    <ClCompile Include="aacdec\bitstream.c" />
+    <ClCompile Include="aacdec\block.c" />
+    <ClCompile Include="aacdec\channel.c" />
+    <ClCompile Include="aacdec\channelinfo.c" />
+    <ClCompile Include="aacdec\conceal.c" />
+    <ClCompile Include="aacdec\dse.c" />
+    <ClCompile Include="aacdec\imdct.c" />
+    <ClCompile Include="aacdec\longblock.c" />
+    <ClCompile Include="aacdec\pce.c" />
+    <ClCompile Include="aacdec\pns.c" />
+    <ClCompile Include="aacdec\pulsedata.c" />
+    <ClCompile Include="aacdec\shortblock.c" />
+    <ClCompile Include="aacdec\stereo.c" />
+    <ClCompile Include="aacdec\streaminfo.c" />
+    <ClCompile Include="aacdec\tns.c" />
+    <ClCompile Include="ADTSHeader.c" />
+    <ClCompile Include="bitbuffer.c" />
+    <ClCompile Include="math\cfftn.c" />
+    <ClCompile Include="math\transcendent.c" />
+    <ClCompile Include="nsaac.c" />
+    <ClCompile Include="sbrdec\aacPLUScheck.c" />
+    <ClCompile Include="sbrdec\env_calc.c" />
+    <ClCompile Include="sbrdec\env_dec.c" />
+    <ClCompile Include="sbrdec\env_extr.c" />
+    <ClCompile Include="sbrdec\freq_sca.c" />
+    <ClCompile Include="sbrdec\huff_dec.c" />
+    <ClCompile Include="sbrdec\hybrid.c" />
+    <ClCompile Include="sbrdec\lpp_tran.c" />
+    <ClCompile Include="sbrdec\ps_bitdec.c" />
+    <ClCompile Include="sbrdec\ps_dec.c" />
+    <ClCompile Include="sbrdec\qmf_dec.c" />
+    <ClCompile Include="sbrdec\sbrdecoder.c" />
+    <ClCompile Include="sbrdec\sbr_bitb.c" />
+    <ClCompile Include="sbrdec\sbr_crc.c" />
+    <ClCompile Include="sbrdec\sbr_dec.c" />
+    <ClCompile Include="sbrdec\sbr_fft.c" />
+    <ClCompile Include="sbrdec\sbr_ram.c" />
+    <ClCompile Include="sbrdec\sbr_rom.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aacdec\aac_ram.h" />
+    <ClInclude Include="aacdec\aac_rom.h" />
+    <ClInclude Include="aacdec\bitstream.h" />
+    <ClInclude Include="aacdec\block.h" />
+    <ClInclude Include="aacdec\channel.h" />
+    <ClInclude Include="aacdec\channelinfo.h" />
+    <ClInclude Include="aacdec\conceal.h" />
+    <ClInclude Include="aacdec\constants.h" />
+    <ClInclude Include="aacdec\dse.h" />
+    <ClInclude Include="aacdec\imdct.h" />
+    <ClInclude Include="aacdec\overlapadd.h" />
+    <ClInclude Include="aacdec\pns.h" />
+    <ClInclude Include="aacdec\pulsedata.h" />
+    <ClInclude Include="aacdec\stereo.h" />
+    <ClInclude Include="aacdec\streaminfo.h" />
+    <ClInclude Include="aacdec\tns.h" />
+    <ClInclude Include="ADTSHeader.h" />
+    <ClInclude Include="include\nsaac\aacdecoder.h" />
+    <ClInclude Include="include\nsaac\bitbuffer.h" />
+    <ClInclude Include="include\nsaac\sbrdecoder.h" />
+    <ClInclude Include="math\cfftn.h" />
+    <ClInclude Include="math\FloatFR.h" />
+    <ClInclude Include="sbrdec\aacPLUScheck.h" />
+    <ClInclude Include="sbrdec\env_calc.h" />
+    <ClInclude Include="sbrdec\env_dec.h" />
+    <ClInclude Include="sbrdec\env_extr.h" />
+    <ClInclude Include="sbrdec\freq_sca.h" />
+    <ClInclude Include="sbrdec\huff_dec.h" />
+    <ClInclude Include="sbrdec\hybrid.h" />
+    <ClInclude Include="sbrdec\lpp_tran.h" />
+    <ClInclude Include="sbrdec\ps_bitdec.h" />
+    <ClInclude Include="sbrdec\ps_dec.h" />
+    <ClInclude Include="sbrdec\qmf_dec.h" />
+    <ClInclude Include="sbrdec\sbrdecsettings.h" />
+    <ClInclude Include="sbrdec\sbr_bitb.h" />
+    <ClInclude Include="sbrdec\sbr_const.h" />
+    <ClInclude Include="sbrdec\sbr_crc.h" />
+    <ClInclude Include="sbrdec\sbr_dec.h" />
+    <ClInclude Include="sbrdec\sbr_fft.h" />
+    <ClInclude Include="sbrdec\sbr_ram.h" />
+    <ClInclude Include="sbrdec\sbr_rom.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{56E06C6B-46E2-4CEC-BE01-3C621D6565EE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>nsaac</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;..;include</AdditionalIncludeDirectories>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;..;include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

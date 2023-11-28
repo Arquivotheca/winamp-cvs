@@ -1,0 +1,33 @@
+#pragma once
+
+#include "foundation/dispatch.h"
+#include "foundation/types.h"
+#include "nx/nxstring.h"
+#include "api_playlistmanager.h"
+#include "ifc_playlist.h"
+#include "cb_playlistloader.h"
+
+class PlaylistManager : public api_playlistmanager
+{
+public:
+	static nx_string_t GetServiceName() { return 0; } // TODO!!
+
+	int WASABICALL PlaylistManager_LoadAs(nx_uri_t filename, nx_string_t ext, cb_playlistloader *playlist);
+#if 0	
+	int Save(const wchar_t *filename, ifc_playlist *playlist);
+	size_t Copy(const wchar_t *destFn, const wchar_t *srcFn); // returns number of items copied
+	size_t CountItems(const wchar_t *filename);
+	int GetLengthMilliseconds(const wchar_t *filename);
+	void Reverse(ifc_playlist *playlist);
+	void Randomize(ifc_playlist *playlist);
+	int LoadFromDialog(const wchar_t *fns, ifc_playlistloadercallback *playlist);
+	int LoadFromANSIDialog(const char *fns, ifc_playlistloadercallback *playlist);
+	void LoadDirectory(const wchar_t *directory, ifc_playlistloadercallback *callback, ifc_playlistdirectorycallback *dirCallback);
+	bool CanLoad(const wchar_t *filename);
+	void GetExtensionList(wchar_t *extensionList, size_t extensionListCch);
+	void GetFilterList(wchar_t *extensionList, size_t extensionListCch);
+	const wchar_t *EnumExtensions(size_t num);
+#endif
+
+private:
+};

@@ -1,0 +1,335 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+//#include "ctl3d.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DLGMAIN DIALOGEX 69, 8, 416, 189
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Operation:",IDC_STATIC,11,3,83,8
+    COMBOBOX        IDC_FUNCTION,10,13,192,192,CBS_DROPDOWNLIST | WS_TABSTOP
+    RTEXT           "Sp&eed:",IDC_SPEEDSTRING,11,27,24,8
+    COMBOBOX        IDC_SPEED,12,36,34,135,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    CONTROL         "&Test",IDC_CHECKTEST,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,113,33,29,10,WS_EX_RIGHT
+    PUSHBUTTON      "G&o !",IDC_GO,149,29,53,17,WS_GROUP,WS_EX_CLIENTEDGE
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",0x1,211,2,
+                    201,13
+    EDITTEXT        IDC_RESULT,211,17,201,79,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,4,52,204,1
+    RTEXT           "&Recorder:",IDC_RECORDERSTRING,7,58,33,8
+    COMBOBOX        IDC_LETTERREC,44,56,159,120,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Eject",IDC_EJECTREC,43,70,32,17,WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Close",IDC_CLOSETRAYREC,75,70,32,17,0,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Dri&ve Info",IDC_UNITINFOREC,114,70,42,17,WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Disc Info",IDC_DISCINFOREC,161,70,42,17,WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Simultaneous to &All present Drives similar to Recorder",
+                    IDC_CHECKRECTOALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    9,89,184,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,4,102,408,1
+    RTEXT           "&Source:",IDC_SOURCESTRING,13,111,27,8
+    COMBOBOX        IDC_LETTERSOURCE,44,109,159,120,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Eject",IDC_EJECTSOURCE,43,123,32,17,WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Close",IDC_CLOSETRAYSOURCE,75,123,32,17,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Drive I&nfo",IDC_UNITINFOSOURCE,114,123,42,17,WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "D&isc Info",IDC_DISCINFOSOURCE,161,123,42,17,WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    RTEXT           "Track to extract as a Wave file:",
+                    IDC_RADIOEXTRACTSTRING,64,145,114,10,SS_NOPREFIX
+    EDITTEXT        IDC_EDITTRACK,182,144,15,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_GROUP
+    LTEXT           "File/Dir, Audio or MPEG files (drag & drop here):",
+                    IDC_FILELISTSTRING,5,112,152,9,SS_NOPREFIX
+    PUSHBUTTON      "Clear List",IDC_CLEARDATA,166,106,42,15,WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    LISTBOX         IDC_FILELIST,4,123,204,56,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    RTEXT           "Volume:",IDC_VOLUMENAMESTRING,225,111,27,8,SS_NOPREFIX
+    EDITTEXT        IDC_VOLUMENAME,255,109,72,12,ES_AUTOHSCROLL | WS_GROUP
+    RTEXT           "Load:",IDC_LOADSTRING,232,131,20,8,SS_NOPREFIX
+    EDITTEXT        IDC_LOAD,255,129,13,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_GROUP
+    CONTROL         "Close Disc",IDC_CLOSEDISC,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHT | WS_TABSTOP,278,130,49,10,WS_EX_RIGHT
+    RTEXT           "Swap:",IDC_SLIDERSWAPSTRING,215,160,21,8
+    CONTROL         "Slider1",IDC_SLIDERSWAP,"msctls_trackbar32",TBS_NOTICKS | 
+                    WS_GROUP | WS_TABSTOP,239,158,52,15
+    LTEXT           "...",IDC_SWAP,289,161,25,8
+    CONTROL         "ISO-9660 Level 1",IDC_RADIOISOLEVEL1,"Button",
+                    BS_AUTORADIOBUTTON | BS_RIGHT | NOT WS_VISIBLE | 
+                    WS_GROUP,277,41,69,10,WS_EX_RIGHT
+    CONTROL         "Microsoft® Joliet",IDC_RADIOJOLIET,"Button",
+                    BS_AUTORADIOBUTTON | BS_RIGHT | NOT WS_VISIBLE,277,52,69,
+                    10,WS_EX_RIGHT
+    CONTROL         "UDF (Bridge)",IDC_RADIOUDF,"Button",BS_AUTORADIOBUTTON | 
+                    BS_RIGHT | NOT WS_VISIBLE,277,62,69,10,WS_EX_RIGHT
+    CONTROL         "Mode 1",IDC_RADIOMODE1,"Button",BS_AUTORADIOBUTTON | 
+                    BS_RIGHT | WS_GROUP | WS_TABSTOP,330,149,37,10,
+                    WS_EX_RIGHT
+    CONTROL         "Mode 2",IDC_RADIOMODE2,"Button",BS_AUTORADIOBUTTON | 
+                    BS_RIGHT,330,160,37,10,WS_EX_RIGHT
+    ICON            IDI_ICON,IDC_LITTLEHORSE,388,158,20,20,0,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Do not force 30mm  Lead Out for DVD+R disc",
+                    IDC_DVDPRQUICK,"Button",BS_AUTOCHECKBOX | BS_RIGHT | 
+                    WS_TABSTOP,216,172,157,11,WS_EX_RIGHT
+    CONTROL         "TAO",IDC_CHKTAO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    376,142,36,12
+    CONTROL         "Create DVD Image",IDC_DVDIMAGE,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,252,152,75,10
+    CONTROL         "Write+Verif&y",IDC_CHECKVERIFY,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,51,33,54,10
+    CONTROL         "Use Stream Callbacks",IDC_STREAMFUNC,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,242,141,85,10
+    CONTROL         "Total Only",IDC_TOTALONLY,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,279,152,48,10
+    COMBOBOX        IDC_FS_COMBO,335,109,71,76,CBS_DROPDOWNLIST | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON                    "pxSample_C.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""ctl3d.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    "DLGMAIN", DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 412
+        VERTGUIDE, 202
+        VERTGUIDE, 208
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 185
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,17
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Sonic Solutions"
+            VALUE "FileDescription", "PrimoSDK Sample Application"
+            VALUE "FileVersion", "1, 0, 0, 17"
+            VALUE "InternalName", "pxSample_C"
+            VALUE "LegalCopyright", "Copyright © 2007 Sonic Solutions"
+            VALUE "OriginalFilename", "pxSample_C.EXE"
+            VALUE "ProductName", "Sample Application"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TESTOK              "Test completed."
+    IDS_WRITEOK             "Write completed."
+    IDS_STOPPED             "Operation stopped by the user."
+    IDS_NOCDRFOUND          "No recorders have been found."
+    IDS_LISTEMPTY           "The recording list is empty. Drag some file in it and try again."
+    IDS_NOCDFOUND           "No optical devices found.  Exiting."
+    IDS_EXTRACTOK           "Audio extraction successfully completed."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NONE                "None"
+    IDS_ALLIMAGE            "All (image)"
+    IDS_EXTRACTING          "Audio Extraction - Sector %d of %d"
+    IDS_TESTING             "Testing - Sector %d of %d"
+    IDS_WRITING             "Writing - Sector %d of %d"
+    IDS_NOTMANAGEDTYPE      "Not managed type"
+    IDS_UNITINFO            "Type: %s\n\nHost:%d  ID:%d  LUN:%d    Assigned drive letter: '%c'\n\nDrive: %s\n\nCD Speeds: %s\nDVD Speeds: %s\n\nCapabilities: 0x%02X\n\nStatus: %s"
+    IDS_SILVERORCLOSED      "Silver or closed recordable disc"
+    IDS_VALIDMEDIA          "Recordable data disc, valid for adding data tracks with PrimoSDK"
+    IDS_NOTVALIDMEDIA       "Recordable CD, but not valid for adding data tracks with PrimoSDK"
+    IDS_BLANKDISC           "Blank Disc"
+    IDS_DISCINFO            "Type: %s\nMedium: 0x%02X\nMediumEx: 0x%02X\n\nFormat: 0x%02X\nErasable: %s\nProtected DVD: %s\n\nTotal Tracks: %d\nUsed sectors: %d\nFree sectors: %d"
+    IDS_STARTINGCOPY        "Starting the copy..."
+    IDS_TRACKINFO           "\nTrack %d - Session: %d   Type: %d   Gap: %d   Start: %d   Length: %d"
+    IDS_SECTORSNEEDED       "%d sectors are needed for these %d files..."
+    IDS_SECTORSNEEDEDDISC   "%d sectors are needed for this %d disc..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STOPBEFORECLOSE     "You need to Stop the operation before closing."
+    IDS_BUILDINGGI          "Build Global-Image - Sector %d of %d"
+    IDS_ERASING             "Erasing rewritable disc..."
+    IDS_ERASEOK             "Erase completed."
+    IDS_AREYOUSURETOERASE   "Are you sure you want to erase this rewritable disc?"
+    IDS_ISNOTERASABLE       "The recorder is not RW and/or the medium is not erasable."
+    IDS_BUILDGIOK           "The Global-Image has been successfully built."
+    IDS_LOADING             "Initializing image and loading track %d..."
+    IDS_ADDING              "Adding files..."
+    IDS_NOAIN               "The File System and Auto Insert Notification blocking is not active, probably because we are using WinASPI.\n\nYou need to have the Auto Insert Notification turned off on all drives engaged by this operation.\n\nAlso, it is better that you do not access these drives with the Explorer or any other application, until this operation terminates.\n\nContinue?"
+    IDS_STARTINGVERIFY      "Starting the verify..."
+    IDS_SECTORSTOCOPY       "%d sectors to copy..."
+    IDS_SAVEDATAOK          "The build of the image successfully completed."
+    IDS_VERIFYOK            "Verify completed."
+    IDS_VERIFING            "Verifying - Sector %d of %d"
+    IDS_READY               "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FUNC1               "1 - Copy Disc to Disc, from Source to Recorder"
+    IDS_FUNC2               "2 - Build a Global Image from the Disc in Source"
+    IDS_FUNC3               "3 - Write a Global Image or Other Image to Recorder"
+    IDS_FUNC4               "4 - Verify Disc in Source against the Disc in Recorder"
+    IDS_FUNC5               "5 - Verify a Global Image against the Disc in Recorder"
+    IDS_FUNC6               "6 - Write/Verify a Data Disc to Recorder"
+    IDS_FUNC7               "7 - Build a Data Disc to Track Image"
+    IDS_FUNC8               "8 - Write an Audio Disc Compilation to Recorder"
+    IDS_FUNC9               "9 - Write a Video CD to Recorder"
+    IDS_FUNC10              "X - Extract an Audio Track from Source"
+    IDS_FUNC11              "E - Erase a Rewritable Disc in Recorder"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NOTREADY            "Not ready"
+    IDS_BUILDINGIMAGE       "Building Image - Sector %d of %d"
+    IDS_FUNCTIONRETURNED    "The function ""%s"" returned  %d  (%s)."
+    IDS_BLANKSOURCECD       "The source disc is blank."
+    IDS_IMAGEEXT            "Global Image (.gi)|*.gi|ISO Image (.iso)|*.iso|UDF Image (.udi)|*.udi|"
+    IDS_GIEXT               "Global Image (.gi)|*.gi|"
+    IDS_WAVEEXT             "Wave file (.wav)|*.wav|"
+    IDS_ISOUDIEXT           "ISO Track Image (.iso)|*.iso|UDF Track Image (.udi)|*.udi|"
+    IDS_PREMASTERING        "Pre-mastering..."
+    IDS_NOLOADING           "Initializing image..."
+    IDS_DRIVEINUSE          "The drive %s is being used by %s.\n\nContinue?"
+    IDS_CDTEXTINFO          "\nTitle: %s\nPerformer: %s\nComposer: %s"
+    IDS_INVALIDLOADVALUE    "Load value for appending to DVD+RW must be 0 or 1."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FUNC12              "S - Save a Set of Files to a Global Image File"
+    IDS_FUNC13              "V - Verify an ISO/UDF image against the Disc in the Recorder"
+    IDS_FUNC14              "I - Display Information about a Global Image File"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

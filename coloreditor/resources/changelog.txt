@@ -1,0 +1,49 @@
+- 2.2.1
+ VS2008 build (Winamp 5.57+ compatible)
+
+- 2.2.0
+ new, cleaner layout
+ improved slider moving (RGB mode):
+   * hold CTRL to move all silders with same value as current one
+   * hold SHIFT to move all sliders, but keeping relative values
+ improved gammaset edit/clone message box, so that the old set name is displayed
+ fixed crash if preview color < 128 and disabling saturation
+ fixed loading of saved colorthemes with Multi-User Configuration
+ faq button links to the new dev wiki
+
+- 2.1.2
+ added support for Winamp5.53+
+
+- 2.1.1
+ removed MSVCP71.DLL dll dependancy
+ added support for Winamp5.36+
+
+- 2.1.0
+ added thinger icon
+ added editboxes for exact input (thanks Leechbite)
+ added support for Winamp5.31+
+ new lock png - now with gammagroup
+ new about box
+
+- 2.0.3
+ made little interface changes
+ added support for Winamp5.22+
+
+- 2.0.2
+ added faq button
+ fixed rgb2hsl estimation of hue when the two min values are bellow 0
+  
+- 2.0.1
+ made resizable
+ added leet about box
+
+- 2.0.0
+ made skin themes non editable
+ added lock icon to themes list for skin themes
+ added HSL mode
+ added export button
+ added clone button
+ added delete button
+ added copy/paste popup on groups
+ added popup on themes
+ added auto apply button

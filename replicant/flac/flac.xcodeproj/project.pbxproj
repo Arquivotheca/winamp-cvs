@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C09C40714C0A09500341670 /* FLACDecoderCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C09C40514C0A09500341670 /* FLACDecoderCallback.cpp */; };
+		0C11ABA914C5DE4600315DA8 /* FLACDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C11ABA814C5DE4600315DA8 /* FLACDecoder.cpp */; };
+		0C5494FE14BC9FA2005EFB72 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5494FD14BC9FA2005EFB72 /* CoreFoundation.framework */; };
+		0C54951314BCA070005EFB72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C54951114BCA070005EFB72 /* InfoPlist.strings */; };
+		0C80DC6514BE1BF40007EC0A /* FLACMetadata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C80DC6314BE1BF40007EC0A /* FLACMetadata.cpp */; };
+		0C80DC6F14BE1C8B0007EC0A /* libnx-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C80DC6E14BE1C7B0007EC0A /* libnx-1.dylib */; };
+		0C80DC7214BE21290007EC0A /* FLACMetadataService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C80DC7014BE21290007EC0A /* FLACMetadataService.cpp */; };
+		0CC9985514C5DB1900484291 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CC9985414C5DB1900484291 /* main.cpp */; };
+		0CC9985B14C5DB4000484291 /* flacplayback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CC9985714C5DB4000484291 /* flacplayback.cpp */; };
+		0CC9985C14C5DB4000484291 /* FLACPlaybackService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CC9985914C5DB4000484291 /* FLACPlaybackService.cpp */; };
+		0CC9987E14C5DC7A00484291 /* libnswasabi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC9987914C5DC3D00484291 /* libnswasabi.a */; };
+		B14399DF14C7EBAB00FEC40B /* libFLAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B14399DD14C7EB9300FEC40B /* libFLAC.a */; };
+		B1958625151CCFA40062DB20 /* FLACMetadataCallbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1958623151CCFA40062DB20 /* FLACMetadataCallbacks.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00F185EA1536781900845F5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C4B9C3C14BF809D00165E4E /* nu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0039B399152A384100D96D3E;
+			remoteInfo = nu;
+		};
+		0C80DC6D14BE1C7B0007EC0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C80DC6614BE1C7B0007EC0A /* nx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CC19BFE14B63FDC0095FCAE;
+			remoteInfo = nx;
+		};
+		0C80DC7314BE26290007EC0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C80DC6614BE1C7B0007EC0A /* nx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CC19BFD14B63FDC0095FCAE;
+			remoteInfo = nx;
+		};
+		0CC9987814C5DC3D00484291 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CC9987414C5DC3C00484291 /* nswasabi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CC9986D14C5DC3C00484291;
+			remoteInfo = nswasabi;
+		};
+		0CC9987F14C5DC7E00484291 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CC9987414C5DC3C00484291 /* nswasabi.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CC9986C14C5DC3C00484291;
+			remoteInfo = nswasabi;
+		};
+		B14399DC14C7EB9300FEC40B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C54952614BCA16F005EFB72 /* libFLAC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1653D9914C7D755006F340E;
+			remoteInfo = FLAC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C09C40514C0A09500341670 /* FLACDecoderCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FLACDecoderCallback.cpp; sourceTree = "<group>"; };
+		0C09C40614C0A09500341670 /* FLACDecoderCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLACDecoderCallback.h; sourceTree = "<group>"; };
+		0C11ABA814C5DE4600315DA8 /* FLACDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FLACDecoder.cpp; sourceTree = "<group>"; };
+		0C11ABAA14C5DE5200315DA8 /* FLACDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLACDecoder.h; sourceTree = "<group>"; };
+		0C4B9C3014BF717C00165E4E /* FLACDecoderPull.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FLACDecoderPull.cpp; sourceTree = "<group>"; };
+		0C4B9C3214BF719400165E4E /* FLACDecoderPull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLACDecoderPull.h; sourceTree = "<group>"; };
+		0C4B9C3414BF7B4400165E4E /* svc_raw_media_reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = svc_raw_media_reader.h; path = ../decode/svc_raw_media_reader.h; sourceTree = "<group>"; };
+		0C4B9C3514BF7B4F00165E4E /* ifc_audio_decoder_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ifc_audio_decoder_callback.h; path = ../audio/ifc_audio_decoder_callback.h; sourceTree = "<group>"; };
+		0C4B9C3614BF7B4F00165E4E /* ifc_audio_decoder_pull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ifc_audio_decoder_pull.h; path = ../audio/ifc_audio_decoder_pull.h; sourceTree = "<group>"; };
+		0C4B9C3C14BF809D00165E4E /* nu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nu.xcodeproj; path = ../nu/nu.xcodeproj; sourceTree = "<group>"; };
+		0C5494FA14BC9FA2005EFB72 /* flac.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flac.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C5494FD14BC9FA2005EFB72 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		0C54950B14BCA060005EFB72 /* flac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "flac-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0C54950C14BCA060005EFB72 /* flac-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "flac-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		0C54951214BCA070005EFB72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		0C54952614BCA16F005EFB72 /* libFLAC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libFLAC.xcodeproj; path = ../libFLAC/libFLAC.xcodeproj; sourceTree = "<group>"; };
+		0C80DC6314BE1BF40007EC0A /* FLACMetadata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FLACMetadata.cpp; sourceTree = "<group>"; };
+		0C80DC6414BE1BF40007EC0A /* FLACMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLACMetadata.h; sourceTree = "<group>"; };
+		0C80DC6614BE1C7B0007EC0A /* nx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nx.xcodeproj; path = ../nx/nx.xcodeproj; sourceTree = "<group>"; };
+		0C80DC7014BE21290007EC0A /* FLACMetadataService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FLACMetadataService.cpp; sourceTree = "<group>"; };
+		0C80DC7114BE21290007EC0A /* FLACMetadataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLACMetadataService.h; sourceTree = "<group>"; };
+		0CC9985414C5DB1900484291 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0CC9985714C5DB4000484291 /* flacplayback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flacplayback.cpp; sourceTree = "<group>"; };
+		0CC9985814C5DB4000484291 /* flacplayback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flacplayback.h; sourceTree = "<group>"; };
+		0CC9985914C5DB4000484291 /* FLACPlaybackService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FLACPlaybackService.cpp; sourceTree = "<group>"; };
+		0CC9985A14C5DB4000484291 /* FLACPlaybackService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLACPlaybackService.h; sourceTree = "<group>"; };
+		0CC9987414C5DC3C00484291 /* nswasabi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nswasabi.xcodeproj; path = ../nswasabi/nswasabi.xcodeproj; sourceTree = "<group>"; };
+		B1958623151CCFA40062DB20 /* FLACMetadataCallbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FLACMetadataCallbacks.cpp; path = crt/FLACMetadataCallbacks.cpp; sourceTree = "<group>"; };
+		B1958624151CCFA40062DB20 /* FLACMetadataCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLACMetadataCallbacks.h; path = crt/FLACMetadataCallbacks.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C5494F714BC9FA2005EFB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B14399DF14C7EBAB00FEC40B /* libFLAC.a in Frameworks */,
+				0C5494FE14BC9FA2005EFB72 /* CoreFoundation.framework in Frameworks */,
+				0C80DC6F14BE1C8B0007EC0A /* libnx-1.dylib in Frameworks */,
+				0CC9987E14C5DC7A00484291 /* libnswasabi.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C4B9C3314BF7B2C00165E4E /* Decode */ = {
+			isa = PBXGroup;
+			children = (
+				0C09C40514C0A09500341670 /* FLACDecoderCallback.cpp */,
+				0C09C40614C0A09500341670 /* FLACDecoderCallback.h */,
+				0C4B9C3514BF7B4F00165E4E /* ifc_audio_decoder_callback.h */,
+				0C4B9C3614BF7B4F00165E4E /* ifc_audio_decoder_pull.h */,
+				0C4B9C3414BF7B4400165E4E /* svc_raw_media_reader.h */,
+				0C4B9C3214BF719400165E4E /* FLACDecoderPull.h */,
+				0C4B9C3014BF717C00165E4E /* FLACDecoderPull.cpp */,
+				0C11ABA814C5DE4600315DA8 /* FLACDecoder.cpp */,
+				0C11ABAA14C5DE5200315DA8 /* FLACDecoder.h */,
+			);
+			name = Decode;
+			sourceTree = "<group>";
+		};
+		0C4B9C3D14BF809D00165E4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00F185EB1536781900845F5E /* libnu.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C5494EF14BC9FA2005EFB72 = {
+			isa = PBXGroup;
+			children = (
+				0CC9987414C5DC3C00484291 /* nswasabi.xcodeproj */,
+				0C4B9C3C14BF809D00165E4E /* nu.xcodeproj */,
+				0CC9985614C5DB3000484291 /* Playback */,
+				0C4B9C3314BF7B2C00165E4E /* Decode */,
+				0C80DC7014BE21290007EC0A /* FLACMetadataService.cpp */,
+				0C80DC7114BE21290007EC0A /* FLACMetadataService.h */,
+				B1958623151CCFA40062DB20 /* FLACMetadataCallbacks.cpp */,
+				B1958624151CCFA40062DB20 /* FLACMetadataCallbacks.h */,
+				0C80DC6314BE1BF40007EC0A /* FLACMetadata.cpp */,
+				0C80DC6414BE1BF40007EC0A /* FLACMetadata.h */,
+				0CC9985414C5DB1900484291 /* main.cpp */,
+				0C80DC6614BE1C7B0007EC0A /* nx.xcodeproj */,
+				0C54952614BCA16F005EFB72 /* libFLAC.xcodeproj */,
+				0C5494FF14BC9FA2005EFB72 /* flac */,
+				0C5494FC14BC9FA2005EFB72 /* Frameworks */,
+				0C5494FB14BC9FA2005EFB72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C5494FB14BC9FA2005EFB72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C5494FA14BC9FA2005EFB72 /* flac.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C5494FC14BC9FA2005EFB72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C5494FD14BC9FA2005EFB72 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C5494FF14BC9FA2005EFB72 /* flac */ = {
+			isa = PBXGroup;
+			children = (
+				0C54950014BC9FA2005EFB72 /* Supporting Files */,
+			);
+			path = flac;
+			sourceTree = "<group>";
+		};
+		0C54950014BC9FA2005EFB72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C54951114BCA070005EFB72 /* InfoPlist.strings */,
+				0C54950B14BCA060005EFB72 /* flac-Info.plist */,
+				0C54950C14BCA060005EFB72 /* flac-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C54952714BCA16F005EFB72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B14399DD14C7EB9300FEC40B /* libFLAC.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C80DC6714BE1C7B0007EC0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C80DC6E14BE1C7B0007EC0A /* libnx-1.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CC9985614C5DB3000484291 /* Playback */ = {
+			isa = PBXGroup;
+			children = (
+				0CC9985714C5DB4000484291 /* flacplayback.cpp */,
+				0CC9985814C5DB4000484291 /* flacplayback.h */,
+				0CC9985914C5DB4000484291 /* FLACPlaybackService.cpp */,
+				0CC9985A14C5DB4000484291 /* FLACPlaybackService.h */,
+			);
+			name = Playback;
+			sourceTree = "<group>";
+		};
+		0CC9987514C5DC3C00484291 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CC9987914C5DC3D00484291 /* libnswasabi.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C5494F914BC9FA2005EFB72 /* flac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C54950814BC9FA2005EFB72 /* Build configuration list for PBXNativeTarget "flac" */;
+			buildPhases = (
+				0C5494F614BC9FA2005EFB72 /* Sources */,
+				0C5494F714BC9FA2005EFB72 /* Frameworks */,
+				0C5494F814BC9FA2005EFB72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CC9988014C5DC7E00484291 /* PBXTargetDependency */,
+				0C80DC7414BE26290007EC0A /* PBXTargetDependency */,
+			);
+			name = flac;
+			productName = flac;
+			productReference = 0C5494FA14BC9FA2005EFB72 /* flac.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C5494F114BC9FA2005EFB72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 0C5494F414BC9FA2005EFB72 /* Build configuration list for PBXProject "flac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0C5494EF14BC9FA2005EFB72;
+			productRefGroup = 0C5494FB14BC9FA2005EFB72 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0C54952714BCA16F005EFB72 /* Products */;
+					ProjectRef = 0C54952614BCA16F005EFB72 /* libFLAC.xcodeproj */;
+				},
+				{
+					ProductGroup = 0CC9987514C5DC3C00484291 /* Products */;
+					ProjectRef = 0CC9987414C5DC3C00484291 /* nswasabi.xcodeproj */;
+				},
+				{
+					ProductGroup = 0C4B9C3D14BF809D00165E4E /* Products */;
+					ProjectRef = 0C4B9C3C14BF809D00165E4E /* nu.xcodeproj */;
+				},
+				{
+					ProductGroup = 0C80DC6714BE1C7B0007EC0A /* Products */;
+					ProjectRef = 0C80DC6614BE1C7B0007EC0A /* nx.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				0C5494F914BC9FA2005EFB72 /* flac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		00F185EB1536781900845F5E /* libnu.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libnu.a;
+			remoteRef = 00F185EA1536781900845F5E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0C80DC6E14BE1C7B0007EC0A /* libnx-1.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = "libnx-1.dylib";
+			remoteRef = 0C80DC6D14BE1C7B0007EC0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CC9987914C5DC3D00484291 /* libnswasabi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libnswasabi.a;
+			remoteRef = 0CC9987814C5DC3D00484291 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B14399DD14C7EB9300FEC40B /* libFLAC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFLAC.a;
+			remoteRef = B14399DC14C7EB9300FEC40B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C5494F814BC9FA2005EFB72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C54951314BCA070005EFB72 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C5494F614BC9FA2005EFB72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C80DC6514BE1BF40007EC0A /* FLACMetadata.cpp in Sources */,
+				0C80DC7214BE21290007EC0A /* FLACMetadataService.cpp in Sources */,
+				0C09C40714C0A09500341670 /* FLACDecoderCallback.cpp in Sources */,
+				0CC9985514C5DB1900484291 /* main.cpp in Sources */,
+				0CC9985B14C5DB4000484291 /* flacplayback.cpp in Sources */,
+				0CC9985C14C5DB4000484291 /* FLACPlaybackService.cpp in Sources */,
+				0C11ABA914C5DE4600315DA8 /* FLACDecoder.cpp in Sources */,
+				B1958625151CCFA40062DB20 /* FLACMetadataCallbacks.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C80DC7414BE26290007EC0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nx;
+			targetProxy = 0C80DC7314BE26290007EC0A /* PBXContainerItemProxy */;
+		};
+		0CC9988014C5DC7E00484291 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nswasabi;
+			targetProxy = 0CC9987F14C5DC7E00484291 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0C54951114BCA070005EFB72 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C54951214BCA070005EFB72 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0C54950614BC9FA2005EFB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../libFLAC/include,
+					../,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		0C54950714BC9FA2005EFB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../libFLAC/include,
+					../,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		0C54950914BC9FA2005EFB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "flac-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "flac-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../libFLAC/include ../";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		0C54950A14BC9FA2005EFB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "flac-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "flac-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../libFLAC/include ../";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C5494F414BC9FA2005EFB72 /* Build configuration list for PBXProject "flac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C54950614BC9FA2005EFB72 /* Debug */,
+				0C54950714BC9FA2005EFB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C54950814BC9FA2005EFB72 /* Build configuration list for PBXNativeTarget "flac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C54950914BC9FA2005EFB72 /* Debug */,
+				0C54950A14BC9FA2005EFB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C5494F114BC9FA2005EFB72 /* Project object */;
+}

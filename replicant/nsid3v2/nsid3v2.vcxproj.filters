@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\windows">
+      <UniqueIdentifier>{f8ae8642-024e-4b48-acac-ec0f008a3370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\windows">
+      <UniqueIdentifier>{919665eb-f71f-4149-ba1d-e4dafc917545}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Frame Parsers">
+      <UniqueIdentifier>{bd138cc7-170f-4061-9c02-0f4b90c0c200}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="extendedheader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frameheader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frames.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="header.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="values.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nsid3v2_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windows\nsid3v2.cpp">
+      <Filter>Source Files\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_object.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_utils.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_popm.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_private.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_text.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_usertext.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_apic.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_id.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_comments.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_url.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="frame_userurl.cpp">
+      <Filter>Source Files\Frame Parsers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="extendedheader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frame_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frameheader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frames.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="values.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\nsid3v2.h">
+      <Filter>Header Files\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="nsid3v2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

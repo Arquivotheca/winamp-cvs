@@ -1,0 +1,254 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		00DC12F41507210B007F9D73 /* audio */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00DC12F51507210B007F9D73 /* Build configuration list for PBXAggregateTarget "audio" */;
+			buildPhases = (
+				00DC12F81507214F007F9D73 /* CopyFiles */,
+				00B73363151B636E00A8251C /* Install Public Headers */,
+			);
+			dependencies = (
+				00B73369151B63E700A8251C /* PBXTargetDependency */,
+			);
+			name = audio;
+			productName = audio;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00DC12F915072167007F9D73 /* ifc_audio_decoder_callback.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FE915054A1100625F51 /* ifc_audio_decoder_callback.h */; };
+		00DC12FA15072167007F9D73 /* ifc_audio_decoder_packet.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FEA15054A1100625F51 /* ifc_audio_decoder_packet.h */; };
+		00DC12FB15072167007F9D73 /* ifc_audio_decoder_pull.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FEB15054A1100625F51 /* ifc_audio_decoder_pull.h */; };
+		00DC12FC15072167007F9D73 /* ifc_audioout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FEC15054A1100625F51 /* ifc_audioout.h */; };
+		00DC12FD15072167007F9D73 /* ifc_equalizer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FED15054A1100625F51 /* ifc_equalizer.h */; };
+		00DC12FE15072167007F9D73 /* parameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883FEE15054A1100625F51 /* parameters.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00B73368151B63E700A8251C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00883FD6150549CD00625F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73364151B63AF00A8251C;
+			remoteInfo = "audio-cleanup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00DC12F81507214F007F9D73 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				00DC12F915072167007F9D73 /* ifc_audio_decoder_callback.h in CopyFiles */,
+				00DC12FA15072167007F9D73 /* ifc_audio_decoder_packet.h in CopyFiles */,
+				00DC12FB15072167007F9D73 /* ifc_audio_decoder_pull.h in CopyFiles */,
+				00DC12FC15072167007F9D73 /* ifc_audioout.h in CopyFiles */,
+				00DC12FD15072167007F9D73 /* ifc_equalizer.h in CopyFiles */,
+				00DC12FE15072167007F9D73 /* parameters.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00883FE915054A1100625F51 /* ifc_audio_decoder_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_audio_decoder_callback.h; sourceTree = "<group>"; };
+		00883FEA15054A1100625F51 /* ifc_audio_decoder_packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_audio_decoder_packet.h; sourceTree = "<group>"; };
+		00883FEB15054A1100625F51 /* ifc_audio_decoder_pull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_audio_decoder_pull.h; sourceTree = "<group>"; };
+		00883FEC15054A1100625F51 /* ifc_audioout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_audioout.h; sourceTree = "<group>"; };
+		00883FED15054A1100625F51 /* ifc_equalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_equalizer.h; sourceTree = "<group>"; };
+		00883FEE15054A1100625F51 /* parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parameters.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00883FD4150549CD00625F51 = {
+			isa = PBXGroup;
+			children = (
+				00883FE915054A1100625F51 /* ifc_audio_decoder_callback.h */,
+				00883FEA15054A1100625F51 /* ifc_audio_decoder_packet.h */,
+				00883FEB15054A1100625F51 /* ifc_audio_decoder_pull.h */,
+				00883FEC15054A1100625F51 /* ifc_audioout.h */,
+				00883FED15054A1100625F51 /* ifc_equalizer.h */,
+				00883FEE15054A1100625F51 /* parameters.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		00B73364151B63AF00A8251C /* audio-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(PUBLIC_HEADERS_DIR)\"";
+			buildConfigurationList = 00B73365151B63AF00A8251C /* Build configuration list for PBXLegacyTarget "audio-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "audio-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "audio-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		00883FD6150549CD00625F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 00883FD9150549CD00625F51 /* Build configuration list for PBXProject "audio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 00883FD4150549CD00625F51;
+			productRefGroup = 00883FD4150549CD00625F51;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00DC12F41507210B007F9D73 /* audio */,
+				00B73364151B63AF00A8251C /* audio-cleanup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00B73363151B636E00A8251C /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00B73369151B63E700A8251C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73364151B63AF00A8251C /* audio-cleanup */;
+			targetProxy = 00B73368151B63E700A8251C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00883FE1150549CD00625F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		00883FE2150549CD00625F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		00B73366151B63AF00A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		00B73367151B63AF00A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		00DC12F61507210B007F9D73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		00DC12F71507210B007F9D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00883FD9150549CD00625F51 /* Build configuration list for PBXProject "audio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00883FE1150549CD00625F51 /* Debug */,
+				00883FE2150549CD00625F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B73365151B63AF00A8251C /* Build configuration list for PBXLegacyTarget "audio-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B73366151B63AF00A8251C /* Debug */,
+				00B73367151B63AF00A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00DC12F51507210B007F9D73 /* Build configuration list for PBXAggregateTarget "audio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DC12F61507210B007F9D73 /* Debug */,
+				00DC12F71507210B007F9D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00883FD6150549CD00625F51 /* Project object */;
+}

@@ -1,0 +1,664 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ITEMVIEW_ACCELERATORS ACCELERATORS 
+BEGIN
+    "C",            ID_COPY,                VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_COPYWIN,             VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_CUT,                 VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_CUTWIN,              VIRTKEY, SHIFT, NOINVERT
+    VK_DELETE,      ID_DELETE,              VIRTKEY, NOINVERT
+    "I",            ID_INVERTSELECTION,     VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_PASTE,               VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_PASTEWIN,            VIRTKEY, SHIFT, NOINVERT
+    "A",            ID_SELECTALL,           VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_SHOWFILEINFO,        VIRTKEY, ALT, NOINVERT
+    VK_MEDIA_PLAY_PAUSE, ID_ACTION,         VIRTKEY, SHIFT, CONTROL, ALT, NOINVERT
+END
+
+IDR_DROPWINDOW_ACCELERATORS ACCELERATORS 
+BEGIN
+    "N",            ID_DOCUMENT_NEW,        VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_DOCUMENT_OPEN,       VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_DOCUMENT_RENAME,     VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_DOCUMENT_SAVE,       VIRTKEY, CONTROL, NOINVERT
+    VK_F4,          ID_WINDOW_CLOSE,        VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_WINDOW_CONTEXTMENU,  VIRTKEY, ALT, NOINVERT
+    "P",            ID_PLUGIN_PREFERENCES,  VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_DROPWINDOW MENU 
+BEGIN
+    POPUP "WindowContext"
+    BEGIN
+        MENUITEM "&New...",                     ID_DOCUMENT_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Open...",                    ID_DOCUMENT_OPEN
+        MENUITEM "&Save",                       ID_DOCUMENT_SAVE
+        MENUITEM "Save &As...",                 ID_DOCUMENT_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Rename",                     ID_DOCUMENT_RENAME
+        MENUITEM SEPARATOR
+        MENUITEM "&Preferences...",             ID_PLUGIN_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_WINDOW_CLOSE
+    END
+    POPUP "ItemContext"
+    BEGIN
+        MENUITEM "Explore Folder",              ID_EXPLOREFOLDER
+        MENUITEM "View File Info...",           ID_SHOWFILEINFO
+    END
+    POPUP "Play"
+    BEGIN
+        MENUITEM "Play",                        ID_PLAY
+        MENUITEM "Enqueue",                     ID_ENQUEUE
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Cut",                         ID_CUT
+        MENUITEM "Copy",                        ID_COPY
+        MENUITEM "Paste",                       ID_PASTE
+        MENUITEM "Delete",                      ID_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Select All",                  ID_SELECTALL
+        MENUITEM "Invert Selection",            ID_INVERTSELECTION
+    END
+    POPUP "Arrange Items By"
+    BEGIN
+        MENUITEM "Reverse Order",               ID_REVERSEORDER
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DROPBOX             ICON                    "resources\\dropbox.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SAVEDLGEXTENSION DIALOGEX 0, 0, 186, 15
+STYLE DS_SETFONT | DS_NOIDLEMSG | DS_3DLOOK | DS_FIXEDSYS | DS_NOFAILCREATE | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Add playlist to registered playlists",IDC_CHECK_REGISTERPLAYLIST,
+                    "Button",BS_AUTOCHECKBOX | BS_TOP | WS_TABSTOP,0,0,185,13
+END
+
+IDD_ASYNCOPERATION DIALOGEX 0, 0, 232, 110
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Cancel",IDCANCEL,90,88,56,12
+    CONTROL         "[operation title]",IDC_LABEL_TITLE,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | SS_ENDELLIPSIS | WS_GROUP,8,10,216,8
+    CONTROL         "[operation progress]",IDC_LABEL_PROCESSED,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | SS_ENDELLIPSIS | WS_GROUP,8,71,216,8
+END
+
+IDD_RENAMEPLAYLIST DIALOGEX 0, 0, 215, 44
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rename Playlist"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,105,26,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,161,26,50,14
+    EDITTEXT        IDC_EDIT_NAME,30,6,181,14,ES_AUTOHSCROLL
+    CONTROL         "Name:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,4,8,23,9
+END
+
+IDD_PREFERENCES_FRAME DIALOGEX 0, 0, 272, 145
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_SELECTPROFILE,0,14,271,71,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "",IDC_TABFRAME,"SysTabControl32",WS_GROUP | WS_TABSTOP,0,51,270,94
+    LTEXT           "Profile Editor",IDC_STATIC,0,0,42,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,42,4,229,1
+END
+
+IDD_PREFPAGE_VIEW DIALOGEX 0, 0, 264, 212
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_PREFPAGE_FILTER DIALOGEX 0, 0, 241, 123
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_PROFILEUI DIALOGEX 0, 0, 194, 154
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | DS_CENTER | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_PROFILELIST,4,4,186,142,LBS_SORT | LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | LBS_WANTKEYBOARDINPUT | LBS_NOSEL | NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_INSERTFILTER DIALOGEX 0, 0, 281, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Dropbox Action"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Enumerate",IDC_BUTTON_ENUMERATE,113,62,50,14
+    PUSHBUTTON      "&Add",IDC_BUTTON_ADD,168,62,50,14
+    DEFPUSHBUTTON   "&Ignore",IDC_BUTTON_IGNORE,223,62,50,14
+    CONTROL         "Apply this action to all items of the same type",IDC_CHECK_APPLYTOALL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,43,265,10
+    CONTROL         "Choose an action you want to be taken for this item:",IDC_MESSAGETITLE,
+                    "Static",SS_LEFTNOWORDWRAP | WS_GROUP,51,7,222,8
+    ICON            "",IDC_MESSAGEICON,8,7,20,20
+    EDITTEXT        IDC_EDIT_PATH,51,24,222,12,ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+END
+
+IDD_PREFERENCES_SHORTCUT DIALOGEX 0, 0, 272, 247
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Enable winamp shortcut",IDC_CHECK_SHORTCUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,16,97,10
+    LTEXT           "Default profile:",IDC_LABEL_DEFAULT_PROFILE,0,59,271,8
+    LTEXT           "Shortcut allows you to access Dropbox from anywhere inside Winamp by pressing the Ctrl+Shift+D key combination.",IDC_LABEL_SHORTCUT_HELP,12,27,259,25,SS_NOPREFIX
+    CONTROL         "",IDC_PROFILEVIEW_RECT,"Static",SS_BLACKRECT | NOT WS_VISIBLE,0,68,271,178
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,30,4,241,1
+    LTEXT           "Shortcut",IDC_LABEL_SHORTCUT,0,0,28,8
+END
+
+IDD_PREFPAGE_GENERAL DIALOGEX 0, 0, 264, 188
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_NAME,12,45,240,14,ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "Update",IDC_BUTTON_NAME_UPDATE,140,61,54,13
+    PUSHBUTTON      "Reset",IDC_BUTTON_NAME_RESET,198,61,54,13
+    EDITTEXT        IDC_EDIT_DESCRIPTION,12,87,240,29,ES_MULTILINE | ES_WANTRETURN
+    PUSHBUTTON      "Update",IDC_BUTTON_DESCRIPTION_UPDATE,140,118,54,13
+    PUSHBUTTON      "Reset",IDC_BUTTON_DESCRIPTION_RESET,198,118,54,13
+    CONTROL         "Name:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,12,36,22,8,WS_EX_TRANSPARENT
+    CONTROL         "Description:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,12,77,60,8,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Advanced",IDC_BUTTON_ADVANCED,181,165,71,14,WS_DISABLED
+    LTEXT           "Advanced settings",IDC_STATIC,12,147,60,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,75,151,177,1
+    LTEXT           "Press Advanced button to modify some advanced settings",IDC_STATIC,16,159,159,20
+END
+
+IDD_SIMPLEVIEW_EDITOR DIALOGEX 0, 0, 229, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "SimpleView Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Close",IDCANCEL,172,149,50,14
+    LTEXT           "Simple View",IDC_STATIC,7,7,39,8
+    CONTROL         "Show item &index",IDC_CHECK_INDEX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,23,76,10
+    LTEXT           "Displays item order in the playlist.",IDC_LABEL_INDEX,26,34,196,13
+    CONTROL         "Show &type icon",IDC_CHECK_ICON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,51,81,10
+    LTEXT           "Displays item type icon (aduio, video,  playlist,...). ",IDC_LABEL_ICON,26,63,196,8
+    CONTROL         "Show item &details",IDC_CHECK_DETAILS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,78,71,10
+    LTEXT           "Displays additional item information on the far side of the item.",IDC_LABEL_DETAILS,26,90,196,18
+    LTEXT           "Use column:",IDC_STATIC,26,110,40,8
+    COMBOBOX        IDC_COMBO_COLUMN,70,108,152,40,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,48,11,174,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,143,215,1
+END
+
+IDD_PREFVIEW_EMPTY DIALOGEX 0, 0, 262, 149
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Oops, there are no profiles on this machine.\r\nYou must have at least one profile in order to continue to work with this plugin.",IDC_LABEL_MESSAGE,8,6,245,26
+    PUSHBUTTON      "Create New Profile",IDC_BUTTON_CREATE,37,51,179,17
+    PUSHBUTTON      "Load Default Profiles",IDC_BUTTON_LOAD,37,75,179,17
+END
+
+IDD_PROFILEUI_EMPTY DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Create profile...",IDC_BUTTON_CREATE,61,69,68,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ASYNCOPERATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 224
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_RENAMEPLAYLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 211
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_PREFERENCES_FRAME, DIALOG
+    BEGIN
+        RIGHTMARGIN, 271
+        HORZGUIDE, 33
+        HORZGUIDE, 46
+    END
+
+    IDD_PREFPAGE_VIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 262
+        VERTGUIDE, 8
+        VERTGUIDE, 97
+        VERTGUIDE, 256
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 209
+        HORZGUIDE, 112
+    END
+
+    IDD_PREFPAGE_FILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 239
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_PROFILEUI, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 190
+        VERTGUIDE, 8
+        VERTGUIDE, 186
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 146
+        HORZGUIDE, 16
+    END
+
+    IDD_INSERTFILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 273
+        VERTGUIDE, 51
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_PREFERENCES_SHORTCUT, DIALOG
+    BEGIN
+        VERTGUIDE, 12
+        VERTGUIDE, 271
+        BOTTOMMARGIN, 246
+    END
+
+    IDD_PREFPAGE_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 262
+        VERTGUIDE, 12
+        VERTGUIDE, 140
+        VERTGUIDE, 194
+        VERTGUIDE, 198
+        VERTGUIDE, 252
+        TOPMARGIN, 5
+        HORZGUIDE, 60
+        HORZGUIDE, 118
+    END
+
+    IDD_SIMPLEVIEW_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        VERTGUIDE, 14
+        VERTGUIDE, 26
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_PREFVIEW_EMPTY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 261
+        VERTGUIDE, 8
+        VERTGUIDE, 37
+        VERTGUIDE, 216
+        VERTGUIDE, 253
+        BOTTOMMARGIN, 148
+        HORZGUIDE, 6
+    END
+
+    IDD_PROFILEUI_EMPTY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PLUGIN_DESCRIPTION_TEMPLATE "Nullsoft DropBox v%d.%d (alpha)"
+    IDS_BUTTON_NEW_TITLE    "New"
+    IDS_BUTTON_OPEN_TITLE   "Open"
+    IDS_BUTTON_SAVE_TITLE   "Save"
+    IDS_FILE_ATTRIBUTES     "RHSACE"
+    IDS_FILETYPE_AUDIO      "Audio File"
+    IDS_FILETYPE_VIDEO      "Video File"
+    IDS_FILETYPE_PLAYLIST   "Playlist File"
+    IDS_FILETYPE_FOLDER     "Folder"
+    IDS_FILETYPE_UNKNOWN    "Unknown Item"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROFILE_COPY_PREFIX "Copy of"
+    IDS_PROFILE_DELETE_TITLE "Profile Delete Confirmation"
+    IDS_PROFILE_DELETE      "Are you sure you want to delete profile ""%s""?"
+    IDS_BUTTON_DELETE       "&Delete"
+    IDS_PROFILE_COMBOBOX_EMPTY "  No profiles loaded"
+    IDS_PREFVIEW_EMPTY      "Create Dropbox profile."
+    IDS_PROFILEUI_EMPTY_MESSAGE 
+                            "No profiles. You need to go to the preferences and create at least one profile."
+    IDS_PROFILE_AUDIO_DESCRIPTION 
+                            "This profile allows you to create amazing audio playlists."
+    IDS_COLUMN_FORMATTEDTITLE "Formatted Name"
+    IDS_COLUMN_FILEPATH     "Path"
+    IDS_COLUMN_FILENAME     "File Name"
+    IDS_COLUMN_FILESIZE     "Size"
+    IDS_COLUMN_FILETYPE     "Type"
+    IDS_COLUMN_FILEEXTENSION "Extension"
+    IDS_COLUMN_FILEMODIFIED "Modified"
+    IDS_COLUMN_FILECREATED  "Created"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COLUMN_FILEATTRIBUTES "Attributes"
+    IDS_COLUMN_TRACKARTIST  "Artist"
+    IDS_COLUMN_TRACKALBUM   "Album"
+    IDS_COLUMN_TRACKTITLE   "Title"
+    IDS_COLUMN_TRACKGENRE   "Genre"
+    IDS_COLUMN_TRACKLENGTH  "Length"
+    IDS_COLUMN_TRACKBITRATE "Bitrate"
+    IDS_COLUMN_TRACKNUMBER  "Track"
+    IDS_COLUMN_DISCNUMBER   "Disc"
+    IDS_COLUMN_TRACKYEAR    "Year"
+    IDS_COLUMN_TRACKPUBLISHER "Publisher"
+    IDS_COLUMN_TRACKCOMPOSER "Composer"
+    IDS_COLUMN_ALBUMARTIST  "Album Artist"
+    IDS_COLUMN_TRACKCOMMENT "Comment"
+    IDS_COLUMN_TRACKBPM     "BPM"
+    IDS_COLUMN_EXTENSIONFAMILY "Family"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROFILE_DATA_DESCRIPTION 
+                            "This profile allows you to create data file playlists."
+    IDS_PROFILES_ASK        "Ask for profile"
+    IDS_PROFILES_ASK_DESCRIPTION 
+                            "Dropbox will ask about profile every time you open the window."
+    IDS_TOOLBUTTON_PLAY     "Play"
+    IDS_TOOLBUTTON_ENQUEUE  "Enqueue"
+    IDS_TOOLBUTTON_PLAY_DESC "Play selection"
+    IDS_COLUMN_FORMATTEDTITLE_LONG "Formatted Title"
+    IDS_COLUMN_FILEPATH_LONG "File Path"
+    IDS_COLUMN_FILENAME_LONG "File Name"
+    IDS_COLUMN_FILESIZE_LONG "File Size"
+    IDS_COLUMN_FILETYPE_LONG "Item Type"
+    IDS_COLUMN_FILEEXTENSION_LONG "File Extension"
+    IDS_COLUMN_FILEMODIFIED_LONG "File Last Modified"
+    IDS_COLUMN_FILECREATED_LONG "File Creation Time"
+    IDS_COLUMN_FILEATTRIBUTES_LONG "File Attributes"
+    IDS_COLUMN_TRACKARTIST_LONG "Artist"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COLUMN_TRACKALBUM_LONG "Album"
+    IDS_COLUMN_TRACKTITLE_LONG "Title"
+    IDS_COLUMN_TRACKGENRE_LONG "Genre"
+    IDS_COLUMN_TRACKLENGTH_LONG "Length"
+    IDS_COLUMN_TRACKBITRATE_LONG "Bitrate"
+    IDS_COLUMN_TRACKNUMBER_LONG "Track Number"
+    IDS_COLUMN_DISCNUMBER_LONG "Disc Number"
+    IDS_COLUMN_TRACKYEAR_LONG "Year"
+    IDS_COLUMN_TRACKPUBLISHER_LONG "Publisher"
+    IDS_COLUMN_TRACKCOMPOSER_LONG "Composer"
+    IDS_COLUMN_ALBUMARTIST_LONG "Album Artist"
+    IDS_COLUMN_TRACKCOMMENT_LONG "Comment"
+    IDS_COLUMN_TRACKBPM_LONG "Beats Per Minute"
+    IDS_COLUMN_EXTENSIONFAMILY_LONG "File Extension Type"
+    IDS_TOOLBUTTON_ENQUEUE_DESC "Enqueue selection"
+    IDS_TOOLBUTTON_REORDER  "Reorder"
+END
+
+STRINGTABLE 
+BEGIN
+    65535                   "{FFCE6920-C6C5-478e-9F58-CCC42D151701}"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FILETYPE_MISSING    "Missing File"
+    IDS_FILETYPE_LINK       "Shortcut File"
+    IDS_FILETYPE_STREAM     "Http Stream"
+    IDS_FILETYPE_AUDIOCDTRACK "Audio CD Track"
+    IDS_PLAYLIST_OPENDIALOGTITLE "Open Playlist"
+    IDS_PLAYLIST_SAVEDIALOGTITLE "Save Playlist As"
+    IDS_ERROR_NOPLAYLISTMANAGER 
+                            "Unable to initialize playlist manager service"
+    IDS_ERROR_DOCUMENTLOAD  "Open Playlist Error"
+    IDS_ERROR_DIALOGFAILED  "Unable to open dialog"
+    IDS_ERROR_DOCUMENTCREATE "Create Playlist Error"
+    IDS_ERROR_UNKNOWN       "Unknown error"
+    IDS_ERROR_DOCUMENTSAVE  "Save Playlist Error"
+    IDS_ERROR_OPENFAILED    "Unable to open playlist file.\r\n\r\n""%s""."
+    IDS_DOCUMENT_CLOSEMODIFIED 
+                            "Playlist was modified since last save.\r\n\r\nSave the changes to the playlist ""%s"" before closing?"
+    IDS_DOCUMENT_CONFIRMCLOSE "Confirm Close"
+    IDS_ERROR_SAVEFAILED    "Unable to save playlist to file.\r\n%s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FILEFILTER_ALLPLAYLIST "All Playlist Types"
+    IDS_PLAYLIST            "Playlist"
+    IDS_FILEFILTER_ALLFILES "All Files"
+    IDS_ERROR_BADPLAYLISTNAME "Playlist Name Error"
+    IDS_PLAYLISTNAME_BADFORMAT "Playlist name incorrectly formatted."
+    IDS_BUTTON_ABORT        "&Abort"
+    IDS_BUTTON_CANCEL       "Cancel"
+    IDS_BUTTON_CONTINUE     "&Continue"
+    IDS_BUTTON_IGNORE       "&Ignore"
+    IDS_BUTTON_NO           "&No"
+    IDS_BUTTON_OK           "OK"
+    IDS_BUTTON_RETRY        "&Retry"
+    IDS_BUTTON_TRYAGAIN     "&Try Again"
+    IDS_BUTTON_YES          "&Yes"
+    IDS_BUTTON_RELOAD       "&Reload"
+    IDS_BUTTON_SAVE         "&Save"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BUTTON_DISCARD      "&Discard"
+    IDS_BUTTON_HELP         "Help"
+    IDS_UNKNOWN             "Unknown"
+    IDS_REGISTER_PLAYLIST   "Add playlist to registered playlists"
+    IDS_REPLACE_EXISTING_FILE 
+                            "File already exists.\r\n""%s""\r\n\r\nDo you want to replace it?"
+    IDS_DOCUMENT_MODIFIEDOUTSIDE 
+                            "Playlist ""%s"" was modified externally.\r\n\r\nDo you want to reload it?"
+    IDS_ERROR_UNKNOWN_PLAYLISTWRITER 
+                            "Unable to save playlist to the file.\r\n""%s""\r\n\r\nSelect another file type."
+    IDS_DOCUMENT_CONFIRMRELOAD "Reload Playlist"
+    IDS_ERROR_UNKNOWN_PLAYLISTLOADER 
+                            "Unable to load playlist file of this type.\r\n""%s""\r\n\r\nSelect another file."
+    IDS_ERROR_PLAYLIST_FILENOTFOUND 
+                            "Specified file not found.\r\n""%s""\r\n\r\nSelect another one."
+    IDS_DEFAULT_WINDOWNAME  "Winamp Dropbox"
+    IDS_EMPTYLIST_MESSAGE   "Drag items here\r\nto create a playlist."
+    IDS_ASYNCOP_INSERT      "Adding items..."
+    IDS_PROCESSED_PERCENT   "%d%% completed"
+    IDS_PROCESSED_ITEMS     "%d items processed"
+    IDS_ASYNCOP_ORDER       "Arranging items..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SELECT_PROFILE      "Select Profile"
+    IDS_MORE                "More..."
+    IDS_DROPBOX             "Dropbox"
+    IDS_PREFPAGE_VIEW       "View"
+    IDS_PREFPAGE_FILTER     "Filter"
+    IDS_MODIFY              "Modify..."
+    IDS_AUDIOCDTRACK_EXTENSION_FAMILY "CD Audio Track shortcut"
+    IDS_LINKFILE_EXTENSION_FAMILY "Shortcut"
+    IDS_FILTERPOLICY_RULE_ASK "Ask"
+    IDS_FILTERPOLICY_RULE_ADD "Add"
+    IDS_FILTERPOLICY_RULE_IGNORE "Ignore"
+    IDS_FILTERPOLICY_RULE_ENUMERATE "Enumerate"
+    IDS_PROFILE_AUDIO       "Audio Playlist"
+    IDS_PROFILE_DATA        "Data Playlist"
+    IDS_BUTTON_ADD          "&Add"
+    IDS_BUTTON_ENUMERATE    "&Enumerate"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DOCUMENT_CHOOSEINSERTRULE "Choose Insert Action"
+    IDS_PREFERENCES_SHORTCUT "Shortcut"
+    IDS_PREFPAGE_GENERAL    "General"
+    IDS_SIMPLEVIEW          "Simple View"
+    IDS_SIMPLEVIEW_DESCRIPTION 
+                            "Classic view with a modern touch.\r\nIdeal for creating and editing audio playlists."
+    IDS_DETAILSVIEW         "Details View"
+    IDS_DETAILSVIEW_DESCRIPTION "All the details in the world..."
+    IDS_LINK_CREATE         "Create"
+    IDS_LINK_DELETE         "Delete"
+    IDS_LINK_DUPLICATE      "Duplicate"
+    IDS_PREFPAGE_FILTER_DESC 
+                            "Customize filters - prevent ""bad"" files going into your playlist."
+    IDS_PREFPAGE_VIEW_DESC  "Select View that fits best."
+    IDS_PREFPAGE_GENERAL_DESC 
+                            "Change profile information and Advanced settings."
+    IDS_RESTART_WINDOW      "Some changes will be applied after Dropbox is next reopened."
+    IDS_PROFILE_NEW         "New Profile"
+    IDS_PROFILE_NEW_DESCRIPTION "Another amazing profile created by me."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TOOLBUTTON_REORDER_DESC "Reorder items"
+    IDS_TOOLBUTTON_DELETE   "Delete"
+    IDS_TOOLBUTTON_DELETE_DESC "Delete selection"
+    IDS_TOOLBUTTON_NEWPL    "New"
+    IDS_TOOLBUTTON_NEWPL_DESC "New playlist"
+    IDS_TOOLBUTTON_OPENPL   "Open"
+    IDS_TOOLBUTTON_OPENPL_DESC "Open playlist"
+    IDS_TOOLBUTTON_SAVEPL   "Save"
+    IDS_TOOLBUTTON_SAVEPL_DESC "Save playlist"
+    IDS_DOCUMENTNAME_PREFIX "Playlist"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

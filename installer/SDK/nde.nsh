@@ -1,0 +1,55 @@
+; Nullsoft Databse Engine
+
+SetOutPath $INSTDIR\nde
+; Project Files
+File ${PROJECTS}\nde\nde.sln
+File ${PROJECTS}\nde\nde.vcproj
+
+File ${PROJECTS}\nde\Binary32Field.cpp
+File ${PROJECTS}\nde\Binary32Field.h
+File ${PROJECTS}\nde\BinaryField.cpp
+File ${PROJECTS}\nde\BinaryField.h
+File ${PROJECTS}\nde\ColumnField.cpp
+File ${PROJECTS}\nde\ColumnField.h
+File ${PROJECTS}\nde\Crc.cpp
+File ${PROJECTS}\nde\CRC.H
+File ${PROJECTS}\nde\Database.cpp
+File ${PROJECTS}\nde\Database.h
+File ${PROJECTS}\nde\DBUtils.cpp
+File ${PROJECTS}\nde\DBUtils.h
+File ${PROJECTS}\nde\entrypoint.cpp
+File ${PROJECTS}\nde\Field.cpp
+File ${PROJECTS}\nde\Field.h
+File ${PROJECTS}\nde\FilenameField.cpp
+File ${PROJECTS}\nde\FilenameField.h
+File ${PROJECTS}\nde\Filter.cpp
+File ${PROJECTS}\nde\Filter.h
+File ${PROJECTS}\nde\Index.cpp
+File ${PROJECTS}\nde\Index.h
+File ${PROJECTS}\nde\IndexField.cpp
+File ${PROJECTS}\nde\IndexField.h
+File ${PROJECTS}\nde\Int128Field.cpp
+File ${PROJECTS}\nde\Int128Field.h
+File ${PROJECTS}\nde\Int64Field.cpp
+File ${PROJECTS}\nde\Int64Field.h
+File ${PROJECTS}\nde\IntegerField.cpp
+File ${PROJECTS}\nde\IntegerField.h
+File ${PROJECTS}\nde\LinkedList.cpp
+File ${PROJECTS}\nde\LinkedList.h
+File ${PROJECTS}\nde\nde.h
+File ${PROJECTS}\nde\NDEString.cpp
+File ${PROJECTS}\nde\NDEString.h
+File ${PROJECTS}\nde\Query.cpp
+File ${PROJECTS}\nde\Query.h
+File ${PROJECTS}\nde\Record.cpp
+File ${PROJECTS}\nde\Record.h
+File ${PROJECTS}\nde\Scanner.cpp
+File ${PROJECTS}\nde\Scanner.h
+File ${PROJECTS}\nde\StringField.cpp
+File ${PROJECTS}\nde\StringField.h
+File ${PROJECTS}\nde\StringFieldW.cpp
+File ${PROJECTS}\nde\StringFieldW.h
+File ${PROJECTS}\nde\Table.cpp
+File ${PROJECTS}\nde\Table.h
+File ${PROJECTS}\nde\Vfs.cpp
+File ${PROJECTS}\nde\Vfs.h

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- replace every '&' with '&amp;' -->
+<WasabiXML>
+	<browserQuickLinks version="1.02">
+		<subMenu name="Help and Support" ontop="1">
+			<link name="Winamp Help" url="http://www.winamp.com/support/help/50/"/>
+			<link name="Winamp Forums" url="http://forums.winamp.com/"/>
+			<link name="Upgrade to Winamp Pro" url="http://www.winamp.com/buy"/>
+		</subMenu>
+		<subMenu name="MP3 Music Blogs">
+			<link name="You Ain't No Picasso" url="http://youaintnopicasso.com/"/>
+			<link name="Aurgasm" url="http://aurgasm.us"/>
+			<link name="An Aquarium Drunkard" url="http://www.aquariumdrunkard.com/"/>
+			<link name="Spinner" url="http://www.spinner.com/category/mp3-of-the-day/"/>
+			<link name="elbo.ws" url="http://elbo.ws/"/>
+			<link name="fluxblog" url="http://www.fluxblog.org/"/>
+			<link name="Music For Robots" url="http://music.for-robots.com/"/>
+			<link name="Gorilla vs Bear" url="http://gorillavsbear.blogspot.com/"/>
+			<link name="fingertips" url="http://fingertipsmusic.blogspot.com/"/>
+			<link name="soul sides" url="http://soul-sides.com/"/>
+			<link name="Said the Gramphone" url="http://www.saidthegramophone.com/"/>
+			<link name="Product Shop NYC" url="http://www.productshopnyc.com/htdocs/"/>
+			<link name="scissorkick" url="http://scissorkick.com/"/>
+			<link name="brooklynvegan" url="http://brooklynvegan.com/"/>
+			<link name="blogotheque" url="http://www.blogotheque.net/"/>
+			<link name="stereogum" url="http://www.stereogum.com/"/>
+			<link name="pretty much amazing" url="http://prettymuchamazing.com/"/>
+			<link name="My Old Kentucky Blog" url="http://myoldkyhome.blogspot.com/"/>
+			<link name="MP3 4U" url="http://mp34u.muzic.com/"/>
+			<link name="3hive" url="http://www.3hive.com/"/>
+			<link name="moistworks" url="http://www.moistworks.com/"/> 
+			<link name="Each Note Secure" url="http://www.eachnotesecure.com/"/>
+			<link name="swedelife" url="http://www.swedelife.com/"/> 
+			<link name="Sonic X" url="http://www.sonicx.com/"/>
+			<link name="mfiles" url="http://www.mfiles.co.uk/mp3-files.htm"/>
+			<link name="The Hype Machine" url="http://www.hypem.com"/>
+		</subMenu>
+<!--		<subMenu name="Special Offers">
+			<link name="eMusic 50 Free MP3s" url="http://www.emusic.com/promo/win/index.html?fref=3D150599"/>
+			<link name="Get BONUS Ringtones!" url="http://offers.thumbplay.com/offers/212/los?ptrx=winamp&amp;iframe=true&amp;thpcid=15000_ringtones&amp;thpcampid=bookmrk"/>
+		</subMenu>-->		
+		<link name="Winamp" url="http://www.winamp.com" />
+		<link name="SHOUTcast" url="http://www.shoutcast.com"/>
+		<link name="AOL Music" url="http://music.aol.com"/>
+		<link name="Spinner" url="http://www.spinner.com/category/mp3-of-the-day/"/>
+		<link name="Winamp Search" url="http://search.winamp.com"/>
+	</browserQuickLinks>
+	<browserDefaultHomes>
+		<!--home lngId="default" url="http://client.winamp.com/browser/welcome"/>
+		<home lngId="en-US" url="http://www.spinner.com/category/mp3-of-the-day/"/>
+		<home lngId="pl-PL" url="http://pl.bsidebeat.com/category/bezplatne-mp3-dnia/"/>
+		<home lngId="nl-NL" url="http://nl.spinner.com/category/gratis-mp3-van-de-dag/"/>
+		<home lngId="es-US" url="http://es.spinner.com/category/mp3dia/"/-->
+		<home lngId="default" url="http://search.winamp.com"/>
+	</browserDefaultHomes>
+</WasabiXML>

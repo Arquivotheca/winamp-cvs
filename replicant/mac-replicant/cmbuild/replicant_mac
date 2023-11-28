@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e;
+
+USER_NAME=$(git config --global user.email)
+
+cm build --build=replicant_mac_0_1 \
+	 	 --automatic \
+	 	 --no-reprompt \
+	 	 --user=$USER_NAME

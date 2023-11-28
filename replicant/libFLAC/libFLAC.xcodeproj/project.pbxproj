@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1653DB014C7D7C3006F340E /* bitmath.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DA814C7D7C3006F340E /* bitmath.c */; };
+		B1653DB214C7D7C3006F340E /* bitreader.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DA914C7D7C3006F340E /* bitreader.c */; };
+		B1653DB414C7D7C3006F340E /* bitwriter.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DAA14C7D7C3006F340E /* bitwriter.c */; };
+		B1653DB614C7D7C3006F340E /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DAB14C7D7C3006F340E /* cpu.c */; };
+		B1653DB814C7D7C3006F340E /* crc.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DAC14C7D7C3006F340E /* crc.c */; };
+		B1653DBA14C7D7C3006F340E /* fixed.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DAD14C7D7C3006F340E /* fixed.c */; };
+		B1653DBC14C7D7C3006F340E /* float.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DAE14C7D7C3006F340E /* float.c */; };
+		B1653DBE14C7D7C3006F340E /* format.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DAF14C7D7C3006F340E /* format.c */; };
+		B1653DC514C7D7CF006F340E /* lpc.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DC014C7D7CF006F340E /* lpc.c */; };
+		B1653DC714C7D7CF006F340E /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DC114C7D7CF006F340E /* md5.c */; };
+		B1653DC914C7D7CF006F340E /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DC214C7D7CF006F340E /* memory.c */; };
+		B1653DCB14C7D7CF006F340E /* metadata_iterators.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DC314C7D7CF006F340E /* metadata_iterators.c */; };
+		B1653DCD14C7D7CF006F340E /* metadata_object.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DC414C7D7CF006F340E /* metadata_object.c */; };
+		B1653DD314C7D7D6006F340E /* stream_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DCF14C7D7D6006F340E /* stream_decoder.c */; };
+		B1653DD514C7D7D6006F340E /* stream_encoder_framing.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DD014C7D7D6006F340E /* stream_encoder_framing.c */; };
+		B1653DD714C7D7D6006F340E /* stream_encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DD114C7D7D6006F340E /* stream_encoder.c */; };
+		B1653DD914C7D7D6006F340E /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = B1653DD214C7D7D6006F340E /* window.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B1653D9914C7D755006F340E /* libFLAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFLAC.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1653DA814C7D7C3006F340E /* bitmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bitmath.c; path = src/libFLAC/bitmath.c; sourceTree = "<group>"; };
+		B1653DA914C7D7C3006F340E /* bitreader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bitreader.c; path = src/libFLAC/bitreader.c; sourceTree = "<group>"; };
+		B1653DAA14C7D7C3006F340E /* bitwriter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bitwriter.c; path = src/libFLAC/bitwriter.c; sourceTree = "<group>"; };
+		B1653DAB14C7D7C3006F340E /* cpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cpu.c; path = src/libFLAC/cpu.c; sourceTree = "<group>"; };
+		B1653DAC14C7D7C3006F340E /* crc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crc.c; path = src/libFLAC/crc.c; sourceTree = "<group>"; };
+		B1653DAD14C7D7C3006F340E /* fixed.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fixed.c; path = src/libFLAC/fixed.c; sourceTree = "<group>"; };
+		B1653DAE14C7D7C3006F340E /* float.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = float.c; path = src/libFLAC/float.c; sourceTree = "<group>"; };
+		B1653DAF14C7D7C3006F340E /* format.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = format.c; path = src/libFLAC/format.c; sourceTree = "<group>"; };
+		B1653DC014C7D7CF006F340E /* lpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc.c; path = src/libFLAC/lpc.c; sourceTree = "<group>"; };
+		B1653DC114C7D7CF006F340E /* md5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = md5.c; path = src/libFLAC/md5.c; sourceTree = "<group>"; };
+		B1653DC214C7D7CF006F340E /* memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memory.c; path = src/libFLAC/memory.c; sourceTree = "<group>"; };
+		B1653DC314C7D7CF006F340E /* metadata_iterators.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = metadata_iterators.c; path = src/libFLAC/metadata_iterators.c; sourceTree = "<group>"; };
+		B1653DC414C7D7CF006F340E /* metadata_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = metadata_object.c; path = src/libFLAC/metadata_object.c; sourceTree = "<group>"; };
+		B1653DCF14C7D7D6006F340E /* stream_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stream_decoder.c; path = src/libFLAC/stream_decoder.c; sourceTree = "<group>"; };
+		B1653DD014C7D7D6006F340E /* stream_encoder_framing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stream_encoder_framing.c; path = src/libFLAC/stream_encoder_framing.c; sourceTree = "<group>"; };
+		B1653DD114C7D7D6006F340E /* stream_encoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stream_encoder.c; path = src/libFLAC/stream_encoder.c; sourceTree = "<group>"; };
+		B1653DD214C7D7D6006F340E /* window.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = window.c; path = src/libFLAC/window.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1653D9614C7D755006F340E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1653D8E14C7D755006F340E = {
+			isa = PBXGroup;
+			children = (
+				B1653DCF14C7D7D6006F340E /* stream_decoder.c */,
+				B1653DD014C7D7D6006F340E /* stream_encoder_framing.c */,
+				B1653DD114C7D7D6006F340E /* stream_encoder.c */,
+				B1653DD214C7D7D6006F340E /* window.c */,
+				B1653DA814C7D7C3006F340E /* bitmath.c */,
+				B1653DA914C7D7C3006F340E /* bitreader.c */,
+				B1653DAA14C7D7C3006F340E /* bitwriter.c */,
+				B1653DAB14C7D7C3006F340E /* cpu.c */,
+				B1653DAC14C7D7C3006F340E /* crc.c */,
+				B1653DAD14C7D7C3006F340E /* fixed.c */,
+				B1653DAE14C7D7C3006F340E /* float.c */,
+				B1653DAF14C7D7C3006F340E /* format.c */,
+				B1653DC014C7D7CF006F340E /* lpc.c */,
+				B1653DC114C7D7CF006F340E /* md5.c */,
+				B1653DC214C7D7CF006F340E /* memory.c */,
+				B1653DC314C7D7CF006F340E /* metadata_iterators.c */,
+				B1653DC414C7D7CF006F340E /* metadata_object.c */,
+				B1653D9A14C7D755006F340E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1653D9A14C7D755006F340E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1653D9914C7D755006F340E /* libFLAC.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B1653D9714C7D755006F340E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B1653D9814C7D755006F340E /* FLAC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1653D9D14C7D755006F340E /* Build configuration list for PBXNativeTarget "FLAC" */;
+			buildPhases = (
+				B1653D9514C7D755006F340E /* Sources */,
+				B1653D9614C7D755006F340E /* Frameworks */,
+				B1653D9714C7D755006F340E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FLAC;
+			productName = libFLAC;
+			productReference = B1653D9914C7D755006F340E /* libFLAC.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1653D9014C7D755006F340E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = B1653D9314C7D755006F340E /* Build configuration list for PBXProject "libFLAC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B1653D8E14C7D755006F340E;
+			productRefGroup = B1653D9A14C7D755006F340E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1653D9814C7D755006F340E /* FLAC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1653D9514C7D755006F340E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1653DB014C7D7C3006F340E /* bitmath.c in Sources */,
+				B1653DB214C7D7C3006F340E /* bitreader.c in Sources */,
+				B1653DB414C7D7C3006F340E /* bitwriter.c in Sources */,
+				B1653DB614C7D7C3006F340E /* cpu.c in Sources */,
+				B1653DB814C7D7C3006F340E /* crc.c in Sources */,
+				B1653DBA14C7D7C3006F340E /* fixed.c in Sources */,
+				B1653DBC14C7D7C3006F340E /* float.c in Sources */,
+				B1653DBE14C7D7C3006F340E /* format.c in Sources */,
+				B1653DC514C7D7CF006F340E /* lpc.c in Sources */,
+				B1653DC714C7D7CF006F340E /* md5.c in Sources */,
+				B1653DC914C7D7CF006F340E /* memory.c in Sources */,
+				B1653DCB14C7D7CF006F340E /* metadata_iterators.c in Sources */,
+				B1653DCD14C7D7CF006F340E /* metadata_object.c in Sources */,
+				B1653DD314C7D7D6006F340E /* stream_decoder.c in Sources */,
+				B1653DD514C7D7D6006F340E /* stream_encoder_framing.c in Sources */,
+				B1653DD714C7D7D6006F340E /* stream_encoder.c in Sources */,
+				B1653DD914C7D7D6006F340E /* window.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B1653D9B14C7D755006F340E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					src/libFLAC/include,
+					include,
+					osx,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DHAVE_CONFIG_H";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B1653D9C14C7D755006F340E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					src/libFLAC/include,
+					include,
+					osx,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "-DHAVE_CONFIG_H";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B1653D9E14C7D755006F340E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B1653D9F14C7D755006F340E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1653D9314C7D755006F340E /* Build configuration list for PBXProject "libFLAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1653D9B14C7D755006F340E /* Debug */,
+				B1653D9C14C7D755006F340E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1653D9D14C7D755006F340E /* Build configuration list for PBXNativeTarget "FLAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1653D9E14C7D755006F340E /* Debug */,
+				B1653D9F14C7D755006F340E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1653D9014C7D755006F340E /* Project object */;
+}

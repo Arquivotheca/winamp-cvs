@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmp_wifi", "pmp_wifi.vcproj", "{DD76E337-88AD-402E-ACC7-E33510A5AE43}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nx", "..\replicant\nx\nx.vcproj", "{57C90706-B25D-4ACA-9B33-95CDB2427C27}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nu", "..\replicant\nu\nu.vcproj", "{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jnetlib-replicant", "..\replicant\jnetlib\jnetlib-replicant.vcproj", "{AAE8BF3C-AD6B-405C-A216-BF62E2D49E95}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\zlib\zlib.vcproj", "{0F9730E4-45DA-4BD2-A50A-403A4BC9751A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD76E337-88AD-402E-ACC7-E33510A5AE43}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD76E337-88AD-402E-ACC7-E33510A5AE43}.Debug|Win32.Build.0 = Debug|Win32
+		{DD76E337-88AD-402E-ACC7-E33510A5AE43}.Release|Win32.ActiveCfg = Release|Win32
+		{DD76E337-88AD-402E-ACC7-E33510A5AE43}.Release|Win32.Build.0 = Release|Win32
+		{57C90706-B25D-4ACA-9B33-95CDB2427C27}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57C90706-B25D-4ACA-9B33-95CDB2427C27}.Debug|Win32.Build.0 = Debug|Win32
+		{57C90706-B25D-4ACA-9B33-95CDB2427C27}.Release|Win32.ActiveCfg = Release|Win32
+		{57C90706-B25D-4ACA-9B33-95CDB2427C27}.Release|Win32.Build.0 = Release|Win32
+		{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}.Debug|Win32.Build.0 = Debug|Win32
+		{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}.Release|Win32.ActiveCfg = Release|Win32
+		{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}.Release|Win32.Build.0 = Release|Win32
+		{AAE8BF3C-AD6B-405C-A216-BF62E2D49E95}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AAE8BF3C-AD6B-405C-A216-BF62E2D49E95}.Debug|Win32.Build.0 = Debug|Win32
+		{AAE8BF3C-AD6B-405C-A216-BF62E2D49E95}.Release|Win32.ActiveCfg = Release|Win32
+		{AAE8BF3C-AD6B-405C-A216-BF62E2D49E95}.Release|Win32.Build.0 = Release|Win32
+		{0F9730E4-45DA-4BD2-A50A-403A4BC9751A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0F9730E4-45DA-4BD2-A50A-403A4BC9751A}.Debug|Win32.Build.0 = Debug|Win32
+		{0F9730E4-45DA-4BD2-A50A-403A4BC9751A}.Release|Win32.ActiveCfg = Release|Win32
+		{0F9730E4-45DA-4BD2-A50A-403A4BC9751A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

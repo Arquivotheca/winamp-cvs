@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enc_flac", "enc_flac2.vcproj", "{922008CC-4A0E-4EA1-92F2-AA822965BDF6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libFLAC_dynamic", "..\replicant\libFLAC\src\libFLAC\libFLAC_dynamic.vcproj", "{4BC26A77-7BEC-4740-A630-0D865689DFAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{922008CC-4A0E-4EA1-92F2-AA822965BDF6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{922008CC-4A0E-4EA1-92F2-AA822965BDF6}.Debug|Win32.Build.0 = Debug|Win32
+		{922008CC-4A0E-4EA1-92F2-AA822965BDF6}.Release|Win32.ActiveCfg = Release|Win32
+		{922008CC-4A0E-4EA1-92F2-AA822965BDF6}.Release|Win32.Build.0 = Release|Win32
+		{4BC26A77-7BEC-4740-A630-0D865689DFAD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BC26A77-7BEC-4740-A630-0D865689DFAD}.Debug|Win32.Build.0 = Debug|Win32
+		{4BC26A77-7BEC-4740-A630-0D865689DFAD}.Release|Win32.ActiveCfg = Release|Win32
+		{4BC26A77-7BEC-4740-A630-0D865689DFAD}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

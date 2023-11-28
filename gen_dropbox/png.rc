@@ -1,0 +1,29 @@
+#include "resource.h"
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+IDR_DRAGIMAGE  RCDATA
+".\\resources\\dragImage.png"
+IDR_NUMHOLDERIMAGE  RCDATA
+".\\resources\\numberHolder.png"
+IDR_SMALLFILETYPES_IMAGE  RCDATA
+".\\resources\\fileTypesSmall.png"
+IDR_MENUBUTTON_IMAGE  RCDATA
+".\\resources\\menuButton.png"
+IDR_DEFAULTPLAYLIST_IMAGE  RCDATA
+".\\resources\\defaultPlaylist.png"
+IDR_PROGRESSCIRCLE_IMAGE  RCDATA
+".\\resources\\progressCircle.png"
+IDR_TOOLBAR_IMAGE  RCDATA
+".\\resources\\toolbar.png"
+IDR_OPENPLAYLIST_IMAGE  RCDATA
+".\\resources\\openPlaylist.png"
+IDR_SIMPLEVIEW_PREVIEWIMAGE  RCDATA
+".\\resources\\simpleView.png"
+IDR_DETAILSVIEW_PREVIEWIMAGE  RCDATA
+".\\resources\\detailsView.png"
+IDR_GROUPHEADER_IMAGE RCDATA
+".\\resources\\groupHeader.png"
+IDR_WARNING_SMALL_IMAGE RCDATA
+".\\resources\\warningSmall.png"

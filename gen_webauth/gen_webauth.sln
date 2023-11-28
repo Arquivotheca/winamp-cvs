@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen_webauth", "gen_webauth.vcproj", "{C42978E8-645D-440E-A689-E36326A2181B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Profiling = Profiling
+		Release = Release
+		Release 64 = Release 64
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C42978E8-645D-440E-A689-E36326A2181B}.Debug.ActiveCfg = Debug|Win32
+		{C42978E8-645D-440E-A689-E36326A2181B}.Debug.Build.0 = Debug|Win32
+		{C42978E8-645D-440E-A689-E36326A2181B}.Profiling.ActiveCfg = Release|Win32
+		{C42978E8-645D-440E-A689-E36326A2181B}.Profiling.Build.0 = Release|Win32
+		{C42978E8-645D-440E-A689-E36326A2181B}.Release.ActiveCfg = Release|Win32
+		{C42978E8-645D-440E-A689-E36326A2181B}.Release.Build.0 = Release|Win32
+		{C42978E8-645D-440E-A689-E36326A2181B}.Release 64.ActiveCfg = Release|Win32
+		{C42978E8-645D-440E-A689-E36326A2181B}.Release 64.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

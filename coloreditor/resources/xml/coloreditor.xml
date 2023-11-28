@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WinampAbstractionLayer version="1.34">
+
+<elements>
+  <bitmap id="coloredit.lock" file="lock.png" gammagroup="Text" h="12" w="12" />
+  <bitmap id="coloredit.about" file="about.png" />
+</elements>
+
+<groupdef id="wasabi.coloreditor.main" name="Color Editor" minimum_w="500" minimum_h="300" default_w="530" default_h="350" >
+  <group id="coloreditor.top" x="4" y="4" w="-8" h="-156" relatw="1" relath="1" />
+  <group id="coloreditor.bottom" x="4" y="-152" w="-8" h="148" relatw="1" relaty="1" />
+</groupdef>
+
+<groupdef id="coloreditor.titlebox1.content">
+	<group id="wasabi.window.embedded" x="0" y="0" w="0" h="-21" relatw="1" relath="1"/>
+	<ColorEditor:SetList id="coloreditor.setlist" x="2" y="2" w="-4" h="-25" relatw="1" relath="1" nocolheader="1"/>
+	<Wasabi:Button x="0" y="-20" w="50" h="19" relatw="2" relaty="1" text="Clone Theme" action="CLONE" action_target="coloreditor" />
+	<Wasabi:Button x="50" y="-20" w="50" h="19" relatx="2" relatw="2" relaty="1" text="New Theme" action="NEW" action_target="coloreditor"/>
+</groupdef>
+
+<groupdef id="coloreditor.titlebox2.content">
+	<group id="wasabi.window.embedded" x="0" y="0" w="0" h="-21" relatw="1" relath="1"/>
+	<ColorEditor:GroupList id="coloreditor.grouplist" x="2" y="2" w="-4" h="-25" relatw="1" relath="1" nocolheader="1"/>
+	<Wasabi:Button id="coloredit.copy" x="0" y="-20" w="50" h="19" relatw="2" relaty="1" text="Copy Group" action="COPY" action_target="coloreditor"/>
+	<Wasabi:Button id="coloredit.paste" x="50" y="-20" w="50" h="19" relatx="2" relatw="2" relaty="1" text="Paste Group" action="PASTE" action_target="coloreditor"/>
+</groupdef>
+
+<groupdef id="coloreditor.left">
+  <Wasabi:TitleBox x="0" y="0" w="0" h="0" relatw="1" relath="1" title="Color Themes" content="coloreditor.titlebox1.content" />
+</groupdef>
+
+<groupdef id="coloreditor.right">
+  <Wasabi:TitleBox x="0" y="0" w="0" h="0" relatw="1" relath="1" title="Color Groups" content="coloreditor.titlebox2.content" />
+</groupdef>
+
+<groupdef id="coloreditor.top">
+	<group id="coloreditor.left" x="0" y="0" w="50" h="0" relatw="2" relath="1"/>
+	<group id="coloreditor.right" x="50" y="0" w="50" h="0" relatx="2" relatw="2" relath="1"/>
+</groupdef>
+
+<groupdef id="coloreditor.bottomleft">
+  <Wasabi:TitleBox x="0" y="0" w="0" h="0" relatw="1" relath="1" title="Group settings" content="coloreditor.controls" />
+</groupdef>
+
+<groupdef id="coloreditor.sourcecontrol">
+  <Wasabi:EditBox id="coloredit.source.red" x="1" y="0" w="30" h="16"/>
+  <Wasabi:EditBox id="coloredit.source.green" x="33" y="0" w="30" h="16"/>
+  <Wasabi:EditBox id="coloredit.source.blue" x="65" y="0" w="30" h="16"/>
+  <group id="wasabi.window.embedded" x="97" y="0" w="49" h="16" />
+  <Rect id="coloredit.source.rect" x="99" y="2" w="45" h="12" color="127,127,127" filled="1"/>
+</groupdef>
+
+
+<groupdef id="coloreditor.themecontrol">
+  <Wasabi:Button x="0" y="0" w="73" h="20" text="Export" action="EXPORT" action_target="coloreditor" />
+  <Wasabi:Button x="74" y="0" w="74" h="20" text="Save Themes" action="SAVE" action_target="coloreditor"/>
+  <Wasabi:Button x="74" y="21" h="20" id="coloreditor.about" text="About" w="74" action="ABOUT" action_target="coloreditor"/>
+  <Wasabi:Button x="0" y="21" h="20" id="coloreditor.about" text="FAQ" w="73" action="FAQ" action_target="coloreditor"/>
+  <Wasabi:Button x="74" y="42" w="74" h="20" id="coloreditor.apply" text="Apply" action="APPLY" action_target="coloreditor"/>
+  <Wasabi:Button x="0" y="42" w="73" h="20" id="coloreditor.revert" text="Revert" action="REVERT" action_target="coloreditor"/>
+</groupdef>
+
+<groupdef id="coloreditor.tools">
+  <Wasabi:TitleBox x="0" y="0" w="0" h="40" relatw="1" title="Preview source color" content="coloreditor.sourcecontrol" />
+  <Wasabi:TitleBox x="0" y="40" w="0" h="85" relatw="1" title="Manage" content="coloreditor.themecontrol" />
+</groupdef>
+
+<groupdef id="coloreditor.bottomright">
+  <Wasabi:TitleBox x="0" y="0" w="0" h="0" relatw="1" relath="1" title="Tools" content="coloreditor.tools" />
+</groupdef>
+
+<groupdef id="coloreditor.bottom">
+  <Wasabi:Frame id="coloreditor.frame.bottom" orientation="vertical" width="180" from="right" resizable="0" left="coloreditor.bottomleft" right="coloreditor.bottomright" x="0" y="0" w="0" h="0" relatw="1" relath="1" />
+</groupdef>
+
+<groupdef id="wasabi.coloreditor.newthemebox" name="New Theme" default_w="230" default_h="80" lockminmax="1">
+  <Wasabi:Text id="name" text="Theme name:" x="2" y="2" w="-4" h="16" relatw="1" />
+  <Wasabi:EditBox id="coloredit.newtheme.edit" x="4" y="20" w="-8" relatw="1" h="16"/>
+  <Wasabi:Button x="-66" y="-26" relatx="1" relaty="1" w="64" h="24" id="cancel" text="Cancel" action="endmodal" retcode="0"/>
+  <Wasabi:Button x="-132" y="-26" relatx="1" relaty="1" w="64" h="24" id="ok" text="Ok" action="endmodal" retcode="1"/>
+</groupdef>
+
+
+<groupdef id="coloreditor.controls">
+  <Wasabi:CheckBox x="0" y="108" id="coloreditor.checkbox.gray" text="Max Grayscale" w="95" />
+  <Wasabi:CheckBox x="97" y="108" id="coloreditor.checkbox.gray2" text="Avg Grayscale" w="95" />
+  <Wasabi:CheckBox x="-105" relatx="1" y="108" id="coloreditor.checkbox.boost" text="Saturate Channels" w="105"/>
+  
+  <Wasabi:EditBox id="red.edit" autoenter="1" x="-45" y="16" w="45" h="16" relatx="1"/>
+  <Wasabi:EditBox id="green.edit" autoenter="1" x="-45" y="48" w="45" h="16" relatx="1"/>
+  <Wasabi:EditBox id="blue.edit" autoenter="1" x="-45" y="80" w="45" h="16" relatx="1"/>
+  
+  <Rect x="0" y="16" w="-50" relatw="1" h="14" color="255,0,0"/>
+  <ColorEditor:PreviewRect id="coloreditor.redpreview" x="1" y="17" w="-52" relatw="1" h="12" />
+  <Wasabi:HSlider x="0" y="32" w="-50" id="coloreditor.slider.red" relatw="1"/>
+  <Rect x="0" y="48" w="-50" relatw="1" h="14" color="0,255,0"/>
+  <ColorEditor:PreviewRect id="coloreditor.greenpreview" x="1" y="49" w="-52" relatw="1" h="12" />
+  <Wasabi:HSlider x="0" y="64" w="-50" relatw="1" id="coloreditor.slider.green"/>
+  <Rect x="0" y="80" w="-50" relatw="1" h="14" color="0,0,255"/>
+  <ColorEditor:PreviewRect id="coloreditor.bluepreview" x="1" y="81" w="-52" relatw="1" h="12" />
+  <Wasabi:HSlider x="0" y="96" w="-50" relatw="1" id="coloreditor.slider.blue"/>
+  <wasabi:radiogroup id="rgb.hsl" />
+  <Wasabi:CheckBox x="0" y="-4" id="coloreditor.checkbox.rgb" text="RGB" w="48" radioid="rgb.hsl"/>
+  <Wasabi:CheckBox x="48" y="-4" id="coloreditor.checkbox.hsl" text="HSL" w="48" radioid="rgb.hsl"/>
+  <Wasabi:CheckBox x="-70" relatx="1" y="-4" id="coloreditor.checkbox.autoapply" text="Auto Apply" w="70"/>
+  <ColorEditor:Instance id="coloreditor"
+    redslider="coloreditor.slider.red"
+    greenslider="coloreditor.slider.green"
+    blueslider="coloreditor.slider.blue"
+    graycheck="coloreditor.checkbox.gray"
+    gray2check="coloreditor.checkbox.gray2"
+    boostcheck="coloreditor.checkbox.boost"
+    redsource="coloredit.source.red"
+    greensource="coloredit.source.green"
+    bluesource="coloredit.source.blue"
+    sourcerect="coloredit.source.rect"
+    setlist="coloreditor.setlist"
+    grouplist="coloreditor.grouplist"
+    redpreview="coloreditor.redpreview"
+    greenpreview="coloreditor.greenpreview"
+    bluepreview="coloreditor.bluepreview"
+    rgbcheck="coloreditor.checkbox.rgb"
+    hslcheck="coloreditor.checkbox.hsl"
+    autoapplycheck="coloreditor.checkbox.autoapply"
+    disablecontrols="coloreditor.checkbox.autoapply;coloredit.paste;coloreditor.apply;coloreditor.revert"
+  />
+  
+  <script id="script.coloreditor" file="coloreditor.maki"/>
+  
+  <script file="ce_extend.maki"/>
+</groupdef>
+
+
+<groupdef id="wasabi.coloreditor.about" name="About" default_w="320" default_h="200" lockminmax="1">
+  <Layer image="coloredit.about" />
+  <Wasabi:Button x="-68" y="-26" relatx="1" relaty="1" w="64" h="22" id="ok" text="Ok" action="endmodal" retcode="1"/>
+  <Wasabi:Text id="coloreditor.version" x="4" y="-42" relaty="1" w="-68" relatw="1" h="16" fontsize="14" visible="1"/> <!-- invisible till bug is fixed in wac -->
+  <Wasabi:Text id="coloreditor.version2" x="4" y="-18" relaty="1" w="-68" relatw="1" h="16" fontsize="14" text="Main Development: Ben Allison" />
+  <Wasabi:Text id="coloreditor.copyright" x="4" y="-30" relaty="1" w="-68" relatw="1" h="16" fontsize="14" />
+
+  <script file="about.maki"/>
+</groupdef>
+
+</WinampAbstractionLayer>

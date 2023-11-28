@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "in_wave", "in_wave.vcproj", "{03366121-F8F5-4845-8EDD-B0EEC955282F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsndfile", "..\libsndfile\libsndfile.vcproj", "{6BFA7E64-2074-4885-A685-2772AF31E288}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03366121-F8F5-4845-8EDD-B0EEC955282F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{03366121-F8F5-4845-8EDD-B0EEC955282F}.Debug|Win32.Build.0 = Debug|Win32
+		{03366121-F8F5-4845-8EDD-B0EEC955282F}.Release|Win32.ActiveCfg = Release|Win32
+		{03366121-F8F5-4845-8EDD-B0EEC955282F}.Release|Win32.Build.0 = Release|Win32
+		{6BFA7E64-2074-4885-A685-2772AF31E288}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6BFA7E64-2074-4885-A685-2772AF31E288}.Debug|Win32.Build.0 = Debug|Win32
+		{6BFA7E64-2074-4885-A685-2772AF31E288}.Release|Win32.ActiveCfg = Release|Win32
+		{6BFA7E64-2074-4885-A685-2772AF31E288}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mpegvideo", "mpegvideo.vcproj", "{FFE44A3B-D911-42D7-A538-138AC82D0172}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mpeg2dec", "..\mpeg2dec\mpeg2dec.vcproj", "{1B99E7EE-C4AC-43AC-813D-B46870A8FB4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFE44A3B-D911-42D7-A538-138AC82D0172}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FFE44A3B-D911-42D7-A538-138AC82D0172}.Debug|Win32.Build.0 = Debug|Win32
+		{FFE44A3B-D911-42D7-A538-138AC82D0172}.Release|Win32.ActiveCfg = Release|Win32
+		{FFE44A3B-D911-42D7-A538-138AC82D0172}.Release|Win32.Build.0 = Release|Win32
+		{1B99E7EE-C4AC-43AC-813D-B46870A8FB4C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1B99E7EE-C4AC-43AC-813D-B46870A8FB4C}.Debug|Win32.Build.0 = Debug|Win32
+		{1B99E7EE-C4AC-43AC-813D-B46870A8FB4C}.Release|Win32.ActiveCfg = Release|Win32
+		{1B99E7EE-C4AC-43AC-813D-B46870A8FB4C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

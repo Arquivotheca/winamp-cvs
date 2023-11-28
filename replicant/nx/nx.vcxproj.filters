@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="win\nxapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nxcondition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nxfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nxpath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nxsleep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nxstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nxthread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nxonce.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nxmutablestring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nxuri.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NXFileObject.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nu\win\MessageLoop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\nximage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="win\nxcondition.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxpath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxsleep.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxstring.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxthread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxonce.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxmutablestring.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxuri.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxdata.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nxsemaphore.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\NXFileObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\NXFileProgressiveDownloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\nximage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

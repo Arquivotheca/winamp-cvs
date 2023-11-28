@@ -1,0 +1,237 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		00F2E78C15254E8700F64C17 /* Replicant */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00F2E78D15254E8700F64C17 /* Build configuration list for PBXAggregateTarget "Replicant" */;
+			buildPhases = (
+				00F2E79015254F7C00F64C17 /* CopyFiles */,
+				00F2E79415254F9900F64C17 /* Install Public Headers */,
+			);
+			dependencies = (
+				00F2E7971525501600F64C17 /* PBXTargetDependency */,
+			);
+			name = Replicant;
+			productName = Replicant;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00F2E79115254F8D00F64C17 /* ifc_replicant_component.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00F2E78415254E4F00F64C17 /* ifc_replicant_component.h */; };
+		00F2E79215254F8D00F64C17 /* Replicant.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00F2E78515254E4F00F64C17 /* Replicant.h */; };
+		00F2E79315254F8D00F64C17 /* version.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00F2E78615254E4F00F64C17 /* version.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00F2E7961525501600F64C17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00F2E75615254D7600F64C17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00F2E78815254E7F00F64C17;
+			remoteInfo = "Replicant-cleanup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00F2E79015254F7C00F64C17 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				00F2E79115254F8D00F64C17 /* ifc_replicant_component.h in CopyFiles */,
+				00F2E79215254F8D00F64C17 /* Replicant.h in CopyFiles */,
+				00F2E79315254F8D00F64C17 /* version.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00F2E78415254E4F00F64C17 /* ifc_replicant_component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ifc_replicant_component.h; sourceTree = "<group>"; };
+		00F2E78515254E4F00F64C17 /* Replicant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Replicant.h; sourceTree = "<group>"; };
+		00F2E78615254E4F00F64C17 /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00F2E75415254D7600F64C17 = {
+			isa = PBXGroup;
+			children = (
+				00F2E78415254E4F00F64C17 /* ifc_replicant_component.h */,
+				00F2E78515254E4F00F64C17 /* Replicant.h */,
+				00F2E78615254E4F00F64C17 /* version.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		00F2E78815254E7F00F64C17 /* Replicant-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(PUBLIC_HEADERS_DIR)\"";
+			buildConfigurationList = 00F2E78915254E7F00F64C17 /* Build configuration list for PBXLegacyTarget "Replicant-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "Replicant-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "Replicant-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		00F2E75615254D7600F64C17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 00F2E75915254D7600F64C17 /* Build configuration list for PBXProject "Replicant" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 00F2E75415254D7600F64C17;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00F2E78C15254E8700F64C17 /* Replicant */,
+				00F2E78815254E7F00F64C17 /* Replicant-cleanup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00F2E79415254F9900F64C17 /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00F2E7971525501600F64C17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00F2E78815254E7F00F64C17 /* Replicant-cleanup */;
+			targetProxy = 00F2E7961525501600F64C17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00F2E75B15254D7600F64C17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../.. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		00F2E75C15254D7600F64C17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../.. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		00F2E78A15254E7F00F64C17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		00F2E78B15254E7F00F64C17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		00F2E78E15254E8700F64C17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		00F2E78F15254E8700F64C17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00F2E75915254D7600F64C17 /* Build configuration list for PBXProject "Replicant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F2E75B15254D7600F64C17 /* Debug */,
+				00F2E75C15254D7600F64C17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00F2E78915254E7F00F64C17 /* Build configuration list for PBXLegacyTarget "Replicant-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F2E78A15254E7F00F64C17 /* Debug */,
+				00F2E78B15254E7F00F64C17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00F2E78D15254E8700F64C17 /* Build configuration list for PBXAggregateTarget "Replicant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F2E78E15254E8700F64C17 /* Debug */,
+				00F2E78F15254E8700F64C17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00F2E75615254D7600F64C17 /* Project object */;
+}

@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen_mud", "gen_mud.vcproj", "{54A8BAC8-3DCD-4D31-9894-2FECAEAB0947}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nde", "..\nde\nde.vcproj", "{4D25C321-7F8B-424E-9899-D80A364BAF1A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "auth", "..\auth\auth.vcproj", "{92037EB1-5BEB-42A4-AAC8-E2CAE0DEED1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54A8BAC8-3DCD-4D31-9894-2FECAEAB0947}.Debug|Win32.ActiveCfg = Debug|Win32
+		{54A8BAC8-3DCD-4D31-9894-2FECAEAB0947}.Debug|Win32.Build.0 = Debug|Win32
+		{54A8BAC8-3DCD-4D31-9894-2FECAEAB0947}.Release|Win32.ActiveCfg = Release|Win32
+		{54A8BAC8-3DCD-4D31-9894-2FECAEAB0947}.Release|Win32.Build.0 = Release|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Debug|Win32.Build.0 = Debug|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Release|Win32.ActiveCfg = Release|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Release|Win32.Build.0 = Release|Win32
+		{92037EB1-5BEB-42A4-AAC8-E2CAE0DEED1E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{92037EB1-5BEB-42A4-AAC8-E2CAE0DEED1E}.Debug|Win32.Build.0 = Debug|Win32
+		{92037EB1-5BEB-42A4-AAC8-E2CAE0DEED1E}.Release|Win32.ActiveCfg = Release|Win32
+		{92037EB1-5BEB-42A4-AAC8-E2CAE0DEED1E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

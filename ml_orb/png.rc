@@ -1,0 +1,11 @@
+#include "resource.h"
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+IDR_MAINSERVICE_ICON  RCDATA
+".\\resources\\serviceMain.png"
+IDR_AUDIOSERVICE_ICON  RCDATA
+".\\resources\\serviceAudio.png"
+IDR_VIDEOSERVICE_ICON  RCDATA
+".\\resources\\serviceVideo.png"

@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		00A5D06115490167007DD287 /* mp4-prepare */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00A5D06215490167007DD287 /* Build configuration list for PBXAggregateTarget "mp4-prepare" */;
+			buildPhases = (
+				00A5D06B15490294007DD287 /* Generate Version Info */,
+			);
+			dependencies = (
+				00A5D06A15490194007DD287 /* PBXTargetDependency */,
+			);
+			name = "mp4-prepare";
+			productName = "mp4-prepare";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00695D1316E70B13009CB115 /* MP4HTTP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00695D1116E70B13009CB115 /* MP4HTTP.cpp */; };
+		00695D1416E70B13009CB115 /* MP4HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 00695D1216E70B13009CB115 /* MP4HTTP.h */; };
+		00695D3016E7E4B5009CB115 /* libjnetlib-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00695D2F16E7E4B5009CB115 /* libjnetlib-1.dylib */; };
+		0074CAF2167912AD005E2369 /* MP4MetadataService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D0A0154977D9007DD287 /* MP4MetadataService.cpp */; };
+		0074CAF5167913BE005E2369 /* MP4MetadataFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074CAF3167913BE005E2369 /* MP4MetadataFile.cpp */; };
+		0074CAF6167913BE005E2369 /* MP4MetadataFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CAF4167913BE005E2369 /* MP4MetadataFile.h */; };
+		00A5D06D1549031E007DD287 /* precomp.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D06C15490307007DD287 /* precomp.h */; };
+		00A5D0A9154977D9007DD287 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D08F154977D9007DD287 /* api.h */; };
+		00A5D0AA154977D9007DD287 /* ifc_mp4audiodecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D090154977D9007DD287 /* ifc_mp4audiodecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A5D0AB154977D9007DD287 /* ifc_mp4file.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D091154977D9007DD287 /* ifc_mp4file.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A5D0AC154977D9007DD287 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D092154977D9007DD287 /* main.cpp */; };
+		00A5D0AD154977D9007DD287 /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D093154977D9007DD287 /* main.h */; };
+		00A5D0AE154977D9007DD287 /* MP4Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D094154977D9007DD287 /* MP4Decoder.cpp */; };
+		00A5D0AF154977D9007DD287 /* MP4Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D095154977D9007DD287 /* MP4Decoder.h */; };
+		00A5D0B0154977D9007DD287 /* MP4DecoderCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D096154977D9007DD287 /* MP4DecoderCallback.cpp */; };
+		00A5D0B1154977D9007DD287 /* MP4DecoderCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D097154977D9007DD287 /* MP4DecoderCallback.h */; };
+		00A5D0B2154977D9007DD287 /* MP4FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D098154977D9007DD287 /* MP4FileObject.cpp */; };
+		00A5D0B3154977D9007DD287 /* MP4FileObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D099154977D9007DD287 /* MP4FileObject.h */; };
+		00A5D0B4154977D9007DD287 /* MP4Metadata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D09A154977D9007DD287 /* MP4Metadata.cpp */; };
+		00A5D0B5154977D9007DD287 /* MP4Metadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D09B154977D9007DD287 /* MP4Metadata.h */; };
+		00A5D0B6154977D9007DD287 /* MP4MetadataBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D09C154977D9007DD287 /* MP4MetadataBase.cpp */; };
+		00A5D0B7154977D9007DD287 /* MP4MetadataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D09D154977D9007DD287 /* MP4MetadataBase.h */; };
+		00A5D0B8154977D9007DD287 /* MP4MetadataEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D09E154977D9007DD287 /* MP4MetadataEditor.cpp */; };
+		00A5D0B9154977D9007DD287 /* MP4MetadataEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D09F154977D9007DD287 /* MP4MetadataEditor.h */; };
+		00A5D0BB154977D9007DD287 /* MP4MetadataService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D0A1154977D9007DD287 /* MP4MetadataService.h */; };
+		00A5D0BC154977D9007DD287 /* MP4Playback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D0A2154977D9007DD287 /* MP4Playback.cpp */; };
+		00A5D0BD154977D9007DD287 /* MP4Playback.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D0A3154977D9007DD287 /* MP4Playback.h */; };
+		00A5D0BE154977D9007DD287 /* MP4PlaybackService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D0A4154977D9007DD287 /* MP4PlaybackService.cpp */; };
+		00A5D0BF154977D9007DD287 /* MP4PlaybackService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D0A5154977D9007DD287 /* MP4PlaybackService.h */; };
+		00A5D0C2154977D9007DD287 /* svc_mp4decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D0A8154977D9007DD287 /* svc_mp4decoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00A5D0CB15497BFA007DD287 /* libnsmp4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A5D0C715497BFA007DD287 /* libnsmp4.a */; };
+		00A5D0CC15497BFA007DD287 /* libnswasabi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A5D0C815497BFA007DD287 /* libnswasabi.a */; };
+		00A5D0CD15497BFA007DD287 /* libnu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A5D0C915497BFA007DD287 /* libnu.a */; };
+		00A5D0CE15497BFA007DD287 /* libnx-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A5D0CA15497BFA007DD287 /* libnx-1.dylib */; };
+		00A5D0D115497C58007DD287 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A5D0D015497C58007DD287 /* CoreFoundation.framework */; };
+		00A5D0D415497CC7007DD287 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 00A5D0D215497CC7007DD287 /* version.c */; };
+		00A5D0D515497CC7007DD287 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A5D0D315497CC7007DD287 /* version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00E0668115B73E4C000BC89C /* MP4RawReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00E0667F15B73E4C000BC89C /* MP4RawReader.cpp */; };
+		00E0668215B73E4C000BC89C /* MP4RawReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E0668015B73E4C000BC89C /* MP4RawReader.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00A5D0651549018E007DD287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00E6E7D61548FE29005C9962 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00A5D05D15490159007DD287;
+			remoteInfo = "mp4-cleanup";
+		};
+		00A5D06715490190007DD287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00E6E7D61548FE29005C9962 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00A5D06115490167007DD287;
+			remoteInfo = "mp4-prepare";
+		};
+		00A5D06915490194007DD287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00E6E7D61548FE29005C9962 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00A5D05D15490159007DD287;
+			remoteInfo = "mp4-cleanup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00695D1116E70B13009CB115 /* MP4HTTP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4HTTP.cpp; sourceTree = "<group>"; };
+		00695D1216E70B13009CB115 /* MP4HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4HTTP.h; sourceTree = "<group>"; };
+		00695D2F16E7E4B5009CB115 /* libjnetlib-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libjnetlib-1.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0074CAF3167913BE005E2369 /* MP4MetadataFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4MetadataFile.cpp; sourceTree = "<group>"; };
+		0074CAF4167913BE005E2369 /* MP4MetadataFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4MetadataFile.h; sourceTree = "<group>"; };
+		00A5D06C15490307007DD287 /* precomp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = precomp.h; sourceTree = "<group>"; };
+		00A5D08F154977D9007DD287 /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		00A5D090154977D9007DD287 /* ifc_mp4audiodecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_mp4audiodecoder.h; sourceTree = "<group>"; };
+		00A5D091154977D9007DD287 /* ifc_mp4file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_mp4file.h; sourceTree = "<group>"; };
+		00A5D092154977D9007DD287 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		00A5D093154977D9007DD287 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		00A5D094154977D9007DD287 /* MP4Decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4Decoder.cpp; sourceTree = "<group>"; };
+		00A5D095154977D9007DD287 /* MP4Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4Decoder.h; sourceTree = "<group>"; };
+		00A5D096154977D9007DD287 /* MP4DecoderCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4DecoderCallback.cpp; sourceTree = "<group>"; };
+		00A5D097154977D9007DD287 /* MP4DecoderCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4DecoderCallback.h; sourceTree = "<group>"; };
+		00A5D098154977D9007DD287 /* MP4FileObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4FileObject.cpp; sourceTree = "<group>"; };
+		00A5D099154977D9007DD287 /* MP4FileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4FileObject.h; sourceTree = "<group>"; };
+		00A5D09A154977D9007DD287 /* MP4Metadata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4Metadata.cpp; sourceTree = "<group>"; };
+		00A5D09B154977D9007DD287 /* MP4Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4Metadata.h; sourceTree = "<group>"; };
+		00A5D09C154977D9007DD287 /* MP4MetadataBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4MetadataBase.cpp; sourceTree = "<group>"; };
+		00A5D09D154977D9007DD287 /* MP4MetadataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4MetadataBase.h; sourceTree = "<group>"; };
+		00A5D09E154977D9007DD287 /* MP4MetadataEditor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4MetadataEditor.cpp; sourceTree = "<group>"; };
+		00A5D09F154977D9007DD287 /* MP4MetadataEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4MetadataEditor.h; sourceTree = "<group>"; };
+		00A5D0A0154977D9007DD287 /* MP4MetadataService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4MetadataService.cpp; sourceTree = "<group>"; };
+		00A5D0A1154977D9007DD287 /* MP4MetadataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4MetadataService.h; sourceTree = "<group>"; };
+		00A5D0A2154977D9007DD287 /* MP4Playback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4Playback.cpp; sourceTree = "<group>"; };
+		00A5D0A3154977D9007DD287 /* MP4Playback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4Playback.h; sourceTree = "<group>"; };
+		00A5D0A4154977D9007DD287 /* MP4PlaybackService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4PlaybackService.cpp; sourceTree = "<group>"; };
+		00A5D0A5154977D9007DD287 /* MP4PlaybackService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4PlaybackService.h; sourceTree = "<group>"; };
+		00A5D0A8154977D9007DD287 /* svc_mp4decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svc_mp4decoder.h; sourceTree = "<group>"; };
+		00A5D0C4154979B3007DD287 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		00A5D0C715497BFA007DD287 /* libnsmp4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnsmp4.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A5D0C815497BFA007DD287 /* libnswasabi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnswasabi.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A5D0C915497BFA007DD287 /* libnu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A5D0CA15497BFA007DD287 /* libnx-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libnx-1.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A5D0D015497C58007DD287 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		00A5D0D215497CC7007DD287 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = $PROJECT_DERIVED_FILE_DIR/version.c; sourceTree = "<absolute>"; };
+		00A5D0D315497CC7007DD287 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = $PROJECT_DERIVED_FILE_DIR/version.h; sourceTree = "<absolute>"; };
+		00E0667F15B73E4C000BC89C /* MP4RawReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4RawReader.cpp; sourceTree = "<group>"; };
+		00E0668015B73E4C000BC89C /* MP4RawReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4RawReader.h; sourceTree = "<group>"; };
+		00E6E7DF1548FE29005C9962 /* libmp4.w6c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmp4.w6c; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E6E7DC1548FE29005C9962 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00695D3016E7E4B5009CB115 /* libjnetlib-1.dylib in Frameworks */,
+				00A5D0D115497C58007DD287 /* CoreFoundation.framework in Frameworks */,
+				00A5D0CB15497BFA007DD287 /* libnsmp4.a in Frameworks */,
+				00A5D0CC15497BFA007DD287 /* libnswasabi.a in Frameworks */,
+				00A5D0CD15497BFA007DD287 /* libnu.a in Frameworks */,
+				00A5D0CE15497BFA007DD287 /* libnx-1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00A5D0C5154979C1007DD287 /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				00A5D0C4154979B3007DD287 /* VERSION */,
+				00A5D0D215497CC7007DD287 /* version.c */,
+				00A5D0D315497CC7007DD287 /* version.h */,
+			);
+			name = Version;
+			sourceTree = "<group>";
+		};
+		00A5D0C6154979D5007DD287 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				00A5D0C715497BFA007DD287 /* libnsmp4.a */,
+				00A5D0C815497BFA007DD287 /* libnswasabi.a */,
+				00A5D0C915497BFA007DD287 /* libnu.a */,
+				00A5D0CA15497BFA007DD287 /* libnx-1.dylib */,
+				00695D2F16E7E4B5009CB115 /* libjnetlib-1.dylib */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		00A5D0CF15497C41007DD287 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00A5D0D015497C58007DD287 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00E6E7D41548FE29005C9962 = {
+			isa = PBXGroup;
+			children = (
+				00695D1116E70B13009CB115 /* MP4HTTP.cpp */,
+				00695D1216E70B13009CB115 /* MP4HTTP.h */,
+				00A5D08F154977D9007DD287 /* api.h */,
+				00A5D090154977D9007DD287 /* ifc_mp4audiodecoder.h */,
+				00A5D091154977D9007DD287 /* ifc_mp4file.h */,
+				00A5D092154977D9007DD287 /* main.cpp */,
+				00A5D093154977D9007DD287 /* main.h */,
+				00A5D094154977D9007DD287 /* MP4Decoder.cpp */,
+				00A5D095154977D9007DD287 /* MP4Decoder.h */,
+				00A5D096154977D9007DD287 /* MP4DecoderCallback.cpp */,
+				00A5D097154977D9007DD287 /* MP4DecoderCallback.h */,
+				00A5D098154977D9007DD287 /* MP4FileObject.cpp */,
+				00A5D099154977D9007DD287 /* MP4FileObject.h */,
+				00A5D09A154977D9007DD287 /* MP4Metadata.cpp */,
+				00A5D09B154977D9007DD287 /* MP4Metadata.h */,
+				00A5D09C154977D9007DD287 /* MP4MetadataBase.cpp */,
+				00A5D09D154977D9007DD287 /* MP4MetadataBase.h */,
+				00A5D09E154977D9007DD287 /* MP4MetadataEditor.cpp */,
+				00A5D09F154977D9007DD287 /* MP4MetadataEditor.h */,
+				0074CAF3167913BE005E2369 /* MP4MetadataFile.cpp */,
+				0074CAF4167913BE005E2369 /* MP4MetadataFile.h */,
+				00A5D0A0154977D9007DD287 /* MP4MetadataService.cpp */,
+				00A5D0A1154977D9007DD287 /* MP4MetadataService.h */,
+				00A5D0A2154977D9007DD287 /* MP4Playback.cpp */,
+				00A5D0A3154977D9007DD287 /* MP4Playback.h */,
+				00A5D0A4154977D9007DD287 /* MP4PlaybackService.cpp */,
+				00A5D0A5154977D9007DD287 /* MP4PlaybackService.h */,
+				00E0667F15B73E4C000BC89C /* MP4RawReader.cpp */,
+				00E0668015B73E4C000BC89C /* MP4RawReader.h */,
+				00A5D06C15490307007DD287 /* precomp.h */,
+				00A5D0A8154977D9007DD287 /* svc_mp4decoder.h */,
+				00A5D0C6154979D5007DD287 /* Libraries */,
+				00A5D0CF15497C41007DD287 /* Frameworks */,
+				00A5D0C5154979C1007DD287 /* Version */,
+				00E6E7E01548FE29005C9962 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00E6E7E01548FE29005C9962 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00E6E7DF1548FE29005C9962 /* libmp4.w6c */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		00E6E7DD1548FE29005C9962 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A5D06D1549031E007DD287 /* precomp.h in Headers */,
+				00A5D0A9154977D9007DD287 /* api.h in Headers */,
+				00A5D0AA154977D9007DD287 /* ifc_mp4audiodecoder.h in Headers */,
+				00A5D0AB154977D9007DD287 /* ifc_mp4file.h in Headers */,
+				00A5D0AD154977D9007DD287 /* main.h in Headers */,
+				00A5D0AF154977D9007DD287 /* MP4Decoder.h in Headers */,
+				00A5D0B1154977D9007DD287 /* MP4DecoderCallback.h in Headers */,
+				00A5D0B3154977D9007DD287 /* MP4FileObject.h in Headers */,
+				00A5D0B5154977D9007DD287 /* MP4Metadata.h in Headers */,
+				00A5D0B7154977D9007DD287 /* MP4MetadataBase.h in Headers */,
+				00A5D0B9154977D9007DD287 /* MP4MetadataEditor.h in Headers */,
+				00A5D0BB154977D9007DD287 /* MP4MetadataService.h in Headers */,
+				00A5D0BD154977D9007DD287 /* MP4Playback.h in Headers */,
+				00A5D0BF154977D9007DD287 /* MP4PlaybackService.h in Headers */,
+				00A5D0C2154977D9007DD287 /* svc_mp4decoder.h in Headers */,
+				00A5D0D515497CC7007DD287 /* version.h in Headers */,
+				00E0668215B73E4C000BC89C /* MP4RawReader.h in Headers */,
+				0074CAF6167913BE005E2369 /* MP4MetadataFile.h in Headers */,
+				00695D1416E70B13009CB115 /* MP4HTTP.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		00A5D05D15490159007DD287 /* mp4-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(LIBRARY_PATH)\" \"$(PUBLIC_HEADERS_DIR)\" \"$(DWARF_DSYM_PATH)\" \"$(PROJECT_DERIVED_FILE_DIR)/version.*\"";
+			buildConfigurationList = 00A5D05E15490159007DD287 /* Build configuration list for PBXLegacyTarget "mp4-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "mp4-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "mp4-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		00E6E7DE1548FE29005C9962 /* mp4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E6E7E31548FE29005C9962 /* Build configuration list for PBXNativeTarget "mp4" */;
+			buildPhases = (
+				00E6E7DB1548FE29005C9962 /* Sources */,
+				00E6E7DC1548FE29005C9962 /* Frameworks */,
+				00A5D0DA154989A7007DD287 /* Create Symbolic Links */,
+				00E6E7DD1548FE29005C9962 /* Headers */,
+				00A5D0DB154989E5007DD287 /* Install Public Headers */,
+				00A5D0DD15498B16007DD287 /* Install Debug Symbols */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00A5D0661549018E007DD287 /* PBXTargetDependency */,
+				00A5D06815490190007DD287 /* PBXTargetDependency */,
+			);
+			name = mp4;
+			productName = mp4;
+			productReference = 00E6E7DF1548FE29005C9962 /* libmp4.w6c */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00E6E7D61548FE29005C9962 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 00E6E7D91548FE29005C9962 /* Build configuration list for PBXProject "mp4" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 00E6E7D41548FE29005C9962;
+			productRefGroup = 00E6E7E01548FE29005C9962 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00E6E7DE1548FE29005C9962 /* mp4 */,
+				00A5D05D15490159007DD287 /* mp4-cleanup */,
+				00A5D06115490167007DD287 /* mp4-prepare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00A5D06B15490294007DD287 /* Generate Version Info */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/VERSION",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.h",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.c",
+			);
+			name = "Generate Version Info";
+			outputPaths = (
+				"$(PROJECT_DERIVED_FILE_DIR)/version.h",
+				"$(PROJECT_DERIVED_FILE_DIR)/version.c",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PRODUCT_VERSION=$(cat \"$SCRIPT_INPUT_FILE_0\")\n\nif [ ! -d \"$PROJECT_DERIVED_FILE_DIR\" ]; then\n    mkdir -p \"$PROJECT_DERIVED_FILE_DIR\"\nfi\n\nNVGTOOL=\"$NSBUILD_TOOLS_BIN_DIR/nvgtool\"\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_1\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_0\"\n\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_2\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_1\"";
+			showEnvVarsInLog = 0;
+		};
+		00A5D0DA154989A7007DD287 /* Create Symbolic Links */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_NAME)",
+			);
+			name = "Create Symbolic Links";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIBLN=\"$NSBUILD_TOOLS_BIN_DIR/libln\"\ncd $TARGET_BUILD_DIR; \\\n$LIBLN \"$EXECUTABLE_NAME\"\n\nif [ \"$DEPLOYMENT_LOCATION\" == \"YES\" ]; then\n    cd \"$BUILT_PRODUCTS_DIR\"; \\\n    $LIBLN \"$EXECUTABLE_NAME\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+		00A5D0DB154989E5007DD287 /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+		00A5D0DD15498B16007DD287 /* Install Debug Symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			name = "Install Debug Symbols";
+			outputPaths = (
+				"$(DWARF_DSYM_INSTALL_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E6E7DB1548FE29005C9962 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A5D0AC154977D9007DD287 /* main.cpp in Sources */,
+				00A5D0AE154977D9007DD287 /* MP4Decoder.cpp in Sources */,
+				00A5D0B0154977D9007DD287 /* MP4DecoderCallback.cpp in Sources */,
+				00A5D0B2154977D9007DD287 /* MP4FileObject.cpp in Sources */,
+				00A5D0B4154977D9007DD287 /* MP4Metadata.cpp in Sources */,
+				00A5D0B6154977D9007DD287 /* MP4MetadataBase.cpp in Sources */,
+				00A5D0B8154977D9007DD287 /* MP4MetadataEditor.cpp in Sources */,
+				00A5D0BC154977D9007DD287 /* MP4Playback.cpp in Sources */,
+				00A5D0BE154977D9007DD287 /* MP4PlaybackService.cpp in Sources */,
+				00A5D0D415497CC7007DD287 /* version.c in Sources */,
+				00E0668115B73E4C000BC89C /* MP4RawReader.cpp in Sources */,
+				0074CAF2167912AD005E2369 /* MP4MetadataService.cpp in Sources */,
+				0074CAF5167913BE005E2369 /* MP4MetadataFile.cpp in Sources */,
+				00695D1316E70B13009CB115 /* MP4HTTP.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00A5D0661549018E007DD287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00A5D05D15490159007DD287 /* mp4-cleanup */;
+			targetProxy = 00A5D0651549018E007DD287 /* PBXContainerItemProxy */;
+		};
+		00A5D06815490190007DD287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00A5D06115490167007DD287 /* mp4-prepare */;
+			targetProxy = 00A5D06715490190007DD287 /* PBXContainerItemProxy */;
+		};
+		00A5D06A15490194007DD287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00A5D05D15490159007DD287 /* mp4-cleanup */;
+			targetProxy = 00A5D06915490194007DD287 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00A5D05F15490159007DD287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		00A5D06015490159007DD287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		00A5D06315490167007DD287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Debug;
+		};
+		00A5D06415490167007DD287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Release;
+		};
+		00E6E7E11548FE29005C9962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = w6c;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_NAME)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				ONLY_ACTIVE_ARCH = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. ../nsmp4/include $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		00E6E7E21548FE29005C9962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = w6c;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_NAME)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. ../nsmp4/include $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		00E6E7E41548FE29005C9962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/mp4-dytdwuiueapszgalwwezystmeaxc/Build/Products/Debug\"",
+				);
+			};
+			name = Debug;
+		};
+		00E6E7E51548FE29005C9962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/mp4-dytdwuiueapszgalwwezystmeaxc/Build/Products/Debug\"",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00A5D05E15490159007DD287 /* Build configuration list for PBXLegacyTarget "mp4-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A5D05F15490159007DD287 /* Debug */,
+				00A5D06015490159007DD287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A5D06215490167007DD287 /* Build configuration list for PBXAggregateTarget "mp4-prepare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A5D06315490167007DD287 /* Debug */,
+				00A5D06415490167007DD287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00E6E7D91548FE29005C9962 /* Build configuration list for PBXProject "mp4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E6E7E11548FE29005C9962 /* Debug */,
+				00E6E7E21548FE29005C9962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00E6E7E31548FE29005C9962 /* Build configuration list for PBXNativeTarget "mp4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E6E7E41548FE29005C9962 /* Debug */,
+				00E6E7E51548FE29005C9962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00E6E7D61548FE29005C9962 /* Project object */;
+}

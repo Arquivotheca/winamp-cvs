@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6FA185F4-DD3F-4137-941B-5A1D7FA7F1D3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>nsmp4</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level2</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;NSMP4_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;include;src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>nsmp4.def</ModuleDefinitionFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Outputs>
+      </Outputs>
+      <Inputs>
+      </Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level2</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;NSMP4_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;include;src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>nsmp4.def</ModuleDefinitionFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy "$(TargetPath)" "$(ProgramW6432)\Replicant\$(TargetName)$(TargetExt)"</Command>
+      <Outputs>$(ProgramW6432)\Replicant\$(TargetName)$(TargetExt)</Outputs>
+      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level2</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;NSMP4_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;include;src</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precomp.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>nsmp4.def</ModuleDefinitionFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Outputs>
+      </Outputs>
+      <Inputs>
+      </Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level2</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;NSMP4_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;include;src</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precomp.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>nsmp4.def</ModuleDefinitionFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy "$(TargetPath)" "$(ProgramW6432)\Replicant\$(TargetName)$(TargetExt)"</Command>
+      <Outputs>$(ProgramW6432)\Replicant\$(TargetName)$(TargetExt)</Outputs>
+      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="boxes\atom_alac.cpp" />
+    <ClCompile Include="boxes\atom_amr.cpp" />
+    <ClCompile Include="boxes\atom_avc1.cpp" />
+    <ClCompile Include="boxes\atom_avcC.cpp" />
+    <ClCompile Include="boxes\atom_chpl.cpp" />
+    <ClCompile Include="boxes\atom_d263.cpp" />
+    <ClCompile Include="boxes\atom_damr.cpp" />
+    <ClCompile Include="boxes\atom_dref.cpp" />
+    <ClCompile Include="boxes\atom_elst.cpp" />
+    <ClCompile Include="boxes\atom_enca.cpp" />
+    <ClCompile Include="boxes\atom_encv.cpp" />
+    <ClCompile Include="boxes\atom_free.cpp" />
+    <ClCompile Include="boxes\atom_ftyp.cpp" />
+    <ClCompile Include="boxes\atom_gmin.cpp" />
+    <ClCompile Include="boxes\atom_hdlr.cpp" />
+    <ClCompile Include="boxes\atom_hinf.cpp" />
+    <ClCompile Include="boxes\atom_hnti.cpp" />
+    <ClCompile Include="boxes\atom_href.cpp" />
+    <ClCompile Include="boxes\atom_mdat.cpp" />
+    <ClCompile Include="boxes\atom_mdhd.cpp" />
+    <ClCompile Include="boxes\atom_meta.cpp" />
+    <ClCompile Include="boxes\atom_mp4s.cpp" />
+    <ClCompile Include="boxes\atom_mp4v.cpp" />
+    <ClCompile Include="boxes\atom_mvhd.cpp" />
+    <ClCompile Include="boxes\atom_ohdr.cpp" />
+    <ClCompile Include="boxes\atom_root.cpp" />
+    <ClCompile Include="boxes\atom_rtp.cpp" />
+    <ClCompile Include="boxes\atom_s263.cpp" />
+    <ClCompile Include="boxes\atom_sdp.cpp" />
+    <ClCompile Include="boxes\atom_smi.cpp" />
+    <ClCompile Include="boxes\atom_sound.cpp" />
+    <ClCompile Include="boxes\atom_standard.cpp" />
+    <ClCompile Include="boxes\atom_stbl.cpp" />
+    <ClCompile Include="boxes\atom_stdp.cpp" />
+    <ClCompile Include="boxes\atom_stsc.cpp" />
+    <ClCompile Include="boxes\atom_stsd.cpp" />
+    <ClCompile Include="boxes\atom_stsz.cpp" />
+    <ClCompile Include="boxes\atom_stz2.cpp" />
+    <ClCompile Include="boxes\atom_text.cpp" />
+    <ClCompile Include="boxes\atom_tfhd.cpp" />
+    <ClCompile Include="boxes\atom_tkhd.cpp" />
+    <ClCompile Include="boxes\atom_treftype.cpp" />
+    <ClCompile Include="boxes\atom_trun.cpp" />
+    <ClCompile Include="boxes\atom_udta.cpp" />
+    <ClCompile Include="boxes\atom_url.cpp" />
+    <ClCompile Include="boxes\atom_urn.cpp" />
+    <ClCompile Include="boxes\atom_video.cpp" />
+    <ClCompile Include="boxes\atom_vmhd.cpp" />
+    <ClCompile Include="boxes\atom_wave.cpp" />
+    <ClCompile Include="src\3gp.cpp" />
+    <ClCompile Include="src\3gpmeta.cpp" />
+    <ClCompile Include="src\descriptors.cpp" />
+    <ClCompile Include="src\isma.cpp" />
+    <ClCompile Include="src\mp4.cpp" />
+    <ClCompile Include="src\mp4atom.cpp" />
+    <ClCompile Include="src\mp4container.cpp" />
+    <ClCompile Include="src\mp4descriptor.cpp" />
+    <ClCompile Include="src\mp4file.cpp" />
+    <ClCompile Include="src\mp4file_io.cpp" />
+    <ClCompile Include="src\mp4info.cpp" />
+    <ClCompile Include="src\mp4meta.cpp" />
+    <ClCompile Include="src\mp4property.cpp" />
+    <ClCompile Include="src\mp4track.cpp" />
+    <ClCompile Include="src\mp4util.cpp" />
+    <ClCompile Include="src\need_for_win32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="src\nsmp4.cpp" />
+    <ClCompile Include="src\ocidescriptors.cpp" />
+    <ClCompile Include="src\odcommands.cpp" />
+    <ClCompile Include="src\precomp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\qosqualifiers.cpp" />
+    <ClCompile Include="src\rtphint.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boxes\atoms.h" />
+    <ClInclude Include="include\nsmp4.h" />
+    <ClInclude Include="src\atoms.h" />
+    <ClInclude Include="src\descriptors.h" />
+    <ClInclude Include="src\mp4array.h" />
+    <ClInclude Include="src\mp4atom.h" />
+    <ClInclude Include="src\mp4common.h" />
+    <ClInclude Include="src\mp4container.h" />
+    <ClInclude Include="src\mp4descriptor.h" />
+    <ClInclude Include="src\mp4file.h" />
+    <ClInclude Include="src\mp4property.h" />
+    <ClInclude Include="src\mp4track.h" />
+    <ClInclude Include="src\mp4util.h" />
+    <ClInclude Include="src\ocidescriptors.h" />
+    <ClInclude Include="src\odcommands.h" />
+    <ClInclude Include="src\precomp.h" />
+    <ClInclude Include="src\qosqualifiers.h" />
+    <ClInclude Include="src\rtphint.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nsmp4.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nx\nx.vcxproj">
+      <Project>{2851cf33-337d-44d9-ba6d-30547b1cdef0}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		00DC1303150721E2007F9D73 /* component */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00DC1304150721E2007F9D73 /* Build configuration list for PBXAggregateTarget "component" */;
+			buildPhases = (
+				00DC130715072255007F9D73 /* Copy Public Headers */,
+				00DC130A15072269007F9D73 /* Copy Shared Files */,
+				006E5B57152C040F0081BD03 /* Copy Mac OS X Shared Files */,
+				00B7333A151B5BD000A8251C /* Install Public Headers */,
+				00B7333B151B5C0D00A8251C /* Install Shared Files */,
+			);
+			dependencies = (
+				00B73341151B5D1600A8251C /* PBXTargetDependency */,
+			);
+			name = component;
+			productName = component;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		006E5B58152C04370081BD03 /* ComponentManager.cpp in Copy Mac OS X Shared Files */ = {isa = PBXBuildFile; fileRef = 006E5B3B152C00940081BD03 /* ComponentManager.cpp */; };
+		006E5B59152C04370081BD03 /* ComponentManager.h in Copy Mac OS X Shared Files */ = {isa = PBXBuildFile; fileRef = 006E5B3C152C00940081BD03 /* ComponentManager.h */; };
+		00DC130815072265007F9D73 /* ifc_component_sync.h in Copy Public Headers */ = {isa = PBXBuildFile; fileRef = 00883F351501621000625F51 /* ifc_component_sync.h */; };
+		00DC130915072265007F9D73 /* ifc_component.h in Copy Public Headers */ = {isa = PBXBuildFile; fileRef = 00883F361501621000625F51 /* ifc_component.h */; };
+		00DC130B15072280007F9D73 /* ComponentManagerBase.cpp in Copy Shared Files */ = {isa = PBXBuildFile; fileRef = 00883F3E1501680C00625F51 /* ComponentManagerBase.cpp */; };
+		00DC130C15072280007F9D73 /* ComponentManagerBase.h in Copy Shared Files */ = {isa = PBXBuildFile; fileRef = 00883F3F1501680C00625F51 /* ComponentManagerBase.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00B73340151B5D1600A8251C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00883F22150160F500625F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B7333C151B5C9800A8251C;
+			remoteInfo = "component-cleanup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		006E5B57152C040F0081BD03 /* Copy Mac OS X Shared Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SHARE_FOLDER_PATH)/osx";
+			dstSubfolderSpec = 16;
+			files = (
+				006E5B58152C04370081BD03 /* ComponentManager.cpp in Copy Mac OS X Shared Files */,
+				006E5B59152C04370081BD03 /* ComponentManager.h in Copy Mac OS X Shared Files */,
+			);
+			name = "Copy Mac OS X Shared Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DC130715072255007F9D73 /* Copy Public Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				00DC130815072265007F9D73 /* ifc_component_sync.h in Copy Public Headers */,
+				00DC130915072265007F9D73 /* ifc_component.h in Copy Public Headers */,
+			);
+			name = "Copy Public Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DC130A15072269007F9D73 /* Copy Shared Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SHARE_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				00DC130B15072280007F9D73 /* ComponentManagerBase.cpp in Copy Shared Files */,
+				00DC130C15072280007F9D73 /* ComponentManagerBase.h in Copy Shared Files */,
+			);
+			name = "Copy Shared Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		006E5B3B152C00940081BD03 /* ComponentManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ComponentManager.cpp; path = osx/ComponentManager.cpp; sourceTree = "<group>"; };
+		006E5B3C152C00940081BD03 /* ComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponentManager.h; path = osx/ComponentManager.h; sourceTree = "<group>"; };
+		00883F351501621000625F51 /* ifc_component_sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_component_sync.h; sourceTree = "<group>"; };
+		00883F361501621000625F51 /* ifc_component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_component.h; sourceTree = "<group>"; };
+		00883F3E1501680C00625F51 /* ComponentManagerBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentManagerBase.cpp; sourceTree = "<group>"; };
+		00883F3F1501680C00625F51 /* ComponentManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentManagerBase.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		006E5B55152C03D00081BD03 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				006E5B3B152C00940081BD03 /* ComponentManager.cpp */,
+				006E5B3C152C00940081BD03 /* ComponentManager.h */,
+			);
+			name = osx;
+			sourceTree = "<group>";
+		};
+		00883F20150160F500625F51 = {
+			isa = PBXGroup;
+			children = (
+				00883F351501621000625F51 /* ifc_component_sync.h */,
+				00883F361501621000625F51 /* ifc_component.h */,
+				00883F3D1501680200625F51 /* share */,
+			);
+			sourceTree = "<group>";
+		};
+		00883F3D1501680200625F51 /* share */ = {
+			isa = PBXGroup;
+			children = (
+				00883F3E1501680C00625F51 /* ComponentManagerBase.cpp */,
+				00883F3F1501680C00625F51 /* ComponentManagerBase.h */,
+				006E5B55152C03D00081BD03 /* osx */,
+			);
+			name = share;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		00B7333C151B5C9800A8251C /* component-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(PUBLIC_HEADERS_DIR)\" \"$(SHARE_DIR)\"";
+			buildConfigurationList = 00B7333D151B5C9800A8251C /* Build configuration list for PBXLegacyTarget "component-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "component-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "component-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		00883F22150160F500625F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 00883F25150160F500625F51 /* Build configuration list for PBXProject "component" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 00883F20150160F500625F51;
+			productRefGroup = 00883F20150160F500625F51;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00DC1303150721E2007F9D73 /* component */,
+				00B7333C151B5C9800A8251C /* component-cleanup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00B7333A151B5BD000A8251C /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+		00B7333B151B5C0D00A8251C /* Install Shared Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(SHARE_FOLDER_PATH)",
+			);
+			name = "Install Shared Files";
+			outputPaths = (
+				"$(DSTROOT)$(SHARE_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00B73341151B5D1600A8251C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B7333C151B5C9800A8251C /* component-cleanup */;
+			targetProxy = 00B73340151B5D1600A8251C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00883F2D150160F500625F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PRODUCT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		00883F2E150160F500625F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PRODUCT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		00B7333E151B5C9800A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+				SHARE_DIR = "$(BUILT_PRODUCTS_DIR)$(SHARE_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		00B7333F151B5C9800A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+				SHARE_DIR = "$(BUILT_PRODUCTS_DIR)$(SHARE_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		00DC1305150721E2007F9D73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		00DC1306150721E2007F9D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00883F25150160F500625F51 /* Build configuration list for PBXProject "component" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00883F2D150160F500625F51 /* Debug */,
+				00883F2E150160F500625F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B7333D151B5C9800A8251C /* Build configuration list for PBXLegacyTarget "component-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B7333E151B5C9800A8251C /* Debug */,
+				00B7333F151B5C9800A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00DC1304150721E2007F9D73 /* Build configuration list for PBXAggregateTarget "component" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DC1305150721E2007F9D73 /* Debug */,
+				00DC1306150721E2007F9D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00883F22150160F500625F51 /* Project object */;
+}

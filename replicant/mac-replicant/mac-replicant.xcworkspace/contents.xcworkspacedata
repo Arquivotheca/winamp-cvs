@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:mac-replicant.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../libyajl/yajl.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../application/application.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../audio/audio.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../component/component.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../decode/decode.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../file/file.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../filelock/filelock.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../foundation/foundation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../metadata/metadata.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../player/player.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../replaygain/replaygain.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Replicant/Replicant.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../service/service.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../syscb/syscb.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Wasabi/Wasabi.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nu/nu.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nx/nx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nsapev2/nsapev2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nsid3v1/nsid3v1.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nsid3v2/nsid3v2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nsmp3/nsmp3.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nsmp4/nsmp4.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nswasabi/nswasabi.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../jnetlib/jnetlib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../mp3/mp3.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../mp4/mp4.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Replicant/common/replicant-common.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Replicant/codec/replicant-codec.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Replicant/metadata/replicant-metadata.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Replicant/playback/replicant-playback.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../gracenote/gracenote.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../cloud/cloud.xcodeproj">
+   </FileRef>
+</Workspace>

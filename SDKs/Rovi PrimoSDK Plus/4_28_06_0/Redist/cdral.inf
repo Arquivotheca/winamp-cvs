@@ -1,0 +1,96 @@
+;/*++
+;
+;Copyright (c) 2006, Sonic Solutions.  All rights reserved.
+;
+;Module Name:
+;
+;    PXHELP.INF
+;
+;Abstract:
+;    INF file for installing stubbeed-out driver for Roxio CDR layer
+;
+;--*/
+ 
+ 
+[Version] 
+Signature = "$Windows NT$" 
+Class=CDROM
+ClassGUID={4d36e965-e325-11ce-bfc1-08002be10318} 
+Provider=%Roxio% 
+CatalogFile.NTx86=cdralx86.cat
+CatalogFile.NTamd64=cdralx64.cat
+DriverVer= 05/15/2009, 8.0.0.212
+
+[DestinationDirs] 
+DefaultDestDir = 12
+
+[SourceDisksNames.x86]
+1=%Desc_x86%
+
+[SourceDisksNames.amd64]
+1=%Desc_amd64%
+
+[SourceDisksFiles.x86]
+cdralw2k.sys=1,, 
+
+[SourceDisksFiles.amd64]
+cdralw2k.sys=1,, 
+
+[Manufacturer] 
+%ROXIOX86%=Roxio,NTx86
+%ROXIOX64%=Roxio,NTamd64
+
+[Roxio.NTx86]
+%CdralDesc%=Cdral_Inst,0
+
+[Roxio.NTamd64]
+%CdralDesc%=Cdral_Inst,0
+
+[Cdral_Inst] 
+include = cdrom.inf
+CopyFiles = Cdral.Files 
+AddReg = Cdral.AddReg 
+
+[Cdral_Inst.Services] 
+AddService = Cdralw2k,0,Cdral_Service_Inst, 
+
+[Cdral_Service_Inst] 
+ServiceType= %SERVICE_KERNEL_DRIVER%
+StartType= %SERVICE_BOOT_START%
+ErrorControl= %SERVICE_ERROR_NORMAL%
+ServiceBinary= %12%\Cdralw2k.SYS
+LoadOrderGroup= "Filter"
+
+[Cdral.AddReg] 
+HKLM,System\CurrentControlSet\Control\Class\{4d36e965-e325-11ce-bfc1-08002be10318},"LowerFilters",0x00010008,"Cdralw2k"
+
+[Cdral.Files] 
+Cdralw2k.sys
+
+
+[Strings] 
+
+;  *******Localizable Strings******* 
+Roxio= "Roxio" 
+ROXIOX86="Roxio 32 bit"
+ROXIOX64="Roxio 64 bit"
+Desc_x86  = "Roxio stubbeed-out 32 bit driver for Roxio CDR layer" 
+Desc_amd64= "Roxio stubbeed-out 64 bit driver for Roxio CDR layer" 
+CdralDesc= "Roxio Cdral" 
+
+;  *******Non Localizable Strings******* 
+
+SERVICE_BOOT_START = 0x0 
+SERVICE_SYSTEM_START = 0x1 
+SERVICE_AUTO_START = 0x2 
+SERVICE_DEMAND_START = 0x3 
+SERVICE_DISABLED = 0x4 
+
+SERVICE_KERNEL_DRIVER = 0x1 
+SERVICE_ERROR_IGNORE = 0x0 
+SERVICE_ERROR_NORMAL = 0x1 
+SERVICE_ERROR_SEVERE = 0x2 
+SERVICE_ERROR_CRITICAL = 0x3 
+
+REG_EXPAND_SZ = 0x00020000 
+REG_DWORD = 0x00010001 

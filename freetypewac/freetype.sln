@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetypewac", "freetypewac.vcproj", "{2E31944B-64BE-4160-A1CF-7A31A923E204}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tataki", "..\tataki\tataki.vcproj", "{255B68B5-7EF8-45EF-A675-2D6B88147909}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bfc", "..\Wasabi\bfc\bfc.vcproj", "{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wasabi", "..\Wasabi\Wasabi.vcproj", "{3E0BFA8A-B86A-42E9-A33F-EC294F823F7F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype", "..\freetype\builds\win32\visualc\freetype.vcproj", "{38CBD775-E028-4A46-8432-119201129541}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2E31944B-64BE-4160-A1CF-7A31A923E204}.Debug.ActiveCfg = Debug|Win32
+		{2E31944B-64BE-4160-A1CF-7A31A923E204}.Debug.Build.0 = Debug|Win32
+		{2E31944B-64BE-4160-A1CF-7A31A923E204}.Release.ActiveCfg = Release|Win32
+		{2E31944B-64BE-4160-A1CF-7A31A923E204}.Release.Build.0 = Release|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Debug.ActiveCfg = Debug|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Debug.Build.0 = Debug|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Release.ActiveCfg = Release|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Release.Build.0 = Release|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Debug.ActiveCfg = Debug|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Debug.Build.0 = Debug|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Release.ActiveCfg = Release|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Release.Build.0 = Release|Win32
+		{3E0BFA8A-B86A-42E9-A33F-EC294F823F7F}.Debug.ActiveCfg = Debug|Win32
+		{3E0BFA8A-B86A-42E9-A33F-EC294F823F7F}.Debug.Build.0 = Debug|Win32
+		{3E0BFA8A-B86A-42E9-A33F-EC294F823F7F}.Release.ActiveCfg = Release|Win32
+		{3E0BFA8A-B86A-42E9-A33F-EC294F823F7F}.Release.Build.0 = Release|Win32
+		{38CBD775-E028-4A46-8432-119201129541}.Debug.ActiveCfg = Debug|Win32
+		{38CBD775-E028-4A46-8432-119201129541}.Debug.Build.0 = Debug|Win32
+		{38CBD775-E028-4A46-8432-119201129541}.Release.ActiveCfg = Profiling|Win32
+		{38CBD775-E028-4A46-8432-119201129541}.Release.Build.0 = Profiling|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

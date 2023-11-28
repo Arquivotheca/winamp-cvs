@@ -1,0 +1,46 @@
+# Visual Studio
+*.suo
+*.sdf
+*.opensdf
+*.vcxproj.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*.ncb
+*.obj
+ipch/
+[Dd]ebug/
+[Rr]elease/
+[Oo]bj/
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+project.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+*.tar.gz
+
+# Mac
+.DS_Store
+.Trashes
+.fseventsd
+.Spotlight-V100
+._.Trashes
+
+# Windows
+[Tt]humbs.db
+
+#MS Office 
+~$*
+/jnetlib/*.user

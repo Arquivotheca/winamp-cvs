@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "winampa", "winampa.vcproj", "{EF082058-B95A-4627-950A-8A825251785D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release 64|Win32 = Release 64|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF082058-B95A-4627-950A-8A825251785D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EF082058-B95A-4627-950A-8A825251785D}.Debug|Win32.Build.0 = Debug|Win32
+		{EF082058-B95A-4627-950A-8A825251785D}.Release 64|Win32.ActiveCfg = Release|Win32
+		{EF082058-B95A-4627-950A-8A825251785D}.Release 64|Win32.Build.0 = Release|Win32
+		{EF082058-B95A-4627-950A-8A825251785D}.Release|Win32.ActiveCfg = Release|Win32
+		{EF082058-B95A-4627-950A-8A825251785D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		009988881520F22D000AB02F /* mp3-prepare */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 009988891520F22D000AB02F /* Build configuration list for PBXAggregateTarget "mp3-prepare" */;
+			buildPhases = (
+				0099888C1520F31F000AB02F /* Generate Version Info */,
+			);
+			dependencies = (
+				0039B37B152A1F9C00D96D3E /* PBXTargetDependency */,
+			);
+			name = "mp3-prepare";
+			productName = "mp3-version";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		007844DF153E62FC00E6DCE5 /* MP4DecoderService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007844DB153E62FC00E6DCE5 /* MP4DecoderService.cpp */; };
+		007844E0153E62FC00E6DCE5 /* MP4DecoderService.h in Headers */ = {isa = PBXBuildFile; fileRef = 007844DC153E62FC00E6DCE5 /* MP4DecoderService.h */; };
+		007844E1153E62FC00E6DCE5 /* MP4MP3Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007844DD153E62FC00E6DCE5 /* MP4MP3Decoder.cpp */; };
+		007844E2153E62FC00E6DCE5 /* MP4MP3Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 007844DE153E62FC00E6DCE5 /* MP4MP3Decoder.h */; };
+		009988941520F41F000AB02F /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 009988921520F41F000AB02F /* version.c */; };
+		009988951520F41F000AB02F /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 009988931520F41F000AB02F /* version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		009988A11520F4EE000AB02F /* libjnetlib-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 009988991520F4EE000AB02F /* libjnetlib-1.dylib */; };
+		009988A21520F4EE000AB02F /* libnsapev2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0099889A1520F4EE000AB02F /* libnsapev2.a */; };
+		009988A31520F4EE000AB02F /* libnsid3v1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0099889B1520F4EE000AB02F /* libnsid3v1.a */; };
+		009988A41520F4EE000AB02F /* libnsid3v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0099889C1520F4EE000AB02F /* libnsid3v2.a */; };
+		009988A51520F4EE000AB02F /* libnsmp3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0099889D1520F4EE000AB02F /* libnsmp3.a */; };
+		009988A61520F4EE000AB02F /* libnswasabi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0099889E1520F4EE000AB02F /* libnswasabi.a */; };
+		009988A71520F4EE000AB02F /* libnu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0099889F1520F4EE000AB02F /* libnu.a */; };
+		009988A81520F4EE000AB02F /* libnx-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 009988A01520F4EE000AB02F /* libnx-1.dylib */; };
+		B13B637614F4815900AC9029 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B636014F4815900AC9029 /* api.h */; };
+		B13B637714F4815900AC9029 /* CVbriHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B636114F4815900AC9029 /* CVbriHeader.cpp */; };
+		B13B637814F4815900AC9029 /* CVbriHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B636214F4815900AC9029 /* CVbriHeader.h */; };
+		B13B637914F4815900AC9029 /* giofile_crt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B636314F4815900AC9029 /* giofile_crt.cpp */; };
+		B13B637A14F4815900AC9029 /* giofile_crt.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B636414F4815900AC9029 /* giofile_crt.h */; };
+		B13B637B14F4815900AC9029 /* gioicy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B636514F4815900AC9029 /* gioicy.cpp */; };
+		B13B637C14F4815900AC9029 /* gioicy.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B636614F4815900AC9029 /* gioicy.h */; };
+		B13B637D14F4815900AC9029 /* giojnet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B636714F4815900AC9029 /* giojnet.cpp */; };
+		B13B637E14F4815900AC9029 /* giojnet.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B636814F4815900AC9029 /* giojnet.h */; };
+		B13B637F14F4815900AC9029 /* GioReplicant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B636914F4815900AC9029 /* GioReplicant.cpp */; };
+		B13B638014F4815900AC9029 /* GioReplicant.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B636A14F4815900AC9029 /* GioReplicant.h */; };
+		B13B638114F4815900AC9029 /* gioultravox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B636B14F4815900AC9029 /* gioultravox.cpp */; };
+		B13B638214F4815900AC9029 /* gioultravox.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B636C14F4815900AC9029 /* gioultravox.h */; };
+		B13B638314F4815900AC9029 /* HTTPMetadata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B636D14F4815900AC9029 /* HTTPMetadata.cpp */; };
+		B13B638414F4815900AC9029 /* HTTPMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B636E14F4815900AC9029 /* HTTPMetadata.h */; };
+		B13B638514F4815900AC9029 /* ICYMP3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B636F14F4815900AC9029 /* ICYMP3.cpp */; };
+		B13B638614F4815900AC9029 /* ICYMP3.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B637014F4815900AC9029 /* ICYMP3.h */; };
+		B13B638714F4815900AC9029 /* ICYMP3Service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B637114F4815900AC9029 /* ICYMP3Service.cpp */; };
+		B13B638814F4815900AC9029 /* ICYMP3Service.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B637214F4815900AC9029 /* ICYMP3Service.h */; };
+		B13B638914F4815900AC9029 /* LAMEInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B637314F4815900AC9029 /* LAMEInfo.cpp */; };
+		B13B638A14F4815900AC9029 /* LAMEInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B637414F4815900AC9029 /* LAMEInfo.h */; };
+		B13B638B14F4815900AC9029 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B637514F4815900AC9029 /* main.cpp */; };
+		B13B63A614F4816300AC9029 /* MP3Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B638C14F4816300AC9029 /* MP3Decoder.cpp */; };
+		B13B63A714F4816300AC9029 /* MP3Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B638D14F4816300AC9029 /* MP3Decoder.h */; };
+		B13B63A814F4816300AC9029 /* MP3DecoderCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B638E14F4816300AC9029 /* MP3DecoderCallback.cpp */; };
+		B13B63A914F4816300AC9029 /* MP3DecoderCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B638F14F4816300AC9029 /* MP3DecoderCallback.h */; };
+		B13B63AA14F4816300AC9029 /* MP3DecoderPacket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B639014F4816300AC9029 /* MP3DecoderPacket.cpp */; };
+		B13B63AB14F4816300AC9029 /* MP3DecoderPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B639114F4816300AC9029 /* MP3DecoderPacket.h */; };
+		B13B63AC14F4816300AC9029 /* MP3HTTP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B639214F4816300AC9029 /* MP3HTTP.cpp */; };
+		B13B63AD14F4816300AC9029 /* MP3HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B639314F4816300AC9029 /* MP3HTTP.h */; };
+		B13B63AE14F4816300AC9029 /* MP3HTTPService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B639414F4816300AC9029 /* MP3HTTPService.cpp */; };
+		B13B63AF14F4816300AC9029 /* MP3HTTPService.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B639514F4816300AC9029 /* MP3HTTPService.h */; };
+		B13B63B014F4816300AC9029 /* MP3MetadataService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B639614F4816300AC9029 /* MP3MetadataService.cpp */; };
+		B13B63B114F4816300AC9029 /* MP3MetadataService.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B639714F4816300AC9029 /* MP3MetadataService.h */; };
+		B13B63B214F4816300AC9029 /* MP3Playback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B639814F4816300AC9029 /* MP3Playback.cpp */; };
+		B13B63B314F4816300AC9029 /* MP3Playback.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B639914F4816300AC9029 /* MP3Playback.h */; };
+		B13B63B414F4816300AC9029 /* MP3PlaybackService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B639A14F4816300AC9029 /* MP3PlaybackService.cpp */; };
+		B13B63B514F4816300AC9029 /* MP3PlaybackService.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B639B14F4816300AC9029 /* MP3PlaybackService.h */; };
+		B13B63B614F4816300AC9029 /* MP3RawReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B639C14F4816300AC9029 /* MP3RawReader.cpp */; };
+		B13B63B714F4816300AC9029 /* MP3RawReader.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B639D14F4816300AC9029 /* MP3RawReader.h */; };
+		B13B63B814F4816300AC9029 /* MPEGHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B639E14F4816300AC9029 /* MPEGHeader.cpp */; };
+		B13B63B914F4816300AC9029 /* MPEGHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B639F14F4816300AC9029 /* MPEGHeader.h */; };
+		B13B63BA14F4816300AC9029 /* OFL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63A014F4816300AC9029 /* OFL.cpp */; };
+		B13B63BB14F4816300AC9029 /* OFL.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63A114F4816300AC9029 /* OFL.h */; };
+		B13B63BC14F4816300AC9029 /* UltravoxMP3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63A214F4816300AC9029 /* UltravoxMP3.cpp */; };
+		B13B63BD14F4816300AC9029 /* UltravoxMP3.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63A314F4816300AC9029 /* UltravoxMP3.h */; };
+		B13B63BE14F4816300AC9029 /* UltravoxMP3Service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63A414F4816300AC9029 /* UltravoxMP3Service.cpp */; };
+		B13B63BF14F4816300AC9029 /* UltravoxMP3Service.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63A514F4816300AC9029 /* UltravoxMP3Service.h */; };
+		B193DFDE14F49BDA005D99FB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B193DFDD14F49BDA005D99FB /* CoreFoundation.framework */; };
+		B193DFE014F49BE3005D99FB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B193DFDF14F49BE3005D99FB /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0039B37A152A1F9C00D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B13B635014F4812500AC9029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 009988841520F21F000AB02F;
+			remoteInfo = "mp3-cleanup";
+		};
+		0099888E1520F3DB000AB02F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B13B635014F4812500AC9029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 009988841520F21F000AB02F;
+			remoteInfo = "mp3-cleanup";
+		};
+		009988901520F3DB000AB02F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B13B635014F4812500AC9029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 009988881520F22D000AB02F;
+			remoteInfo = "mp3-version";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007844DB153E62FC00E6DCE5 /* MP4DecoderService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4DecoderService.cpp; sourceTree = "<group>"; };
+		007844DC153E62FC00E6DCE5 /* MP4DecoderService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4DecoderService.h; sourceTree = "<group>"; };
+		007844DD153E62FC00E6DCE5 /* MP4MP3Decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4MP3Decoder.cpp; sourceTree = "<group>"; };
+		007844DE153E62FC00E6DCE5 /* MP4MP3Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4MP3Decoder.h; sourceTree = "<group>"; };
+		0099888D1520F38D000AB02F /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		009988921520F41F000AB02F /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = $PROJECT_DERIVED_FILE_DIR/version.c; sourceTree = "<absolute>"; };
+		009988931520F41F000AB02F /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = $PROJECT_DERIVED_FILE_DIR/version.h; sourceTree = "<absolute>"; };
+		009988991520F4EE000AB02F /* libjnetlib-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libjnetlib-1.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0099889A1520F4EE000AB02F /* libnsapev2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnsapev2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0099889B1520F4EE000AB02F /* libnsid3v1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnsid3v1.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0099889C1520F4EE000AB02F /* libnsid3v2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnsid3v2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0099889D1520F4EE000AB02F /* libnsmp3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnsmp3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0099889E1520F4EE000AB02F /* libnswasabi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnswasabi.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0099889F1520F4EE000AB02F /* libnu.a */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = libnu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		009988A01520F4EE000AB02F /* libnx-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libnx-1.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00C27E9D153734A7008D95CD /* precomp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = precomp.h; sourceTree = "<group>"; };
+		B13B635914F4812500AC9029 /* libmp3.w6c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmp3.w6c; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13B636014F4815900AC9029 /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		B13B636114F4815900AC9029 /* CVbriHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CVbriHeader.cpp; sourceTree = "<group>"; };
+		B13B636214F4815900AC9029 /* CVbriHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVbriHeader.h; sourceTree = "<group>"; };
+		B13B636314F4815900AC9029 /* giofile_crt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = giofile_crt.cpp; sourceTree = "<group>"; };
+		B13B636414F4815900AC9029 /* giofile_crt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = giofile_crt.h; sourceTree = "<group>"; };
+		B13B636514F4815900AC9029 /* gioicy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gioicy.cpp; sourceTree = "<group>"; };
+		B13B636614F4815900AC9029 /* gioicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gioicy.h; sourceTree = "<group>"; };
+		B13B636714F4815900AC9029 /* giojnet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = giojnet.cpp; sourceTree = "<group>"; };
+		B13B636814F4815900AC9029 /* giojnet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = giojnet.h; sourceTree = "<group>"; };
+		B13B636914F4815900AC9029 /* GioReplicant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GioReplicant.cpp; sourceTree = "<group>"; };
+		B13B636A14F4815900AC9029 /* GioReplicant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GioReplicant.h; sourceTree = "<group>"; };
+		B13B636B14F4815900AC9029 /* gioultravox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gioultravox.cpp; sourceTree = "<group>"; };
+		B13B636C14F4815900AC9029 /* gioultravox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gioultravox.h; sourceTree = "<group>"; };
+		B13B636D14F4815900AC9029 /* HTTPMetadata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPMetadata.cpp; sourceTree = "<group>"; };
+		B13B636E14F4815900AC9029 /* HTTPMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPMetadata.h; sourceTree = "<group>"; };
+		B13B636F14F4815900AC9029 /* ICYMP3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ICYMP3.cpp; sourceTree = "<group>"; };
+		B13B637014F4815900AC9029 /* ICYMP3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICYMP3.h; sourceTree = "<group>"; };
+		B13B637114F4815900AC9029 /* ICYMP3Service.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ICYMP3Service.cpp; sourceTree = "<group>"; };
+		B13B637214F4815900AC9029 /* ICYMP3Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICYMP3Service.h; sourceTree = "<group>"; };
+		B13B637314F4815900AC9029 /* LAMEInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LAMEInfo.cpp; sourceTree = "<group>"; };
+		B13B637414F4815900AC9029 /* LAMEInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMEInfo.h; sourceTree = "<group>"; };
+		B13B637514F4815900AC9029 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B13B638C14F4816300AC9029 /* MP3Decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP3Decoder.cpp; sourceTree = "<group>"; };
+		B13B638D14F4816300AC9029 /* MP3Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3Decoder.h; sourceTree = "<group>"; };
+		B13B638E14F4816300AC9029 /* MP3DecoderCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP3DecoderCallback.cpp; sourceTree = "<group>"; };
+		B13B638F14F4816300AC9029 /* MP3DecoderCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3DecoderCallback.h; sourceTree = "<group>"; };
+		B13B639014F4816300AC9029 /* MP3DecoderPacket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP3DecoderPacket.cpp; sourceTree = "<group>"; };
+		B13B639114F4816300AC9029 /* MP3DecoderPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3DecoderPacket.h; sourceTree = "<group>"; };
+		B13B639214F4816300AC9029 /* MP3HTTP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP3HTTP.cpp; sourceTree = "<group>"; };
+		B13B639314F4816300AC9029 /* MP3HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3HTTP.h; sourceTree = "<group>"; };
+		B13B639414F4816300AC9029 /* MP3HTTPService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP3HTTPService.cpp; sourceTree = "<group>"; };
+		B13B639514F4816300AC9029 /* MP3HTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3HTTPService.h; sourceTree = "<group>"; };
+		B13B639614F4816300AC9029 /* MP3MetadataService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP3MetadataService.cpp; sourceTree = "<group>"; };
+		B13B639714F4816300AC9029 /* MP3MetadataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3MetadataService.h; sourceTree = "<group>"; };
+		B13B639814F4816300AC9029 /* MP3Playback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP3Playback.cpp; sourceTree = "<group>"; };
+		B13B639914F4816300AC9029 /* MP3Playback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3Playback.h; sourceTree = "<group>"; };
+		B13B639A14F4816300AC9029 /* MP3PlaybackService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP3PlaybackService.cpp; sourceTree = "<group>"; };
+		B13B639B14F4816300AC9029 /* MP3PlaybackService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3PlaybackService.h; sourceTree = "<group>"; };
+		B13B639C14F4816300AC9029 /* MP3RawReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP3RawReader.cpp; sourceTree = "<group>"; };
+		B13B639D14F4816300AC9029 /* MP3RawReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP3RawReader.h; sourceTree = "<group>"; };
+		B13B639E14F4816300AC9029 /* MPEGHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MPEGHeader.cpp; sourceTree = "<group>"; };
+		B13B639F14F4816300AC9029 /* MPEGHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPEGHeader.h; sourceTree = "<group>"; };
+		B13B63A014F4816300AC9029 /* OFL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OFL.cpp; sourceTree = "<group>"; };
+		B13B63A114F4816300AC9029 /* OFL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFL.h; sourceTree = "<group>"; };
+		B13B63A214F4816300AC9029 /* UltravoxMP3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UltravoxMP3.cpp; sourceTree = "<group>"; };
+		B13B63A314F4816300AC9029 /* UltravoxMP3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UltravoxMP3.h; sourceTree = "<group>"; };
+		B13B63A414F4816300AC9029 /* UltravoxMP3Service.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UltravoxMP3Service.cpp; sourceTree = "<group>"; };
+		B13B63A514F4816300AC9029 /* UltravoxMP3Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UltravoxMP3Service.h; sourceTree = "<group>"; };
+		B193DFDD14F49BDA005D99FB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		B193DFDF14F49BE3005D99FB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B13B635614F4812500AC9029 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				009988A21520F4EE000AB02F /* libnsapev2.a in Frameworks */,
+				009988A31520F4EE000AB02F /* libnsid3v1.a in Frameworks */,
+				009988A41520F4EE000AB02F /* libnsid3v2.a in Frameworks */,
+				009988A51520F4EE000AB02F /* libnsmp3.a in Frameworks */,
+				009988A61520F4EE000AB02F /* libnswasabi.a in Frameworks */,
+				009988A71520F4EE000AB02F /* libnu.a in Frameworks */,
+				009988A81520F4EE000AB02F /* libnx-1.dylib in Frameworks */,
+				009988A11520F4EE000AB02F /* libjnetlib-1.dylib in Frameworks */,
+				B193DFE014F49BE3005D99FB /* libz.dylib in Frameworks */,
+				B193DFDE14F49BDA005D99FB /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		007844D6153E624800E6DCE5 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				B13B638C14F4816300AC9029 /* MP3Decoder.cpp */,
+				B13B638D14F4816300AC9029 /* MP3Decoder.h */,
+				B13B638E14F4816300AC9029 /* MP3DecoderCallback.cpp */,
+				B13B638F14F4816300AC9029 /* MP3DecoderCallback.h */,
+				B13B639014F4816300AC9029 /* MP3DecoderPacket.cpp */,
+				B13B639114F4816300AC9029 /* MP3DecoderPacket.h */,
+			);
+			name = Decoder;
+			sourceTree = "<group>";
+		};
+		007844D8153E626300E6DCE5 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				B13B636314F4815900AC9029 /* giofile_crt.cpp */,
+				B13B636414F4815900AC9029 /* giofile_crt.h */,
+				B13B639814F4816300AC9029 /* MP3Playback.cpp */,
+				B13B639914F4816300AC9029 /* MP3Playback.h */,
+				B13B639A14F4816300AC9029 /* MP3PlaybackService.cpp */,
+				B13B639B14F4816300AC9029 /* MP3PlaybackService.h */,
+				B13B639C14F4816300AC9029 /* MP3RawReader.cpp */,
+				B13B639D14F4816300AC9029 /* MP3RawReader.h */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
+		007844D9153E62BC00E6DCE5 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				B13B639614F4816300AC9029 /* MP3MetadataService.cpp */,
+				B13B639714F4816300AC9029 /* MP3MetadataService.h */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+		007844DA153E62D700E6DCE5 /* MP4 */ = {
+			isa = PBXGroup;
+			children = (
+				007844DB153E62FC00E6DCE5 /* MP4DecoderService.cpp */,
+				007844DC153E62FC00E6DCE5 /* MP4DecoderService.h */,
+				007844DD153E62FC00E6DCE5 /* MP4MP3Decoder.cpp */,
+				007844DE153E62FC00E6DCE5 /* MP4MP3Decoder.h */,
+			);
+			name = MP4;
+			sourceTree = "<group>";
+		};
+		007844E3153E631900E6DCE5 /* Playback */ = {
+			isa = PBXGroup;
+			children = (
+				007844E4153E632600E6DCE5 /* HTTP */,
+				007844E6153E633700E6DCE5 /* SHOUTcast */,
+				007844E5153E632C00E6DCE5 /* Ultravox */,
+			);
+			name = Playback;
+			sourceTree = "<group>";
+		};
+		007844E4153E632600E6DCE5 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				B13B636714F4815900AC9029 /* giojnet.cpp */,
+				B13B636814F4815900AC9029 /* giojnet.h */,
+				B13B639214F4816300AC9029 /* MP3HTTP.cpp */,
+				B13B639314F4816300AC9029 /* MP3HTTP.h */,
+				B13B639414F4816300AC9029 /* MP3HTTPService.cpp */,
+				B13B639514F4816300AC9029 /* MP3HTTPService.h */,
+			);
+			name = HTTP;
+			sourceTree = "<group>";
+		};
+		007844E5153E632C00E6DCE5 /* Ultravox */ = {
+			isa = PBXGroup;
+			children = (
+				B13B636B14F4815900AC9029 /* gioultravox.cpp */,
+				B13B636C14F4815900AC9029 /* gioultravox.h */,
+				B13B63A214F4816300AC9029 /* UltravoxMP3.cpp */,
+				B13B63A314F4816300AC9029 /* UltravoxMP3.h */,
+				B13B63A414F4816300AC9029 /* UltravoxMP3Service.cpp */,
+				B13B63A514F4816300AC9029 /* UltravoxMP3Service.h */,
+			);
+			name = Ultravox;
+			sourceTree = "<group>";
+		};
+		007844E6153E633700E6DCE5 /* SHOUTcast */ = {
+			isa = PBXGroup;
+			children = (
+				B13B636514F4815900AC9029 /* gioicy.cpp */,
+				B13B636614F4815900AC9029 /* gioicy.h */,
+				B13B636F14F4815900AC9029 /* ICYMP3.cpp */,
+				B13B637014F4815900AC9029 /* ICYMP3.h */,
+				B13B637114F4815900AC9029 /* ICYMP3Service.cpp */,
+				B13B637214F4815900AC9029 /* ICYMP3Service.h */,
+			);
+			name = SHOUTcast;
+			sourceTree = "<group>";
+		};
+		007844E7153E63C600E6DCE5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B13B636114F4815900AC9029 /* CVbriHeader.cpp */,
+				B13B636214F4815900AC9029 /* CVbriHeader.h */,
+				B13B637314F4815900AC9029 /* LAMEInfo.cpp */,
+				B13B637414F4815900AC9029 /* LAMEInfo.h */,
+				B13B639E14F4816300AC9029 /* MPEGHeader.cpp */,
+				B13B639F14F4816300AC9029 /* MPEGHeader.h */,
+				B13B63A014F4816300AC9029 /* OFL.cpp */,
+				B13B63A114F4816300AC9029 /* OFL.h */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		0099887D1520F076000AB02F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B193DFDD14F49BDA005D99FB /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0099887E1520F081000AB02F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0099889A1520F4EE000AB02F /* libnsapev2.a */,
+				0099889B1520F4EE000AB02F /* libnsid3v1.a */,
+				0099889C1520F4EE000AB02F /* libnsid3v2.a */,
+				0099889D1520F4EE000AB02F /* libnsmp3.a */,
+				0099889E1520F4EE000AB02F /* libnswasabi.a */,
+				0099889F1520F4EE000AB02F /* libnu.a */,
+				009988A01520F4EE000AB02F /* libnx-1.dylib */,
+				009988991520F4EE000AB02F /* libjnetlib-1.dylib */,
+				B193DFDF14F49BE3005D99FB /* libz.dylib */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		0099887F1520F090000AB02F /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				0099888D1520F38D000AB02F /* VERSION */,
+				009988921520F41F000AB02F /* version.c */,
+				009988931520F41F000AB02F /* version.h */,
+			);
+			name = Version;
+			sourceTree = "<group>";
+		};
+		B13B634E14F4812500AC9029 = {
+			isa = PBXGroup;
+			children = (
+				B13B636014F4815900AC9029 /* api.h */,
+				B13B636914F4815900AC9029 /* GioReplicant.cpp */,
+				B13B636A14F4815900AC9029 /* GioReplicant.h */,
+				B13B636D14F4815900AC9029 /* HTTPMetadata.cpp */,
+				B13B636E14F4815900AC9029 /* HTTPMetadata.h */,
+				B13B637514F4815900AC9029 /* main.cpp */,
+				00C27E9D153734A7008D95CD /* precomp.h */,
+				007844D6153E624800E6DCE5 /* Decoder */,
+				007844D8153E626300E6DCE5 /* File */,
+				007844D9153E62BC00E6DCE5 /* Metadata */,
+				007844DA153E62D700E6DCE5 /* MP4 */,
+				007844E3153E631900E6DCE5 /* Playback */,
+				007844E7153E63C600E6DCE5 /* Utility */,
+				0099887F1520F090000AB02F /* Version */,
+				0099887E1520F081000AB02F /* Libraries */,
+				0099887D1520F076000AB02F /* Frameworks */,
+				B13B635A14F4812500AC9029 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B13B635A14F4812500AC9029 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B13B635914F4812500AC9029 /* libmp3.w6c */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B13B635714F4812500AC9029 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B13B637614F4815900AC9029 /* api.h in Headers */,
+				B13B637814F4815900AC9029 /* CVbriHeader.h in Headers */,
+				B13B637A14F4815900AC9029 /* giofile_crt.h in Headers */,
+				B13B637C14F4815900AC9029 /* gioicy.h in Headers */,
+				B13B637E14F4815900AC9029 /* giojnet.h in Headers */,
+				B13B638014F4815900AC9029 /* GioReplicant.h in Headers */,
+				B13B638214F4815900AC9029 /* gioultravox.h in Headers */,
+				B13B638414F4815900AC9029 /* HTTPMetadata.h in Headers */,
+				B13B638614F4815900AC9029 /* ICYMP3.h in Headers */,
+				B13B638814F4815900AC9029 /* ICYMP3Service.h in Headers */,
+				B13B638A14F4815900AC9029 /* LAMEInfo.h in Headers */,
+				B13B63A714F4816300AC9029 /* MP3Decoder.h in Headers */,
+				B13B63A914F4816300AC9029 /* MP3DecoderCallback.h in Headers */,
+				B13B63AB14F4816300AC9029 /* MP3DecoderPacket.h in Headers */,
+				B13B63AD14F4816300AC9029 /* MP3HTTP.h in Headers */,
+				B13B63AF14F4816300AC9029 /* MP3HTTPService.h in Headers */,
+				B13B63B114F4816300AC9029 /* MP3MetadataService.h in Headers */,
+				B13B63B314F4816300AC9029 /* MP3Playback.h in Headers */,
+				B13B63B514F4816300AC9029 /* MP3PlaybackService.h in Headers */,
+				B13B63B714F4816300AC9029 /* MP3RawReader.h in Headers */,
+				B13B63B914F4816300AC9029 /* MPEGHeader.h in Headers */,
+				B13B63BB14F4816300AC9029 /* OFL.h in Headers */,
+				B13B63BD14F4816300AC9029 /* UltravoxMP3.h in Headers */,
+				B13B63BF14F4816300AC9029 /* UltravoxMP3Service.h in Headers */,
+				009988951520F41F000AB02F /* version.h in Headers */,
+				007844E0153E62FC00E6DCE5 /* MP4DecoderService.h in Headers */,
+				007844E2153E62FC00E6DCE5 /* MP4MP3Decoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		009988841520F21F000AB02F /* mp3-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(LIBRARY_PATH)\" \"$(PUBLIC_HEADERS_DIR)\" \"$(DWARF_DSYM_PATH)\" \"$(PROJECT_DERIVED_FILE_DIR)/version.*\"";
+			buildConfigurationList = 009988851520F21F000AB02F /* Build configuration list for PBXLegacyTarget "mp3-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "mp3-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "mp3-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		B13B635814F4812500AC9029 /* mp3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B13B635D14F4812500AC9029 /* Build configuration list for PBXNativeTarget "mp3" */;
+			buildPhases = (
+				B13B635514F4812500AC9029 /* Sources */,
+				B13B635614F4812500AC9029 /* Frameworks */,
+				009988AA1520F575000AB02F /* Create Symbolic Links */,
+				B13B635714F4812500AC9029 /* Headers */,
+				009988AB1520F5B5000AB02F /* Install Public Headers */,
+				009988AC1520F5E4000AB02F /* Install Debug Symbols */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0099888F1520F3DB000AB02F /* PBXTargetDependency */,
+				009988911520F3DB000AB02F /* PBXTargetDependency */,
+			);
+			name = mp3;
+			productName = mp3;
+			productReference = B13B635914F4812500AC9029 /* libmp3.w6c */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B13B635014F4812500AC9029 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = B13B635314F4812500AC9029 /* Build configuration list for PBXProject "mp3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B13B634E14F4812500AC9029;
+			productRefGroup = B13B635A14F4812500AC9029 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B13B635814F4812500AC9029 /* mp3 */,
+				009988841520F21F000AB02F /* mp3-cleanup */,
+				009988881520F22D000AB02F /* mp3-prepare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0099888C1520F31F000AB02F /* Generate Version Info */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/VERSION",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.h",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.c",
+			);
+			name = "Generate Version Info";
+			outputPaths = (
+				"$(PROJECT_DERIVED_FILE_DIR)/version.h",
+				"$(PROJECT_DERIVED_FILE_DIR)/version.c",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PRODUCT_VERSION=$(cat \"$SCRIPT_INPUT_FILE_0\")\n\nif [ ! -d \"$PROJECT_DERIVED_FILE_DIR\" ]; then\n    mkdir -p \"$PROJECT_DERIVED_FILE_DIR\"\nfi\n\nNVGTOOL=\"$NSBUILD_TOOLS_BIN_DIR/nvgtool\"\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_1\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_0\"\n\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_2\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_1\"";
+			showEnvVarsInLog = 0;
+		};
+		009988AA1520F575000AB02F /* Create Symbolic Links */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_NAME)",
+			);
+			name = "Create Symbolic Links";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIBLN=\"$NSBUILD_TOOLS_BIN_DIR/libln\"\ncd $TARGET_BUILD_DIR; \\\n$LIBLN \"$EXECUTABLE_NAME\"\n\nif [ \"$DEPLOYMENT_LOCATION\" == \"YES\" ]; then\n    cd \"$BUILT_PRODUCTS_DIR\"; \\\n    $LIBLN \"$EXECUTABLE_NAME\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+		009988AB1520F5B5000AB02F /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+		009988AC1520F5E4000AB02F /* Install Debug Symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			name = "Install Debug Symbols";
+			outputPaths = (
+				"$(DWARF_DSYM_INSTALL_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B13B635514F4812500AC9029 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B13B637714F4815900AC9029 /* CVbriHeader.cpp in Sources */,
+				B13B637914F4815900AC9029 /* giofile_crt.cpp in Sources */,
+				B13B637B14F4815900AC9029 /* gioicy.cpp in Sources */,
+				B13B637D14F4815900AC9029 /* giojnet.cpp in Sources */,
+				B13B637F14F4815900AC9029 /* GioReplicant.cpp in Sources */,
+				B13B638114F4815900AC9029 /* gioultravox.cpp in Sources */,
+				B13B638314F4815900AC9029 /* HTTPMetadata.cpp in Sources */,
+				B13B638514F4815900AC9029 /* ICYMP3.cpp in Sources */,
+				B13B638714F4815900AC9029 /* ICYMP3Service.cpp in Sources */,
+				B13B638914F4815900AC9029 /* LAMEInfo.cpp in Sources */,
+				B13B638B14F4815900AC9029 /* main.cpp in Sources */,
+				B13B63A614F4816300AC9029 /* MP3Decoder.cpp in Sources */,
+				B13B63A814F4816300AC9029 /* MP3DecoderCallback.cpp in Sources */,
+				B13B63AA14F4816300AC9029 /* MP3DecoderPacket.cpp in Sources */,
+				B13B63AC14F4816300AC9029 /* MP3HTTP.cpp in Sources */,
+				B13B63AE14F4816300AC9029 /* MP3HTTPService.cpp in Sources */,
+				B13B63B014F4816300AC9029 /* MP3MetadataService.cpp in Sources */,
+				B13B63B214F4816300AC9029 /* MP3Playback.cpp in Sources */,
+				B13B63B414F4816300AC9029 /* MP3PlaybackService.cpp in Sources */,
+				B13B63B614F4816300AC9029 /* MP3RawReader.cpp in Sources */,
+				B13B63B814F4816300AC9029 /* MPEGHeader.cpp in Sources */,
+				B13B63BA14F4816300AC9029 /* OFL.cpp in Sources */,
+				B13B63BC14F4816300AC9029 /* UltravoxMP3.cpp in Sources */,
+				B13B63BE14F4816300AC9029 /* UltravoxMP3Service.cpp in Sources */,
+				009988941520F41F000AB02F /* version.c in Sources */,
+				007844DF153E62FC00E6DCE5 /* MP4DecoderService.cpp in Sources */,
+				007844E1153E62FC00E6DCE5 /* MP4MP3Decoder.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0039B37B152A1F9C00D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 009988841520F21F000AB02F /* mp3-cleanup */;
+			targetProxy = 0039B37A152A1F9C00D96D3E /* PBXContainerItemProxy */;
+		};
+		0099888F1520F3DB000AB02F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 009988841520F21F000AB02F /* mp3-cleanup */;
+			targetProxy = 0099888E1520F3DB000AB02F /* PBXContainerItemProxy */;
+		};
+		009988911520F3DB000AB02F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 009988881520F22D000AB02F /* mp3-prepare */;
+			targetProxy = 009988901520F3DB000AB02F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		009988861520F21F000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		009988871520F21F000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		0099888A1520F22D000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		0099888B1520F22D000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		B13B635B14F4812500AC9029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = w6c;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_NAME)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				ONLY_ACTIVE_ARCH = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		B13B635C14F4812500AC9029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = w6c;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_NAME)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		B13B635E14F4812500AC9029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		B13B635F14F4812500AC9029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		009988851520F21F000AB02F /* Build configuration list for PBXLegacyTarget "mp3-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009988861520F21F000AB02F /* Debug */,
+				009988871520F21F000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		009988891520F22D000AB02F /* Build configuration list for PBXAggregateTarget "mp3-prepare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0099888A1520F22D000AB02F /* Debug */,
+				0099888B1520F22D000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B13B635314F4812500AC9029 /* Build configuration list for PBXProject "mp3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B13B635B14F4812500AC9029 /* Debug */,
+				B13B635C14F4812500AC9029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B13B635D14F4812500AC9029 /* Build configuration list for PBXNativeTarget "mp3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B13B635E14F4812500AC9029 /* Debug */,
+				B13B635F14F4812500AC9029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B13B635014F4812500AC9029 /* Project object */;
+}

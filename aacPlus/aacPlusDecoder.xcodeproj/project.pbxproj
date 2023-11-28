@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C51E04A0BB787B300FD70AF /* NSVFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C51E0450BB787B300FD70AF /* NSVFactory.h */; };
+		0C51E04B0BB787B300FD70AF /* NSVFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C51E0460BB787B300FD70AF /* NSVFactory.cpp */; };
+		0C51E04C0BB787B300FD70AF /* factory_nsvFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C51E0470BB787B300FD70AF /* factory_nsvFactory.cpp */; };
+		0C51E04D0BB787B300FD70AF /* factory_nsvFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C51E0480BB787B300FD70AF /* factory_nsvFactory.h */; };
+		0C51E04E0BB787B300FD70AF /* nsvdec.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C51E0490BB787B300FD70AF /* nsvdec.h */; };
+		0C51E0670BB7881B00FD70AF /* wa5_aacplusdecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C51E0660BB7881B00FD70AF /* wa5_aacplusdecoder.cpp */; };
+		0C51E0690BB7882200FD70AF /* wa5_aacplusdecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C51E0680BB7882200FD70AF /* wa5_aacplusdecoder.h */; };
+		0CAC19B40BC0A44900649B62 /* CTDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC19B20BC0A44900649B62 /* CTDecoder.cpp */; };
+		0CAC19B50BC0A44900649B62 /* CTDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CAC19B30BC0A44900649B62 /* CTDecoder.h */; };
+		0CF9422E0BB769CC002035AB /* aacplusdec.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CF9422D0BB769CC002035AB /* aacplusdec.h */; };
+		0CF942300BB769D3002035AB /* aacplusdectypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CF9422F0BB769D3002035AB /* aacplusdectypes.h */; };
+		0CF942320BB769D9002035AB /* api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CF942310BB769D9002035AB /* api.cpp */; };
+		0CF942340BB769E1002035AB /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CF942330BB769E1002035AB /* api.h */; };
+		0CF942430BB76A19002035AB /* nsvdec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CF942420BB76A19002035AB /* nsvdec.cpp */; };
+		0CF942710BB76BB6002035AB /* libaacplusdec_ppc40.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF942700BB76BB6002035AB /* libaacplusdec_ppc40.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C51E0450BB787B300FD70AF /* NSVFactory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSVFactory.h; sourceTree = "<group>"; };
+		0C51E0460BB787B300FD70AF /* NSVFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = NSVFactory.cpp; sourceTree = "<group>"; };
+		0C51E0470BB787B300FD70AF /* factory_nsvFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = factory_nsvFactory.cpp; sourceTree = "<group>"; };
+		0C51E0480BB787B300FD70AF /* factory_nsvFactory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = factory_nsvFactory.h; sourceTree = "<group>"; };
+		0C51E0490BB787B300FD70AF /* nsvdec.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = nsvdec.h; sourceTree = "<group>"; };
+		0C51E0660BB7881B00FD70AF /* wa5_aacplusdecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = wa5_aacplusdecoder.cpp; sourceTree = "<group>"; };
+		0C51E0680BB7882200FD70AF /* wa5_aacplusdecoder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wa5_aacplusdecoder.h; sourceTree = "<group>"; };
+		0CAC19B20BC0A44900649B62 /* CTDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CTDecoder.cpp; sourceTree = "<group>"; };
+		0CAC19B30BC0A44900649B62 /* CTDecoder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CTDecoder.h; sourceTree = "<group>"; };
+		0CF9422D0BB769CC002035AB /* aacplusdec.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = aacplusdec.h; sourceTree = "<group>"; };
+		0CF9422F0BB769D3002035AB /* aacplusdectypes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = aacplusdectypes.h; sourceTree = "<group>"; };
+		0CF942310BB769D9002035AB /* api.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = api.cpp; sourceTree = "<group>"; };
+		0CF942330BB769E1002035AB /* api.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		0CF942420BB76A19002035AB /* nsvdec.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = nsvdec.cpp; sourceTree = "<group>"; };
+		0CF942700BB76BB6002035AB /* libaacplusdec_ppc40.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libaacplusdec_ppc40.a; path = osx/libaacplusdec_ppc40.a; sourceTree = "<group>"; };
+		D2AAC0630554660B00DB518D /* aacPlusDecoder.w5s */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = aacPlusDecoder.w5s; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289988505E68E00004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CF942710BB76BB6002035AB /* libaacplusdec_ppc40.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* aacPlusDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = aacPlusDecoder;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0CAC19AE0BC0A43500649B62 /* MP4 */,
+				0C51E0650BB7880300FD70AF /* Coding Technologies */,
+				0C51E0640BB787F300FD70AF /* W5S */,
+				0C51E0660BB7881B00FD70AF /* wa5_aacplusdecoder.cpp */,
+				0C51E0680BB7882200FD70AF /* wa5_aacplusdecoder.h */,
+				0C51E0420BB7879100FD70AF /* NSVFactory */,
+				0CF942700BB76BB6002035AB /* libaacplusdec_ppc40.a */,
+				0CF942310BB769D9002035AB /* api.cpp */,
+				0CF942330BB769E1002035AB /* api.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		0C51E0420BB7879100FD70AF /* NSVFactory */ = {
+			isa = PBXGroup;
+			children = (
+				0C51E0450BB787B300FD70AF /* NSVFactory.h */,
+				0C51E0460BB787B300FD70AF /* NSVFactory.cpp */,
+				0C51E0470BB787B300FD70AF /* factory_nsvFactory.cpp */,
+				0C51E0480BB787B300FD70AF /* factory_nsvFactory.h */,
+				0C51E0490BB787B300FD70AF /* nsvdec.h */,
+				0CF942420BB76A19002035AB /* nsvdec.cpp */,
+			);
+			name = NSVFactory;
+			sourceTree = "<group>";
+		};
+		0C51E0640BB787F300FD70AF /* W5S */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = W5S;
+			sourceTree = "<group>";
+		};
+		0C51E0650BB7880300FD70AF /* Coding Technologies */ = {
+			isa = PBXGroup;
+			children = (
+				0CF9422F0BB769D3002035AB /* aacplusdectypes.h */,
+				0CF9422D0BB769CC002035AB /* aacplusdec.h */,
+			);
+			name = "Coding Technologies";
+			sourceTree = "<group>";
+		};
+		0CAC19AE0BC0A43500649B62 /* MP4 */ = {
+			isa = PBXGroup;
+			children = (
+				0CAC19B20BC0A44900649B62 /* CTDecoder.cpp */,
+				0CAC19B30BC0A44900649B62 /* CTDecoder.h */,
+			);
+			name = MP4;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC0630554660B00DB518D /* aacPlusDecoder.w5s */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC0600554660B00DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CF9422E0BB769CC002035AB /* aacplusdec.h in Headers */,
+				0CF942300BB769D3002035AB /* aacplusdectypes.h in Headers */,
+				0CF942340BB769E1002035AB /* api.h in Headers */,
+				0C51E04A0BB787B300FD70AF /* NSVFactory.h in Headers */,
+				0C51E04D0BB787B300FD70AF /* factory_nsvFactory.h in Headers */,
+				0C51E04E0BB787B300FD70AF /* nsvdec.h in Headers */,
+				0C51E0690BB7882200FD70AF /* wa5_aacplusdecoder.h in Headers */,
+				0CAC19B50BC0A44900649B62 /* CTDecoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC0620554660B00DB518D /* aacPlusDecoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "aacPlusDecoder" */;
+			buildPhases = (
+				D2AAC0600554660B00DB518D /* Headers */,
+				D2AAC0610554660B00DB518D /* Sources */,
+				D289988505E68E00004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aacPlusDecoder;
+			productName = aacPlusDecoder;
+			productReference = D2AAC0630554660B00DB518D /* aacPlusDecoder.w5s */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "aacPlusDecoder" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* aacPlusDecoder */;
+			projectDirPath = "";
+			targets = (
+				D2AAC0620554660B00DB518D /* aacPlusDecoder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC0610554660B00DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CF942320BB769D9002035AB /* api.cpp in Sources */,
+				0CF942430BB76A19002035AB /* nsvdec.cpp in Sources */,
+				0C51E04B0BB787B300FD70AF /* NSVFactory.cpp in Sources */,
+				0C51E04C0BB787B300FD70AF /* factory_nsvFactory.cpp in Sources */,
+				0C51E0670BB7881B00FD70AF /* wa5_aacplusdecoder.cpp in Sources */,
+				0CAC19B40BC0A44900649B62 /* CTDecoder.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB914B08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/osx\"";
+				PRODUCT_NAME = aacPlusDecoder;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		1DEB914C08733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				EXECUTABLE_PREFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/osx\"";
+				PRODUCT_NAME = aacPlusDecoder;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1DEB914F08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = w5s;
+				EXECUTABLE_PREFIX = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Wasabi;
+				PREBINDING = NO;
+				PRODUCT_NAME = aacPlusDecoder;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		1DEB915008733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = w5s;
+				EXECUTABLE_PREFIX = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Wasabi;
+				PREBINDING = NO;
+				PRODUCT_NAME = aacPlusDecoder;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "aacPlusDecoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914B08733D8E0010E9CD /* Debug */,
+				1DEB914C08733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "aacPlusDecoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914F08733D8E0010E9CD /* Debug */,
+				1DEB915008733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

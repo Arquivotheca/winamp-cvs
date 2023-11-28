@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enc_wma", "enc_wma.vcproj", "{5F4B0989-B35B-40C0-BAA1-E7058377B398}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5F4B0989-B35B-40C0-BAA1-E7058377B398}.Debug.ActiveCfg = Debug|Win32
+		{5F4B0989-B35B-40C0-BAA1-E7058377B398}.Debug.Build.0 = Debug|Win32
+		{5F4B0989-B35B-40C0-BAA1-E7058377B398}.Release.ActiveCfg = Profiling|Win32
+		{5F4B0989-B35B-40C0-BAA1-E7058377B398}.Release.Build.0 = Profiling|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,730 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		00B733DB151BA7BE00A8251C /* nu-prepare */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00B733DC151BA7BE00A8251C /* Build configuration list for PBXAggregateTarget "nu-prepare" */;
+			buildPhases = (
+				00B733E8151BA84300A8251C /* Generate Version Info */,
+				0039B44E152A3A2D00D96D3E /* Prepare Platform Specific Files */,
+			);
+			dependencies = (
+				0039B367152A1F0A00D96D3E /* PBXTargetDependency */,
+			);
+			name = "nu-prepare";
+			productName = "nu-version";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0039B3A1152A386900D96D3E /* lfitem.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C11ABA114C5DD0D00315DA8 /* lfitem.c */; };
+		0039B3A2152A386900D96D3E /* PtrList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B195372614F5F9590056BB8C /* PtrList.cpp */; };
+		0039B3A3152A386900D96D3E /* BitReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B193DFD214F49B4F005D99FB /* BitReader.cpp */; };
+		0039B3A4152A386900D96D3E /* ByteReader.c in Sources */ = {isa = PBXBuildFile; fileRef = B193DFC514F49ACF005D99FB /* ByteReader.c */; };
+		0039B3A5152A386900D96D3E /* ByteWriter.c in Sources */ = {isa = PBXBuildFile; fileRef = B193DFC714F49ACF005D99FB /* ByteWriter.c */; };
+		0039B3A6152A386900D96D3E /* RingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B9C4E14BF80DD00165E4E /* RingBuffer.cpp */; };
+		0039B3A7152A387B00D96D3E /* lfitem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11ABA214C5DD0D00315DA8 /* lfitem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0039B3A8152A387B00D96D3E /* AutoLock.h in Headers */ = {isa = PBXBuildFile; fileRef = B195372A14F5F9BE0056BB8C /* AutoLock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0039B3A9152A387B00D96D3E /* BitReader.h in Headers */ = {isa = PBXBuildFile; fileRef = B193DFD314F49B4F005D99FB /* BitReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0039B3AA152A387B00D96D3E /* ByteReader.h in Headers */ = {isa = PBXBuildFile; fileRef = B193DFC614F49ACF005D99FB /* ByteReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0039B3AB152A387B00D96D3E /* ByteWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = B193DFC814F49ACF005D99FB /* ByteWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0039B3AC152A387B00D96D3E /* RingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C4B9C4F14BF80DD00165E4E /* RingBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0039B3AD152A387B00D96D3E /* LockFreeLIFO.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C80A08B14B65C9200FAA6BA /* LockFreeLIFO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0039B3AE152A387B00D96D3E /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B733EA151BA94200A8251C /* version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0039B457152A9F1200D96D3E /* LockFreeLIFO.c in Sources */ = {isa = PBXBuildFile; fileRef = 0039B456152A9F1200D96D3E /* LockFreeLIFO.c */; };
+		0039B459152A9F1900D96D3E /* LockFreeLIFO-osx.s in Sources */ = {isa = PBXBuildFile; fileRef = 0039B458152A9F1900D96D3E /* LockFreeLIFO-osx.s */; };
+		0039B466152AA2C400D96D3E /* LockFreeLIFO.h in Copy Mac OS X amd64 Public Headers */ = {isa = PBXBuildFile; fileRef = 0C9FF61714B4CC8F0038DC5E /* LockFreeLIFO.h */; };
+		0039B468152AA2F200D96D3E /* LockFreeLIFO.h in Copy Mac OS X x86 Public Headers */ = {isa = PBXBuildFile; fileRef = 0CD7FC6514B6332200E813FC /* LockFreeLIFO.h */; };
+		00695D2316E7DCAB009CB115 /* ProgressTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00695D2116E7DCAB009CB115 /* ProgressTracker.cpp */; };
+		00695D2416E7DCAB009CB115 /* ProgressTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 00695D2216E7DCAB009CB115 /* ProgressTracker.h */; };
+		006E5AE8152B70F40081BD03 /* AutoBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5AE7152B70F40081BD03 /* AutoBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5AEA152B71000081BD03 /* AutoChar.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5AE9152B71000081BD03 /* AutoChar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5AEC152B71080081BD03 /* AutoWide.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5AEB152B71080081BD03 /* AutoWide.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5AF1152B712D0081BD03 /* lfmpscq.c in Sources */ = {isa = PBXBuildFile; fileRef = 006E5AED152B712D0081BD03 /* lfmpscq.c */; };
+		006E5AF2152B712D0081BD03 /* lfmpscq.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5AEE152B712D0081BD03 /* lfmpscq.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5AF3152B712D0081BD03 /* lfringbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 006E5AEF152B712D0081BD03 /* lfringbuffer.c */; };
+		006E5AF4152B712D0081BD03 /* lfringbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5AF0152B712D0081BD03 /* lfringbuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5AFA152B714A0081BD03 /* LockFreeItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5AF7152B714A0081BD03 /* LockFreeItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5AFD152B71C60081BD03 /* LockFreeRingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 006E5AFB152B71C60081BD03 /* LockFreeRingBuffer.cpp */; };
+		006E5AFE152B71C60081BD03 /* LockFreeRingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5AFC152B71C60081BD03 /* LockFreeRingBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B01152B71DB0081BD03 /* Pair.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5AFF152B71DB0081BD03 /* Pair.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B02152B71DB0081BD03 /* PtrDeque.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B00152B71DB0081BD03 /* PtrDeque.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B06152B71F80081BD03 /* PtrList.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B03152B71F80081BD03 /* PtrList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B07152B71F80081BD03 /* ptrmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B04152B71F80081BD03 /* ptrmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B08152B71F80081BD03 /* queue_node.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B05152B71F80081BD03 /* queue_node.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B10152B72160081BD03 /* SafeSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B09152B72160081BD03 /* SafeSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B11152B72160081BD03 /* strsafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B0A152B72160081BD03 /* strsafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B12152B72160081BD03 /* utf.c in Sources */ = {isa = PBXBuildFile; fileRef = 006E5B0B152B72160081BD03 /* utf.c */; };
+		006E5B13152B72160081BD03 /* utf.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B0C152B72160081BD03 /* utf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B14152B72160081BD03 /* ValueMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B0D152B72160081BD03 /* ValueMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B15152B72160081BD03 /* ValueSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B0E152B72160081BD03 /* ValueSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006E5B16152B72160081BD03 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 006E5B0F152B72160081BD03 /* vector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0074C8A516790639005E2369 /* nodelist.c in Sources */ = {isa = PBXBuildFile; fileRef = 0074C8A316790639005E2369 /* nodelist.c */; };
+		0074C8A616790639005E2369 /* nodelist.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074C8A416790639005E2369 /* nodelist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0074C8AA16790668005E2369 /* LockFreeFIFO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074C8A816790667005E2369 /* LockFreeFIFO.cpp */; };
+		0074C8AB16790668005E2369 /* LockFreeFIFO.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074C8A916790667005E2369 /* LockFreeFIFO.h */; };
+		00C27E8E153723C7008D95CD /* precomp.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C27E8C153722FF008D95CD /* precomp.h */; };
+		00E6E66715473D58005C9962 /* ThreadLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E6E66615473D58005C9962 /* ThreadLoop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00E6E66C15473DF3005C9962 /* ThreadLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00E6E66A15473DF3005C9962 /* ThreadLoop.cpp */; };
+		00E6E66D15473DF3005C9962 /* ThreadLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E6E66B15473DF3005C9962 /* ThreadLoop.h */; settings = {ATTRIBUTES = (); }; };
+		00E6E66F15473EAD005C9962 /* ThreadLoop.h in Copy Mac OS X Public Headers */ = {isa = PBXBuildFile; fileRef = 00E6E66B15473DF3005C9962 /* ThreadLoop.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0039B366152A1F0A00D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C9FF60314B4C4030038DC5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733D3151BA5FA00A8251C;
+			remoteInfo = "nu-cleanup";
+		};
+		0039B39D152A384B00D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C9FF60314B4C4030038DC5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733D3151BA5FA00A8251C;
+			remoteInfo = "nu-cleanup";
+		};
+		0039B39F152A384D00D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C9FF60314B4C4030038DC5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733DB151BA7BE00A8251C;
+			remoteInfo = "nu-prepare";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0039B463152AA28C00D96D3E /* Copy Mac OS X amd64 Public Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+			dstSubfolderSpec = 16;
+			files = (
+				0039B466152AA2C400D96D3E /* LockFreeLIFO.h in Copy Mac OS X amd64 Public Headers */,
+			);
+			name = "Copy Mac OS X amd64 Public Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0039B467152AA2CC00D96D3E /* Copy Mac OS X x86 Public Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+			dstSubfolderSpec = 16;
+			files = (
+				0039B468152AA2F200D96D3E /* LockFreeLIFO.h in Copy Mac OS X x86 Public Headers */,
+			);
+			name = "Copy Mac OS X x86 Public Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00E6E66E15473E80005C9962 /* Copy Mac OS X Public Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx";
+			dstSubfolderSpec = 16;
+			files = (
+				00E6E66F15473EAD005C9962 /* ThreadLoop.h in Copy Mac OS X Public Headers */,
+			);
+			name = "Copy Mac OS X Public Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0039B399152A384100D96D3E /* libnu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0039B454152A9DAD00D96D3E /* LockFreeLIFO-osx.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; name = "LockFreeLIFO-osx.s"; path = "osx-x86/LockFreeLIFO-osx.s"; sourceTree = "<group>"; };
+		0039B455152A9DC000D96D3E /* LockFreeLIFO-osx.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; name = "LockFreeLIFO-osx.s"; path = "osx-amd64/LockFreeLIFO-osx.s"; sourceTree = "<group>"; };
+		0039B456152A9F1200D96D3E /* LockFreeLIFO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LockFreeLIFO.c; path = $PROJECT_DERIVED_FILE_DIR/LockFreeLIFO.c; sourceTree = "<absolute>"; };
+		0039B458152A9F1900D96D3E /* LockFreeLIFO-osx.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "LockFreeLIFO-osx.s"; path = "$PROJECT_DERIVED_FILE_DIR/LockFreeLIFO-osx.s"; sourceTree = "<absolute>"; };
+		00695D2116E7DCAB009CB115 /* ProgressTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProgressTracker.cpp; sourceTree = "<group>"; };
+		00695D2216E7DCAB009CB115 /* ProgressTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressTracker.h; sourceTree = "<group>"; };
+		006E5AE7152B70F40081BD03 /* AutoBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoBuffer.h; sourceTree = "<group>"; };
+		006E5AE9152B71000081BD03 /* AutoChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoChar.h; sourceTree = "<group>"; };
+		006E5AEB152B71080081BD03 /* AutoWide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoWide.h; sourceTree = "<group>"; };
+		006E5AED152B712D0081BD03 /* lfmpscq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lfmpscq.c; sourceTree = "<group>"; };
+		006E5AEE152B712D0081BD03 /* lfmpscq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfmpscq.h; sourceTree = "<group>"; };
+		006E5AEF152B712D0081BD03 /* lfringbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lfringbuffer.c; sourceTree = "<group>"; };
+		006E5AF0152B712D0081BD03 /* lfringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfringbuffer.h; sourceTree = "<group>"; };
+		006E5AF7152B714A0081BD03 /* LockFreeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockFreeItem.h; sourceTree = "<group>"; };
+		006E5AFB152B71C60081BD03 /* LockFreeRingBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LockFreeRingBuffer.cpp; sourceTree = "<group>"; };
+		006E5AFC152B71C60081BD03 /* LockFreeRingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockFreeRingBuffer.h; sourceTree = "<group>"; };
+		006E5AFF152B71DB0081BD03 /* Pair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pair.h; sourceTree = "<group>"; };
+		006E5B00152B71DB0081BD03 /* PtrDeque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrDeque.h; sourceTree = "<group>"; };
+		006E5B03152B71F80081BD03 /* PtrList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrList.h; sourceTree = "<group>"; };
+		006E5B04152B71F80081BD03 /* ptrmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ptrmap.h; sourceTree = "<group>"; };
+		006E5B05152B71F80081BD03 /* queue_node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue_node.h; sourceTree = "<group>"; };
+		006E5B09152B72160081BD03 /* SafeSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeSize.h; sourceTree = "<group>"; };
+		006E5B0A152B72160081BD03 /* strsafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strsafe.h; sourceTree = "<group>"; };
+		006E5B0B152B72160081BD03 /* utf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utf.c; sourceTree = "<group>"; };
+		006E5B0C152B72160081BD03 /* utf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf.h; sourceTree = "<group>"; };
+		006E5B0D152B72160081BD03 /* ValueMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueMap.h; sourceTree = "<group>"; };
+		006E5B0E152B72160081BD03 /* ValueSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueSet.h; sourceTree = "<group>"; };
+		006E5B0F152B72160081BD03 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		0074C8A316790639005E2369 /* nodelist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nodelist.c; sourceTree = "<group>"; };
+		0074C8A416790639005E2369 /* nodelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nodelist.h; sourceTree = "<group>"; };
+		0074C8A816790667005E2369 /* LockFreeFIFO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LockFreeFIFO.cpp; sourceTree = "<group>"; };
+		0074C8A916790667005E2369 /* LockFreeFIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockFreeFIFO.h; sourceTree = "<group>"; };
+		00B733DA151BA7B000A8251C /* VERSION */ = {isa = PBXFileReference; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		00B733EA151BA94200A8251C /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = $PROJECT_DERIVED_FILE_DIR/version.h; sourceTree = "<absolute>"; };
+		00C27E8C153722FF008D95CD /* precomp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = precomp.h; sourceTree = "<group>"; };
+		00E6E66615473D58005C9962 /* ThreadLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadLoop.h; sourceTree = "<group>"; };
+		00E6E66A15473DF3005C9962 /* ThreadLoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadLoop.cpp; path = osx/ThreadLoop.cpp; sourceTree = "<group>"; };
+		00E6E66B15473DF3005C9962 /* ThreadLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadLoop.h; path = osx/ThreadLoop.h; sourceTree = "<group>"; };
+		0C11ABA114C5DD0D00315DA8 /* lfitem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lfitem.c; sourceTree = "<group>"; };
+		0C11ABA214C5DD0D00315DA8 /* lfitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfitem.h; sourceTree = "<group>"; };
+		0C4B9C4E14BF80DD00165E4E /* RingBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RingBuffer.cpp; sourceTree = "<group>"; };
+		0C4B9C4F14BF80DD00165E4E /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
+		0C80A08B14B65C9200FAA6BA /* LockFreeLIFO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockFreeLIFO.h; sourceTree = "<group>"; };
+		0C9FF61714B4CC8F0038DC5E /* LockFreeLIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LockFreeLIFO.h; path = "osx-amd64/LockFreeLIFO.h"; sourceTree = "<group>"; };
+		0C9FF61914B4CCD30038DC5E /* LockFreeLIFO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LockFreeLIFO.c; path = "osx-amd64/LockFreeLIFO.c"; sourceTree = "<group>"; };
+		0CD7FC6414B6332200E813FC /* LockFreeLIFO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LockFreeLIFO.c; path = "osx-x86/LockFreeLIFO.c"; sourceTree = "<group>"; };
+		0CD7FC6514B6332200E813FC /* LockFreeLIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LockFreeLIFO.h; path = "osx-x86/LockFreeLIFO.h"; sourceTree = "<group>"; };
+		B193DFC514F49ACF005D99FB /* ByteReader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ByteReader.c; sourceTree = "<group>"; };
+		B193DFC614F49ACF005D99FB /* ByteReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteReader.h; sourceTree = "<group>"; };
+		B193DFC714F49ACF005D99FB /* ByteWriter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ByteWriter.c; sourceTree = "<group>"; };
+		B193DFC814F49ACF005D99FB /* ByteWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteWriter.h; sourceTree = "<group>"; };
+		B193DFD214F49B4F005D99FB /* BitReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitReader.cpp; sourceTree = "<group>"; };
+		B193DFD314F49B4F005D99FB /* BitReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitReader.h; sourceTree = "<group>"; };
+		B195372614F5F9590056BB8C /* PtrList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PtrList.cpp; sourceTree = "<group>"; };
+		B195372A14F5F9BE0056BB8C /* AutoLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLock.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0039B396152A384100D96D3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00B733D9151BA6F000A8251C /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				00B733EA151BA94200A8251C /* version.h */,
+				00B733DA151BA7B000A8251C /* VERSION */,
+			);
+			name = Version;
+			sourceTree = "<group>";
+		};
+		00E6E66915473DD2005C9962 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				00E6E66A15473DF3005C9962 /* ThreadLoop.cpp */,
+				00E6E66B15473DF3005C9962 /* ThreadLoop.h */,
+			);
+			name = osx;
+			sourceTree = "<group>";
+		};
+		0C9FF60114B4C4030038DC5E = {
+			isa = PBXGroup;
+			children = (
+				00C27E8C153722FF008D95CD /* precomp.h */,
+				006E5AE7152B70F40081BD03 /* AutoBuffer.h */,
+				006E5AE9152B71000081BD03 /* AutoChar.h */,
+				B195372A14F5F9BE0056BB8C /* AutoLock.h */,
+				006E5AEB152B71080081BD03 /* AutoWide.h */,
+				B193DFD214F49B4F005D99FB /* BitReader.cpp */,
+				B193DFD314F49B4F005D99FB /* BitReader.h */,
+				B193DFC514F49ACF005D99FB /* ByteReader.c */,
+				B193DFC614F49ACF005D99FB /* ByteReader.h */,
+				B193DFC714F49ACF005D99FB /* ByteWriter.c */,
+				B193DFC814F49ACF005D99FB /* ByteWriter.h */,
+				0C11ABA114C5DD0D00315DA8 /* lfitem.c */,
+				0C11ABA214C5DD0D00315DA8 /* lfitem.h */,
+				006E5AED152B712D0081BD03 /* lfmpscq.c */,
+				006E5AEE152B712D0081BD03 /* lfmpscq.h */,
+				006E5AEF152B712D0081BD03 /* lfringbuffer.c */,
+				006E5AF0152B712D0081BD03 /* lfringbuffer.h */,
+				006E5AF7152B714A0081BD03 /* LockFreeItem.h */,
+				0074C8A816790667005E2369 /* LockFreeFIFO.cpp */,
+				0074C8A916790667005E2369 /* LockFreeFIFO.h */,
+				0039B458152A9F1900D96D3E /* LockFreeLIFO-osx.s */,
+				0039B456152A9F1200D96D3E /* LockFreeLIFO.c */,
+				0C80A08B14B65C9200FAA6BA /* LockFreeLIFO.h */,
+				006E5AFB152B71C60081BD03 /* LockFreeRingBuffer.cpp */,
+				006E5AFC152B71C60081BD03 /* LockFreeRingBuffer.h */,
+				0074C8A316790639005E2369 /* nodelist.c */,
+				0074C8A416790639005E2369 /* nodelist.h */,
+				006E5AFF152B71DB0081BD03 /* Pair.h */,
+				00695D2116E7DCAB009CB115 /* ProgressTracker.cpp */,
+				00695D2216E7DCAB009CB115 /* ProgressTracker.h */,
+				006E5B00152B71DB0081BD03 /* PtrDeque.h */,
+				B195372614F5F9590056BB8C /* PtrList.cpp */,
+				006E5B03152B71F80081BD03 /* PtrList.h */,
+				006E5B04152B71F80081BD03 /* ptrmap.h */,
+				006E5B05152B71F80081BD03 /* queue_node.h */,
+				0C4B9C4E14BF80DD00165E4E /* RingBuffer.cpp */,
+				0C4B9C4F14BF80DD00165E4E /* RingBuffer.h */,
+				006E5B09152B72160081BD03 /* SafeSize.h */,
+				006E5B0A152B72160081BD03 /* strsafe.h */,
+				00E6E66615473D58005C9962 /* ThreadLoop.h */,
+				006E5B0B152B72160081BD03 /* utf.c */,
+				006E5B0C152B72160081BD03 /* utf.h */,
+				006E5B0D152B72160081BD03 /* ValueMap.h */,
+				006E5B0E152B72160081BD03 /* ValueSet.h */,
+				006E5B0F152B72160081BD03 /* vector.h */,
+				00E6E66915473DD2005C9962 /* osx */,
+				0CD7FC6014B6325400E813FC /* amd64 */,
+				0CD7FC6214B632EE00E813FC /* x86 */,
+				00B733D9151BA6F000A8251C /* Version */,
+				0C9FF60D14B4C4030038DC5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C9FF60D14B4C4030038DC5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0039B399152A384100D96D3E /* libnu.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CD7FC6014B6325400E813FC /* amd64 */ = {
+			isa = PBXGroup;
+			children = (
+				0039B455152A9DC000D96D3E /* LockFreeLIFO-osx.s */,
+				0C9FF61914B4CCD30038DC5E /* LockFreeLIFO.c */,
+				0C9FF61714B4CC8F0038DC5E /* LockFreeLIFO.h */,
+			);
+			name = amd64;
+			sourceTree = "<group>";
+		};
+		0CD7FC6214B632EE00E813FC /* x86 */ = {
+			isa = PBXGroup;
+			children = (
+				0039B454152A9DAD00D96D3E /* LockFreeLIFO-osx.s */,
+				0CD7FC6414B6332200E813FC /* LockFreeLIFO.c */,
+				0CD7FC6514B6332200E813FC /* LockFreeLIFO.h */,
+			);
+			name = x86;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0039B397152A384100D96D3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0039B3A7152A387B00D96D3E /* lfitem.h in Headers */,
+				0039B3A8152A387B00D96D3E /* AutoLock.h in Headers */,
+				0039B3A9152A387B00D96D3E /* BitReader.h in Headers */,
+				0039B3AA152A387B00D96D3E /* ByteReader.h in Headers */,
+				0039B3AB152A387B00D96D3E /* ByteWriter.h in Headers */,
+				0039B3AC152A387B00D96D3E /* RingBuffer.h in Headers */,
+				0039B3AD152A387B00D96D3E /* LockFreeLIFO.h in Headers */,
+				0039B3AE152A387B00D96D3E /* version.h in Headers */,
+				006E5AE8152B70F40081BD03 /* AutoBuffer.h in Headers */,
+				006E5AEA152B71000081BD03 /* AutoChar.h in Headers */,
+				006E5AEC152B71080081BD03 /* AutoWide.h in Headers */,
+				006E5AF2152B712D0081BD03 /* lfmpscq.h in Headers */,
+				006E5AF4152B712D0081BD03 /* lfringbuffer.h in Headers */,
+				006E5AFA152B714A0081BD03 /* LockFreeItem.h in Headers */,
+				006E5AFE152B71C60081BD03 /* LockFreeRingBuffer.h in Headers */,
+				006E5B01152B71DB0081BD03 /* Pair.h in Headers */,
+				006E5B02152B71DB0081BD03 /* PtrDeque.h in Headers */,
+				006E5B06152B71F80081BD03 /* PtrList.h in Headers */,
+				006E5B07152B71F80081BD03 /* ptrmap.h in Headers */,
+				006E5B08152B71F80081BD03 /* queue_node.h in Headers */,
+				006E5B10152B72160081BD03 /* SafeSize.h in Headers */,
+				006E5B11152B72160081BD03 /* strsafe.h in Headers */,
+				006E5B13152B72160081BD03 /* utf.h in Headers */,
+				006E5B14152B72160081BD03 /* ValueMap.h in Headers */,
+				006E5B15152B72160081BD03 /* ValueSet.h in Headers */,
+				006E5B16152B72160081BD03 /* vector.h in Headers */,
+				00C27E8E153723C7008D95CD /* precomp.h in Headers */,
+				00E6E66715473D58005C9962 /* ThreadLoop.h in Headers */,
+				00E6E66D15473DF3005C9962 /* ThreadLoop.h in Headers */,
+				0074C8A616790639005E2369 /* nodelist.h in Headers */,
+				0074C8AB16790668005E2369 /* LockFreeFIFO.h in Headers */,
+				00695D2416E7DCAB009CB115 /* ProgressTracker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		00B733D3151BA5FA00A8251C /* nu-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode --libraries \"$(LIBRARY_PATH)\" \"$(PUBLIC_HEADERS_DIR)\" \"$(DWARF_DSYM_PATH)\" \"$(PROJECT_DERIVED_FILE_DIR)/version.*\"";
+			buildConfigurationList = 00B733D4151BA5FA00A8251C /* Build configuration list for PBXLegacyTarget "nu-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "nu-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "nu-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		0039B398152A384100D96D3E /* nu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0039B39A152A384200D96D3E /* Build configuration list for PBXNativeTarget "nu" */;
+			buildPhases = (
+				0039B395152A384100D96D3E /* Sources */,
+				0039B396152A384100D96D3E /* Frameworks */,
+				0039B469152AA30D00D96D3E /* Create Symbolic Links */,
+				0039B397152A384100D96D3E /* Headers */,
+				00E6E66E15473E80005C9962 /* Copy Mac OS X Public Headers */,
+				0039B463152AA28C00D96D3E /* Copy Mac OS X amd64 Public Headers */,
+				0039B467152AA2CC00D96D3E /* Copy Mac OS X x86 Public Headers */,
+				0039B46A152AA34C00D96D3E /* Install Public Headers */,
+				0039B46B152AA37B00D96D3E /* Install Debug Symbols */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0039B39E152A384B00D96D3E /* PBXTargetDependency */,
+				0039B3A0152A384D00D96D3E /* PBXTargetDependency */,
+			);
+			name = nu;
+			productName = nu;
+			productReference = 0039B399152A384100D96D3E /* libnu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C9FF60314B4C4030038DC5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 0C9FF60614B4C4030038DC5E /* Build configuration list for PBXProject "nu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0C9FF60114B4C4030038DC5E;
+			productRefGroup = 0C9FF60D14B4C4030038DC5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0039B398152A384100D96D3E /* nu */,
+				00B733D3151BA5FA00A8251C /* nu-cleanup */,
+				00B733DB151BA7BE00A8251C /* nu-prepare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0039B44E152A3A2D00D96D3E /* Prepare Platform Specific Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/osx-x86",
+				"$(SRCROOT)/osx-amd64",
+			);
+			name = "Prepare Platform Specific Files";
+			outputPaths = (
+				"$(PROJECT_DERIVED_FILE_DIR)/LockFreeLIFO.c",
+				"$(PROJECT_DERIVED_FILE_DIR)/LockFreeLIFO-osx.s",
+				"$(PROJECT_DERIVED_FILE_DIR)/LockFreeLIFO-dummy",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ! -d \"$PROJECT_DERIVED_FILE_DIR\" ]; then\n    mkdir -p \"$PROJECT_DERIVED_FILE_DIR\"\nfi\n\nif [ \"$CURRENT_ARCH\" == \"x86_64\" ]; then\n    NU_PLATFORM_FILES=\"$SCRIPT_INPUT_FILE_1\"\nelif [ \"$CURRENT_ARCH\" == \"i386\" ]; then\n    NU_PLATFORM_FILES=\"$SCRIPT_INPUT_FILE_0\"\nfi\n\ncp -af \"$NU_PLATFORM_FILES/$(basename $SCRIPT_OUTPUT_FILE_0)\" \"$SCRIPT_OUTPUT_FILE_0\"\ncp -af \"$NU_PLATFORM_FILES/$(basename $SCRIPT_OUTPUT_FILE_1)\" \"$SCRIPT_OUTPUT_FILE_1\"";
+			showEnvVarsInLog = 0;
+		};
+		0039B469152AA30D00D96D3E /* Create Symbolic Links */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_NAME)",
+			);
+			name = "Create Symbolic Links";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIBLN=\"$NSBUILD_TOOLS_BIN_DIR/libln\"\ncd $TARGET_BUILD_DIR; \\\n$LIBLN \"$EXECUTABLE_NAME\"\n\nif [ \"$DEPLOYMENT_LOCATION\" == \"YES\" ]; then\n    cd \"$BUILT_PRODUCTS_DIR\"; \\\n    $LIBLN \"$EXECUTABLE_NAME\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+		0039B46A152AA34C00D96D3E /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0039B46B152AA37B00D96D3E /* Install Debug Symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			name = "Install Debug Symbols";
+			outputPaths = (
+				"$(DWARF_DSYM_INSTALL_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+		00B733E8151BA84300A8251C /* Generate Version Info */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/VERSION",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/lib-version.template.h",
+			);
+			name = "Generate Version Info";
+			outputPaths = (
+				"$(PROJECT_DERIVED_FILE_DIR)/version.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PRODUCT_VERSION=$(cat \"$SCRIPT_INPUT_FILE_0\")\n\nif [ ! -d \"$PROJECT_DERIVED_FILE_DIR\" ]; then\n    mkdir -p \"$PROJECT_DERIVED_FILE_DIR\"\nfi\n\nNVGTOOL=\"$NSBUILD_TOOLS_BIN_DIR/nvgtool\"\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_1\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_0\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0039B395152A384100D96D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0039B3A1152A386900D96D3E /* lfitem.c in Sources */,
+				0039B3A2152A386900D96D3E /* PtrList.cpp in Sources */,
+				0039B3A3152A386900D96D3E /* BitReader.cpp in Sources */,
+				0039B3A4152A386900D96D3E /* ByteReader.c in Sources */,
+				0039B3A5152A386900D96D3E /* ByteWriter.c in Sources */,
+				0039B3A6152A386900D96D3E /* RingBuffer.cpp in Sources */,
+				0039B457152A9F1200D96D3E /* LockFreeLIFO.c in Sources */,
+				0039B459152A9F1900D96D3E /* LockFreeLIFO-osx.s in Sources */,
+				006E5AF1152B712D0081BD03 /* lfmpscq.c in Sources */,
+				006E5AF3152B712D0081BD03 /* lfringbuffer.c in Sources */,
+				006E5AFD152B71C60081BD03 /* LockFreeRingBuffer.cpp in Sources */,
+				006E5B12152B72160081BD03 /* utf.c in Sources */,
+				00E6E66C15473DF3005C9962 /* ThreadLoop.cpp in Sources */,
+				0074C8A516790639005E2369 /* nodelist.c in Sources */,
+				0074C8AA16790668005E2369 /* LockFreeFIFO.cpp in Sources */,
+				00695D2316E7DCAB009CB115 /* ProgressTracker.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0039B367152A1F0A00D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733D3151BA5FA00A8251C /* nu-cleanup */;
+			targetProxy = 0039B366152A1F0A00D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B39E152A384B00D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733D3151BA5FA00A8251C /* nu-cleanup */;
+			targetProxy = 0039B39D152A384B00D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B3A0152A384D00D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733DB151BA7BE00A8251C /* nu-prepare */;
+			targetProxy = 0039B39F152A384D00D96D3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0039B39B152A384200D96D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+			};
+			name = Debug;
+		};
+		0039B39C152A384200D96D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+			};
+			name = Release;
+		};
+		00B733D5151BA5FA00A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		00B733D6151BA5FA00A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		00B733DD151BA7BE00A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Debug;
+		};
+		00B733DE151BA7BE00A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Release;
+		};
+		0C9FF60E14B4C4030038DC5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				ONLY_ACTIVE_ARCH = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		0C9FF60F14B4C4030038DC5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0039B39A152A384200D96D3E /* Build configuration list for PBXNativeTarget "nu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0039B39B152A384200D96D3E /* Debug */,
+				0039B39C152A384200D96D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B733D4151BA5FA00A8251C /* Build configuration list for PBXLegacyTarget "nu-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B733D5151BA5FA00A8251C /* Debug */,
+				00B733D6151BA5FA00A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B733DC151BA7BE00A8251C /* Build configuration list for PBXAggregateTarget "nu-prepare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B733DD151BA7BE00A8251C /* Debug */,
+				00B733DE151BA7BE00A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C9FF60614B4C4030038DC5E /* Build configuration list for PBXProject "nu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C9FF60E14B4C4030038DC5E /* Debug */,
+				0C9FF60F14B4C4030038DC5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C9FF60314B4C4030038DC5E /* Project object */;
+}

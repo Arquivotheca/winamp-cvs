@@ -1,0 +1,146 @@
+#pragma once
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+#include <windows.h>
+#include <stdio.h>
+#include "../replicant/cloud/Logger.h"
+#include "../gen_ml/ml.h"
+#include "../gen_ml/ml_ipc_0313.h"
+#include "../libyajl/include/yajl/yajl_parse.h"
+#include "../nu/threadpool/api_threadpool.h"
+#include "../Winamp/wa_ipc.h"
+#include "../jnetlib/api_httpget.h"
+#include "../nu/AutoLock.h"
+#include "Upload.h"
+#include "shared.h"
+#include <bfc/error.h>
+#include <bfc/platform/types.h>
+//#include "../replicant/cloud/CloudDB.h"
+#include "../replicant/cloud/cb_cloudevents.h"
+#include "../replicant/cloud/ifc_cloudclient.h"
+
+extern ifc_cloudclient *cloud_client;
+extern int local_device_id, first_pull;
+extern nx_string_t local_device_token, current_device_name;
+extern winampMediaLibraryPlugin plugin;
+extern prefsDlgRecW preferences;
+extern int winampVersion;
+extern uint32_t cloud_revision;
+extern int IPC_LIBRARY_PLAYLISTS_REFRESH;
+void ClearMediaHashes();
+struct Attributes;
+ns_error_t UpdateFile(ifc_clouddb *db_connection, Attributes &attributes, int internal_id, const wchar_t *filename);
+bool AddFilesToLibrary(ifc_clouddb *db, Attributes &attributes, void *user_data);
+ns_error_t AddFileToLibrary(ifc_clouddb *db_connection, Attributes &attributes, itemRecordW *record);
+extern char winamp_id_str[40];
+int PostJSON(const char *url, const unsigned char *json_data, size_t json_len, yajl_handle parser, Logger *logger);
+int PostFile(const char *url, const wchar_t *filename, const unsigned char *json_data, size_t json_length, const wchar_t *mime_type, yajl_handle parser, Logger *logger);
+
+extern int cloud_treeItem, signin_treeItem, first_login, last_string_id, auth_error;
+extern uint64_t revision;
+extern wchar_t ini_file[MAX_PATH];
+BOOL CALLBACK PreferencesDialogBaseProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
+BOOL CALLBACK PreferencesDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
+
+static const wchar_t *INI_APP_NAME = L"ml_cloud";
+typedef void (*Config_StringSetter)(const wchar_t *value);
+typedef void (*Config_StringGetter)(wchar_t *value, size_t cch);
+typedef void (*Config_BoolSetter)(bool value);
+typedef bool (*Config_BoolGetter)();
+
+void Config_GetProvider(wchar_t *provider, size_t provider_cch);
+void Config_SetProvider(const wchar_t *provider);
+void Config_GetAuthToken(wchar_t *auth_token, size_t auth_token_cch);
+void Config_SetAuthToken(const wchar_t *auth_token);
+void Config_GetUsername(wchar_t *username, size_t username_cch);
+void Config_SetUsername(const wchar_t *username);
+
+void Config_SetWebURL(const wchar_t *url);
+void Config_GetWebURL(wchar_t *url, size_t cch);
+void Config_SetCloudAPIURL(const wchar_t *url);
+void Config_GetCloudAPIURL(wchar_t *url, size_t cch);
+
+bool SetCredentials();
+
+int Config_GetLastTab();
+void Config_SetLastTab();
+
+void Config_SetShowLocal(int show);
+int Config_GetShowLocal();
+
+void Config_SetFirstRun(int use);
+int Config_GetFirstRun();
+
+void Config_SetFirstLogin();
+int Config_GetFirstLogin();
+
+void Config_SetNukeVersion(int version);
+int Config_GetNukeVersion();
+
+void Config_SetNukeIgnoredVersion(int version);
+int Config_GetNukeIgnoredVersion();
+
+void Config_SetShowStatus(int show_status);
+int Config_GetShowStatus();
+
+void Config_GetShowPos(int *left, int *top);
+void Config_SaveShowPos(int left, int top);
+
+time_t Config_GetLastScan();
+void Config_SetLastScan(time_t scan_time);
+
+void Config_SetDevMode(int mode);
+int Config_GetDevMode();
+
+extern int logMode;
+bool Config_GetLogging();
+bool Config_GetSlimLogging();
+bool Config_GetLogBinary();
+
+const wchar_t *Config_GetDefaultAPIUrl();
+const wchar_t *Config_GetDefaultWebUrl();
+
+class ConfigurationKeys
+{
+public:
+	static const wchar_t *provider[4];
+	static const wchar_t *auth_token[4];
+	static const wchar_t *username[4];
+	static const wchar_t *web_url;
+	static const wchar_t *cloud_api_url;
+	static const wchar_t *cloud_last_tab;
+	static const wchar_t *show_local;
+	static const wchar_t *cloud_last_scan;
+	static const wchar_t *cloud_dev_last_scan;
+	static const wchar_t *nuke[4];
+	static const wchar_t *nuke_ignored[4];
+	static const wchar_t *first_run[4];
+	static const wchar_t *first_login[4];
+	static const wchar_t *show_status;
+	static const wchar_t *x_status;
+	static const wchar_t *y_status;
+	static const wchar_t *dev_mode;
+};
+
+void Config_SetUsername(const wchar_t *username);
+
+extern Nullsoft::Utility::LockGuard socket_guard;
+
+extern "C" HWND debug_console_window, child_window, invalid_view, status_window, status_progress_window;
+extern "C" int debug_tab_sel;
+void DebugConsole_SetStatus(const wchar_t *status/*, bool static_text = 1*/);
+void DebugConsole_ShowProgess(int show);
+void DebugConsole_UpdateProgress(int position, int show);
+void DebugConsole_GetRevision(int64_t revision);
+void DebugConsole_UpdateIgnoredFiles();
+void DebugConsole_ClearLog(HWND hwndDlg);
+
+void StatusWindow_Message(int string_id);
+void StatusWindow_DetailsMessage();
+void StatusWindow_SavePos(int do_destroy = true);
+void ToggleStatusWindow(bool first = false);
+
+void SetSignInNodeText(LPWSTR text);
+
+extern "C" ns_error_t GetName(nx_string_t *device_name);

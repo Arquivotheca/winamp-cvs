@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wasabi2", "Wasabi2.vcproj", "{4A907402-5983-4D6B-8D85-0F61C348319A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nx", "..\replicant\nx\nx.vcproj", "{57C90706-B25D-4ACA-9B33-95CDB2427C27}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nu", "..\replicant\nu\nu.vcproj", "{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nswasabi", "..\replicant\nswasabi\nswasabi.vcproj", "{E4A6C250-B426-4328-945A-303865086F4C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wasabi-replicant", "..\replicant\Wasabi\Wasabi-replicant.vcproj", "{4F34CA12-9F74-4A96-A917-8DEEA4961B31}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "metadata", "..\replicant\Replicant\metadata\metadata.vcproj", "{E2FD86D4-1A1C-49EB-BAB8-B63D594CC956}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A907402-5983-4D6B-8D85-0F61C348319A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4A907402-5983-4D6B-8D85-0F61C348319A}.Debug|Win32.Build.0 = Debug|Win32
+		{4A907402-5983-4D6B-8D85-0F61C348319A}.Release|Win32.ActiveCfg = Release|Win32
+		{4A907402-5983-4D6B-8D85-0F61C348319A}.Release|Win32.Build.0 = Release|Win32
+		{57C90706-B25D-4ACA-9B33-95CDB2427C27}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57C90706-B25D-4ACA-9B33-95CDB2427C27}.Debug|Win32.Build.0 = Debug|Win32
+		{57C90706-B25D-4ACA-9B33-95CDB2427C27}.Release|Win32.ActiveCfg = Release|Win32
+		{57C90706-B25D-4ACA-9B33-95CDB2427C27}.Release|Win32.Build.0 = Release|Win32
+		{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}.Debug|Win32.Build.0 = Debug|Win32
+		{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}.Release|Win32.ActiveCfg = Release|Win32
+		{EFC75A79-269F-44FC-BAC5-D7D4FD4EC92C}.Release|Win32.Build.0 = Release|Win32
+		{E4A6C250-B426-4328-945A-303865086F4C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E4A6C250-B426-4328-945A-303865086F4C}.Debug|Win32.Build.0 = Debug|Win32
+		{E4A6C250-B426-4328-945A-303865086F4C}.Release|Win32.ActiveCfg = Release|Win32
+		{E4A6C250-B426-4328-945A-303865086F4C}.Release|Win32.Build.0 = Release|Win32
+		{4F34CA12-9F74-4A96-A917-8DEEA4961B31}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F34CA12-9F74-4A96-A917-8DEEA4961B31}.Debug|Win32.Build.0 = Debug|Win32
+		{4F34CA12-9F74-4A96-A917-8DEEA4961B31}.Release|Win32.ActiveCfg = Release|Win32
+		{4F34CA12-9F74-4A96-A917-8DEEA4961B31}.Release|Win32.Build.0 = Release|Win32
+		{E2FD86D4-1A1C-49EB-BAB8-B63D594CC956}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E2FD86D4-1A1C-49EB-BAB8-B63D594CC956}.Debug|Win32.Build.0 = Debug|Win32
+		{E2FD86D4-1A1C-49EB-BAB8-B63D594CC956}.Release|Win32.ActiveCfg = Release|Win32
+		{E2FD86D4-1A1C-49EB-BAB8-B63D594CC956}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

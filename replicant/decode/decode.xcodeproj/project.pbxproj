@@ -1,0 +1,241 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		009988D915216919000AB02F /* decode */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 009988DA15216919000AB02F /* Build configuration list for PBXAggregateTarget "decode" */;
+			buildPhases = (
+				009988E3152169CC000AB02F /* CopyFiles */,
+				009988E8152169F1000AB02F /* Install Public Headers */,
+			);
+			dependencies = (
+				009988E2152169C6000AB02F /* PBXTargetDependency */,
+			);
+			name = decode;
+			productName = decode;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		009988E4152169EB000AB02F /* api_decode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 009988D515216908000AB02F /* api_decode.h */; };
+		009988E5152169EB000AB02F /* ifc_raw_media_reader.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 009988D615216908000AB02F /* ifc_raw_media_reader.h */; };
+		009988E6152169EB000AB02F /* svc_decode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 009988D715216908000AB02F /* svc_decode.h */; };
+		009988E7152169EB000AB02F /* svc_raw_media_reader.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 009988D815216908000AB02F /* svc_raw_media_reader.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		009988E1152169C6000AB02F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 009988C715216827000AB02F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 009988DD15216929000AB02F;
+			remoteInfo = "decode-cleanup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		009988E3152169CC000AB02F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				009988E4152169EB000AB02F /* api_decode.h in CopyFiles */,
+				009988E5152169EB000AB02F /* ifc_raw_media_reader.h in CopyFiles */,
+				009988E6152169EB000AB02F /* svc_decode.h in CopyFiles */,
+				009988E7152169EB000AB02F /* svc_raw_media_reader.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		009988D515216908000AB02F /* api_decode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = api_decode.h; sourceTree = "<group>"; };
+		009988D615216908000AB02F /* ifc_raw_media_reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ifc_raw_media_reader.h; sourceTree = "<group>"; };
+		009988D715216908000AB02F /* svc_decode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = svc_decode.h; sourceTree = "<group>"; };
+		009988D815216908000AB02F /* svc_raw_media_reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = svc_raw_media_reader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		009988C515216827000AB02F = {
+			isa = PBXGroup;
+			children = (
+				009988D515216908000AB02F /* api_decode.h */,
+				009988D615216908000AB02F /* ifc_raw_media_reader.h */,
+				009988D715216908000AB02F /* svc_decode.h */,
+				009988D815216908000AB02F /* svc_raw_media_reader.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		009988DD15216929000AB02F /* decode-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(PUBLIC_HEADERS_DIR)\"";
+			buildConfigurationList = 009988DE15216929000AB02F /* Build configuration list for PBXLegacyTarget "decode-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "decode-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "decode-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		009988C715216827000AB02F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 009988CA15216827000AB02F /* Build configuration list for PBXProject "decode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 009988C515216827000AB02F;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				009988D915216919000AB02F /* decode */,
+				009988DD15216929000AB02F /* decode-cleanup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		009988E8152169F1000AB02F /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		009988E2152169C6000AB02F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 009988DD15216929000AB02F /* decode-cleanup */;
+			targetProxy = 009988E1152169C6000AB02F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		009988CC15216827000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PRODUCT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		009988CD15216827000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PRODUCT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		009988DB15216919000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		009988DC15216919000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		009988DF15216929000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		009988E015216929000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		009988CA15216827000AB02F /* Build configuration list for PBXProject "decode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009988CC15216827000AB02F /* Debug */,
+				009988CD15216827000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		009988DA15216919000AB02F /* Build configuration list for PBXAggregateTarget "decode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009988DB15216919000AB02F /* Debug */,
+				009988DC15216919000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		009988DE15216929000AB02F /* Build configuration list for PBXLegacyTarget "decode-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009988DF15216929000AB02F /* Debug */,
+				009988E015216929000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 009988C715216827000AB02F /* Project object */;
+}

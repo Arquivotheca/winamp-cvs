@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.w6c</TargetExt>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetExt>.w6c</TargetExt>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy "$(TargetPath)" "$(ProgramFiles)\Replicant\$(TargetName)$(TargetExt)"</Command>
+      <Outputs>$(ProgramFiles)\Replicant\$(TargetName)$(TargetExt)</Outputs>
+      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..</AdditionalIncludeDirectories>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <CustomBuildStep>
+      <Outputs>$(ProgramFiles)\Replicant\$(TargetName)$(TargetExt)</Outputs>
+      <Command>copy "$(TargetPath)" "$(ProgramFiles)\Replicant\$(TargetName)$(TargetExt)"</Command>
+      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CVbriHeader.cpp" />
+    <ClCompile Include="GioFileRead.cpp" />
+    <ClCompile Include="giofile_crt.cpp" />
+    <ClCompile Include="gioicy.cpp" />
+    <ClCompile Include="giojnet.cpp" />
+    <ClCompile Include="GioReplicant.cpp" />
+    <ClCompile Include="gioultravox.cpp" />
+    <ClCompile Include="ICYMP3.cpp" />
+    <ClCompile Include="ICYMP3Service.cpp" />
+    <ClCompile Include="LAMEInfo.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MP3Decoder.cpp" />
+    <ClCompile Include="MP3DecoderCallback.cpp" />
+    <ClCompile Include="MP3DecoderPacket.cpp" />
+    <ClCompile Include="MP3HTTP.cpp" />
+    <ClCompile Include="MP3HTTPService.cpp" />
+    <ClCompile Include="MP3MetadataService.cpp" />
+    <ClCompile Include="MP3Playback.cpp" />
+    <ClCompile Include="MP3PlaybackService.cpp" />
+    <ClCompile Include="MP4DecoderService.cpp" />
+    <ClCompile Include="MP4MP3Decoder.cpp" />
+    <ClCompile Include="MPEGHeader.cpp" />
+    <ClCompile Include="OFL.cpp" />
+    <ClCompile Include="MP3RawReader.cpp" />
+    <ClCompile Include="UltravoxMP3.cpp" />
+    <ClCompile Include="UltravoxMP3Service.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="api.h" />
+    <ClInclude Include="CVbriHeader.h" />
+    <ClInclude Include="giofile_crt.h" />
+    <ClInclude Include="gioicy.h" />
+    <ClInclude Include="giojnet.h" />
+    <ClInclude Include="GioReplicant.h" />
+    <ClInclude Include="gioultravox.h" />
+    <ClInclude Include="ICYMP3.h" />
+    <ClInclude Include="ICYMP3Service.h" />
+    <ClInclude Include="LAMEInfo.h" />
+    <ClInclude Include="MP3Decoder.h" />
+    <ClInclude Include="MP3DecoderCallback.h" />
+    <ClInclude Include="MP3DecoderPacket.h" />
+    <ClInclude Include="MP3HTTP.h" />
+    <ClInclude Include="MP3HTTPService.h" />
+    <ClInclude Include="MP3MetadataService.h" />
+    <ClInclude Include="MP3Playback.h" />
+    <ClInclude Include="MP3PlaybackService.h" />
+    <ClInclude Include="MP4DecoderService.h" />
+    <ClInclude Include="MP4MP3Decoder.h" />
+    <ClInclude Include="MPEGHeader.h" />
+    <ClInclude Include="OFL.h" />
+    <ClInclude Include="MP3RawReader.h" />
+    <ClInclude Include="UltravoxMP3.h" />
+    <ClInclude Include="UltravoxMP3Service.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\jnetlib\jnetlib.vcxproj">
+      <Project>{e105a0a2-7391-47c5-86ac-718003524c3d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nsapev2\nsapev2.vcxproj">
+      <Project>{b1a36ad2-d17f-467e-a93f-8b75ce0db156}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nsid3v1\nsid3v1.vcxproj">
+      <Project>{277dbdac-60e0-4aec-94d3-60aea006a327}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nsid3v2\nsid3v2.vcxproj">
+      <Project>{e049b5ce-b462-41aa-85db-0b8b28de5aa0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nsmp3\nsmp3.vcxproj">
+      <Project>{c3837ef5-d7a7-47c3-b69b-0a7bc52e8fd6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nswasabi\nswasabi.vcxproj">
+      <Project>{480502a0-71da-4bf0-bf99-2720d69a526b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nu\nu.vcxproj">
+      <Project>{f1f5cd60-0d5b-4cea-9eeb-2f87ff9aa915}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nx\nx.vcxproj">
+      <Project>{2851cf33-337d-44d9-ba6d-30547b1cdef0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\zlib\zlib.vcxproj">
+      <Project>{b33ae14a-c8ec-46e0-803b-4587c8c4897f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

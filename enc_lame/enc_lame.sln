@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enc_lame", "enc_lame.vcproj", "{861F24D8-9B22-42FA-B056-7A86D6B4500C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Winamp|Win32 = Debug Winamp|Win32
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Debug Winamp|Win32.ActiveCfg = Debug|Win32
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Debug Winamp|Win32.Build.0 = Debug|Win32
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Debug|Win32.Build.0 = Debug|Win32
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Release|Win32.ActiveCfg = Release|Win32
+		{861F24D8-9B22-42FA-B056-7A86D6B4500C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

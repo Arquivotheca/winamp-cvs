@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bitstream.cpp" />
+    <ClCompile Include="conceal.cpp" />
+    <ClCompile Include="crc16.cpp" />
+    <ClCompile Include="huffdec.cpp" />
+    <ClCompile Include="huffmanbitobj.cpp" />
+    <ClCompile Include="huffmandecoder.cpp" />
+    <ClCompile Include="huffmantable.cpp" />
+    <ClCompile Include="l3table.cpp" />
+    <ClCompile Include="meanvalue.cpp" />
+    <ClCompile Include="mp2decode.cpp" />
+    <ClCompile Include="mp3ancofl.cpp" />
+    <ClCompile Include="mp3decode.cpp" />
+    <ClCompile Include="mp3quant.cpp" />
+    <ClCompile Include="mp3read.cpp" />
+    <ClCompile Include="mp3ssc.cpp" />
+    <ClCompile Include="mpegbitstream.cpp" />
+    <ClCompile Include="mpegheader.cpp" />
+    <ClCompile Include="mpgadecoder.cpp" />
+    <ClCompile Include="sequencedetector.cpp" />
+    <ClCompile Include="x86-sse\mdct.cpp" />
+    <ClCompile Include="x86-sse\mp3tools.cpp" />
+    <ClCompile Include="x86-sse\polyphase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bitsequence.h" />
+    <ClInclude Include="bitstream.h" />
+    <ClInclude Include="conceal.h" />
+    <ClInclude Include="crc16.h" />
+    <ClInclude Include="giobase.h" />
+    <ClInclude Include="huffdec.h" />
+    <ClInclude Include="huffmanbitobj.h" />
+    <ClInclude Include="huffmandecoder.h" />
+    <ClInclude Include="huffmantable.h" />
+    <ClInclude Include="l3reg.h" />
+    <ClInclude Include="l3table.h" />
+    <ClInclude Include="mdct.h" />
+    <ClInclude Include="meanvalue.h" />
+    <ClInclude Include="mp2decode.h" />
+    <ClInclude Include="mp3ancofl.h" />
+    <ClInclude Include="mp3decode.h" />
+    <ClInclude Include="mp3drmifc.h" />
+    <ClInclude Include="mp3quant.h" />
+    <ClInclude Include="mp3read.h" />
+    <ClInclude Include="mp3ssc.h" />
+    <ClInclude Include="mp3sscdef.h" />
+    <ClInclude Include="mp3streaminfo.h" />
+    <ClInclude Include="mp3tools.h" />
+    <ClInclude Include="mpeg.h" />
+    <ClInclude Include="mpegbitstream.h" />
+    <ClInclude Include="mpegheader.h" />
+    <ClInclude Include="mpgadecoder.h" />
+    <ClInclude Include="polyphase.h" />
+    <ClInclude Include="regtypes.h" />
+    <ClInclude Include="sequencedetector.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C3837EF5-D7A7-47C3-B69B-0A7BC52E8FD6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>nsmp3</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

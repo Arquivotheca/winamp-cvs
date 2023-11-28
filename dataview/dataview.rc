@@ -1,0 +1,137 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    65535                   "{AB9B9F97-0D96-47c2-AF3B-74995065FEAC}"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TRACK_AUDIO         "Audio"
+    IDS_TRACK_VIDEO         "Video"
+    IDS_TRACK_UNKNOWN       "Unknown"
+    IDS_DAY                 "day"
+    IDS_DAY_PLURAL          "days"
+    IDS_FORMAT_TIMESPAN     "%u:%02u:%02u"
+    IDS_FORMAT_TIMESPAN_LONG "%u %s+%u:%02u:%02u"
+    IDS_FORMAT_TIMESPAN_SHORT "%u:%02u"
+    IDS_SIZE_KB             "KB"
+    IDS_SIZE_BYTE           "bytes"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SIZE_MB             "MB"
+    IDS_SIZE_GB             "GB"
+    IDS_SIZE_TB             "TB"
+    IDS_COLUMN_ALBUM        "Album"
+    IDS_COLUMN_ARTIST       "Artist"
+    IDS_COLUMN_ARTIST_INDEX "Arist Index"
+    IDS_COLUMN_BITRATE      "Bitrate"
+    IDS_COLUMN_COMPOSER     "Composer"
+    IDS_COLUMN_DISC_NUMBER  "Disc#"
+    IDS_COLUMN_GENRE        "Genre"
+    IDS_COLUMN_LAST_PLAYED  "Last Played"
+    IDS_COLUMN_LAST_UPDATED "Last Updated"
+    IDS_COLUMN_LENGTH       "Length"
+    IDS_COLUMN_PLAY_COUNT   "Play Count"
+    IDS_COLUMN_PUBLISHER    "Publisher"
+    IDS_COLUMN_RATING       "Rating"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COLUMN_SIZE         "Size"
+    IDS_COLUMN_TITLE        "Title"
+    IDS_COLUMN_TRACK_COUNT  "Tracks"
+    IDS_COLUMN_TRACK_NUMBER "Track#"
+    IDS_COLUMN_TYPE         "Type"
+    IDS_COLUMN_YEAR         "Year"
+    IDS_COLUMN_ALBUM_ARTIST "Album Artist"
+    IDS_COLUMN_ALBUM_ARTIST_INDEX "Album Artist Index"
+    IDS_GROUP_ARTIST        "Artists"
+    IDS_GROUP_ARTIST_COUNTER "Artists"
+    IDS_GROUP_ARTIST_EMPTY  "No Artist"
+    IDS_GROUP_ALBUM         "Albums"
+    IDS_GROUP_ALBUM_COUNTER "Albums"
+    IDS_GROUP_ALBUM_EMPTY   "No Album"
+    IDS_COLUMN_NEXT_FILTER_COUNT "Next Filter Count"
+    IDS_GROUP_GENRE         "Genres"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_GROUPFILTER_EMPTYGROUP_FORMAT "[%s]"
+    IDS_GROUP_GENRE_COUNTER "Genres"
+    IDS_GROUP_GENRE_EMPTY   "No Genre"
+    IDS_GROUPFILTER_SUMMARY_FORMAT "All (%u)"
+    IDS_KBPS                "kbps"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

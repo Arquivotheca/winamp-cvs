@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Decoder">
+      <UniqueIdentifier>{dbb1895c-d5e6-4161-9048-31b836eabde0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Playback">
+      <UniqueIdentifier>{255c3ad7-c175-4c42-83fc-6b41ea32613c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Metadata">
+      <UniqueIdentifier>{6a7db681-668b-431b-955f-177b401e7e9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic">
+      <UniqueIdentifier>{1faaa391-45db-4230-a7ab-9067e533f5e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FLACMetadataService.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="FLACMetadata.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="flacplayback.cpp">
+      <Filter>Playback</Filter>
+    </ClCompile>
+    <ClCompile Include="FLACPlaybackService.cpp">
+      <Filter>Playback</Filter>
+    </ClCompile>
+    <ClCompile Include="FLACDecoder.cpp">
+      <Filter>Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="FLACDecoderCallback.cpp">
+      <Filter>Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="crt\FLACMetadataCallbacks.cpp">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="FLACFileCallbacks.cpp">
+      <Filter>Playback</Filter>
+    </ClCompile>
+    <ClCompile Include="FLACMetadataEditor.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="FLACRawReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FLACHTTP.cpp">
+      <Filter>Playback</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FLACPlaybackService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="flacplayback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FLACDecoder.h">
+      <Filter>Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="FLACDecoderCallback.h">
+      <Filter>Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="FLACMetadata.h">
+      <Filter>Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="FLACMetadataService.h">
+      <Filter>Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="crt\FLACMetadataCallbacks.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="FLACFileCallbacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FLACRawReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FLACHTTP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,793 @@
+#include "api.h"
+#include "BackgroundTasks.h"
+#include "main.h"
+#include "../Winamp/wa_ipc.h"
+#include "../gen_ml/ml_ipc_0313.h"
+#include "../gen_ml/itemlist.h"
+#include "../nu/MediaLibraryInterface.h"
+#include "../nu/ServiceWatcher.h"
+#include "../Wasabi2/main.h"
+#include "nx/nxuri.h"
+#include "nswasabi/ReferenceCounted.h"
+#include "service.h"
+#include "resource.h"
+#include "menu.h"
+#include "JSAPI2_Creator.h"
+#include "jnetlib/jnetlib.h"
+#include <shellapi.h>
+#include <shlwapi.h>
+#include <strsafe.h>
+
+static unsigned int build_number = 
+#include "build.h"
+;
+
+// to allow for easier db updates if needed, we check an ini flag for the time being
+// and if less than this we assume an older client version and so nuke the cloud db
+#define NUKE_VERSION 14
+
+ifc_cloudclient *cloud_client=0;
+int local_device_id = 0, first_pull = 0, clean_install = 0, network_fail = 0, IPC_GET_CLOUD_HINST = -1;
+Cloud_Background cloud_background;
+HINSTANCE WASABI_API_LNG_HINST = 0, WASABI_API_ORIG_HINST = 0;
+prefsDlgRecW preferences;
+static wchar_t preferencesName[64];
+static wchar_t szDescription[256];
+
+class MLDB_Watcher : public ServiceWatcherSingle
+{
+	void OnRegister()
+	{
+		cloud_background.Initialize();
+	}
+	void OnDeregister() {}
+};
+
+class DeviceCloudCallback : public cb_cloudevents
+{
+	void WASABICALL CloudEvents_OnRevision(ifc_cloudclient *client, int64_t revision, int from_reset)
+	{
+		if (!from_reset)
+			DebugConsole_GetRevision(revision);
+		else
+		{
+			if (revision >= 0)
+			{
+				cloud_background.OnReset();
+				MessageBox(child_window, L"Reset Succeeded\r\nWill start re-adding files shortly.", L"Cloud Reset", MB_OK | MB_ICONINFORMATION);
+			}
+			else
+			{
+				MessageBox(child_window, L"Reset Failed\r\nSee logs for more details.", L"Cloud Reset", MB_OK | MB_ICONEXCLAMATION);
+			}
+		}
+	}
+
+	void WASABICALL CloudEvents_OnFirstPull(ifc_cloudclient *client, bool forced)
+	{
+		cloud_background.OnFirstPull(clean_install, forced);
+
+		first_pull = 1;
+		network_fail = 0;
+		// enable some of the actions on the preferences dialog now that a pull has happened
+		if (IsWindow(child_window))
+		{
+			EnableWindow(GetDlgItem(child_window, IDC_RESET), TRUE);
+			EnableWindow(GetDlgItem(child_window, IDC_RESCAN), TRUE);
+
+			ifc_clouddb *db_connection = cloud_background.Get_DB_Connection();
+			if (db_connection && db_connection->Devices_GetName(local_device_id, &current_device_name, 0) == NErr_Success && first_pull)
+			{
+				SetDlgItemText(child_window, IDC_CURRENT_NAME, current_device_name->string);
+				EnableWindow(GetDlgItem(child_window, IDC_CURRENT_NAME), TRUE);
+			}
+		}
+		StatusWindow_Message(0);
+	}
+
+	void WASABICALL CloudEvents_OnGetIgnoredFiles(ifc_cloudclient *client, int num_ignored_mediahash_ids, int *ignored_mediahash_ids, nx_string_t *filenames)
+	{
+		DebugConsole_OnRefreshIgnoredFiles(num_ignored_mediahash_ids, ignored_mediahash_ids, filenames);
+	}
+
+	void WASABICALL CloudEvents_OnError(ifc_cloudclient *client, nx_string_t action, nx_string_t code, nx_string_t message, nx_string_t field)
+	{
+		wchar_t buf[2048] = {0};
+		if (action && action->len)
+		{
+			if (field && field->len)
+			{
+				StringCchPrintf(buf, sizeof(buf), L"Error - Action: %s, Code: %s, Message: %s, Field: %s", action->string, code->string, message->string, field->string);
+			}
+			else
+			{
+				if (code && code->len)
+				{
+					if (message && message->len)
+					{
+						StringCchPrintf(buf, sizeof(buf), L"Error - Action: %s, Code: %s, Message: %s", action->string, code->string, message->string);
+					}
+					else
+					{
+						StringCchPrintf(buf, sizeof(buf), L"Error - Action: %s, Code: %s", action->string);
+					}
+				}
+				else
+				{
+					if (message && message->len)
+					{
+						StringCchPrintf(buf, sizeof(buf), L"Error - Action: %s, Message: %s", action->string, message->string);
+					}
+					else
+					{
+						StringCchPrintf(buf, sizeof(buf), L"Error - Action: %s", action->string);
+					}
+				}
+			}
+
+			if (!NXStringKeywordCompareWithCString(action, "user-device-remove"))
+			{
+				wchar_t buf2[2048];
+				StringCchPrintf(buf2, sizeof(buf2), L"The device could not be removed.\n\nError Code: %s\nMessage: %s\nField: %s",
+								(code && code->len ? code->string : L"not specified"),
+								(message->string ? message->string : L"not specified"),
+								(field && field->len ? field->string : L"n\a"));
+				MessageBox(plugin.hwndWinampParent, buf2, L"Device Removal", MB_ICONERROR);
+			}
+
+			if (!NXStringKeywordCompareWithCString(action, "pull") ||
+				!NXStringKeywordCompareWithCString(action, "user-devices"))
+			{
+				nx_string_t con_fail;
+				NXStringCreateWithFormatting(&con_fail, "%d", NErr_ConnectionFailed);
+				if (!NXStringKeywordCompare(code, con_fail))
+				{
+					if (!network_fail)
+					{
+						network_fail = 1;
+						DebugConsole_SetStatus(L"Network Connection Failure - Changing To Read-only Mode");
+					}
+					else
+					{
+						DebugConsole_SetStatus(L"Network Connection Failure");
+					}
+					DebugConsole_ShowProgess(-1);
+					StatusWindow_Message(IDS_STATUS_NETWORK_FAILURE);
+					return;
+				}
+			}
+
+			DebugConsole_SetStatus(buf);
+		}
+	}
+
+	void WASABICALL CloudEvents_OnAction(ifc_cloudclient *client, nx_string_t action, nx_string_t message)
+	{
+		if (!NXStringKeywordCompareWithCString(action, "pull"))
+		{
+			if (first_pull)
+			{
+				DebugConsole_SetStatus(WASABI_API_LNGSTRINGW(IDS_PULLING));
+			}
+		}
+		else if (!NXStringKeywordCompareWithCString(action, "forced-pull"))
+		{
+			// if this happens, indicate that we're doing something in the ui
+			DebugConsole_ShowProgess(-1);
+			StatusWindow_Message(IDS_STATUS_FIRST_PULL);
+			DebugConsole_SetStatus(WASABI_API_LNGSTRINGW(IDS_FORCED_PULLING));
+		}
+		else if (!NXStringKeywordCompareWithCString(action, "user-devices"))
+		{
+			DebugConsole_SetStatus(WASABI_API_LNGSTRINGW(IDS_REFRESH_DEVICES_LIST));
+		}
+		else if (!NXStringKeywordCompareWithCString(action, "user-devices-update"))
+		{
+			DebugConsole_SetStatus(WASABI_API_LNGSTRINGW(IDS_UPDATING_LOCAL_DEVICE));
+		}
+		else
+		{
+			DebugConsole_SetStatus((message ? message->string : action->string));
+		}
+	}
+};
+
+static MLDB_Watcher mldb_watcher;
+static DeviceCloudCallback device_cloud_callback;
+DEFINE_EXTERNAL_SERVICE(api_service,          WASABI_API_SVC);
+DEFINE_EXTERNAL_SERVICE(api_language,         WASABI_API_LNG);
+DEFINE_EXTERNAL_SERVICE(api_application,      WASABI_API_APP);
+DEFINE_EXTERNAL_SERVICE(api_mldb,             AGAVE_API_MLDB);
+DEFINE_EXTERNAL_SERVICE(api_syscb,            WASABI_API_SYSCB);
+DEFINE_EXTERNAL_SERVICE(api_metadata,         AGAVE_API_METADATA);
+DEFINE_EXTERNAL_SERVICE(api_config,           AGAVE_API_CONFIG);
+DEFINE_EXTERNAL_SERVICE(api_memmgr,           WASABI_API_MEMMGR);
+DEFINE_EXTERNAL_SERVICE(api_albumart,         AGAVE_API_ALBUMART);
+DEFINE_EXTERNAL_SERVICE(JSAPI2::api_security, AGAVE_API_JSAPI2_SECURITY);
+DEFINE_EXTERNAL_SERVICE(obj_ombrowser,        AGAVE_OBJ_BROWSER);
+DEFINE_EXTERNAL_SERVICE(api_threadpool,       AGAVE_API_THREADPOOL);
+DEFINE_EXTERNAL_SERVICE(api_cloud,			  REPLICANT_API_CLOUD);
+Wasabi2::api_service *WASABI2_API_SVC=0;
+Wasabi2::api_application *WASABI2_API_APP=0;
+Wasabi2::api_mediaserver *REPLICANT_API_MEDIASERVER=0;
+JSAPI2Factory jsapi2Factory;
+int winampVersion=0;
+uint32_t cloud_revision=0;
+char winamp_id_str[40];
+uint64_t revision=0;
+wchar_t ini_file[MAX_PATH];
+int cloud_treeItem=0, signin_treeItem=0;
+nx_string_t local_device_token=0;
+Nullsoft::Utility::LockGuard socket_guard;
+
+static int Init();
+static void Quit();
+static INT_PTR CloudPluginMessageProc(int message_type, INT_PTR param1, INT_PTR param2, INT_PTR param3);
+
+template <class api_T>
+void ServiceBuild(api_T *&api_t, GUID factoryGUID_t)
+{
+	if (WASABI_API_SVC)
+	{
+		waServiceFactory *factory = WASABI_API_SVC->service_getServiceByGuid(factoryGUID_t);
+		if (factory)
+			api_t = (api_T *)factory->getInterface();
+	}
+}
+
+template <class api_T>
+void ServiceRelease(api_T *api_t, GUID factoryGUID_t)
+{
+	if (WASABI_API_SVC)
+	{
+		waServiceFactory *factory = WASABI_API_SVC->service_getServiceByGuid(factoryGUID_t);
+		if (factory)
+			factory->releaseInterface(api_t);
+	}
+}
+
+winampMediaLibraryPlugin plugin =
+{
+	MLHDR_VER,
+	"nullsoft(ml_cloud.dll)",
+	Init,
+	Quit,
+	CloudPluginMessageProc,
+	0,
+	0,
+	0,
+};
+
+
+ns_error_t GetName(nx_string_t *device_name)
+{
+	wchar_t computer[256];
+	DWORD buffer_size_computer=256;
+	if (GetComputerNameW(computer, &buffer_size_computer))
+		return NXStringCreateWithUTF16(device_name, computer);
+	else
+		return NErr_Error;
+}
+
+
+static WNDPROC cloud_oldWndProc;
+static LRESULT WINAPI Cloud_WinampWndProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+	if (uMsg == WM_WA_IPC && lParam == IPC_GET_CLOUD_HINST && IPC_GET_CLOUD_HINST > 65536)
+	{
+		return (LRESULT)plugin.hDllInstance;
+	}
+
+	return CallWindowProcW(cloud_oldWndProc, hwndDlg, uMsg, wParam, lParam);
+}
+
+static int Init()
+{
+	mediaLibrary.library = plugin.hwndLibraryParent;
+	mediaLibrary.winamp = plugin.hwndWinampParent;
+	mediaLibrary.instance = plugin.hDllInstance;
+
+	winampVersion = mediaLibrary.GetWinampVersion();
+	if (winampVersion < 0x5070)
+		return ML_INIT_FAILURE;
+
+	mediaLibrary.BuildPath(L"Plugins\\gen_ml.ini", ini_file, MAX_PATH);
+
+	// this is used to determine if we need to force the item places
+	int first_run = Config_GetFirstRun();
+	if (!first_run)
+	{
+		Config_SetFirstRun(1);
+	}
+
+	WASABI_API_SVC = (api_service*)SendMessage(plugin.hwndWinampParent, WM_WA_IPC, 0, IPC_GET_API_SERVICE);
+	if (WASABI_API_SVC == 0	|| WASABI_API_SVC == (api_service*)1) 
+		return ML_INIT_FAILURE;
+
+	ServiceBuild(WASABI2_API_SVC, Wasabi2::api_service::GetServiceGUID());
+	if (!WASABI2_API_SVC)
+		return ML_INIT_FAILURE;
+
+	if (WASABI2_API_SVC)
+	{
+		WASABI2_API_SVC->GetService(&WASABI2_API_APP);
+		WASABI2_API_SVC->GetService(&REPLICANT_API_MEDIASERVER);
+	}																								 
+
+	if (REPLICANT_API_MEDIASERVER)
+	{
+		char hostname[256];
+		jnl_dns_gethostname(hostname, 256);
+		addrinfo *addr;
+
+		if (jnl_dns_resolve_now(hostname, 0, &addr, SOCK_STREAM) == NErr_Success)
+		{
+			addrinfo *n = addr;
+			while (n)
+			{
+				if (n->ai_family == AF_INET)
+				{
+					int ip = ((sockaddr_in *)(n->ai_addr))->sin_addr.S_un.S_addr;
+					REPLICANT_API_MEDIASERVER->SetIPv4Address(ip);
+					REPLICANT_API_MEDIASERVER->Start();
+					break;
+				}
+				n = n->ai_next;
+			}
+			jnl_dns_freeaddrinfo(addr);
+		}
+	}
+	
+	ServiceBuild(WASABI_API_APP, applicationApiServiceGuid);
+	ServiceBuild(WASABI_API_LNG, languageApiGUID);
+	ServiceBuild(WASABI_API_SYSCB, syscbApiServiceGuid);
+	ServiceBuild(AGAVE_API_JSAPI2_SECURITY, JSAPI2::api_securityGUID);
+	ServiceBuild(AGAVE_OBJ_BROWSER, OBJ_OmBrowser);
+	ServiceBuild(AGAVE_API_METADATA, api_metadataGUID);
+	ServiceBuild(AGAVE_API_CONFIG, AgaveConfigGUID);
+	ServiceBuild(WASABI_API_MEMMGR, memMgrApiServiceGuid);
+	ServiceBuild(AGAVE_API_ALBUMART, albumArtGUID);
+	ServiceBuild(AGAVE_API_THREADPOOL, ThreadPoolGUID);
+	WASABI2_API_SVC->GetService(&REPLICANT_API_CLOUD);
+	WASABI_API_SVC->service_register(&jsapi2Factory);
+
+	// need to have this initialised before we try to do anything with localisation features
+	WASABI_API_START_LANG(plugin.hDllInstance, MlCloudLangGUID);
+
+	StringCchPrintfW(szDescription, ARRAYSIZE(szDescription),
+					 WASABI_API_LNGSTRINGW(IDS_NULLSOFT_CLOUD), 0, build_number);
+	plugin.description = (char*)szDescription;
+
+	ReferenceCountedNXString settings;
+	NXStringCreateWithUTF16(&settings, mediaLibrary.GetIniDirectoryW());
+	ReferenceCountedNXURI nx_filename;
+	NXURICreateWithNXString(&nx_filename, settings);
+	Logger::Init(nx_filename, "Cloud\\logs");
+
+	GUID winamp_id;
+	WASABI_API_APP->GetUserID(&winamp_id);
+	StringCbPrintfA(winamp_id_str, sizeof(winamp_id_str), "%08x-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x",
+					(int)winamp_id.Data1, (int)winamp_id.Data2, (int)winamp_id.Data3, (int)winamp_id.Data4[0],
+					(int)winamp_id.Data4[1], (int)winamp_id.Data4[2], (int)winamp_id.Data4[3],
+					(int)winamp_id.Data4[4], (int)winamp_id.Data4[5], (int)winamp_id.Data4[6], (int)winamp_id.Data4[7]);
+
+	wchar_t cloud_db_file[MAX_PATH], cloud_db[MAX_PATH];
+	StringCbPrintfW(cloud_db, sizeof(cloud_db), (!Config_GetDevMode() ? L"Cloud\\local-%hs.db" : L"Cloud\\cloud-%hs.db"), winamp_id_str);
+	mediaLibrary.BuildPath(cloud_db, cloud_db_file, MAX_PATH);
+	clean_install = !PathFileExistsW(cloud_db_file);
+
+	if (Config_GetDevMode())
+	{
+		DebugConsole_SetStatus(WASABI_API_LNGSTRINGW(IDS_DEV_MODE));
+	}
+
+	// to allow for easier db updates if needed, we check an ini flag for the time being
+	if (Config_GetNukeVersion() < NUKE_VERSION)
+	{
+		if (!clean_install)
+		{
+			DeleteFile(cloud_db_file);
+			clean_install = 1;
+		}
+		Config_SetNukeVersion(NUKE_VERSION);
+	}
+
+	int show_status = Config_GetShowStatus();
+	if (show_status)
+	{
+		ToggleStatusWindow(show_status == 2);
+	}
+
+	if (REPLICANT_API_CLOUD)
+	{
+		REPLICANT_API_CLOUD->SetDevMode(Config_GetDevMode());
+		NXStringCreateWithUTF8(&local_device_token, winamp_id_str);
+
+		ifc_clouddb *db;
+		nx_string_t friendly_name, device_name, device_platform;
+		ns_error_t get_name = GetName(&friendly_name);
+		NXStringCreateWithUTF16(&device_platform, L"windows");
+		if (REPLICANT_API_CLOUD->CreateDatabaseConnection(&db, local_device_token) == NErr_Success)
+		{
+			db->BeginTransaction();
+			if (db->Info_GetLogging(&logMode) != NErr_Success)
+			{
+				db->Info_SetLogging((logMode = 3));
+			}
+
+			if (logMode & 8) 
+			{
+				DebugConsole_ClearLog(0);
+			}
+
+			DeviceInfoStruct *device_info = new (std::nothrow) DeviceInfoStruct;
+			if (db->Devices_Find(local_device_token, &local_device_id, device_info) != NErr_Success)
+			{
+				if (get_name == NErr_Success)
+				{
+					db->Devices_Add(local_device_token, friendly_name, device_info, &local_device_id);
+				}
+				else
+				{
+					db->Devices_Add(local_device_token, 0, device_info, &local_device_id);
+				}
+			}
+			else
+			{
+				// this should make sure that we have a friendly name for the client
+				// even if one hasn't been obtained properly or db was badly altered
+				if (db->Devices_GetName(local_device_id, &device_name, 0) != NErr_Success ||
+					!device_name->len)
+				{
+					if (get_name == NErr_Success)
+					{
+						db->Info_SetDeviceName(friendly_name);
+						db->Devices_Add(local_device_token, friendly_name, device_info, &local_device_id);
+					}
+				}
+				else
+				{
+					db->Info_SetDeviceName(device_name);
+				}
+			}
+			db->Commit();
+			db->Release();
+			delete device_info;
+		}
+
+		if (REPLICANT_API_CLOUD->CreateCloudClient(local_device_token, &cloud_client) == NErr_Success && cloud_client)
+		{
+			cloud_client->RegisterCallback(&device_cloud_callback);
+		}
+	}
+
+	// no guarantee that AGAVE_API_MLDB will be available yet, so we'll start a watcher for it
+	mldb_watcher.WatchWith(WASABI_API_SVC);
+	mldb_watcher.WatchFor(&AGAVE_API_MLDB, mldbApiGuid);
+	WASABI_API_SYSCB->syscb_registerCallback(&mldb_watcher);
+
+	preferences.hInst = plugin.hDllInstance;//WASABI_API_LNG_HINST;
+	preferences.dlgID = IDD_DEBUG_CONSOLE;
+	preferences.proc = (void *)PreferencesDialogBaseProc;
+	preferences.name = WASABI_API_LNGSTRINGW_BUF(IDS_CLOUD_SOURCES,preferencesName,64);
+	preferences.where = 0;
+	mediaLibrary.AddPreferences(preferences);
+
+	NAVINSERTSTRUCT nis = {0};
+	nis.item.cbSize = sizeof(NAVITEM);
+	nis.item.pszText = preferencesName;
+	nis.item.pszInvariant = L"cloud_sources";
+	nis.item.mask = NIMF_TEXT | NIMF_TEXTINVARIANT | NIMF_IMAGE | NIMF_IMAGESEL | NIMF_STYLE;
+	nis.item.iImage = nis.item.iSelectedImage = mediaLibrary.AddTreeImageBmp(IDB_TREEITEM_CLOUD);
+	nis.item.style = NIS_HASCHILDREN | NIS_ALLOWCHILDMOVE;
+	// only force to be after some items on a first run
+	// with attempts to appear nearer the top of things
+	if (!first_run)
+	{
+		NAVCTRLFINDPARAMS find = {0};
+		find.pszName = L"Playlists";
+		find.cchLength = -1;
+		find.compFlags = NICF_INVARIANT;
+		find.fFullNameSearch = FALSE;
+		HNAVITEM item = MLNavCtrl_FindItemByName(plugin.hwndLibraryParent, &find);
+		if (!item)
+		{
+			find.pszName = L"Local Media";
+			item = MLNavCtrl_FindItemByName(plugin.hwndLibraryParent, &find);
+		}
+		if (item) nis.hInsertAfter = item;
+	}
+
+	NAVITEM nvItem = {sizeof(NAVITEM),0,NIMF_ITEMID,};
+	nvItem.hItem = MLNavCtrl_InsertItem(plugin.hwndLibraryParent, &nis);
+
+	MLNavItem_GetInfo(plugin.hwndLibraryParent, &nvItem);
+	cloud_treeItem = nvItem.id;
+
+	// TODO this is just a place holder for the moment (waiting on proper page from taber / james)
+	nis.item.cbSize = sizeof(NAVITEM);
+	nis.item.pszText = WASABI_API_LNGSTRINGW(IDS_SIGN_IN);
+	nis.item.pszInvariant = L"winamp_sign_in";
+	nis.item.mask = NIMF_TEXT | NIMF_TEXTINVARIANT | NIMF_IMAGE | NIMF_IMAGESEL | NIMF_STYLE;
+	nis.item.iImage = nis.item.iSelectedImage = mediaLibrary.AddTreeImageBmp(IDB_TREEITEM_SIGN_IN);
+	nis.item.style = 0;
+	// only force to the top on the first run
+	if (!first_run) nis.hInsertAfter = NCI_FIRST;
+	else nis.hInsertAfter = 0;
+	nvItem.hItem = MLNavCtrl_InsertItem(plugin.hwndLibraryParent, &nis);
+
+	MLNavItem_GetInfo(plugin.hwndLibraryParent, &nvItem);
+	signin_treeItem = nvItem.id;
+
+	// subclass the winamp window to get our leet menu item to work
+	cloud_oldWndProc = (WNDPROC)(LONG_PTR)SetWindowLongPtrW(plugin.hwndWinampParent, GWLP_WNDPROC, (LONG_PTR)Cloud_WinampWndProc);
+	IPC_GET_CLOUD_HINST = (INT)SendMessage(plugin.hwndWinampParent, WM_WA_IPC, (WPARAM)&"WinampCloud", IPC_REGISTER_WINAMP_IPCMESSAGE);
+
+	return ML_INIT_SUCCESS;
+}
+
+static void Quit()
+{
+	StatusWindow_SavePos();
+
+	WASABI_API_SYSCB->syscb_deregisterCallback(&cloud_background);
+	cloud_background.Kill();
+	WASABI_API_SYSCB->syscb_deregisterCallback(&mldb_watcher);
+	mldb_watcher.StopWatching();
+
+	ServiceRelease(WASABI_API_SYSCB, syscbApiServiceGuid);
+	ServiceRelease(WASABI_API_APP, applicationApiServiceGuid);
+	ServiceRelease(AGAVE_API_MLDB, mldbApiGuid);
+	ServiceRelease(AGAVE_API_JSAPI2_SECURITY, JSAPI2::api_securityGUID);
+	ServiceRelease(AGAVE_OBJ_BROWSER, OBJ_OmBrowser);
+	ServiceRelease(AGAVE_API_METADATA, api_metadataGUID);
+	ServiceRelease(AGAVE_API_CONFIG, AgaveConfigGUID);
+	ServiceRelease(WASABI_API_MEMMGR, memMgrApiServiceGuid);
+	ServiceRelease(AGAVE_API_ALBUMART, albumArtGUID);
+	ServiceRelease(AGAVE_API_THREADPOOL, ThreadPoolGUID);
+	WASABI_API_SVC->service_deregister(&jsapi2Factory);
+	if (REPLICANT_API_CLOUD) REPLICANT_API_CLOUD->Release();
+	if (WASABI2_API_APP) WASABI2_API_APP->Release();
+	if (WASABI2_API_SVC) WASABI2_API_SVC->Release();
+}
+
+static INT_PTR Cloud_OnContextMenu(INT_PTR param1, HWND hHost, POINTS pts)
+{
+	HNAVITEM hItem = (HNAVITEM)param1;
+	HNAVITEM signinItem = MLNavCtrl_FindItemById(plugin.hwndLibraryParent, signin_treeItem);
+	HNAVITEM cloudItem = MLNavCtrl_FindItemById(plugin.hwndLibraryParent, cloud_treeItem);
+
+	if (hItem != signinItem && hItem != cloudItem)
+		return FALSE;
+
+	POINT pt;
+	POINTSTOPOINT(pt, pts);
+	if (-1 == pt.x || -1 == pt.y)
+	{
+		NAVITEMGETRECT itemRect;
+		itemRect.fItem = FALSE;
+		itemRect.hItem = hItem;
+		if (MLNavItem_GetRect(plugin.hwndLibraryParent, &itemRect))
+		{
+			MapWindowPoints(hHost, HWND_DESKTOP, (POINT*)&itemRect.rc, 2);
+			pt.x = itemRect.rc.left + 2;
+			pt.y = itemRect.rc.top + 2;
+		}
+	}
+
+	HMENU hMenu = WASABI_API_LOADMENUW(IDR_CONTEXTMENUS),
+		  subMenu = (NULL != hMenu) ? GetSubMenu(hMenu, (hItem == signinItem)) : NULL;
+	if (NULL != subMenu)
+	{
+		if (hItem == cloudItem)
+		{
+			CheckMenuItem(subMenu, ID_NAVIGATION_TOGGLESTATUSWINDOW, Config_GetShowStatus() ? MF_CHECKED : MF_UNCHECKED);
+		}
+		else
+		{
+			EnableMenuItem(subMenu, ID_SIGN_ACCOUNT, MF_BYCOMMAND | (MLNavCtrl_GetSelection(plugin.hwndLibraryParent) == signinItem ? MF_DISABLED : MF_ENABLED));
+		}
+
+		INT r = Menu_TrackPopup(subMenu, TPM_LEFTALIGN | TPM_TOPALIGN | TPM_NONOTIFY |
+								TPM_RETURNCMD | TPM_RIGHTBUTTON | TPM_LEFTBUTTON,
+								pt.x, pt.y, hHost, NULL);
+		if (hItem == signinItem)
+		{
+			switch(r)
+			{
+				case ID_SIGN_ACCOUNT:
+				{
+					HNAVITEM item = MLNavCtrl_FindItemById(plugin.hwndLibraryParent, (signin_treeItem ? signin_treeItem : cloud_treeItem));
+					MLNavItem_Select(plugin.hwndLibraryParent, item);
+					break;
+				}
+				case ID_SIGN_TOS:
+				{
+					/*wchar_t url[1024] = {0};
+					StringCchCopy(url, sizeof(url), Config_GetDefaultWebUrl());
+					int len = lstrlen(url);
+					if (len > 0 && url[len - 1] == L'/') url[len - 1] = 0;
+					StringCchCat(url, sizeof(url), L"/tos");*/
+					SENDWAIPC(plugin.hwndWinampParent, IPC_OPEN_URL, L"http://www.winamp.com/legal/cloud"/*url*/);
+					break;
+				}
+				case ID_SIGN_HELP:
+					// TODO
+					SENDWAIPC(plugin.hwndWinampParent, IPC_OPEN_URL, L"http://www.winamp.com/help/Main_Page#Account");
+					break;
+			}
+		}
+		else
+		{
+			switch(r)
+			{
+				case ID_NAVIGATION_TOGGLESTATUSWINDOW:
+					ToggleStatusWindow();
+					break;
+				case ID_NAVIGATION_PREFERENCES:
+					SENDWAIPC(plugin.hwndWinampParent, IPC_OPENPREFSTOPAGE, &preferences);
+					break;
+				case ID_NAVIGATION_HELP:
+					// TODO
+					SENDWAIPC(plugin.hwndWinampParent, IPC_OPEN_URL, L"http://www.winamp.com/help/Main_Page#Cloud_Sources");
+					break;
+			}
+		}
+	}
+
+	if (NULL != hMenu)
+		DestroyMenu(hMenu);
+
+	return TRUE;
+}
+
+static INT_PTR CloudPluginMessageProc(int message_type, INT_PTR param1, INT_PTR param2, INT_PTR param3)
+{
+	switch(message_type)
+	{
+		case ML_MSG_TREE_ONCREATEVIEW: 
+			// TODO for the sign-in part, need to split out as needed
+			if (cloud_treeItem == param1 || signin_treeItem == param1)
+			{
+				OmService *om_service;
+				if (cloud_treeItem == param1)
+					OmService::CreateInstance(SERVICE_SOURCES, preferencesName, &om_service);
+				else
+					OmService::CreateInstance(SERVICE_SIGN_IN, WASABI_API_LNGSTRINGW(IDS_SIGN_IN), &om_service);
+
+				HWND hView;
+				HRESULT hr = AGAVE_OBJ_BROWSER->CreateView(om_service, (HWND)param2, 0, 0, &hView);
+				om_service->Release();
+				if (SUCCEEDED(hr)) 
+				{
+					return (INT_PTR)hView;
+				}
+			}
+			break;
+
+		case ML_MSG_NAVIGATION_ONDESTROY:
+			AGAVE_OBJ_BROWSER->Finish();
+			break;
+
+		case ML_MSG_CONFIG:
+			mediaLibrary.GoToPreferences(preferences._id);
+			return TRUE;
+
+		case ML_MSG_NAVIGATION_CONTEXTMENU:
+			return Cloud_OnContextMenu(param1, (HWND)param2, MAKEPOINTS(param3));
+
+		case 0x402/*ML_MSG_CLOUD_PREFS_ID*/:
+			return (INT_PTR)&preferences;
+
+		case 0x403/*ML_MSG_CLOUD_SYNC_FILEPATHS*/:
+		{
+			if (first_pull && !network_fail)
+			{
+				ifc_clouddb *db_connection = cloud_background.Get_DB_Connection();
+				if (db_connection)
+				{
+					size_t num_filepaths = 0;;
+					nx_string_t * out_filepaths = 0;
+					// param1 == -1 means use the local cloud device
+					// param1 == anything else then we use device id
+					// param2 == the dest device id to compare with
+					db_connection->IDMap_GetSyncFilePaths((param1 == -1 ? local_device_id : param1)/*source*/, param2/*dest*/, &out_filepaths, &num_filepaths);
+
+					C_ItemList * filenameMaps2 = (C_ItemList *)param3;
+					for (size_t i = 0; i < num_filepaths; i++)
+					{
+						filenameMaps2->Add((void*)_wcsdup(out_filepaths[i]->string));
+					}
+					if (out_filepaths) free(out_filepaths);
+					return (!!num_filepaths);
+				}
+			}
+			return 0;
+
+		case 0x404/*ML_MSG_CLOUD_SYNC_FILEPATHS*/:
+			if (param1 && param2)
+			{
+				if (first_pull && !network_fail || param3 == 0xDEADBEEF)
+				{
+					size_t num_files = 0;
+					ifc_clouddb *db_connection = cloud_background.Get_DB_Connection();
+					if (db_connection)
+					{
+						db_connection->IDMap_GetDeviceCloudFiles(local_device_id, (nx_string_t **)param1/*&out_filenames*/, (int **)param2/*&out_ids*/, &num_files);
+					}
+					return num_files;
+				}
+			}
+			return 0;
+
+		case 0x405/*ML_MSG_CLOUD_DEVICE_NAMES_FROM_FILEPATHS*/:
+			{
+				if (param1 && param2)
+				{
+					wchar_t *filename = (wchar_t*)param1;
+					if (filename && *filename)
+					{
+						ifc_clouddb *db_connection = cloud_background.Get_DB_Connection();
+						if (db_connection)
+						{
+							ReferenceCountedNXURI fileuri;
+							NXURICreateWithUTF16(&fileuri, (wchar_t*)param1/*filename*/);
+							size_t num_names = 0;
+							nx_string_t *out_devicenames = 0;
+							db_connection->IDMap_GetDeviceNameFromFilepath(fileuri, (nx_string_t **)param2/*&out_devicenames*/, &num_names);
+							return num_names;
+						}
+					}
+				}
+			}
+			return 0;
+		}
+	}
+
+	return FALSE;
+}
+
+extern "C" 
+{
+	__declspec(dllexport) winampMediaLibraryPlugin *winampGetMediaLibraryPlugin()
+	{
+		return &plugin;
+	}
+
+#if 0
+	__declspec( dllexport ) int winampUninstallPlugin(HINSTANCE hDllInst, HWND hwndDlg, int param) {
+		// TODO need to get this to close correctly including in pmp_cloud as well, otherwise the db locks
+		/*GUID winamp_id;
+		WASABI_API_APP->GetUserID(&winamp_id);
+		StringCbPrintfA(winamp_id_str, sizeof(winamp_id_str), "%08x-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x",
+						(int)winamp_id.Data1, (int)winamp_id.Data2, (int)winamp_id.Data3, (int)winamp_id.Data4[0],
+						(int)winamp_id.Data4[1], (int)winamp_id.Data4[2], (int)winamp_id.Data4[3],
+						(int)winamp_id.Data4[4], (int)winamp_id.Data4[5], (int)winamp_id.Data4[6], (int)winamp_id.Data4[7]);*/
+
+		/*wchar_t cloud_db_file[MAX_PATH], cloud_db[MAX_PATH];
+		StringCbPrintfW(cloud_db, sizeof(cloud_db), L"Cloud\\cloud-%hs.db", winamp_id_str);
+		mediaLibrary.BuildPath(cloud_db, cloud_db_file, MAX_PATH);
+		if (PathFileExistsW(cloud_db_file))
+		{
+			Quit();
+			if (!DeleteFile(cloud_db_file))
+			{
+				MessageBox(0, cloud_db_file, 0, 0);
+			}
+		}*/
+
+		wchar_t cloud_db_file[MAX_PATH], cloud_db[MAX_PATH], base_path[MAX_PATH];
+		//StringCbPrintfW(cloud_db, sizeof(cloud_db), L"Cloud\\views", winamp_id_str);
+		mediaLibrary.BuildPath(L"Cloud\\views", base_path, MAX_PATH);
+		MessageBox(0, base_path, 0, 0);
+
+		SHFILEOPSTRUCT shop = {0};
+		shop.wFunc = FO_DELETE;
+		shop.pFrom = base_path;
+		shop.fFlags = FOF_NOCONFIRMATION|FOF_NOCONFIRMMKDIR|FOF_SIMPLEPROGRESS|FOF_NORECURSION|FOF_NOERRORUI|FOF_SILENT;
+		SHFileOperation(&shop);
+
+		return ML_PLUGIN_UNINSTALL_REBOOT;
+	}
+#endif
+}

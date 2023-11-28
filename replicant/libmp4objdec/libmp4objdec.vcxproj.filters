@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{4c9dc524-b41a-498e-9cc7-9682d1b41842}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libs\Win32\fdreverblib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\HdAacDeclib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\libirc.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\limiterlib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\mathlib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\mp4audiodec.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\mpegsDeclib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\qmflib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\readonlybitbuflib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\sbrdecoderlib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\spaceDeclib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\utillib.lib">
+      <Filter>win32</Filter>
+    </Library>
+    <Library Include="libs\Win32\concealMDCTlib.lib">
+      <Filter>win32</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

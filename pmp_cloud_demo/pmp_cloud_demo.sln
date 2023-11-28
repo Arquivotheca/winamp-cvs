@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmp_cloud_demo", "pmp_cloud_demo.vcproj", "{C74095B5-CB5C-412E-B544-F77160C4634E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libyajl", "libyajl\libyajl.vcproj", "{ECF322D2-0E6F-49DC-87B9-D1DD908C0BEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C74095B5-CB5C-412E-B544-F77160C4634E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C74095B5-CB5C-412E-B544-F77160C4634E}.Debug|Win32.Build.0 = Debug|Win32
+		{C74095B5-CB5C-412E-B544-F77160C4634E}.Release|Win32.ActiveCfg = Release|Win32
+		{C74095B5-CB5C-412E-B544-F77160C4634E}.Release|Win32.Build.0 = Release|Win32
+		{ECF322D2-0E6F-49DC-87B9-D1DD908C0BEF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ECF322D2-0E6F-49DC-87B9-D1DD908C0BEF}.Debug|Win32.Build.0 = Debug|Win32
+		{ECF322D2-0E6F-49DC-87B9-D1DD908C0BEF}.Release|Win32.ActiveCfg = Release|Win32
+		{ECF322D2-0E6F-49DC-87B9-D1DD908C0BEF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

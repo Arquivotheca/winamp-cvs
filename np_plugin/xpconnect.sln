@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xpconnect", "xpconnect.vcproj", "{1071BB29-7DEA-4892-838B-E89A1CC5933F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_1.7.2|Win32 = Debug_1.7.2|Win32
+		Debug|Win32 = Debug|Win32
+		Release_1.7.2|Win32 = Release_1.7.2|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1071BB29-7DEA-4892-838B-E89A1CC5933F}.Debug_1.7.2|Win32.ActiveCfg = Debug_1.7.2|Win32
+		{1071BB29-7DEA-4892-838B-E89A1CC5933F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1071BB29-7DEA-4892-838B-E89A1CC5933F}.Debug|Win32.Build.0 = Debug|Win32
+		{1071BB29-7DEA-4892-838B-E89A1CC5933F}.Release_1.7.2|Win32.ActiveCfg = Release_1.7.2|Win32
+		{1071BB29-7DEA-4892-838B-E89A1CC5933F}.Release|Win32.ActiveCfg = Release|Win32
+		{1071BB29-7DEA-4892-838B-E89A1CC5933F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0047A033151EDC8200F99D12 /* jnetlib-prepare */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0047A034151EDC8300F99D12 /* Build configuration list for PBXAggregateTarget "jnetlib-prepare" */;
+			buildPhases = (
+				0047A03B151EDD4A00F99D12 /* Generate Version Info */,
+			);
+			dependencies = (
+				0039B377152A1F8200D96D3E /* PBXTargetDependency */,
+			);
+			name = "jnetlib-prepare";
+			productName = "jnetlib-versionb";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0047A012151D7BD400F99D12 /* libnu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0047A011151D7BD400F99D12 /* libnu.a */; };
+		0047A040151EDDFE00F99D12 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 0047A03E151EDDFE00F99D12 /* version.c */; };
+		0047A041151EDDFE00F99D12 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 0047A03F151EDDFE00F99D12 /* version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		009F3E7D16DC573C007496EF /* headers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009F3E7716DC573B007496EF /* headers.cpp */; };
+		009F3E7E16DC573C007496EF /* headers.h in Headers */ = {isa = PBXBuildFile; fileRef = 009F3E7816DC573B007496EF /* headers.h */; };
+		009F3E7F16DC573C007496EF /* httpserv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009F3E7916DC573B007496EF /* httpserv.cpp */; };
+		009F3E8016DC573C007496EF /* httpserv.h in Headers */ = {isa = PBXBuildFile; fileRef = 009F3E7A16DC573B007496EF /* httpserv.h */; };
+		009F3E8116DC573C007496EF /* httpuserv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009F3E7B16DC573C007496EF /* httpuserv.cpp */; };
+		009F3E8216DC573C007496EF /* httpuserv.h in Headers */ = {isa = PBXBuildFile; fileRef = 009F3E7C16DC573C007496EF /* httpuserv.h */; };
+		00C27E9C15372F89008D95CD /* precomp.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C27E9B15372F89008D95CD /* precomp.h */; };
+		B136302216F3B811009F4C19 /* httpserv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B136301E16F3B811009F4C19 /* httpserv.cpp */; };
+		B136302316F3B811009F4C19 /* httpserv.h in Headers */ = {isa = PBXBuildFile; fileRef = B136301F16F3B811009F4C19 /* httpserv.h */; };
+		B136302416F3B811009F4C19 /* httpuserv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B136302016F3B811009F4C19 /* httpuserv.cpp */; };
+		B136302516F3B811009F4C19 /* httpuserv.h in Headers */ = {isa = PBXBuildFile; fileRef = B136302116F3B811009F4C19 /* httpuserv.h */; };
+		B13B63E614F481D400AC9029 /* asyncdns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63D214F481D400AC9029 /* asyncdns.cpp */; };
+		B13B63E714F481D400AC9029 /* asyncdns.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63D314F481D400AC9029 /* asyncdns.h */; };
+		B13B63E814F481D400AC9029 /* connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63D414F481D400AC9029 /* connection.cpp */; };
+		B13B63E914F481D400AC9029 /* connection.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63D514F481D400AC9029 /* connection.h */; };
+		B13B63EA14F481D400AC9029 /* httpget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63D614F481D400AC9029 /* httpget.cpp */; };
+		B13B63EB14F481D400AC9029 /* httpget.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63D714F481D400AC9029 /* httpget.h */; };
+		B13B63EC14F481D400AC9029 /* jnetlib_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63D814F481D400AC9029 /* jnetlib_defines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B13B63ED14F481D400AC9029 /* jnetlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63D914F481D400AC9029 /* jnetlib.cpp */; };
+		B13B63EE14F481D400AC9029 /* jnetlib.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63DA14F481D400AC9029 /* jnetlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B13B63EF14F481D400AC9029 /* listen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63DB14F481D400AC9029 /* listen.cpp */; };
+		B13B63F014F481D400AC9029 /* listen.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63DC14F481D400AC9029 /* listen.h */; };
+		B13B63F114F481D400AC9029 /* multicastlisten.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63DD14F481D400AC9029 /* multicastlisten.cpp */; };
+		B13B63F214F481D400AC9029 /* multicastlisten.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63DE14F481D400AC9029 /* multicastlisten.h */; };
+		B13B63F314F481D400AC9029 /* netinc.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63DF14F481D400AC9029 /* netinc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B13B63F414F481D400AC9029 /* sslconnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63E014F481D400AC9029 /* sslconnection.cpp */; };
+		B13B63F514F481D400AC9029 /* sslconnection.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63E114F481D400AC9029 /* sslconnection.h */; };
+		B13B63F614F481D400AC9029 /* udpconnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63E214F481D400AC9029 /* udpconnection.cpp */; };
+		B13B63F714F481D400AC9029 /* udpconnection.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63E314F481D400AC9029 /* udpconnection.h */; };
+		B13B63F814F481D400AC9029 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B13B63E414F481D400AC9029 /* util.cpp */; };
+		B13B63F914F481D400AC9029 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = B13B63E514F481D400AC9029 /* util.h */; };
+		B13B640D14F4823C00AC9029 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B13B640C14F4823C00AC9029 /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0039B376152A1F8200D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B13B63C214F481A300AC9029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0047A02F151EDC7500F99D12;
+			remoteInfo = "jnetlib-cleanup";
+		};
+		0047A037151EDC9000F99D12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B13B63C214F481A300AC9029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0047A02F151EDC7500F99D12;
+			remoteInfo = "jnetlib-cleanup";
+		};
+		0047A039151EDCA300F99D12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B13B63C214F481A300AC9029 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0047A033151EDC8200F99D12;
+			remoteInfo = "jnetlib-version";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0047A011151D7BD400F99D12 /* libnu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0047A03D151EDDDB00F99D12 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		0047A03E151EDDFE00F99D12 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = $PROJECT_DERIVED_FILE_DIR/version.c; sourceTree = "<absolute>"; };
+		0047A03F151EDDFE00F99D12 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = $PROJECT_DERIVED_FILE_DIR/version.h; sourceTree = "<absolute>"; };
+		009F3E7716DC573B007496EF /* headers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = headers.cpp; sourceTree = "<group>"; };
+		009F3E7816DC573B007496EF /* headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headers.h; sourceTree = "<group>"; };
+		009F3E7916DC573B007496EF /* httpserv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = httpserv.cpp; sourceTree = "<group>"; };
+		009F3E7A16DC573B007496EF /* httpserv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpserv.h; sourceTree = "<group>"; };
+		009F3E7B16DC573C007496EF /* httpuserv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = httpuserv.cpp; sourceTree = "<group>"; };
+		009F3E7C16DC573C007496EF /* httpuserv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpuserv.h; sourceTree = "<group>"; };
+		00C27E9B15372F89008D95CD /* precomp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precomp.h; sourceTree = "<group>"; };
+		B136301E16F3B811009F4C19 /* httpserv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = httpserv.cpp; sourceTree = "<group>"; };
+		B136301F16F3B811009F4C19 /* httpserv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpserv.h; sourceTree = "<group>"; };
+		B136302016F3B811009F4C19 /* httpuserv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = httpuserv.cpp; sourceTree = "<group>"; };
+		B136302116F3B811009F4C19 /* httpuserv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpuserv.h; sourceTree = "<group>"; };
+		B13B63CB14F481A300AC9029 /* libjnetlib-1.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libjnetlib-1.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13B63D214F481D400AC9029 /* asyncdns.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asyncdns.cpp; sourceTree = "<group>"; };
+		B13B63D314F481D400AC9029 /* asyncdns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asyncdns.h; sourceTree = "<group>"; };
+		B13B63D414F481D400AC9029 /* connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = connection.cpp; sourceTree = "<group>"; };
+		B13B63D514F481D400AC9029 /* connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = connection.h; sourceTree = "<group>"; };
+		B13B63D614F481D400AC9029 /* httpget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = httpget.cpp; sourceTree = "<group>"; };
+		B13B63D714F481D400AC9029 /* httpget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpget.h; sourceTree = "<group>"; };
+		B13B63D814F481D400AC9029 /* jnetlib_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jnetlib_defines.h; sourceTree = "<group>"; };
+		B13B63D914F481D400AC9029 /* jnetlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jnetlib.cpp; sourceTree = "<group>"; };
+		B13B63DA14F481D400AC9029 /* jnetlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jnetlib.h; sourceTree = "<group>"; };
+		B13B63DB14F481D400AC9029 /* listen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = listen.cpp; sourceTree = "<group>"; };
+		B13B63DC14F481D400AC9029 /* listen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listen.h; sourceTree = "<group>"; };
+		B13B63DD14F481D400AC9029 /* multicastlisten.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multicastlisten.cpp; sourceTree = "<group>"; };
+		B13B63DE14F481D400AC9029 /* multicastlisten.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multicastlisten.h; sourceTree = "<group>"; };
+		B13B63DF14F481D400AC9029 /* netinc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netinc.h; sourceTree = "<group>"; };
+		B13B63E014F481D400AC9029 /* sslconnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sslconnection.cpp; sourceTree = "<group>"; };
+		B13B63E114F481D400AC9029 /* sslconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sslconnection.h; sourceTree = "<group>"; };
+		B13B63E214F481D400AC9029 /* udpconnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = udpconnection.cpp; sourceTree = "<group>"; };
+		B13B63E314F481D400AC9029 /* udpconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = udpconnection.h; sourceTree = "<group>"; };
+		B13B63E414F481D400AC9029 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		B13B63E514F481D400AC9029 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		B13B640C14F4823C00AC9029 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B13B63C814F481A300AC9029 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B13B640D14F4823C00AC9029 /* libz.dylib in Frameworks */,
+				0047A012151D7BD400F99D12 /* libnu.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0047A00B151D7A0C00F99D12 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0047A011151D7BD400F99D12 /* libnu.a */,
+				B13B640C14F4823C00AC9029 /* libz.dylib */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		0047A03C151EDDA000F99D12 /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				0047A03D151EDDDB00F99D12 /* VERSION */,
+				0047A03E151EDDFE00F99D12 /* version.c */,
+				0047A03F151EDDFE00F99D12 /* version.h */,
+			);
+			name = Version;
+			sourceTree = "<group>";
+		};
+		B13B63C014F481A300AC9029 = {
+			isa = PBXGroup;
+			children = (
+				009F3E7716DC573B007496EF /* headers.cpp */,
+				009F3E7816DC573B007496EF /* headers.h */,
+				009F3E7916DC573B007496EF /* httpserv.cpp */,
+				009F3E7A16DC573B007496EF /* httpserv.h */,
+				009F3E7B16DC573C007496EF /* httpuserv.cpp */,
+				009F3E7C16DC573C007496EF /* httpuserv.h */,
+				00C27E9B15372F89008D95CD /* precomp.h */,
+				B136301E16F3B811009F4C19 /* httpserv.cpp */,
+				B136301F16F3B811009F4C19 /* httpserv.h */,
+				B136302016F3B811009F4C19 /* httpuserv.cpp */,
+				B136302116F3B811009F4C19 /* httpuserv.h */,
+				B13B63D214F481D400AC9029 /* asyncdns.cpp */,
+				B13B63D314F481D400AC9029 /* asyncdns.h */,
+				B13B63D414F481D400AC9029 /* connection.cpp */,
+				B13B63D514F481D400AC9029 /* connection.h */,
+				B13B63D614F481D400AC9029 /* httpget.cpp */,
+				B13B63D714F481D400AC9029 /* httpget.h */,
+				B13B63D814F481D400AC9029 /* jnetlib_defines.h */,
+				B13B63D914F481D400AC9029 /* jnetlib.cpp */,
+				B13B63DA14F481D400AC9029 /* jnetlib.h */,
+				B13B63DB14F481D400AC9029 /* listen.cpp */,
+				B13B63DC14F481D400AC9029 /* listen.h */,
+				B13B63DD14F481D400AC9029 /* multicastlisten.cpp */,
+				B13B63DE14F481D400AC9029 /* multicastlisten.h */,
+				B13B63DF14F481D400AC9029 /* netinc.h */,
+				B13B63E014F481D400AC9029 /* sslconnection.cpp */,
+				B13B63E114F481D400AC9029 /* sslconnection.h */,
+				B13B63E214F481D400AC9029 /* udpconnection.cpp */,
+				B13B63E314F481D400AC9029 /* udpconnection.h */,
+				B13B63E414F481D400AC9029 /* util.cpp */,
+				B13B63E514F481D400AC9029 /* util.h */,
+				0047A03C151EDDA000F99D12 /* Version */,
+				0047A00B151D7A0C00F99D12 /* Libraries */,
+				B13B63CC14F481A300AC9029 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B13B63CC14F481A300AC9029 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B13B63CB14F481A300AC9029 /* libjnetlib-1.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B13B63C914F481A300AC9029 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B13B63E714F481D400AC9029 /* asyncdns.h in Headers */,
+				B13B63E914F481D400AC9029 /* connection.h in Headers */,
+				B13B63EB14F481D400AC9029 /* httpget.h in Headers */,
+				B13B63EC14F481D400AC9029 /* jnetlib_defines.h in Headers */,
+				B13B63EE14F481D400AC9029 /* jnetlib.h in Headers */,
+				B13B63F014F481D400AC9029 /* listen.h in Headers */,
+				B13B63F214F481D400AC9029 /* multicastlisten.h in Headers */,
+				B13B63F314F481D400AC9029 /* netinc.h in Headers */,
+				B13B63F514F481D400AC9029 /* sslconnection.h in Headers */,
+				B13B63F714F481D400AC9029 /* udpconnection.h in Headers */,
+				B13B63F914F481D400AC9029 /* util.h in Headers */,
+				0047A041151EDDFE00F99D12 /* version.h in Headers */,
+				00C27E9C15372F89008D95CD /* precomp.h in Headers */,
+				009F3E7E16DC573C007496EF /* headers.h in Headers */,
+				009F3E8016DC573C007496EF /* httpserv.h in Headers */,
+				009F3E8216DC573C007496EF /* httpuserv.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		0047A02F151EDC7500F99D12 /* jnetlib-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode --libraries \"$(LIBRARY_PATH)\" \"$(PUBLIC_HEADERS_DIR)\" \"$(DWARF_DSYM_PATH)\" \"$(PROJECT_DERIVED_FILE_DIR)/version.*\"";
+			buildConfigurationList = 0047A030151EDC7600F99D12 /* Build configuration list for PBXLegacyTarget "jnetlib-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "jnetlib-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "jnetlib-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		B13B63CA14F481A300AC9029 /* jnetlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B13B63CF14F481A300AC9029 /* Build configuration list for PBXNativeTarget "jnetlib" */;
+			buildPhases = (
+				B13B63C714F481A300AC9029 /* Sources */,
+				B13B63C814F481A300AC9029 /* Frameworks */,
+				0047A02B151ED9C200F99D12 /* Create Symbolic Links */,
+				B13B63C914F481A300AC9029 /* Headers */,
+				0047A02C151EDA3700F99D12 /* Install Public Headers */,
+				0047A02D151EDA7100F99D12 /* Install Debug Symbols */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0047A038151EDC9000F99D12 /* PBXTargetDependency */,
+				0047A03A151EDCA300F99D12 /* PBXTargetDependency */,
+			);
+			name = jnetlib;
+			productName = jnetlib;
+			productReference = B13B63CB14F481A300AC9029 /* libjnetlib-1.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B13B63C214F481A300AC9029 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = B13B63C514F481A300AC9029 /* Build configuration list for PBXProject "jnetlib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B13B63C014F481A300AC9029;
+			productRefGroup = B13B63CC14F481A300AC9029 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B13B63CA14F481A300AC9029 /* jnetlib */,
+				0047A02F151EDC7500F99D12 /* jnetlib-cleanup */,
+				0047A033151EDC8200F99D12 /* jnetlib-prepare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0047A02B151ED9C200F99D12 /* Create Symbolic Links */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_NAME)",
+			);
+			name = "Create Symbolic Links";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIBLN=\"$NSBUILD_TOOLS_BIN_DIR/libln\"\ncd $TARGET_BUILD_DIR; \\\n$LIBLN \"$EXECUTABLE_NAME\"\n\nif [ \"$DEPLOYMENT_LOCATION\" == \"YES\" ]; then\n    cd \"$BUILT_PRODUCTS_DIR\"; \\\n    $LIBLN \"$EXECUTABLE_NAME\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+		0047A02C151EDA3700F99D12 /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0047A02D151EDA7100F99D12 /* Install Debug Symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			name = "Install Debug Symbols";
+			outputPaths = (
+				"$(DWARF_DSYM_INSTALL_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0047A03B151EDD4A00F99D12 /* Generate Version Info */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/VERSION",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.h",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.c",
+			);
+			name = "Generate Version Info";
+			outputPaths = (
+				"$(PROJECT_DERIVED_FILE_DIR)/version.h",
+				"$(PROJECT_DERIVED_FILE_DIR)/version.c",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PRODUCT_VERSION=$(cat \"$SCRIPT_INPUT_FILE_0\")\n\nif [ ! -d \"$PROJECT_DERIVED_FILE_DIR\" ]; then\n    mkdir -p \"$PROJECT_DERIVED_FILE_DIR\"\nfi\n\nNVGTOOL=\"$NSBUILD_TOOLS_BIN_DIR/nvgtool\"\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_1\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_0\"\n\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_2\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_1\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B13B63C714F481A300AC9029 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B13B63E614F481D400AC9029 /* asyncdns.cpp in Sources */,
+				B13B63E814F481D400AC9029 /* connection.cpp in Sources */,
+				B13B63EA14F481D400AC9029 /* httpget.cpp in Sources */,
+				B13B63ED14F481D400AC9029 /* jnetlib.cpp in Sources */,
+				B13B63EF14F481D400AC9029 /* listen.cpp in Sources */,
+				B13B63F114F481D400AC9029 /* multicastlisten.cpp in Sources */,
+				B13B63F414F481D400AC9029 /* sslconnection.cpp in Sources */,
+				B13B63F614F481D400AC9029 /* udpconnection.cpp in Sources */,
+				B13B63F814F481D400AC9029 /* util.cpp in Sources */,
+				0047A040151EDDFE00F99D12 /* version.c in Sources */,
+				009F3E7D16DC573C007496EF /* headers.cpp in Sources */,
+				009F3E7F16DC573C007496EF /* httpserv.cpp in Sources */,
+				009F3E8116DC573C007496EF /* httpuserv.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0039B377152A1F8200D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0047A02F151EDC7500F99D12 /* jnetlib-cleanup */;
+			targetProxy = 0039B376152A1F8200D96D3E /* PBXContainerItemProxy */;
+		};
+		0047A038151EDC9000F99D12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0047A02F151EDC7500F99D12 /* jnetlib-cleanup */;
+			targetProxy = 0047A037151EDC9000F99D12 /* PBXContainerItemProxy */;
+		};
+		0047A03A151EDCA300F99D12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0047A033151EDC8200F99D12 /* jnetlib-prepare */;
+			targetProxy = 0047A039151EDCA300F99D12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0047A031151EDC7600F99D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		0047A032151EDC7600F99D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		0047A035151EDC8300F99D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Debug;
+		};
+		0047A036151EDC8300F99D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Release;
+		};
+		B13B63CD14F481A300AC9029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME)-$(DYLIB_CURRENT_VERSION).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PREFIX)$(PRODUCT_NAME)-$(DYLIB_COMPATIBILITY_VERSION).$(EXECUTABLE_EXTENSION)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				ONLY_ACTIVE_ARCH = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		B13B63CE14F481A300AC9029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME)-$(DYLIB_CURRENT_VERSION).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PREFIX)$(PRODUCT_NAME)-$(DYLIB_COMPATIBILITY_VERSION).$(EXECUTABLE_EXTENSION)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		B13B63D014F481A300AC9029 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Debug;
+		};
+		B13B63D114F481A300AC9029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0047A030151EDC7600F99D12 /* Build configuration list for PBXLegacyTarget "jnetlib-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0047A031151EDC7600F99D12 /* Debug */,
+				0047A032151EDC7600F99D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0047A034151EDC8300F99D12 /* Build configuration list for PBXAggregateTarget "jnetlib-prepare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0047A035151EDC8300F99D12 /* Debug */,
+				0047A036151EDC8300F99D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B13B63C514F481A300AC9029 /* Build configuration list for PBXProject "jnetlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B13B63CD14F481A300AC9029 /* Debug */,
+				B13B63CE14F481A300AC9029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B13B63CF14F481A300AC9029 /* Build configuration list for PBXNativeTarget "jnetlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B13B63D014F481A300AC9029 /* Debug */,
+				B13B63D114F481A300AC9029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B13B63C214F481A300AC9029 /* Project object */;
+}

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="sbrdec">
+      <UniqueIdentifier>{ca9d9682-3e34-40b0-97f4-e57f450472d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{6eac8f33-59c4-4c2b-8e89-803429920d5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="aacdec">
+      <UniqueIdentifier>{dfe45078-134e-413e-b41c-941affa9e9f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bitbuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="math\cfftn.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="math\transcendent.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\env_calc.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\env_dec.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\env_extr.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\freq_sca.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\huff_dec.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\hybrid.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\lpp_tran.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\ps_bitdec.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\ps_dec.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\qmf_dec.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\sbrdecoder.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\sbr_bitb.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\sbr_crc.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\sbr_dec.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\sbr_fft.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\sbr_ram.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\sbr_rom.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\aac_rom.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\aacdecoder.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\bitstream.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\block.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\channel.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\channelinfo.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\conceal.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\dse.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\imdct.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\longblock.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\pns.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\pulsedata.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\shortblock.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\stereo.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\streaminfo.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\tns.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\aac_ram.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="sbrdec\aacPLUScheck.c">
+      <Filter>sbrdec</Filter>
+    </ClCompile>
+    <ClCompile Include="nsaac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aacdec\pce.c">
+      <Filter>aacdec</Filter>
+    </ClCompile>
+    <ClCompile Include="ADTSHeader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\nsaac\bitbuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="math\cfftn.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\FloatFR.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\env_calc.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\env_dec.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\env_extr.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\freq_sca.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\huff_dec.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\hybrid.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\lpp_tran.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\ps_bitdec.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\ps_dec.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\qmf_dec.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\sbrdecsettings.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\sbr_bitb.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\sbr_const.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\sbr_crc.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\sbr_dec.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\sbr_fft.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\sbr_ram.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\sbr_rom.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\aac_ram.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\aac_rom.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\bitstream.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\block.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\channel.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\channelinfo.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\conceal.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\dse.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\imdct.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\overlapadd.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\pns.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\pulsedata.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\stereo.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\streaminfo.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\tns.h">
+      <Filter>aacdec</Filter>
+    </ClInclude>
+    <ClInclude Include="sbrdec\aacPLUScheck.h">
+      <Filter>sbrdec</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nsaac\aacdecoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nsaac\sbrdecoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aacdec\constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADTSHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

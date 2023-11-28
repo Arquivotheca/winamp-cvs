@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0011D5B0152C8F7E00CCC727 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0011D5AF152C8F7E00CCC727 /* main.cpp */; };
+		0011D5C6152C91F600CCC727 /* libnx-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0011D5C5152C91F600CCC727 /* libnx-1.dylib */; };
+		0011D5C8152C922000CCC727 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0011D5C7152C922000CCC727 /* CoreFoundation.framework */; };
+		0011D5CA152C922C00CCC727 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0011D5C9152C922C00CCC727 /* CoreServices.framework */; };
+		0011D5CD152C925300CCC727 /* ComponentManagerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0011D5CB152C925300CCC727 /* ComponentManagerBase.cpp */; };
+		0011D5D0152C927C00CCC727 /* ComponentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0011D5CE152C927C00CCC727 /* ComponentManager.cpp */; };
+		0011D5EE152CB77400CCC727 /* libnu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0011D5ED152CB77400CCC727 /* libnu.a */; };
+		0011D5EF152CB7A000CCC727 /* libWasabi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0011D5E9152CB70D00CCC727 /* libWasabi.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0011D591152C8F4400CCC727 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0011D593152C8F4400CCC727 /* component-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "component-test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0011D5AF152C8F7E00CCC727 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0011D5C5152C91F600CCC727 /* libnx-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libnx-1.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0011D5C7152C922000CCC727 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		0011D5C9152C922C00CCC727 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		0011D5CB152C925300CCC727 /* ComponentManagerBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ComponentManagerBase.cpp; path = ../../ComponentManagerBase.cpp; sourceTree = "<group>"; };
+		0011D5CC152C925300CCC727 /* ComponentManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponentManagerBase.h; path = ../../ComponentManagerBase.h; sourceTree = "<group>"; };
+		0011D5CE152C927C00CCC727 /* ComponentManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ComponentManager.cpp; path = ../../osx/ComponentManager.cpp; sourceTree = "<group>"; };
+		0011D5CF152C927C00CCC727 /* ComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponentManager.h; path = ../../osx/ComponentManager.h; sourceTree = "<group>"; };
+		0011D5E9152CB70D00CCC727 /* libWasabi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWasabi.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0011D5ED152CB77400CCC727 /* libnu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0011D590152C8F4400CCC727 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0011D5CA152C922C00CCC727 /* CoreServices.framework in Frameworks */,
+				0011D5C8152C922000CCC727 /* CoreFoundation.framework in Frameworks */,
+				0011D5EE152CB77400CCC727 /* libnu.a in Frameworks */,
+				0011D5EF152CB7A000CCC727 /* libWasabi.a in Frameworks */,
+				0011D5C6152C91F600CCC727 /* libnx-1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0011D588152C8F4400CCC727 = {
+			isa = PBXGroup;
+			children = (
+				0011D5AF152C8F7E00CCC727 /* main.cpp */,
+				0011D5D1152C928200CCC727 /* Component Manager */,
+				0011D5B3152C8F9A00CCC727 /* Libraries */,
+				0011D5B2152C8F9000CCC727 /* Frameworks */,
+				0011D594152C8F4400CCC727 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0011D594152C8F4400CCC727 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0011D593152C8F4400CCC727 /* component-test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0011D5B2152C8F9000CCC727 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0011D5C9152C922C00CCC727 /* CoreServices.framework */,
+				0011D5C7152C922000CCC727 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0011D5B3152C8F9A00CCC727 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0011D5C5152C91F600CCC727 /* libnx-1.dylib */,
+				0011D5ED152CB77400CCC727 /* libnu.a */,
+				0011D5E9152CB70D00CCC727 /* libWasabi.a */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		0011D5D1152C928200CCC727 /* Component Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0011D5CE152C927C00CCC727 /* ComponentManager.cpp */,
+				0011D5CF152C927C00CCC727 /* ComponentManager.h */,
+				0011D5CB152C925300CCC727 /* ComponentManagerBase.cpp */,
+				0011D5CC152C925300CCC727 /* ComponentManagerBase.h */,
+			);
+			name = "Component Manager";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0011D592152C8F4400CCC727 /* component-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0011D59D152C8F4400CCC727 /* Build configuration list for PBXNativeTarget "component-test" */;
+			buildPhases = (
+				0011D58F152C8F4400CCC727 /* Sources */,
+				0011D590152C8F4400CCC727 /* Frameworks */,
+				0011D591152C8F4400CCC727 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "component-test";
+			productName = "component-test";
+			productReference = 0011D593152C8F4400CCC727 /* component-test */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0011D58A152C8F4400CCC727 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 0011D58D152C8F4400CCC727 /* Build configuration list for PBXProject "component-test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0011D588152C8F4400CCC727;
+			productRefGroup = 0011D594152C8F4400CCC727 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0011D592152C8F4400CCC727 /* component-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0011D58F152C8F4400CCC727 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0011D5B0152C8F7E00CCC727 /* main.cpp in Sources */,
+				0011D5CD152C925300CCC727 /* ComponentManagerBase.cpp in Sources */,
+				0011D5D0152C927C00CCC727 /* ComponentManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0011D59B152C8F4400CCC727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include",
+					"$(SRCROOT)/../../..",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)  $(REPLICANT_SDK)/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)",
+					"$(REPLICANT_SDK)/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				REPLICANT_SDK = "$(SRCROOT)/../../../../replicant-sdk";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0011D59C152C8F4400CCC727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include",
+					"$(SRCROOT)/../../..",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)  $(REPLICANT_SDK)/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)",
+					"$(REPLICANT_SDK)/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				REPLICANT_SDK = "$(SRCROOT)/../../../../replicant-sdk";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0011D59E152C8F4400CCC727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_PATH_PREFIX = /usr/local;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/component-enanofetpujlyafplrqvjwraztad/Build/Products/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0011D59F152C8F4400CCC727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_PATH_PREFIX = /usr/local;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/component-enanofetpujlyafplrqvjwraztad/Build/Products/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0011D58D152C8F4400CCC727 /* Build configuration list for PBXProject "component-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0011D59B152C8F4400CCC727 /* Debug */,
+				0011D59C152C8F4400CCC727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0011D59D152C8F4400CCC727 /* Build configuration list for PBXNativeTarget "component-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0011D59E152C8F4400CCC727 /* Debug */,
+				0011D59F152C8F4400CCC727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0011D58A152C8F4400CCC727 /* Project object */;
+}

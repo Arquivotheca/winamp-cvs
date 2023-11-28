@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vorbis", "vorbis.vcproj", "{ACECD96A-DA0E-4DF1-9659-775BA5293FE6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vorbis_static", "..\libvorbis\win32\vorbis_static.vcproj", "{49238ED1-3146-49AB-9523-E9826EE4A0C8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ogg_static", "..\libogg\win32\ogg_static.vcproj", "{4FC28B55-2A14-43D5-86F7-201054F338A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACECD96A-DA0E-4DF1-9659-775BA5293FE6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ACECD96A-DA0E-4DF1-9659-775BA5293FE6}.Debug|Win32.Build.0 = Debug|Win32
+		{ACECD96A-DA0E-4DF1-9659-775BA5293FE6}.Release|Win32.ActiveCfg = Release|Win32
+		{ACECD96A-DA0E-4DF1-9659-775BA5293FE6}.Release|Win32.Build.0 = Release|Win32
+		{49238ED1-3146-49AB-9523-E9826EE4A0C8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{49238ED1-3146-49AB-9523-E9826EE4A0C8}.Debug|Win32.Build.0 = Debug|Win32
+		{49238ED1-3146-49AB-9523-E9826EE4A0C8}.Release|Win32.ActiveCfg = Release|Win32
+		{49238ED1-3146-49AB-9523-E9826EE4A0C8}.Release|Win32.Build.0 = Release|Win32
+		{4FC28B55-2A14-43D5-86F7-201054F338A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FC28B55-2A14-43D5-86F7-201054F338A9}.Debug|Win32.Build.0 = Debug|Win32
+		{4FC28B55-2A14-43D5-86F7-201054F338A9}.Release|Win32.ActiveCfg = Release|Win32
+		{4FC28B55-2A14-43D5-86F7-201054F338A9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

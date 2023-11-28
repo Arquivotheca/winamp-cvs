@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ml_bookmarks", "ml_bookmarks.vcproj", "{24335E73-2704-466A-8265-4314DD99886A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Profiling|Win32 = Profiling|Win32
+		Release 64|Win32 = Release 64|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24335E73-2704-466A-8265-4314DD99886A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{24335E73-2704-466A-8265-4314DD99886A}.Debug|Win32.Build.0 = Debug|Win32
+		{24335E73-2704-466A-8265-4314DD99886A}.Profiling|Win32.ActiveCfg = Profiling|Win32
+		{24335E73-2704-466A-8265-4314DD99886A}.Profiling|Win32.Build.0 = Profiling|Win32
+		{24335E73-2704-466A-8265-4314DD99886A}.Release 64|Win32.ActiveCfg = Release 64|Win32
+		{24335E73-2704-466A-8265-4314DD99886A}.Release 64|Win32.Build.0 = Release 64|Win32
+		{24335E73-2704-466A-8265-4314DD99886A}.Release|Win32.ActiveCfg = Release|Win32
+		{24335E73-2704-466A-8265-4314DD99886A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

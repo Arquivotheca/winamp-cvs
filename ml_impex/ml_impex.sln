@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ml_impex", "ml_impex.vcproj", "{DDD08D55-B0E6-4070-9C67-39B495A0B4ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bfc", "..\Wasabi\bfc\bfc.vcproj", "{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plist", "..\plist\plist.vcproj", "{5ED1729B-EA41-4163-9506-741A8B76F625}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDD08D55-B0E6-4070-9C67-39B495A0B4ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DDD08D55-B0E6-4070-9C67-39B495A0B4ED}.Debug|Win32.Build.0 = Debug|Win32
+		{DDD08D55-B0E6-4070-9C67-39B495A0B4ED}.Release|Win32.ActiveCfg = Release|Win32
+		{DDD08D55-B0E6-4070-9C67-39B495A0B4ED}.Release|Win32.Build.0 = Release|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Debug|Win32.Build.0 = Debug|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Release|Win32.ActiveCfg = Release|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Release|Win32.Build.0 = Release|Win32
+		{5ED1729B-EA41-4163-9506-741A8B76F625}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5ED1729B-EA41-4163-9506-741A8B76F625}.Debug|Win32.Build.0 = Debug|Win32
+		{5ED1729B-EA41-4163-9506-741A8B76F625}.Release|Win32.ActiveCfg = Release|Win32
+		{5ED1729B-EA41-4163-9506-741A8B76F625}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

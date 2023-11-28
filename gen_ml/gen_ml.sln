@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen_ml", "gen_ml.vcproj", "{9B212232-4908-49D2-8D6D-96555B1F701E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tataki", "..\tataki\tataki.vcproj", "{255B68B5-7EF8-45EF-A675-2D6B88147909}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bfc", "..\Wasabi\bfc\bfc.vcproj", "{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B212232-4908-49D2-8D6D-96555B1F701E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9B212232-4908-49D2-8D6D-96555B1F701E}.Debug|Win32.Build.0 = Debug|Win32
+		{9B212232-4908-49D2-8D6D-96555B1F701E}.Release|Win32.ActiveCfg = Release|Win32
+		{9B212232-4908-49D2-8D6D-96555B1F701E}.Release|Win32.Build.0 = Release|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Debug|Win32.ActiveCfg = Debug|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Debug|Win32.Build.0 = Debug|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Release|Win32.ActiveCfg = Release|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Release|Win32.Build.0 = Release|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Debug|Win32.Build.0 = Debug|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Release|Win32.ActiveCfg = Release|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

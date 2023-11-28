@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ml_rg", "ml_rg.vcproj", "{F42B3AC8-E719-4AA6-B9EC-1F9BFC799861}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReplayGainAnalysis", "..\ReplayGainAnalysis\ReplayGainAnalysis.vcproj", "{8155E1C4-B6F8-4A1D-96A3-E4FF0FE9192D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libebur128", "..\replicant\libebur128\libebur128.vcproj", "{AE15CFFA-12D0-4ABF-A8F3-B99D484B7FAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release 64|Win32 = Release 64|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F42B3AC8-E719-4AA6-B9EC-1F9BFC799861}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F42B3AC8-E719-4AA6-B9EC-1F9BFC799861}.Debug|Win32.Build.0 = Debug|Win32
+		{F42B3AC8-E719-4AA6-B9EC-1F9BFC799861}.Release 64|Win32.ActiveCfg = Release 64|Win32
+		{F42B3AC8-E719-4AA6-B9EC-1F9BFC799861}.Release 64|Win32.Build.0 = Release 64|Win32
+		{F42B3AC8-E719-4AA6-B9EC-1F9BFC799861}.Release|Win32.ActiveCfg = Release|Win32
+		{F42B3AC8-E719-4AA6-B9EC-1F9BFC799861}.Release|Win32.Build.0 = Release|Win32
+		{8155E1C4-B6F8-4A1D-96A3-E4FF0FE9192D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8155E1C4-B6F8-4A1D-96A3-E4FF0FE9192D}.Debug|Win32.Build.0 = Debug|Win32
+		{8155E1C4-B6F8-4A1D-96A3-E4FF0FE9192D}.Release 64|Win32.ActiveCfg = Release 64|Win32
+		{8155E1C4-B6F8-4A1D-96A3-E4FF0FE9192D}.Release 64|Win32.Build.0 = Release 64|Win32
+		{8155E1C4-B6F8-4A1D-96A3-E4FF0FE9192D}.Release|Win32.ActiveCfg = Release|Win32
+		{8155E1C4-B6F8-4A1D-96A3-E4FF0FE9192D}.Release|Win32.Build.0 = Release|Win32
+		{AE15CFFA-12D0-4ABF-A8F3-B99D484B7FAC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AE15CFFA-12D0-4ABF-A8F3-B99D484B7FAC}.Debug|Win32.Build.0 = Debug|Win32
+		{AE15CFFA-12D0-4ABF-A8F3-B99D484B7FAC}.Release 64|Win32.ActiveCfg = Release|Win32
+		{AE15CFFA-12D0-4ABF-A8F3-B99D484B7FAC}.Release 64|Win32.Build.0 = Release|Win32
+		{AE15CFFA-12D0-4ABF-A8F3-B99D484B7FAC}.Release|Win32.ActiveCfg = Release|Win32
+		{AE15CFFA-12D0-4ABF-A8F3-B99D484B7FAC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

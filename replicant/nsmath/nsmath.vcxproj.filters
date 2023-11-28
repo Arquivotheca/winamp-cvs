@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="x86-sse2">
+      <UniqueIdentifier>{61764a9d-6e1e-49b2-a7e9-4fed91b62778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x86-sse2\PCM">
+      <UniqueIdentifier>{4918c238-1332-4af8-8117-fcf77220e3f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x86-sse2\PCM\ConverterGain">
+      <UniqueIdentifier>{bb746505-5346-4aa6-be2e-1031fb210afa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x86-sse2\PCM\Interleaver">
+      <UniqueIdentifier>{85ed7263-fab6-4eba-bedc-5cbadb32efd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x86-sse2\PCM\InterleaverGain">
+      <UniqueIdentifier>{d51cddb6-891a-49e1-b7f9-7cb86065f6c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x86-sse2\PCM\InterleaverDecimate">
+      <UniqueIdentifier>{2c40a636-c7fa-41e0-a248-1adac9278ec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x86-sse2\PCM\InterleaverPad">
+      <UniqueIdentifier>{07710bbb-6eda-4182-b9d4-6579eb02d976}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pcm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x86-sse2\pcm\pcm.h">
+      <Filter>x86-sse2\PCM</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="x86-sse2\pcm\pcm_convert_F32_S16.c">
+      <Filter>x86-sse2\PCM\ConverterGain</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm.cpp">
+      <Filter>x86-sse2\PCM</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\stereo\pcm_interleave_S32_S16_stereo_shift.c">
+      <Filter>x86-sse2\PCM\InterleaverDecimate</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\stereo\pcm_interleave_S32_S16_stereo_shift8.c">
+      <Filter>x86-sse2\PCM\InterleaverDecimate</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\stereo\pcm_interleave_S32_S16_gain_stereo.c">
+      <Filter>x86-sse2\PCM\InterleaverGain</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\stereo\pcm_interleave_S32_S16_stereo.c">
+      <Filter>x86-sse2\PCM\Interleaver</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\stereo\pcm_interleave_S32_F32_stereo.c">
+      <Filter>x86-sse2\PCM\InterleaverGain</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\mono\pcm_interleave_S32_S16_mono_shift.c">
+      <Filter>x86-sse2\PCM\InterleaverDecimate</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\mono\pcm_interleave_S32_S16_mono_shift8.c">
+      <Filter>x86-sse2\PCM\InterleaverDecimate</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\mono\pcm_interleave_S32_S16_mono.c">
+      <Filter>x86-sse2\PCM\Interleaver</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\mono\pcm_interleave_S32_S16_gain_mono.c">
+      <Filter>x86-sse2\PCM\InterleaverGain</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\mono\pcm_interleave_S32_F32_mono.c">
+      <Filter>x86-sse2\PCM\InterleaverGain</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_interleave_S32_S16.c">
+      <Filter>x86-sse2\PCM\Interleaver</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_interleave_S32_F32.c">
+      <Filter>x86-sse2\PCM\InterleaverGain</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_interleave_S32_S16_gain.c">
+      <Filter>x86-sse2\PCM\InterleaverGain</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_interleave_S32_S16_shift.c">
+      <Filter>x86-sse2\PCM\InterleaverDecimate</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_interleave_S32_S16_shift8.c">
+      <Filter>x86-sse2\PCM\InterleaverDecimate</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_interleave_S32_S24.c">
+      <Filter>x86-sse2\PCM\Interleaver</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_convert_F32_S24.c">
+      <Filter>x86-sse2\PCM\ConverterGain</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_interleave_S32_S24_gain.c">
+      <Filter>x86-sse2\PCM\InterleaverGain</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_interleave_S32_S24_shift.c">
+      <Filter>x86-sse2\PCM\InterleaverDecimate</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse2\pcm\pcm_interleave_S32_S24_pad.c">
+      <Filter>x86-sse2\PCM\InterleaverPad</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

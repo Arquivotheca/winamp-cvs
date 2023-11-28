@@ -1,0 +1,1790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		0039B4C0152B270000D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733BB151B816300A8251C;
+			remoteInfo = nu;
+		};
+		0039B4C4152B279F00D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00479F26151C3D8500F99D12;
+			remoteInfo = nswasabi;
+		};
+		0039B4C6152B27A600D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73429151C131900A8251C;
+			remoteInfo = nsapev2;
+		};
+		0039B4C8152B27AC00D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73446151C220000A8251C;
+			remoteInfo = nsid3v1;
+		};
+		0039B4CA152B27AF00D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73463151C2A0400A8251C;
+			remoteInfo = nsid3v2;
+		};
+		0039B4CC152B27B700D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 009986FE1520A7F2000AB02F;
+			remoteInfo = nsmp3;
+		};
+		0039B4CE152B27BC00D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733BB151B816300A8251C;
+			remoteInfo = nu;
+		};
+		0039B4D0152B27C100D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 003BFE4915124BEF002F3E54;
+			remoteInfo = nx;
+		};
+		0039B4D2152B27C900D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0047A01C151EBE6F00F99D12;
+			remoteInfo = jnetlib;
+		};
+		0039B4D4152B27D500D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733BB151B816300A8251C;
+			remoteInfo = nu;
+		};
+		0039B4D6152B27D700D96D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 003BFE4915124BEF002F3E54;
+			remoteInfo = nx;
+		};
+		005D4D5D167F7F6B00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733BB151B816300A8251C;
+			remoteInfo = nu;
+		};
+		005D4D5F167F7F6B00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 003BFE4915124BEF002F3E54;
+			remoteInfo = nx;
+		};
+		005D4D61167F7F6B00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73429151C131900A8251C;
+			remoteInfo = nsapev2;
+		};
+		005D4D63167F7F6B00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73446151C220000A8251C;
+			remoteInfo = nsid3v1;
+		};
+		005D4D65167F7F6B00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73463151C2A0400A8251C;
+			remoteInfo = nsid3v2;
+		};
+		005D4D67167F7F6B00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00479F26151C3D8500F99D12;
+			remoteInfo = nswasabi;
+		};
+		00695D3D16E846CF009CB115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0047A01C151EBE6F00F99D12;
+			remoteInfo = jnetlib;
+		};
+		00695D3F16E846E7009CB115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0047A01C151EBE6F00F99D12;
+			remoteInfo = jnetlib;
+		};
+		0071D99116824C0600A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0071D83A168226F800A95E2D;
+			remoteInfo = yajl;
+		};
+		0071D99416824C0D00A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73297151A542300A8251C;
+			remoteInfo = foundation;
+		};
+		0071D99616824C1200A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0047A01C151EBE6F00F99D12;
+			remoteInfo = jnetlib;
+		};
+		0071D99816824C1900A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00479F26151C3D8500F99D12;
+			remoteInfo = nswasabi;
+		};
+		0071D99A16824C1E00A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733BB151B816300A8251C;
+			remoteInfo = nu;
+		};
+		0071D99C16824C2100A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 003BFE4915124BEF002F3E54;
+			remoteInfo = nx;
+		};
+		0071DA201682557E00A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733BB151B816300A8251C;
+			remoteInfo = nu;
+		};
+		0071DA6E168255D600A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73297151A542300A8251C;
+			remoteInfo = foundation;
+		};
+		0071DAD11682667800A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 003BFE4915124BEF002F3E54;
+			remoteInfo = nx;
+		};
+		0071DAD4168266CA00A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733BB151B816300A8251C;
+			remoteInfo = nu;
+		};
+		0071DAD6168266D300A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 003BFE4915124BEF002F3E54;
+			remoteInfo = nx;
+		};
+		0071DB3B1682681300A95E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733BB151B816300A8251C;
+			remoteInfo = nu;
+		};
+		00A5D184154995D8007DD287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B733BB151B816300A8251C;
+			remoteInfo = nu;
+		};
+		00A5D186154995D8007DD287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 003BFE4915124BEF002F3E54;
+			remoteInfo = nx;
+		};
+		00A5D188154995D8007DD287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0099872E1520BD99000AB02F;
+			remoteInfo = nsmp4;
+		};
+		00A5D18A154995D8007DD287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 003BFE3F15124B81002F3E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00479F26151C3D8500F99D12;
+			remoteInfo = nswasabi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXGroup section */
+		003BFE3D15124B81002F3E54 = {
+			isa = PBXGroup;
+			children = (
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		0039B2F9152A1C0100D96D3E /* gracenote */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../gracenote/gracenote";
+			buildConfigurationList = 0039B2FC152A1C0200D96D3E /* Build configuration list for PBXLegacyTarget "gracenote" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+				0039B4D5152B27D500D96D3E /* PBXTargetDependency */,
+				0039B4D7152B27D700D96D3E /* PBXTargetDependency */,
+			);
+			name = gracenote;
+			passBuildSettingsInEnvironment = 1;
+			productName = gracenote;
+		};
+		003BFE4915124BEF002F3E54 /* nx */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../nx/nx";
+			buildConfigurationList = 003BFE4C15124BEF002F3E54 /* Build configuration list for PBXLegacyTarget "nx" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+				0071DA6F168255D600A95E2D /* PBXTargetDependency */,
+				0071DA211682557E00A95E2D /* PBXTargetDependency */,
+				00695D3E16E846CF009CB115 /* PBXTargetDependency */,
+			);
+			name = nx;
+			passBuildSettingsInEnvironment = 1;
+			productName = "build-vx";
+		};
+		00479F26151C3D8500F99D12 /* nswasabi */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../nswasabi/nswasabi";
+			buildConfigurationList = 00479F29151C3D8500F99D12 /* Build configuration list for PBXLegacyTarget "nswasabi" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = nswasabi;
+			passBuildSettingsInEnvironment = 1;
+			productName = nswasabi;
+		};
+		0047A01C151EBE6F00F99D12 /* jnetlib */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../jnetlib/jnetlib";
+			buildConfigurationList = 0047A01D151EBE6F00F99D12 /* Build configuration list for PBXLegacyTarget "jnetlib" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+				0039B4C1152B270000D96D3E /* PBXTargetDependency */,
+			);
+			name = jnetlib;
+			passBuildSettingsInEnvironment = 1;
+			productName = jnetlib;
+		};
+		005D4D58167F7DBD00F58775 /* file */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../file/file";
+			buildConfigurationList = 005D4D5B167F7DBD00F58775 /* Build configuration list for PBXLegacyTarget "file" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+				005D4D5E167F7F6B00F58775 /* PBXTargetDependency */,
+				005D4D60167F7F6B00F58775 /* PBXTargetDependency */,
+				005D4D62167F7F6B00F58775 /* PBXTargetDependency */,
+				005D4D64167F7F6B00F58775 /* PBXTargetDependency */,
+				005D4D66167F7F6B00F58775 /* PBXTargetDependency */,
+				005D4D68167F7F6B00F58775 /* PBXTargetDependency */,
+			);
+			name = file;
+			passBuildSettingsInEnvironment = 1;
+			productName = file;
+		};
+		0071D83A168226F800A95E2D /* yajl */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../libyajl/yajl";
+			buildConfigurationList = 0071D83D168226F800A95E2D /* Build configuration list for PBXLegacyTarget "yajl" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = yajl;
+			passBuildSettingsInEnvironment = 1;
+			productName = yajl;
+		};
+		0071D91416824B3A00A95E2D /* cloud */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../cloud/cloud";
+			buildConfigurationList = 0071D91716824B3A00A95E2D /* Build configuration list for PBXLegacyTarget "cloud" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+				0071D99216824C0600A95E2D /* PBXTargetDependency */,
+				0071D99516824C0D00A95E2D /* PBXTargetDependency */,
+				0071D99716824C1200A95E2D /* PBXTargetDependency */,
+				0071D99916824C1900A95E2D /* PBXTargetDependency */,
+				0071D99B16824C1E00A95E2D /* PBXTargetDependency */,
+				0071D99D16824C2100A95E2D /* PBXTargetDependency */,
+			);
+			name = cloud;
+			passBuildSettingsInEnvironment = 1;
+			productName = cloud;
+		};
+		009986FE1520A7F2000AB02F /* nsmp3 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../nsmp3/nsmp3";
+			buildConfigurationList = 009987011520A7F2000AB02F /* Build configuration list for PBXLegacyTarget "nsmp3" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = nsmp3;
+			passBuildSettingsInEnvironment = 1;
+			productName = nsmp3;
+		};
+		0099872E1520BD99000AB02F /* nsmp4 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../nsmp4/nsmp4";
+			buildConfigurationList = 0099872F1520BD99000AB02F /* Build configuration list for PBXLegacyTarget "nsmp4" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+				0071DB3C1682681300A95E2D /* PBXTargetDependency */,
+				0071DAD21682667800A95E2D /* PBXTargetDependency */,
+			);
+			name = nsmp4;
+			passBuildSettingsInEnvironment = 1;
+			productName = nsmp4;
+		};
+		009988AD1520F924000AB02F /* mp3 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../mp3/mp3";
+			buildConfigurationList = 009988B01520F924000AB02F /* Build configuration list for PBXLegacyTarget "mp3" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+				0039B4C5152B279F00D96D3E /* PBXTargetDependency */,
+				0039B4C7152B27A600D96D3E /* PBXTargetDependency */,
+				0039B4C9152B27AC00D96D3E /* PBXTargetDependency */,
+				0039B4CB152B27AF00D96D3E /* PBXTargetDependency */,
+				0039B4CD152B27B700D96D3E /* PBXTargetDependency */,
+				0039B4CF152B27BC00D96D3E /* PBXTargetDependency */,
+				0039B4D1152B27C100D96D3E /* PBXTargetDependency */,
+				0039B4D3152B27C900D96D3E /* PBXTargetDependency */,
+			);
+			name = mp3;
+			passBuildSettingsInEnvironment = 1;
+			productName = mp3;
+		};
+		009988E915216A47000AB02F /* decode */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../decode/decode";
+			buildConfigurationList = 009988EA15216A47000AB02F /* Build configuration list for PBXLegacyTarget "decode" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = decode;
+			passBuildSettingsInEnvironment = 1;
+			productName = decode;
+		};
+		0099890815216EC3000AB02F /* replaygain */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../replaygain/replaygain";
+			buildConfigurationList = 0099890915216EC3000AB02F /* Build configuration list for PBXLegacyTarget "replaygain" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = replaygain;
+			passBuildSettingsInEnvironment = 1;
+			productName = replaygain;
+		};
+		00A5D17F1549953F007DD287 /* mp4 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../mp4/mp4";
+			buildConfigurationList = 00A5D1821549953F007DD287 /* Build configuration list for PBXLegacyTarget "mp4" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+				00A5D185154995D8007DD287 /* PBXTargetDependency */,
+				00A5D187154995D8007DD287 /* PBXTargetDependency */,
+				00A5D189154995D8007DD287 /* PBXTargetDependency */,
+				00A5D18B154995D8007DD287 /* PBXTargetDependency */,
+				00695D4016E846E7009CB115 /* PBXTargetDependency */,
+			);
+			name = mp4;
+			passBuildSettingsInEnvironment = 1;
+			productName = mp4;
+		};
+		00B73297151A542300A8251C /* foundation */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../foundation/foundation";
+			buildConfigurationList = 00B7329A151A542300A8251C /* Build configuration list for PBXLegacyTarget "foundation" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = foundation;
+			passBuildSettingsInEnvironment = 1;
+			productName = foundation;
+		};
+		00B732F7151ABA6300A8251C /* syscb */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../syscb/syscb";
+			buildConfigurationList = 00B732FA151ABA6300A8251C /* Build configuration list for PBXLegacyTarget "syscb" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = syscb;
+			passBuildSettingsInEnvironment = 1;
+			productName = syscb;
+		};
+		00B7330A151ABE8200A8251C /* service */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../service/service";
+			buildConfigurationList = 00B7330B151ABE8200A8251C /* Build configuration list for PBXLegacyTarget "service" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = service;
+			passBuildSettingsInEnvironment = 1;
+			productName = service;
+		};
+		00B73342151B5D3100A8251C /* component */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../component/component";
+			buildConfigurationList = 00B73343151B5D3100A8251C /* Build configuration list for PBXLegacyTarget "component" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = component;
+			passBuildSettingsInEnvironment = 1;
+			productName = component;
+		};
+		00B73384151B675A00A8251C /* application */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../application/application";
+			buildConfigurationList = 00B73385151B675A00A8251C /* Build configuration list for PBXLegacyTarget "application" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = application;
+			passBuildSettingsInEnvironment = 1;
+			productName = application;
+		};
+		00B73388151B676800A8251C /* metadata */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../metadata/metadata";
+			buildConfigurationList = 00B73389151B676800A8251C /* Build configuration list for PBXLegacyTarget "metadata" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = metadata;
+			passBuildSettingsInEnvironment = 1;
+			productName = metadata;
+		};
+		00B7338C151B677000A8251C /* audio */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../audio/audio";
+			buildConfigurationList = 00B7338D151B677000A8251C /* Build configuration list for PBXLegacyTarget "audio" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = audio;
+			passBuildSettingsInEnvironment = 1;
+			productName = audio;
+		};
+		00B73390151B677900A8251C /* player */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../player/player";
+			buildConfigurationList = 00B73391151B677900A8251C /* Build configuration list for PBXLegacyTarget "player" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = player;
+			passBuildSettingsInEnvironment = 1;
+			productName = player;
+		};
+		00B733A4151B6F3400A8251C /* Wasabi */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../Wasabi/Wasabi";
+			buildConfigurationList = 00B733A5151B6F3400A8251C /* Build configuration list for PBXLegacyTarget "Wasabi" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = Wasabi;
+			passBuildSettingsInEnvironment = 1;
+			productName = Wasabi;
+		};
+		00B733BB151B816300A8251C /* nu */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../nu/nu";
+			buildConfigurationList = 00B733BC151B816300A8251C /* Build configuration list for PBXLegacyTarget "nu" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = nu;
+			passBuildSettingsInEnvironment = 1;
+			productName = nu;
+		};
+		00B73429151C131900A8251C /* nsapev2 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../nsapev2/nsapev2";
+			buildConfigurationList = 00B7342A151C131900A8251C /* Build configuration list for PBXLegacyTarget "nsapev2" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+				0071DAD5168266CA00A95E2D /* PBXTargetDependency */,
+				0071DAD7168266D300A95E2D /* PBXTargetDependency */,
+			);
+			name = nsapev2;
+			passBuildSettingsInEnvironment = 1;
+			productName = nsapev2;
+		};
+		00B73446151C220000A8251C /* nsid3v1 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../nsid3v1/nsid3v1";
+			buildConfigurationList = 00B73447151C220000A8251C /* Build configuration list for PBXLegacyTarget "nsid3v1" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = nsid3v1;
+			passBuildSettingsInEnvironment = 1;
+			productName = nsid3v1;
+		};
+		00B73463151C2A0400A8251C /* nsid3v2 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../nsid3v2/nsid3v2";
+			buildConfigurationList = 00B73464151C2A0400A8251C /* Build configuration list for PBXLegacyTarget "nsid3v2" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = nsid3v2;
+			passBuildSettingsInEnvironment = 1;
+			productName = nsid3v2;
+		};
+		00CC77AD1524DD3D004886ED /* replicant-metadata */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../Replicant/metadata/replicant-metadata --target metadata";
+			buildConfigurationList = 00CC77B01524DD3D004886ED /* Build configuration list for PBXLegacyTarget "replicant-metadata" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "replicant-metadata";
+			passBuildSettingsInEnvironment = 1;
+			productName = "replicant-metadata";
+		};
+		00CC77B21524DD46004886ED /* replicant-codec */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../Replicant/codec/replicant-codec --target codec";
+			buildConfigurationList = 00CC77B31524DD46004886ED /* Build configuration list for PBXLegacyTarget "replicant-codec" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "replicant-codec";
+			passBuildSettingsInEnvironment = 1;
+			productName = "replicant-codec";
+		};
+		00E6E6E415483ADC005C9962 /* replicant-common */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../Replicant/common/replicant-common --target common";
+			buildConfigurationList = 00E6E6E515483ADC005C9962 /* Build configuration list for PBXLegacyTarget "replicant-common" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "replicant-common";
+			passBuildSettingsInEnvironment = 1;
+			productName = "replicant-common";
+		};
+		00E6E6E815483C6D005C9962 /* replicant-playback */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../Replicant/playback/replicant-playback --target playback";
+			buildConfigurationList = 00E6E6E915483C6D005C9962 /* Build configuration list for PBXLegacyTarget "replicant-playback" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "replicant-playback";
+			passBuildSettingsInEnvironment = 1;
+			productName = "replicant-playback";
+		};
+		00E6E6EC15483CAA005C9962 /* Replicant */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../Replicant/Replicant";
+			buildConfigurationList = 00E6E6ED15483CAA005C9962 /* Build configuration list for PBXLegacyTarget "Replicant" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = Replicant;
+			passBuildSettingsInEnvironment = 1;
+			productName = Replicant;
+		};
+		00F2E74F152549D200F64C17 /* filelock */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/xcodebuild --project ../filelock/filelock";
+			buildConfigurationList = 00F2E752152549D200F64C17 /* Build configuration list for PBXLegacyTarget "filelock" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = filelock;
+			passBuildSettingsInEnvironment = 1;
+			productName = filelock;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		003BFE3F15124B81002F3E54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 003BFE4215124B81002F3E54 /* Build configuration list for PBXProject "mac-replicant" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 003BFE3D15124B81002F3E54;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0071D83A168226F800A95E2D /* yajl */,
+				00B73384151B675A00A8251C /* application */,
+				00B7338C151B677000A8251C /* audio */,
+				00B73342151B5D3100A8251C /* component */,
+				009988E915216A47000AB02F /* decode */,
+				00F2E74F152549D200F64C17 /* filelock */,
+				00B73297151A542300A8251C /* foundation */,
+				00B73388151B676800A8251C /* metadata */,
+				00B73390151B677900A8251C /* player */,
+				0099890815216EC3000AB02F /* replaygain */,
+				00E6E6EC15483CAA005C9962 /* Replicant */,
+				00B7330A151ABE8200A8251C /* service */,
+				00B732F7151ABA6300A8251C /* syscb */,
+				00B733A4151B6F3400A8251C /* Wasabi */,
+				00B733BB151B816300A8251C /* nu */,
+				003BFE4915124BEF002F3E54 /* nx */,
+				00B73429151C131900A8251C /* nsapev2 */,
+				00B73446151C220000A8251C /* nsid3v1 */,
+				00B73463151C2A0400A8251C /* nsid3v2 */,
+				009986FE1520A7F2000AB02F /* nsmp3 */,
+				0099872E1520BD99000AB02F /* nsmp4 */,
+				00479F26151C3D8500F99D12 /* nswasabi */,
+				0047A01C151EBE6F00F99D12 /* jnetlib */,
+				005D4D58167F7DBD00F58775 /* file */,
+				009988AD1520F924000AB02F /* mp3 */,
+				00A5D17F1549953F007DD287 /* mp4 */,
+				00E6E6E415483ADC005C9962 /* replicant-common */,
+				00CC77AD1524DD3D004886ED /* replicant-metadata */,
+				00CC77B21524DD46004886ED /* replicant-codec */,
+				00E6E6E815483C6D005C9962 /* replicant-playback */,
+				0039B2F9152A1C0100D96D3E /* gracenote */,
+				0071D91416824B3A00A95E2D /* cloud */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXTargetDependency section */
+		0039B4C1152B270000D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733BB151B816300A8251C /* nu */;
+			targetProxy = 0039B4C0152B270000D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4C5152B279F00D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00479F26151C3D8500F99D12 /* nswasabi */;
+			targetProxy = 0039B4C4152B279F00D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4C7152B27A600D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73429151C131900A8251C /* nsapev2 */;
+			targetProxy = 0039B4C6152B27A600D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4C9152B27AC00D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73446151C220000A8251C /* nsid3v1 */;
+			targetProxy = 0039B4C8152B27AC00D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4CB152B27AF00D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73463151C2A0400A8251C /* nsid3v2 */;
+			targetProxy = 0039B4CA152B27AF00D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4CD152B27B700D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 009986FE1520A7F2000AB02F /* nsmp3 */;
+			targetProxy = 0039B4CC152B27B700D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4CF152B27BC00D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733BB151B816300A8251C /* nu */;
+			targetProxy = 0039B4CE152B27BC00D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4D1152B27C100D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 003BFE4915124BEF002F3E54 /* nx */;
+			targetProxy = 0039B4D0152B27C100D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4D3152B27C900D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0047A01C151EBE6F00F99D12 /* jnetlib */;
+			targetProxy = 0039B4D2152B27C900D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4D5152B27D500D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733BB151B816300A8251C /* nu */;
+			targetProxy = 0039B4D4152B27D500D96D3E /* PBXContainerItemProxy */;
+		};
+		0039B4D7152B27D700D96D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 003BFE4915124BEF002F3E54 /* nx */;
+			targetProxy = 0039B4D6152B27D700D96D3E /* PBXContainerItemProxy */;
+		};
+		005D4D5E167F7F6B00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733BB151B816300A8251C /* nu */;
+			targetProxy = 005D4D5D167F7F6B00F58775 /* PBXContainerItemProxy */;
+		};
+		005D4D60167F7F6B00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 003BFE4915124BEF002F3E54 /* nx */;
+			targetProxy = 005D4D5F167F7F6B00F58775 /* PBXContainerItemProxy */;
+		};
+		005D4D62167F7F6B00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73429151C131900A8251C /* nsapev2 */;
+			targetProxy = 005D4D61167F7F6B00F58775 /* PBXContainerItemProxy */;
+		};
+		005D4D64167F7F6B00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73446151C220000A8251C /* nsid3v1 */;
+			targetProxy = 005D4D63167F7F6B00F58775 /* PBXContainerItemProxy */;
+		};
+		005D4D66167F7F6B00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73463151C2A0400A8251C /* nsid3v2 */;
+			targetProxy = 005D4D65167F7F6B00F58775 /* PBXContainerItemProxy */;
+		};
+		005D4D68167F7F6B00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00479F26151C3D8500F99D12 /* nswasabi */;
+			targetProxy = 005D4D67167F7F6B00F58775 /* PBXContainerItemProxy */;
+		};
+		00695D3E16E846CF009CB115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0047A01C151EBE6F00F99D12 /* jnetlib */;
+			targetProxy = 00695D3D16E846CF009CB115 /* PBXContainerItemProxy */;
+		};
+		00695D4016E846E7009CB115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0047A01C151EBE6F00F99D12 /* jnetlib */;
+			targetProxy = 00695D3F16E846E7009CB115 /* PBXContainerItemProxy */;
+		};
+		0071D99216824C0600A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0071D83A168226F800A95E2D /* yajl */;
+			targetProxy = 0071D99116824C0600A95E2D /* PBXContainerItemProxy */;
+		};
+		0071D99516824C0D00A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73297151A542300A8251C /* foundation */;
+			targetProxy = 0071D99416824C0D00A95E2D /* PBXContainerItemProxy */;
+		};
+		0071D99716824C1200A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0047A01C151EBE6F00F99D12 /* jnetlib */;
+			targetProxy = 0071D99616824C1200A95E2D /* PBXContainerItemProxy */;
+		};
+		0071D99916824C1900A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00479F26151C3D8500F99D12 /* nswasabi */;
+			targetProxy = 0071D99816824C1900A95E2D /* PBXContainerItemProxy */;
+		};
+		0071D99B16824C1E00A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733BB151B816300A8251C /* nu */;
+			targetProxy = 0071D99A16824C1E00A95E2D /* PBXContainerItemProxy */;
+		};
+		0071D99D16824C2100A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 003BFE4915124BEF002F3E54 /* nx */;
+			targetProxy = 0071D99C16824C2100A95E2D /* PBXContainerItemProxy */;
+		};
+		0071DA211682557E00A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733BB151B816300A8251C /* nu */;
+			targetProxy = 0071DA201682557E00A95E2D /* PBXContainerItemProxy */;
+		};
+		0071DA6F168255D600A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73297151A542300A8251C /* foundation */;
+			targetProxy = 0071DA6E168255D600A95E2D /* PBXContainerItemProxy */;
+		};
+		0071DAD21682667800A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 003BFE4915124BEF002F3E54 /* nx */;
+			targetProxy = 0071DAD11682667800A95E2D /* PBXContainerItemProxy */;
+		};
+		0071DAD5168266CA00A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733BB151B816300A8251C /* nu */;
+			targetProxy = 0071DAD4168266CA00A95E2D /* PBXContainerItemProxy */;
+		};
+		0071DAD7168266D300A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 003BFE4915124BEF002F3E54 /* nx */;
+			targetProxy = 0071DAD6168266D300A95E2D /* PBXContainerItemProxy */;
+		};
+		0071DB3C1682681300A95E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733BB151B816300A8251C /* nu */;
+			targetProxy = 0071DB3B1682681300A95E2D /* PBXContainerItemProxy */;
+		};
+		00A5D185154995D8007DD287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B733BB151B816300A8251C /* nu */;
+			targetProxy = 00A5D184154995D8007DD287 /* PBXContainerItemProxy */;
+		};
+		00A5D187154995D8007DD287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 003BFE4915124BEF002F3E54 /* nx */;
+			targetProxy = 00A5D186154995D8007DD287 /* PBXContainerItemProxy */;
+		};
+		00A5D189154995D8007DD287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0099872E1520BD99000AB02F /* nsmp4 */;
+			targetProxy = 00A5D188154995D8007DD287 /* PBXContainerItemProxy */;
+		};
+		00A5D18B154995D8007DD287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00479F26151C3D8500F99D12 /* nswasabi */;
+			targetProxy = 00A5D18A154995D8007DD287 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0039B2FA152A1C0200D96D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0039B2FB152A1C0200D96D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		003BFE4415124B81002F3E54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				BUILD_VARIANTS = normal;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "";
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				HEADER_SEARCH_PATH = "$(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include ..";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				OBJROOT = "$(BUILD_DIR)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/SharedPrecompiledHeaders";
+				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = build;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		003BFE4515124B81002F3E54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				BUILD_VARIANTS = normal;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				HEADER_SEARCH_PATH = "$(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include ..";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				OBJROOT = "$(BUILD_DIR)";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/SharedPrecompiledHeaders";
+				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = build;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		003BFE4A15124BEF002F3E54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		003BFE4B15124BEF002F3E54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00479F27151C3D8500F99D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00479F28151C3D8500F99D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0047A01E151EBE6F00F99D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0047A01F151EBE6F00F99D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		005D4D59167F7DBD00F58775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		005D4D5A167F7DBD00F58775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0071D83B168226F800A95E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0071D83C168226F800A95E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0071D91516824B3A00A95E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0071D91616824B3A00A95E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		009986FF1520A7F2000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		009987001520A7F2000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		009987301520BD99000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		009987311520BD99000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		009988AE1520F924000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		009988AF1520F924000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		009988EB15216A47000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		009988EC15216A47000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0099890A15216EC3000AB02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0099890B15216EC3000AB02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00A5D1801549953F007DD287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00A5D1811549953F007DD287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B73298151A542300A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B73299151A542300A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B732F8151ABA6300A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B732F9151ABA6300A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B7330C151ABE8200A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B7330D151ABE8200A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B73344151B5D3100A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B73345151B5D3100A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B73386151B675A00A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B73387151B675A00A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B7338A151B676800A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B7338B151B676800A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B7338E151B677000A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B7338F151B677000A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B73392151B677900A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B73393151B677900A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B733A6151B6F3400A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B733A7151B6F3400A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B733BD151B816300A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B733BE151B816300A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B7342B151C131900A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B7342C151C131900A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B73448151C220000A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B73449151C220000A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00B73465151C2A0400A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00B73466151C2A0400A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00CC77AE1524DD3D004886ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00CC77AF1524DD3D004886ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00CC77B41524DD46004886ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00CC77B51524DD46004886ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00E6E6E615483ADC005C9962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00E6E6E715483ADC005C9962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00E6E6EA15483C6D005C9962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00E6E6EB15483C6D005C9962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00E6E6EE15483CAA005C9962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00E6E6EF15483CAA005C9962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00F2E750152549D200F64C17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00F2E751152549D200F64C17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0039B2FC152A1C0200D96D3E /* Build configuration list for PBXLegacyTarget "gracenote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0039B2FA152A1C0200D96D3E /* Debug */,
+				0039B2FB152A1C0200D96D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		003BFE4215124B81002F3E54 /* Build configuration list for PBXProject "mac-replicant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				003BFE4415124B81002F3E54 /* Debug */,
+				003BFE4515124B81002F3E54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		003BFE4C15124BEF002F3E54 /* Build configuration list for PBXLegacyTarget "nx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				003BFE4A15124BEF002F3E54 /* Debug */,
+				003BFE4B15124BEF002F3E54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00479F29151C3D8500F99D12 /* Build configuration list for PBXLegacyTarget "nswasabi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00479F27151C3D8500F99D12 /* Debug */,
+				00479F28151C3D8500F99D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0047A01D151EBE6F00F99D12 /* Build configuration list for PBXLegacyTarget "jnetlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0047A01E151EBE6F00F99D12 /* Debug */,
+				0047A01F151EBE6F00F99D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005D4D5B167F7DBD00F58775 /* Build configuration list for PBXLegacyTarget "file" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D4D59167F7DBD00F58775 /* Debug */,
+				005D4D5A167F7DBD00F58775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0071D83D168226F800A95E2D /* Build configuration list for PBXLegacyTarget "yajl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0071D83B168226F800A95E2D /* Debug */,
+				0071D83C168226F800A95E2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0071D91716824B3A00A95E2D /* Build configuration list for PBXLegacyTarget "cloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0071D91516824B3A00A95E2D /* Debug */,
+				0071D91616824B3A00A95E2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		009987011520A7F2000AB02F /* Build configuration list for PBXLegacyTarget "nsmp3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009986FF1520A7F2000AB02F /* Debug */,
+				009987001520A7F2000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0099872F1520BD99000AB02F /* Build configuration list for PBXLegacyTarget "nsmp4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009987301520BD99000AB02F /* Debug */,
+				009987311520BD99000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		009988B01520F924000AB02F /* Build configuration list for PBXLegacyTarget "mp3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009988AE1520F924000AB02F /* Debug */,
+				009988AF1520F924000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		009988EA15216A47000AB02F /* Build configuration list for PBXLegacyTarget "decode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009988EB15216A47000AB02F /* Debug */,
+				009988EC15216A47000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0099890915216EC3000AB02F /* Build configuration list for PBXLegacyTarget "replaygain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0099890A15216EC3000AB02F /* Debug */,
+				0099890B15216EC3000AB02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00A5D1821549953F007DD287 /* Build configuration list for PBXLegacyTarget "mp4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A5D1801549953F007DD287 /* Debug */,
+				00A5D1811549953F007DD287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B7329A151A542300A8251C /* Build configuration list for PBXLegacyTarget "foundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B73298151A542300A8251C /* Debug */,
+				00B73299151A542300A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B732FA151ABA6300A8251C /* Build configuration list for PBXLegacyTarget "syscb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B732F8151ABA6300A8251C /* Debug */,
+				00B732F9151ABA6300A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B7330B151ABE8200A8251C /* Build configuration list for PBXLegacyTarget "service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B7330C151ABE8200A8251C /* Debug */,
+				00B7330D151ABE8200A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B73343151B5D3100A8251C /* Build configuration list for PBXLegacyTarget "component" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B73344151B5D3100A8251C /* Debug */,
+				00B73345151B5D3100A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B73385151B675A00A8251C /* Build configuration list for PBXLegacyTarget "application" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B73386151B675A00A8251C /* Debug */,
+				00B73387151B675A00A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B73389151B676800A8251C /* Build configuration list for PBXLegacyTarget "metadata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B7338A151B676800A8251C /* Debug */,
+				00B7338B151B676800A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B7338D151B677000A8251C /* Build configuration list for PBXLegacyTarget "audio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B7338E151B677000A8251C /* Debug */,
+				00B7338F151B677000A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B73391151B677900A8251C /* Build configuration list for PBXLegacyTarget "player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B73392151B677900A8251C /* Debug */,
+				00B73393151B677900A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B733A5151B6F3400A8251C /* Build configuration list for PBXLegacyTarget "Wasabi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B733A6151B6F3400A8251C /* Debug */,
+				00B733A7151B6F3400A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B733BC151B816300A8251C /* Build configuration list for PBXLegacyTarget "nu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B733BD151B816300A8251C /* Debug */,
+				00B733BE151B816300A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B7342A151C131900A8251C /* Build configuration list for PBXLegacyTarget "nsapev2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B7342B151C131900A8251C /* Debug */,
+				00B7342C151C131900A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B73447151C220000A8251C /* Build configuration list for PBXLegacyTarget "nsid3v1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B73448151C220000A8251C /* Debug */,
+				00B73449151C220000A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B73464151C2A0400A8251C /* Build configuration list for PBXLegacyTarget "nsid3v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B73465151C2A0400A8251C /* Debug */,
+				00B73466151C2A0400A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00CC77B01524DD3D004886ED /* Build configuration list for PBXLegacyTarget "replicant-metadata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00CC77AE1524DD3D004886ED /* Debug */,
+				00CC77AF1524DD3D004886ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00CC77B31524DD46004886ED /* Build configuration list for PBXLegacyTarget "replicant-codec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00CC77B41524DD46004886ED /* Debug */,
+				00CC77B51524DD46004886ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00E6E6E515483ADC005C9962 /* Build configuration list for PBXLegacyTarget "replicant-common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E6E6E615483ADC005C9962 /* Debug */,
+				00E6E6E715483ADC005C9962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00E6E6E915483C6D005C9962 /* Build configuration list for PBXLegacyTarget "replicant-playback" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E6E6EA15483C6D005C9962 /* Debug */,
+				00E6E6EB15483C6D005C9962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00E6E6ED15483CAA005C9962 /* Build configuration list for PBXLegacyTarget "Replicant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E6E6EE15483CAA005C9962 /* Debug */,
+				00E6E6EF15483CAA005C9962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00F2E752152549D200F64C17 /* Build configuration list for PBXLegacyTarget "filelock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F2E750152549D200F64C17 /* Debug */,
+				00F2E751152549D200F64C17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 003BFE3F15124B81002F3E54 /* Project object */;
+}

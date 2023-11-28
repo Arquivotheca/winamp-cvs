@@ -1,0 +1,404 @@
+#include "api.h"
+#include "main.h"
+#include "../nu/threadpool/TimerHandle.h"
+#include "BackgroundTasks.h"
+#include <api/service/waServiceFactory.h>
+#include "../Agave/DecodeFile/svc_raw_media_reader.h"
+#include "../nswasabi/ReferenceCounted.h"
+#include "../cloud/ifc_clouddb.h"
+
+static ns_error_t ComputeMediaHash(const wchar_t *filename, nx_string_t *out_mediahash)
+{
+	uint8_t sha1_hash[20];
+	waServiceFactory *sf;
+	size_t i=0;
+	while (sf = WASABI_API_SVC->service_enumService(svc_raw_media_reader::SERVICETYPE, i++))
+	{
+		svc_raw_media_reader *reader_service = (svc_raw_media_reader *)sf->getInterface();
+		if (reader_service)
+		{
+			ifc_raw_media_reader *reader=0;
+			int ret = reader_service->CreateRawMediaReader(filename, &reader);
+			sf->releaseInterface(reader_service);
+			if (ret == NErr_Success)
+			{
+				SHA1_CTX sha1;
+				uint8_t buffer[4096];
+				size_t bytes_read;
+				SHA1Init(&sha1);
+				while (reader->Read(buffer, 4096, &bytes_read) == NErr_Success)
+				{
+					SHA1Update(&sha1, buffer, bytes_read);
+				}
+
+				reader->Release();
+				SHA1Final(sha1_hash, &sha1);
+	char temp[41];
+	sprintf(temp, "%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x", 
+		sha1_hash[0], sha1_hash[1], sha1_hash[2], sha1_hash[3], 
+		sha1_hash[4], sha1_hash[5], sha1_hash[6], sha1_hash[7], 
+		sha1_hash[8], sha1_hash[9], sha1_hash[10], sha1_hash[11], 
+		sha1_hash[12], sha1_hash[13], sha1_hash[14], sha1_hash[15],
+		sha1_hash[16], sha1_hash[17], sha1_hash[18], sha1_hash[19]);
+
+	return NXStringCreateWithUTF8(out_mediahash, temp);
+				
+			}
+		}
+	}
+
+	return NErr_Error;
+}
+
+Cloud_Background::Cloud_Background()
+{
+	background_thread=0;
+	db_connection=0;
+	killswitch=0;
+	mediahash_ids=0;
+	num_mediahash_ids=0;
+	mediahash_itr=0;
+}
+
+Cloud_Background::~Cloud_Background()
+{
+	if (db_connection)
+		db_connection->Release();
+	free(mediahash_ids);
+}
+
+void Cloud_Background::Kill()
+{
+	killswitch=1;
+	AGAVE_API_THREADPOOL->RunFunction(background_thread, Background_Run, this, 0, 0);
+}
+
+void Cloud_Background::OnReset()
+{
+	AGAVE_API_THREADPOOL->RunFunction(background_thread, Background_AddFiles, this, 0, 0);
+}
+
+int Cloud_Background::Background_Run(HANDLE handle, void *user_data, intptr_t id)
+{
+	Cloud_Background *background = (Cloud_Background *)user_data;
+
+	if (background->killswitch)
+	{
+		AGAVE_API_THREADPOOL->RemoveHandle(background->background_thread, background->pull_timer);
+		AGAVE_API_THREADPOOL->RemoveHandle(background->background_thread, background->flush_timer);
+		AGAVE_API_THREADPOOL->RemoveHandle(background->background_thread, background->login_timer);
+		AGAVE_API_THREADPOOL->RemoveHandle(background->background_thread, background->add_timer);
+
+		return 1;
+	}
+	else
+		background->Internal_Initialize();
+
+#if 0
+	switch(background->state)
+	{
+	case STATE_INITIALIZE:
+		background->Internal_Initialize(); break;
+	case STATE_WAIT:
+		background->Wait(); break;
+	case STATE_WAIT_FOR_LOGIN:
+		background->WaitForLogin(); break;
+	case STATE_INITIAL_PULL:
+		background->InitialPull(); break;	
+	case STATE_ADD_FILES:
+		background->AddFiles(); break;
+	case STATE_MEDIAHASH:
+		background->MediaHash(); break;	
+	case STATE_IDLE:
+		background->Pull(); break;
+	}
+
+	if (background->state == STATE_IDLE)
+	{
+		DebugConsole_SetStatus(L"Idling");
+		background->timer_handle.Wait(60000);
+	}
+	else if (background->state == STATE_WAIT)
+	{
+		DebugConsole_SetStatus(L"Waiting");
+		background->timer_handle.Wait(1000);
+	}
+	else if (background->state == STATE_WAIT_FOR_LOGIN)
+	{
+		DebugConsole_SetStatus(L"Waiting for Login");
+		background->timer_handle.Wait(1000);
+	}
+	else
+	{
+		AGAVE_API_THREADPOOL->RunFunction(background->background_thread, Background_Run, background, 0, 0);
+	}
+#endif
+	return 0;
+
+}
+
+
+int Cloud_Background::Background_Add(HANDLE handle, void *user_data, intptr_t id)
+{
+#if 0
+	Cloud_Background *background = (Cloud_Background *)user_data;
+	nx_uri_t filename = (nx_uri_t)id;
+
+	ReferenceCountedNXString media_hash;
+	int internal_id;
+	if (background->db_connection->Media_FindByFilename(filename, local_device_id, &internal_id) == NErr_Success)
+	{
+		AGAVE_API_MLDB->SetFieldInteger(filename->string, "songid", internal_id);
+
+		if (background->db_connection->Media_GetAttribute(internal_id, background->attributes.mediahash, &media_hash) == NErr_Success)
+		{
+
+		}
+		else if (/*REPLICANT_API_CLOUD->*/ComputeMediaHash(filename->string, &media_hash) == NErr_Success)
+		{
+			background->db_connection->IDMap_SetMediaHash(internal_id, media_hash);
+			int value_id;
+			background->db_connection->Value_Add(background->attributes.mediahash, media_hash, &value_id);
+			background->db_connection->Media_AddAttributeValue(internal_id, background->attributes.mediahash, value_id);
+
+		}
+	}
+	else
+	{
+		background->add_timer.Cancel();
+		background->add_timer.Wait(5000);
+	}
+
+	// TODO: AGAVE_API_MLDB->Sync();
+	NXURIRelease(filename);
+#endif
+	return 1;
+}
+
+int Cloud_Background::Background_Remove(HANDLE handle, void *user_data, intptr_t id)
+{
+	Cloud_Background *background = (Cloud_Background *)user_data;
+	nx_uri_t filename = (nx_uri_t)id;
+
+	ReferenceCountedNXString media_hash;
+	int internal_id;
+	if (background->db_connection->Media_FindByFilename(filename, local_device_id, &internal_id) == NErr_Success)
+	{
+	
+		cloud_client->MetadataDelete(background->db_connection, internal_id);
+	}
+
+	// TODO: AGAVE_API_MLDB->Sync();
+	NXURIRelease(filename);
+	return 1;
+}
+
+
+int Cloud_Background::Background_Flush(HANDLE handle, void *user_data, intptr_t id)
+{
+	AGAVE_API_MLDB->Sync();
+	cloud_client->Flush();
+	return 0;
+}
+
+#define RegisterAttribute(x) db_connection->Attribute_Add(#x, &attributes. ## x)
+void Cloud_Background::Internal_Initialize()
+{
+	DebugConsole_SetStatus(L"Initializing");
+	cloud_client->CreateDatabaseConnection(&db_connection);
+
+	attributes.device_token = NXStringRetain(local_device_token);
+
+	db_connection->BeginTransaction();
+	RegisterAttribute(artist);
+	RegisterAttribute(album);
+	RegisterAttribute(track);
+	RegisterAttribute(title);
+	RegisterAttribute(metahash);
+	RegisterAttribute(albumartist);
+	RegisterAttribute(bpm);
+	RegisterAttribute(category);
+	RegisterAttribute(comment);
+	RegisterAttribute(composer);
+	RegisterAttribute(director);
+	RegisterAttribute(disc);
+	RegisterAttribute(discs);
+	RegisterAttribute(genre);
+	RegisterAttribute(producer);
+	RegisterAttribute(publisher);
+	RegisterAttribute(tracks);
+	RegisterAttribute(year);
+	RegisterAttribute(filepath);
+	RegisterAttribute(albumgain);
+	RegisterAttribute(trackgain);
+	RegisterAttribute(length);
+	RegisterAttribute(rating);
+	RegisterAttribute(playcount);
+	RegisterAttribute(lastplay);
+	RegisterAttribute(lastupd);
+	RegisterAttribute(filesize);
+	RegisterAttribute(bitrate);
+	RegisterAttribute(type);
+	RegisterAttribute(lossless);
+	RegisterAttribute(mime);
+	RegisterAttribute(mediahash);
+	RegisterAttribute(id);
+	RegisterAttribute(idhash);
+	RegisterAttribute(device);
+
+	db_connection->Commit();
+
+
+	AGAVE_API_THREADPOOL->AddHandle(background_thread, pull_timer, Background_Pull, this, 0, 0);
+	AGAVE_API_THREADPOOL->AddHandle(background_thread, flush_timer, Background_Flush, this, 0, 0);
+	AGAVE_API_THREADPOOL->AddHandle(background_thread, add_timer, Background_AddFiles, this, 0, 0);	
+	AGAVE_API_THREADPOOL->AddHandle(background_thread, login_timer, Background_CheckLogin, this, 0, 0);
+
+	WASABI_API_SYSCB->syscb_registerCallback(this);
+	AGAVE_API_THREADPOOL->RunFunction(0, Background_AddFiles, this, 0, 0);
+
+	login_timer.Poll(5000);
+}
+#undef RegisterAttribute
+
+
+int commit_callback(void *)
+{
+	return 0;
+}
+int Cloud_Background::Background_AddFiles(HANDLE handle, void *user_data, intptr_t id)
+{
+	Cloud_Background *background = (Cloud_Background *)user_data;
+	ifc_clouddb *db_connection = 0;
+	time_t start = time(0);
+	if (cloud_client->CreateDatabaseConnection(&db_connection) == NErr_Success)
+	{
+		//AddFilesToLibrary(background->db_connection, background->attributes, 100000);
+		while (AddFilesToLibrary(db_connection, background->attributes, 500))
+		{
+			// TODO: check a killswitch or something
+		}
+		db_connection->Release();
+	}
+
+	int total = time(0) - start;
+	char temp[1024];
+	sprintf(temp, "took %u seconds", total);
+	MessageBoxA(NULL, temp, "insert time", MB_OK);
+	// TODO: AGAVE_API_THREADPOOL->RunFunction(background->background_thread, Background_MediaHash, user_data, 0, 0);
+	return 0;	
+}
+
+int Cloud_Background::Background_MediaHash(HANDLE handle, void *user_data, intptr_t id)
+{
+	Cloud_Background *background = (Cloud_Background *)user_data;
+
+	// TODO: let the thread process other things as we go.  
+	// probably want to keep internal_ids and num_ids as a member variable.  and the counter
+	if (background->mediahash_ids && background->mediahash_itr < background->num_mediahash_ids)
+	{
+		DebugConsole_SetStatus(L"Calculating Media Hash");
+
+		int internal_id = background->mediahash_ids[background->mediahash_itr++];
+		ReferenceCountedNXString filename, media_hash, meta_hash, id_hash;
+		if (background->db_connection->Media_GetAttribute(internal_id, background->attributes.filepath, &filename) == NErr_Success)
+		{
+			ReferenceCountedNXURI filename_uri;
+			NXURICreateWithNXString(&filename_uri, filename);
+			if (/*REPLICANT_API_CLOUD->*/ComputeMediaHash(filename_uri->string, &media_hash) == NErr_Success)
+			{
+				background->db_connection->BeginTransaction();
+				background->db_connection->IDMap_SetMediaHash(internal_id, media_hash);
+				int value_id;
+				background->db_connection->Value_Add(background->attributes.mediahash, media_hash, &value_id);
+				background->db_connection->Media_AddAttributeValue(internal_id, background->attributes.mediahash, value_id);
+
+				background->db_connection->Media_GetAttribute(internal_id, background->attributes.metahash, &meta_hash);
+
+				REPLICANT_API_CLOUD->ComputeIDHash(meta_hash, media_hash, &id_hash);
+				background->db_connection->Value_Add(background->attributes.idhash, id_hash, &value_id);
+				background->db_connection->Media_AddAttributeValue(internal_id, background->attributes.idhash, value_id);
+				background->db_connection->Commit();
+				AGAVE_API_THREADPOOL->RunFunction(background->background_thread, Background_MediaHash, user_data, 0, 0);
+
+				// do an announce every 16 tracks.  we can tune this
+				if ((background->num_mediahash_ids  & 15) == 0)
+					cloud_client->MetadataAnnounce(background->db_connection); // announce what we have so far
+				return 0;		
+			}
+		}
+
+		AGAVE_API_THREADPOOL->RunFunction(background->background_thread, Background_MediaHash, user_data, 0, 0);
+	}
+	else
+	{
+		cloud_client->MetadataAnnounce(background->db_connection); // announce what we have so far
+		free(background->mediahash_ids);
+		background->mediahash_ids=0;
+
+		if (background->db_connection->IDMap_Get_MediaHash_Null(&background->mediahash_ids, &background->num_mediahash_ids) == NErr_Success)
+		{
+			background->mediahash_itr=0;
+			background->add_timer.Cancel();
+			background->add_timer.Wait(10000);
+		}
+	}
+
+
+	return 1;
+}
+
+int Cloud_Background::Background_Pull(HANDLE handle, void *user_data, intptr_t id)
+{
+	DebugConsole_SetStatus(L"Pulling");
+	cloud_client->Pull();
+	return 0;
+}
+
+bool SetCredentials();
+
+int Cloud_Background::Background_CheckLogin(HANDLE handle, void *user_data, intptr_t id)
+{
+	Cloud_Background *background = (Cloud_Background *)user_data;
+	DebugConsole_SetStatus(L"Waiting for Login");
+	if (SetCredentials())
+	{
+		background->login_timer.Cancel();
+		DebugConsole_SetStatus(L"Devices List");
+		cloud_client->DevicesList();
+		DebugConsole_SetStatus(L"Pulling");
+		cloud_client->Pull(); // do an initial pull
+		cloud_client->MetadataAnnounce(background->db_connection); // announce what we have so far
+		background->pull_timer.Poll(60000);
+		return 1;
+	}
+	return 0;
+}
+
+
+
+int Cloud_Background::Initialize()
+{
+	DebugConsole_SetStatus(L"Starting Thread");
+	background_thread=AGAVE_API_THREADPOOL->ReserveThread(0);
+	AGAVE_API_THREADPOOL->RunFunction(background_thread, Background_Run, this, 0, 0);
+	return NErr_Success;
+}
+
+void Cloud_Background::OnFileAdded(const wchar_t *filename)
+{
+	ReferenceCountedNXString nx_temp;
+	nx_uri_t nx_filename;
+	NXStringCreateWithUTF16(&nx_temp, filename);
+	NXURICreateWithNXString(&nx_filename, nx_temp);
+	AGAVE_API_THREADPOOL->RunFunction(background_thread, Background_Add, this, (intptr_t)nx_filename, 0);
+}
+
+void Cloud_Background::OnFileRemove_Post(const wchar_t *filename)
+{
+	ReferenceCountedNXString nx_temp;
+	nx_uri_t nx_filename;
+	NXStringCreateWithUTF16(&nx_temp, filename);
+	NXURICreateWithNXString(&nx_filename, nx_temp);
+	AGAVE_API_THREADPOOL->RunFunction(background_thread, Background_Remove, this, (intptr_t)nx_filename, 0);
+}

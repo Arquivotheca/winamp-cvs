@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ml_devices", "ml_devices.vcproj", "{07D24820-5624-4EC3-AAC6-288D20E039DE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "devices", "..\devices\devices.vcproj", "{06F6E796-653F-48A9-BA2F-46B679D35F9E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen_deviceprovider", "gen_deviceprovider\gen_deviceprovider.vcproj", "{A3C7D830-CD01-4C2B-9E1A-FB62B5236BA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07D24820-5624-4EC3-AAC6-288D20E039DE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{07D24820-5624-4EC3-AAC6-288D20E039DE}.Debug|Win32.Build.0 = Debug|Win32
+		{07D24820-5624-4EC3-AAC6-288D20E039DE}.Release|Win32.ActiveCfg = Release|Win32
+		{07D24820-5624-4EC3-AAC6-288D20E039DE}.Release|Win32.Build.0 = Release|Win32
+		{06F6E796-653F-48A9-BA2F-46B679D35F9E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{06F6E796-653F-48A9-BA2F-46B679D35F9E}.Debug|Win32.Build.0 = Debug|Win32
+		{06F6E796-653F-48A9-BA2F-46B679D35F9E}.Release|Win32.ActiveCfg = Release|Win32
+		{06F6E796-653F-48A9-BA2F-46B679D35F9E}.Release|Win32.Build.0 = Release|Win32
+		{A3C7D830-CD01-4C2B-9E1A-FB62B5236BA9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A3C7D830-CD01-4C2B-9E1A-FB62B5236BA9}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

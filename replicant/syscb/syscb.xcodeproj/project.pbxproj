@@ -1,0 +1,235 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		00DC133E15072451007F9D73 /* syscb */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00DC133F15072451007F9D73 /* Build configuration list for PBXAggregateTarget "syscb" */;
+			buildPhases = (
+				00DC134215072474007F9D73 /* Copy Files */,
+				00B732F0151AB9B000A8251C /* Install Public Headers */,
+			);
+			dependencies = (
+				00B732F6151ABA4800A8251C /* PBXTargetDependency */,
+			);
+			name = syscb;
+			productName = syscb;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00DC134315072481007F9D73 /* api_syscb.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 00883F8515016B4100625F51 /* api_syscb.h */; };
+		00DC134415072481007F9D73 /* ifc_syscallback.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 00883F8615016B4100625F51 /* ifc_syscallback.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00B732F5151ABA4800A8251C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00883F7215016AE100625F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B732F1151AB9F800A8251C;
+			remoteInfo = "syscb-cleanup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00DC134215072474007F9D73 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				00DC134315072481007F9D73 /* api_syscb.h in Copy Files */,
+				00DC134415072481007F9D73 /* ifc_syscallback.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00883F8515016B4100625F51 /* api_syscb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api_syscb.h; sourceTree = "<group>"; };
+		00883F8615016B4100625F51 /* ifc_syscallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_syscallback.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00883F7015016AE100625F51 = {
+			isa = PBXGroup;
+			children = (
+				00883F8515016B4100625F51 /* api_syscb.h */,
+				00883F8615016B4100625F51 /* ifc_syscallback.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		00B732F1151AB9F800A8251C /* syscb-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(PUBLIC_HEADERS_DIR)\"";
+			buildConfigurationList = 00B732F2151AB9F800A8251C /* Build configuration list for PBXLegacyTarget "syscb-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "syscb-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "syscb-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		00883F7215016AE100625F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 00883F7515016AE100625F51 /* Build configuration list for PBXProject "syscb" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 00883F7015016AE100625F51;
+			productRefGroup = 00883F7015016AE100625F51;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00DC133E15072451007F9D73 /* syscb */,
+				00B732F1151AB9F800A8251C /* syscb-cleanup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00B732F0151AB9B000A8251C /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00B732F6151ABA4800A8251C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B732F1151AB9F800A8251C /* syscb-cleanup */;
+			targetProxy = 00B732F5151ABA4800A8251C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00883F7D15016AE100625F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		00883F7E15016AE100625F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		00B732F3151AB9F800A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		00B732F4151AB9F800A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		00DC134015072451007F9D73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		00DC134115072451007F9D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00883F7515016AE100625F51 /* Build configuration list for PBXProject "syscb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00883F7D15016AE100625F51 /* Debug */,
+				00883F7E15016AE100625F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B732F2151AB9F800A8251C /* Build configuration list for PBXLegacyTarget "syscb-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B732F3151AB9F800A8251C /* Debug */,
+				00B732F4151AB9F800A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00DC133F15072451007F9D73 /* Build configuration list for PBXAggregateTarget "syscb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DC134015072451007F9D73 /* Debug */,
+				00DC134115072451007F9D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00883F7215016AE100625F51 /* Project object */;
+}

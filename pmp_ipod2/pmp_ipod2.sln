@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmp_ipod2", "pmp_ipod2.vcproj", "{DD76E337-88AD-402E-ACC7-E33510A5AE43}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5ED1729B-EA41-4163-9506-741A8B76F625} = {5ED1729B-EA41-4163-9506-741A8B76F625}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plist", "..\plist\plist.vcproj", "{5ED1729B-EA41-4163-9506-741A8B76F625}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bfc", "..\Wasabi\bfc\bfc.vcproj", "{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tataki", "..\tataki\tataki.vcproj", "{255B68B5-7EF8-45EF-A675-2D6B88147909}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD76E337-88AD-402E-ACC7-E33510A5AE43}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD76E337-88AD-402E-ACC7-E33510A5AE43}.Debug|Win32.Build.0 = Debug|Win32
+		{DD76E337-88AD-402E-ACC7-E33510A5AE43}.Release|Win32.ActiveCfg = Release|Win32
+		{DD76E337-88AD-402E-ACC7-E33510A5AE43}.Release|Win32.Build.0 = Release|Win32
+		{5ED1729B-EA41-4163-9506-741A8B76F625}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5ED1729B-EA41-4163-9506-741A8B76F625}.Debug|Win32.Build.0 = Debug|Win32
+		{5ED1729B-EA41-4163-9506-741A8B76F625}.Release|Win32.ActiveCfg = Release|Win32
+		{5ED1729B-EA41-4163-9506-741A8B76F625}.Release|Win32.Build.0 = Release|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Debug|Win32.Build.0 = Debug|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Release|Win32.ActiveCfg = Release|Win32
+		{D0EC862E-DDDD-4F4F-934F-B75DC9062DC1}.Release|Win32.Build.0 = Release|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Debug|Win32.ActiveCfg = Debug|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Debug|Win32.Build.0 = Debug|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Release|Win32.ActiveCfg = Release|Win32
+		{255B68B5-7EF8-45EF-A675-2D6B88147909}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

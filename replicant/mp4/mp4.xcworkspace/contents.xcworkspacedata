@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "container:mp4.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nsmp4/nsmp4.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nswasabi/nswasabi.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nu/nu.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../jnetlib/jnetlib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nx/nx.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "h264", "h264.vcproj", "{CB4658FB-5E5B-4B1D-8341-6E31E41B49E4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "h264dec", "..\h264dec\ldecod_vc9.vcproj", "{5499B067-CF32-4141-A757-E0A29866994A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmp4v2", "..\libmp4v2\libmp4v2.vcproj", "{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB4658FB-5E5B-4B1D-8341-6E31E41B49E4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CB4658FB-5E5B-4B1D-8341-6E31E41B49E4}.Debug|Win32.Build.0 = Debug|Win32
+		{CB4658FB-5E5B-4B1D-8341-6E31E41B49E4}.Release|Win32.ActiveCfg = Release IPP|Win32
+		{CB4658FB-5E5B-4B1D-8341-6E31E41B49E4}.Release|Win32.Build.0 = Release IPP|Win32
+		{5499B067-CF32-4141-A757-E0A29866994A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5499B067-CF32-4141-A757-E0A29866994A}.Debug|Win32.Build.0 = Debug|Win32
+		{5499B067-CF32-4141-A757-E0A29866994A}.Release|Win32.ActiveCfg = Release IPP|Win32
+		{5499B067-CF32-4141-A757-E0A29866994A}.Release|Win32.Build.0 = Release IPP|Win32
+		{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}.Debug|Win32.ActiveCfg = Release|Win32
+		{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}.Debug|Win32.Build.0 = Release|Win32
+		{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}.Release|Win32.ActiveCfg = Release|Win32
+		{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

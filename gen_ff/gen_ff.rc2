@@ -1,0 +1,18 @@
+// Microsoft Visual C++ generated resource script.
+//
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+//IDB_MB_TAB_NORMAL		RCDATA	DISCARDABLE     "bitmaps\\mb-unselected.png"
+//IDB_MB_TAB_HILITED		RCDATA	DISCARDABLE     "bitmaps\\mb-hilited.png"
+//IDB_MB_TAB_SELECTED		RCDATA	DISCARDABLE     "bitmaps\\mb-selected.png"
+
+/////////////////////////////////////////////////////////////////////////////

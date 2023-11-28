@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="bitstream.cpp" />
+    <ClCompile Include="conceal.cpp" />
+    <ClCompile Include="crc16.cpp" />
+    <ClCompile Include="huffdec.cpp" />
+    <ClCompile Include="huffmanbitobj.cpp" />
+    <ClCompile Include="huffmandecoder.cpp" />
+    <ClCompile Include="huffmantable.cpp" />
+    <ClCompile Include="l3table.cpp" />
+    <ClCompile Include="meanvalue.cpp" />
+    <ClCompile Include="mp2decode.cpp" />
+    <ClCompile Include="mp3ancofl.cpp" />
+    <ClCompile Include="mp3decode.cpp" />
+    <ClCompile Include="mp3quant.cpp" />
+    <ClCompile Include="mp3read.cpp" />
+    <ClCompile Include="mp3ssc.cpp" />
+    <ClCompile Include="mpegbitstream.cpp" />
+    <ClCompile Include="mpegheader.cpp" />
+    <ClCompile Include="mpgadecoder.cpp" />
+    <ClCompile Include="sequencedetector.cpp" />
+    <ClCompile Include="x86-sse\mdct.cpp">
+      <Filter>x86</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse\mp3tools.cpp">
+      <Filter>x86</Filter>
+    </ClCompile>
+    <ClCompile Include="x86-sse\polyphase.cpp">
+      <Filter>x86</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bitsequence.h" />
+    <ClInclude Include="bitstream.h" />
+    <ClInclude Include="conceal.h" />
+    <ClInclude Include="crc16.h" />
+    <ClInclude Include="giobase.h" />
+    <ClInclude Include="huffdec.h" />
+    <ClInclude Include="huffmanbitobj.h" />
+    <ClInclude Include="huffmandecoder.h" />
+    <ClInclude Include="huffmantable.h" />
+    <ClInclude Include="l3reg.h" />
+    <ClInclude Include="l3table.h" />
+    <ClInclude Include="mdct.h" />
+    <ClInclude Include="meanvalue.h" />
+    <ClInclude Include="mp2decode.h" />
+    <ClInclude Include="mp3ancofl.h" />
+    <ClInclude Include="mp3decode.h" />
+    <ClInclude Include="mp3drmifc.h" />
+    <ClInclude Include="mp3quant.h" />
+    <ClInclude Include="mp3read.h" />
+    <ClInclude Include="mp3ssc.h" />
+    <ClInclude Include="mp3sscdef.h" />
+    <ClInclude Include="mp3streaminfo.h" />
+    <ClInclude Include="mp3tools.h" />
+    <ClInclude Include="mpeg.h" />
+    <ClInclude Include="mpegbitstream.h" />
+    <ClInclude Include="mpegheader.h" />
+    <ClInclude Include="mpgadecoder.h" />
+    <ClInclude Include="polyphase.h" />
+    <ClInclude Include="regtypes.h" />
+    <ClInclude Include="sequencedetector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="x86">
+      <UniqueIdentifier>{52adddec-391a-47cd-b3f6-d9e4508ac613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic">
+      <UniqueIdentifier>{26b9f4a6-9c79-4cc4-b47f-685878539c4e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

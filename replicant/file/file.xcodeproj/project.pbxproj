@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		005D4C26167F77A200F58775 /* file-prepare */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 005D4C27167F77A200F58775 /* Build configuration list for PBXAggregateTarget "file-prepare" */;
+			buildPhases = (
+				005D4C2C167F77F600F58775 /* Generate Version Info */,
+			);
+			dependencies = (
+				005D4C2B167F77ED00F58775 /* PBXTargetDependency */,
+			);
+			name = "file-prepare";
+			productName = "file-prepare";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		005D4C04167F743000F58775 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 005D4C03167F743000F58775 /* libz.dylib */; };
+		005D4C33167F78D100F58775 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 005D4C31167F78D100F58775 /* version.c */; };
+		005D4C34167F78D100F58775 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4C32167F78D100F58775 /* version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0074CB7A167A74D3005E2369 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB66167A74D3005E2369 /* api.h */; };
+		0074CB7B167A74D3005E2369 /* FileDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074CB67167A74D3005E2369 /* FileDecoder.cpp */; };
+		0074CB7C167A74D3005E2369 /* FileDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB68167A74D3005E2369 /* FileDecoder.h */; };
+		0074CB7D167A74D3005E2369 /* FileMetadata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074CB69167A74D3005E2369 /* FileMetadata.cpp */; };
+		0074CB7E167A74D3005E2369 /* FileMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB6A167A74D3005E2369 /* FileMetadata.h */; };
+		0074CB7F167A74D3005E2369 /* FileMetadataRead.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074CB6B167A74D3005E2369 /* FileMetadataRead.cpp */; };
+		0074CB80167A74D3005E2369 /* FileMetadataService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074CB6C167A74D3005E2369 /* FileMetadataService.cpp */; };
+		0074CB81167A74D3005E2369 /* FileMetadataWrite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074CB6D167A74D3005E2369 /* FileMetadataWrite.cpp */; };
+		0074CB82167A74D3005E2369 /* FilePlayback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074CB6E167A74D3005E2369 /* FilePlayback.cpp */; };
+		0074CB83167A74D3005E2369 /* FilePlayback.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB6F167A74D3005E2369 /* FilePlayback.h */; };
+		0074CB84167A74D3005E2369 /* FileRawReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074CB70167A74D3005E2369 /* FileRawReader.cpp */; };
+		0074CB85167A74D3005E2369 /* FileRawReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB71167A74D3005E2369 /* FileRawReader.h */; };
+		0074CB86167A74D3005E2369 /* ifc_filemetadata_editor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB72167A74D3005E2369 /* ifc_filemetadata_editor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0074CB87167A74D3005E2369 /* ifc_fileplayback.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB73167A74D3005E2369 /* ifc_fileplayback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0074CB88167A74D3005E2369 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0074CB74167A74D3005E2369 /* main.cpp */; };
+		0074CB89167A74D3005E2369 /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB75167A74D3005E2369 /* main.h */; };
+		0074CB8B167A74D3005E2369 /* svc_filedecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB77167A74D3005E2369 /* svc_filedecode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0074CB8C167A74D3005E2369 /* svc_filemetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB78167A74D3005E2369 /* svc_filemetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0074CB8D167A74D3005E2369 /* svc_fileplayback.h in Headers */ = {isa = PBXBuildFile; fileRef = 0074CB79167A74D3005E2369 /* svc_fileplayback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0074CBD4167A76D3005E2369 /* libnsapev2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0074CBCE167A76D3005E2369 /* libnsapev2.a */; };
+		0074CBD5167A76D3005E2369 /* libnsid3v1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0074CBCF167A76D3005E2369 /* libnsid3v1.a */; };
+		0074CBD6167A76D3005E2369 /* libnsid3v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0074CBD0167A76D3005E2369 /* libnsid3v2.a */; };
+		0074CBD7167A76D3005E2369 /* libnswasabi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0074CBD1167A76D3005E2369 /* libnswasabi.a */; };
+		0074CBD8167A76D3005E2369 /* libnu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0074CBD2167A76D3005E2369 /* libnu.a */; };
+		0074CBD9167A76D3005E2369 /* libnx-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0074CBD3167A76D3005E2369 /* libnx-1.dylib */; };
+		0074CBDE167A7752005E2369 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0074CBDD167A7752005E2369 /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		005D4C2A167F77ED00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0074CB53167A7418005E2369 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005D4C21167F771400F58775;
+			remoteInfo = "file-cleanup";
+		};
+		005D4C2D167F787900F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0074CB53167A7418005E2369 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005D4C21167F771400F58775;
+			remoteInfo = "file-cleanup";
+		};
+		005D4C2F167F787A00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0074CB53167A7418005E2369 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005D4C26167F77A200F58775;
+			remoteInfo = "file-prepare";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005D4C03167F743000F58775 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		005D4C31167F78D100F58775 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = $PROJECT_DERIVED_FILE_DIR/version.c; sourceTree = "<absolute>"; };
+		005D4C32167F78D100F58775 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = $PROJECT_DERIVED_FILE_DIR/version.h; sourceTree = "<absolute>"; };
+		0074CB5C167A7418005E2369 /* libfile.w6c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libfile.w6c; sourceTree = BUILT_PRODUCTS_DIR; };
+		0074CB66167A74D3005E2369 /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		0074CB67167A74D3005E2369 /* FileDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileDecoder.cpp; sourceTree = "<group>"; };
+		0074CB68167A74D3005E2369 /* FileDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDecoder.h; sourceTree = "<group>"; };
+		0074CB69167A74D3005E2369 /* FileMetadata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileMetadata.cpp; sourceTree = "<group>"; };
+		0074CB6A167A74D3005E2369 /* FileMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMetadata.h; sourceTree = "<group>"; };
+		0074CB6B167A74D3005E2369 /* FileMetadataRead.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileMetadataRead.cpp; sourceTree = "<group>"; };
+		0074CB6C167A74D3005E2369 /* FileMetadataService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileMetadataService.cpp; sourceTree = "<group>"; };
+		0074CB6D167A74D3005E2369 /* FileMetadataWrite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileMetadataWrite.cpp; sourceTree = "<group>"; };
+		0074CB6E167A74D3005E2369 /* FilePlayback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FilePlayback.cpp; sourceTree = "<group>"; };
+		0074CB6F167A74D3005E2369 /* FilePlayback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePlayback.h; sourceTree = "<group>"; };
+		0074CB70167A74D3005E2369 /* FileRawReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileRawReader.cpp; sourceTree = "<group>"; };
+		0074CB71167A74D3005E2369 /* FileRawReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileRawReader.h; sourceTree = "<group>"; };
+		0074CB72167A74D3005E2369 /* ifc_filemetadata_editor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_filemetadata_editor.h; sourceTree = "<group>"; };
+		0074CB73167A74D3005E2369 /* ifc_fileplayback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_fileplayback.h; sourceTree = "<group>"; };
+		0074CB74167A74D3005E2369 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0074CB75167A74D3005E2369 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		0074CB77167A74D3005E2369 /* svc_filedecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svc_filedecode.h; sourceTree = "<group>"; };
+		0074CB78167A74D3005E2369 /* svc_filemetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svc_filemetadata.h; sourceTree = "<group>"; };
+		0074CB79167A74D3005E2369 /* svc_fileplayback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svc_fileplayback.h; sourceTree = "<group>"; };
+		0074CBCE167A76D3005E2369 /* libnsapev2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnsapev2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0074CBCF167A76D3005E2369 /* libnsid3v1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnsid3v1.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0074CBD0167A76D3005E2369 /* libnsid3v2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnsid3v2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0074CBD1167A76D3005E2369 /* libnswasabi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnswasabi.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0074CBD2167A76D3005E2369 /* libnu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0074CBD3167A76D3005E2369 /* libnx-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libnx-1.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0074CBDD167A7752005E2369 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		0074CBDF167A7793005E2369 /* VERSION */ = {isa = PBXFileReference; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		0074CBE0167A7A48005E2369 /* precomp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precomp.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0074CB59167A7418005E2369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0074CBD4167A76D3005E2369 /* libnsapev2.a in Frameworks */,
+				0074CBD5167A76D3005E2369 /* libnsid3v1.a in Frameworks */,
+				0074CBD6167A76D3005E2369 /* libnsid3v2.a in Frameworks */,
+				0074CBD7167A76D3005E2369 /* libnswasabi.a in Frameworks */,
+				0074CBD8167A76D3005E2369 /* libnu.a in Frameworks */,
+				0074CBD9167A76D3005E2369 /* libnx-1.dylib in Frameworks */,
+				005D4C04167F743000F58775 /* libz.dylib in Frameworks */,
+				0074CBDE167A7752005E2369 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0074CB51167A7418005E2369 = {
+			isa = PBXGroup;
+			children = (
+				0074CB66167A74D3005E2369 /* api.h */,
+				0074CB67167A74D3005E2369 /* FileDecoder.cpp */,
+				0074CB68167A74D3005E2369 /* FileDecoder.h */,
+				0074CB69167A74D3005E2369 /* FileMetadata.cpp */,
+				0074CB6A167A74D3005E2369 /* FileMetadata.h */,
+				0074CB6B167A74D3005E2369 /* FileMetadataRead.cpp */,
+				0074CB6C167A74D3005E2369 /* FileMetadataService.cpp */,
+				0074CB6D167A74D3005E2369 /* FileMetadataWrite.cpp */,
+				0074CB6E167A74D3005E2369 /* FilePlayback.cpp */,
+				0074CB6F167A74D3005E2369 /* FilePlayback.h */,
+				0074CB70167A74D3005E2369 /* FileRawReader.cpp */,
+				0074CB71167A74D3005E2369 /* FileRawReader.h */,
+				0074CB72167A74D3005E2369 /* ifc_filemetadata_editor.h */,
+				0074CB73167A74D3005E2369 /* ifc_fileplayback.h */,
+				0074CB74167A74D3005E2369 /* main.cpp */,
+				0074CB75167A74D3005E2369 /* main.h */,
+				0074CBE0167A7A48005E2369 /* precomp.h */,
+				0074CB77167A74D3005E2369 /* svc_filedecode.h */,
+				0074CB78167A74D3005E2369 /* svc_filemetadata.h */,
+				0074CB79167A74D3005E2369 /* svc_fileplayback.h */,
+				0074CBDC167A773B005E2369 /* Version */,
+				0074CB92167A7517005E2369 /* Libraries */,
+				0074CBDB167A7727005E2369 /* Frameworks */,
+				0074CB5D167A7418005E2369 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0074CB5D167A7418005E2369 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0074CB5C167A7418005E2369 /* libfile.w6c */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0074CB92167A7517005E2369 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0074CBCE167A76D3005E2369 /* libnsapev2.a */,
+				0074CBCF167A76D3005E2369 /* libnsid3v1.a */,
+				0074CBD0167A76D3005E2369 /* libnsid3v2.a */,
+				0074CBD1167A76D3005E2369 /* libnswasabi.a */,
+				0074CBD2167A76D3005E2369 /* libnu.a */,
+				0074CBD3167A76D3005E2369 /* libnx-1.dylib */,
+				005D4C03167F743000F58775 /* libz.dylib */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		0074CBDB167A7727005E2369 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0074CBDD167A7752005E2369 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0074CBDC167A773B005E2369 /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				0074CBDF167A7793005E2369 /* VERSION */,
+				005D4C31167F78D100F58775 /* version.c */,
+				005D4C32167F78D100F58775 /* version.h */,
+			);
+			name = Version;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0074CB5A167A7418005E2369 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0074CB7A167A74D3005E2369 /* api.h in Headers */,
+				0074CB7C167A74D3005E2369 /* FileDecoder.h in Headers */,
+				0074CB7E167A74D3005E2369 /* FileMetadata.h in Headers */,
+				0074CB83167A74D3005E2369 /* FilePlayback.h in Headers */,
+				0074CB85167A74D3005E2369 /* FileRawReader.h in Headers */,
+				0074CB86167A74D3005E2369 /* ifc_filemetadata_editor.h in Headers */,
+				0074CB87167A74D3005E2369 /* ifc_fileplayback.h in Headers */,
+				0074CB89167A74D3005E2369 /* main.h in Headers */,
+				0074CB8B167A74D3005E2369 /* svc_filedecode.h in Headers */,
+				0074CB8C167A74D3005E2369 /* svc_filemetadata.h in Headers */,
+				0074CB8D167A74D3005E2369 /* svc_fileplayback.h in Headers */,
+				005D4C34167F78D100F58775 /* version.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		005D4C21167F771400F58775 /* file-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(LIBRARY_PATH)\" \"$(PUBLIC_HEADERS_DIR)\" \"$(DWARF_DSYM_PATH)\" \"$(PROJECT_DERIVED_FILE_DIR)/version.*\"";
+			buildConfigurationList = 005D4C24167F771400F58775 /* Build configuration list for PBXLegacyTarget "file-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "file-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "file-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		0074CB5B167A7418005E2369 /* file */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0074CB60167A7418005E2369 /* Build configuration list for PBXNativeTarget "file" */;
+			buildPhases = (
+				0074CB58167A7418005E2369 /* Sources */,
+				0074CB59167A7418005E2369 /* Frameworks */,
+				005D4C50167F7A7000F58775 /* Create Symbolic Links */,
+				0074CB5A167A7418005E2369 /* Headers */,
+				005D4C51167F7AF500F58775 /* Install Public Headers */,
+				005D4C52167F7B3900F58775 /* Install Debug Symbols */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				005D4C2E167F787900F58775 /* PBXTargetDependency */,
+				005D4C30167F787A00F58775 /* PBXTargetDependency */,
+			);
+			name = file;
+			productName = file;
+			productReference = 0074CB5C167A7418005E2369 /* libfile.w6c */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0074CB53167A7418005E2369 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Nullsoft, Inc";
+			};
+			buildConfigurationList = 0074CB56167A7418005E2369 /* Build configuration list for PBXProject "file" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0074CB51167A7418005E2369;
+			productRefGroup = 0074CB5D167A7418005E2369 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0074CB5B167A7418005E2369 /* file */,
+				005D4C21167F771400F58775 /* file-cleanup */,
+				005D4C26167F77A200F58775 /* file-prepare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		005D4C2C167F77F600F58775 /* Generate Version Info */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/VERSION",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.h",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.c",
+			);
+			name = "Generate Version Info";
+			outputPaths = (
+				"$(PROJECT_DERIVED_FILE_DIR)/version.h",
+				"$(PROJECT_DERIVED_FILE_DIR)/version.c",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PRODUCT_VERSION=$(cat \"$SCRIPT_INPUT_FILE_0\")\n\nif [ ! -d \"$PROJECT_DERIVED_FILE_DIR\" ]; then\n    mkdir -p \"$PROJECT_DERIVED_FILE_DIR\"\nfi\n\nNVGTOOL=\"$NSBUILD_TOOLS_BIN_DIR/nvgtool\"\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_1\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_0\"\n\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_2\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_1\"";
+			showEnvVarsInLog = 0;
+		};
+		005D4C50167F7A7000F58775 /* Create Symbolic Links */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_NAME)",
+			);
+			name = "Create Symbolic Links";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIBLN=\"$NSBUILD_TOOLS_BIN_DIR/libln\"\ncd $TARGET_BUILD_DIR; \\\n$LIBLN \"$EXECUTABLE_NAME\"\n\nif [ \"$DEPLOYMENT_LOCATION\" == \"YES\" ]; then\n    cd \"$BUILT_PRODUCTS_DIR\"; \\\n    $LIBLN \"$EXECUTABLE_NAME\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+		005D4C51167F7AF500F58775 /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+		005D4C52167F7B3900F58775 /* Install Debug Symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			name = "Install Debug Symbols";
+			outputPaths = (
+				"$(DWARF_DSYM_INSTALL_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0074CB58167A7418005E2369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0074CB7B167A74D3005E2369 /* FileDecoder.cpp in Sources */,
+				0074CB7D167A74D3005E2369 /* FileMetadata.cpp in Sources */,
+				0074CB7F167A74D3005E2369 /* FileMetadataRead.cpp in Sources */,
+				0074CB80167A74D3005E2369 /* FileMetadataService.cpp in Sources */,
+				0074CB81167A74D3005E2369 /* FileMetadataWrite.cpp in Sources */,
+				0074CB82167A74D3005E2369 /* FilePlayback.cpp in Sources */,
+				0074CB84167A74D3005E2369 /* FileRawReader.cpp in Sources */,
+				0074CB88167A74D3005E2369 /* main.cpp in Sources */,
+				005D4C33167F78D100F58775 /* version.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		005D4C2B167F77ED00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005D4C21167F771400F58775 /* file-cleanup */;
+			targetProxy = 005D4C2A167F77ED00F58775 /* PBXContainerItemProxy */;
+		};
+		005D4C2E167F787900F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005D4C21167F771400F58775 /* file-cleanup */;
+			targetProxy = 005D4C2D167F787900F58775 /* PBXContainerItemProxy */;
+		};
+		005D4C30167F787A00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005D4C26167F77A200F58775 /* file-prepare */;
+			targetProxy = 005D4C2F167F787A00F58775 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		005D4C22167F771400F58775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		005D4C23167F771400F58775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		005D4C28167F77A200F58775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		005D4C29167F77A200F58775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		0074CB5E167A7418005E2369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = w6c;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_NAME)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				ONLY_ACTIVE_ARCH = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = file;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		0074CB5F167A7418005E2369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = w6c;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_NAME)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = file;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		0074CB61167A7418005E2369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../nu/build/Release\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0074CB62167A7418005E2369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../nu/build/Release\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		005D4C24167F771400F58775 /* Build configuration list for PBXLegacyTarget "file-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D4C22167F771400F58775 /* Debug */,
+				005D4C23167F771400F58775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005D4C27167F77A200F58775 /* Build configuration list for PBXAggregateTarget "file-prepare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D4C28167F77A200F58775 /* Debug */,
+				005D4C29167F77A200F58775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0074CB56167A7418005E2369 /* Build configuration list for PBXProject "file" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0074CB5E167A7418005E2369 /* Debug */,
+				0074CB5F167A7418005E2369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0074CB60167A7418005E2369 /* Build configuration list for PBXNativeTarget "file" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0074CB61167A7418005E2369 /* Debug */,
+				0074CB62167A7418005E2369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0074CB53167A7418005E2369 /* Project object */;
+}

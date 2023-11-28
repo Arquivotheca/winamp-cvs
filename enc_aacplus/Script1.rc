@@ -1,0 +1,296 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AACP_MP4 DIALOGEX 0, 0, 256, 167
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "aacPlus Encoder Options",IDC_STATIC,0,0,256,94
+    LTEXT           "Bitrate:",IDC_STATIC,25,15,48,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_BITRATE,79,13,71,96,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Channel Mode:",IDC_STATIC,25,35,49,8
+    COMBOBOX        IDC_CHANNELMODE,79,33,120,74,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Note: some channel modes are only available for certain bitrates.",
+                    IDC_STATIC,25,50,217,21,SS_CENTERIMAGE
+    GROUPBOX        "Advanced Options",IDC_STATIC,0,69,256,25
+    CONTROL         "Tune for speech",IDC_SPEECH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,79,68,10
+    CTEXT           "aacPlus encoding (c) 1998-2009 Coding Technologies.\n All rights reserved.",
+                    IDC_STATIC,0,148,202,17
+    CONTROL         102,IDC_LOGO,"Static",SS_BITMAP | SS_NOTIFY,203,135,53,
+                    32
+END
+
+IDD_AACP DIALOGEX 0, 0, 256, 167
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "aacPlus Encoder Options",IDC_STATIC,0,0,256,125
+    LTEXT           "Bitrate:",IDC_STATIC,25,15,23,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_BITRATE,81,13,71,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Channel Mode:",IDC_STATIC,25,35,49,8
+    COMBOBOX        IDC_CHANNELMODE,81,33,120,124,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Note: some channel modes are only available for certain bitrates.",
+                    IDC_STATIC,4,50,247,21,SS_CENTERIMAGE
+    GROUPBOX        "Advanced Options",IDC_STATIC,0,95,256,30
+    CONTROL         "Tune for speech",IDC_SPEECH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,108,68,10
+    CTEXT           "aacPlus encoding (c) 1998-2009 Coding Technologies.\n All rights reserved.",
+                    IDC_STATIC,0,148,202,17
+    CONTROL         102,IDC_LOGO,"Static",SS_BITMAP | SS_NOTIFY,203,135,53,
+                    32
+END
+
+IDD_AACH_MP4 DIALOGEX 0, 0, 256, 167
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "aacPlus High Bitrate Encoder Options",IDC_STATIC,0,0,
+                    256,94
+    LTEXT           "Bitrate:",IDC_STATIC,25,15,46,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_BITRATE,79,13,71,96,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Channel Mode:",IDC_STATIC,25,35,49,8
+    COMBOBOX        IDC_CHANNELMODE,79,33,120,74,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Note: some channel modes are only available for certain bitrates.",
+                    IDC_STATIC,25,50,211,21,SS_CENTERIMAGE
+    GROUPBOX        "Advanced Options",IDC_STATIC,0,69,256,25
+    CONTROL         "Tune for speech",IDC_SPEECH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,79,68,10
+    CTEXT           "aacPlus encoding (c) 1998-2009 Coding Technologies.\n All rights reserved.",
+                    IDC_STATIC,0,148,202,17
+    CONTROL         102,IDC_LOGO,"Static",SS_BITMAP | SS_NOTIFY,203,135,53,
+                    32
+END
+
+IDD_AACH DIALOGEX 0, 0, 256, 167
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "aacPlus High Bitrate Encoder Options",IDC_STATIC,0,0,
+                    256,125
+    LTEXT           "Bitrate:",IDC_STATIC,25,15,45,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_BITRATE,81,13,71,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Channel Mode:",IDC_STATIC,25,35,49,8
+    COMBOBOX        IDC_CHANNELMODE,81,33,120,124,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Note: some channel modes are only available for certain bitrates.",
+                    IDC_STATIC,4,50,247,21,SS_CENTERIMAGE
+    GROUPBOX        "Advanced Options",IDC_STATIC,0,95,256,30
+    CONTROL         "Tune for speech",IDC_SPEECH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,108,68,10
+    CTEXT           "aacPlus encoding (c) 1998-2009 Coding Technologies.\n All rights reserved.",
+                    IDC_STATIC,0,148,202,17
+    CONTROL         102,IDC_LOGO,"Static",SS_BITMAP | SS_NOTIFY,203,135,53,
+                    32
+END
+
+IDD_AAC_MP4 DIALOGEX 0, 0, 256, 167
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "AAC Encoder Options",IDC_STATIC,0,0,256,106
+    LTEXT           "Bitrate:",IDC_STATIC,25,15,42,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_BITRATE,81,13,71,96,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Channel Mode:",IDC_STATIC,25,35,49,8
+    COMBOBOX        IDC_CHANNELMODE,81,33,120,74,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Note: some channel modes are only available for certain bitrates.",
+                    IDC_STATIC,4,50,247,21,SS_CENTERIMAGE
+    GROUPBOX        "Advanced Options",IDC_STATIC,0,69,256,37
+    CONTROL         "Tune for speech",IDC_SPEECH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,79,68,10
+    CTEXT           "AAC encoding (c) 1998-2009 Coding Technologies.\n All rights reserved.",
+                    IDC_STATIC,0,148,256,17
+END
+
+IDD_AAC DIALOGEX 0, 0, 256, 167
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "AAC Encoder Options",IDC_STATIC,0,0,256,125
+    LTEXT           "Bitrate:",IDC_STATIC,25,15,38,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_BITRATE,81,13,71,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Channel Mode:",IDC_STATIC,25,35,49,8
+    COMBOBOX        IDC_CHANNELMODE,81,33,120,124,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Note: some channel modes are only available for certain bitrates.",
+                    IDC_STATIC,4,50,247,21,SS_CENTERIMAGE
+    GROUPBOX        "Advanced Options",IDC_STATIC,0,95,256,30
+    CONTROL         "Tune for speech",IDC_SPEECH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,108,68,10
+    CTEXT           "AAC encoding (c) 1998-2009 Coding Technologies.\n All rights reserved.",
+                    IDC_STATIC,0,148,256,17
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_AACLOGO             BITMAP                  "aaclogo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_AACP_MP4, DIALOG
+    BEGIN
+        RIGHTMARGIN, 255
+    END
+
+    IDD_AACP, DIALOG
+    BEGIN
+        RIGHTMARGIN, 255
+    END
+
+    IDD_AACH_MP4, DIALOG
+    BEGIN
+        RIGHTMARGIN, 255
+    END
+
+    IDD_AACH, DIALOG
+    BEGIN
+        RIGHTMARGIN, 255
+    END
+
+    IDD_AAC_MP4, DIALOG
+    BEGIN
+        RIGHTMARGIN, 255
+    END
+
+    IDD_AAC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 255
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    65535                   "{8FBADBBB-B4D5-47d9-A723-5C8C8E88EE73}"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MONO                "Mono"
+    IDS_STEREO              "Stereo"
+    IDS_INDEPENDENT_STEREO  "Independent Stereo"
+    IDS_PARAMETRIC_STEREO   "Parametric Stereo"
+    IDS_DUAL_CHANNEL        "Dual Channel"
+    IDS_4_CHANNEL_2CPE      "4 Channel (2 CPE)"
+    IDS_4_CHANNEL_MPEG      "4 Channel (MPEG)"
+    IDS_5_CHANNEL_SURROUND  "5 Channel Surround"
+    IDS_ACCURATE_INFORMATION "Accurate Information"
+    IDS_BACKWARDS_COMPATIBLE "Backwards Compatible"
+    IDS_ENC_HE_AAC_DESC     "aacPlus (HE-AAC) Encoder %s"
+    IDS_ENC_HE_AAC_HIBR_DESC "aacPlus (HE-AAC) High Bitrate Encoder %s"
+    IDS_ENC_LC_AAC_DESC     "LC-AAC Encoder %s"
+    IDS_ENC_MP4_AAC_PLUS_DESC "MP4/aacPlus (HE-AAC) Encoder %s"
+    IDS_ENC_MP4_AAC_PLUS_HIBR_DESC 
+                            "MP4/aacPlus (HE-AAC) High Bitrate Encoder %s"
+    IDS_ENC_MP4_LC_AAC_DESC "MP4/LC-AAC Encoder %s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_KBPS                "kbps"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

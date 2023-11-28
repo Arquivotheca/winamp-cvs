@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ml_transcode", "ml_transcode.vcproj", "{B9933E53-426C-4603-BE06-672059143A27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug for Will|Win32 = Debug for Will|Win32
+		Debug|Win32 = Debug|Win32
+		Profiling|Win32 = Profiling|Win32
+		Release 64|Win32 = Release 64|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9933E53-426C-4603-BE06-672059143A27}.Debug for Will|Win32.ActiveCfg = Debug|Win32
+		{B9933E53-426C-4603-BE06-672059143A27}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B9933E53-426C-4603-BE06-672059143A27}.Debug|Win32.Build.0 = Debug|Win32
+		{B9933E53-426C-4603-BE06-672059143A27}.Profiling|Win32.ActiveCfg = Release|Win32
+		{B9933E53-426C-4603-BE06-672059143A27}.Release 64|Win32.ActiveCfg = Release|Win32
+		{B9933E53-426C-4603-BE06-672059143A27}.Release|Win32.ActiveCfg = Release|Win32
+		{B9933E53-426C-4603-BE06-672059143A27}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

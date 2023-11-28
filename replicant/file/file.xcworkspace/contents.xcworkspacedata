@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../foundation/foundation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nx/nx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nu/nu.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "absolute:/Users/barabanger/Projects/replicant/nu/../nsid3v1/nsid3v1.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nsid3v2/nsid3v2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nsapev2/nsapev2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../nswasabi/nswasabi.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:file.xcodeproj">
+   </FileRef>
+</Workspace>

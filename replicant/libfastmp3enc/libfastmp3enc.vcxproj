@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fastmp3enclib\bitenc.c" />
+    <ClCompile Include="fastmp3enclib\bit_cnt.c" />
+    <ClCompile Include="fastmp3enclib\cfftl3.c" />
+    <ClCompile Include="fastmp3enclib\channelelement.c" />
+    <ClCompile Include="fastmp3enclib\cmdct.c" />
+    <ClCompile Include="fastmp3enclib\dyn_bits.c" />
+    <ClCompile Include="fastmp3enclib\framctrl.c" />
+    <ClCompile Include="fastmp3enclib\huff_cnt.c" />
+    <ClCompile Include="fastmp3enclib\interface.c" />
+    <ClCompile Include="fastmp3enclib\is_stereo.c" />
+    <ClCompile Include="fastmp3enclib\mp3bitbuf.c" />
+    <ClCompile Include="fastmp3enclib\mp3bitmux.c" />
+    <ClCompile Include="fastmp3enclib\mp3crc.c" />
+    <ClCompile Include="fastmp3enclib\mp3enc.c" />
+    <ClCompile Include="fastmp3enclib\ms_stereo.c" />
+    <ClCompile Include="fastmp3enclib\p4\adj_thr_p4.c" />
+    <ClCompile Include="fastmp3enclib\p4\band_nrg_p4.c" />
+    <ClCompile Include="fastmp3enclib\p4\block_switch_p4.c" />
+    <ClCompile Include="fastmp3enclib\p4\initSSE.c" />
+    <ClCompile Include="fastmp3enclib\p4\line_pe_p4.c" />
+    <ClCompile Include="fastmp3enclib\p4\polyana_p4.c" />
+    <ClCompile Include="fastmp3enclib\p4\quantize_p4.c" />
+    <ClCompile Include="fastmp3enclib\p4\sf_estim_p4.c" />
+    <ClCompile Include="fastmp3enclib\pre_echo_control.c" />
+    <ClCompile Include="fastmp3enclib\psy_configuration.c" />
+    <ClCompile Include="fastmp3enclib\psy_main.c" />
+    <ClCompile Include="fastmp3enclib\qc_main.c" />
+    <ClCompile Include="fastmp3enclib\ratectrl.c" />
+    <ClCompile Include="fastmp3enclib\sf_cmprs.c" />
+    <ClCompile Include="fastmp3enclib\spreading.c" />
+    <ClCompile Include="fastmp3enclib\stprepro.c" />
+    <ClCompile Include="fastmp3enclib\time_buffer.c" />
+    <ClCompile Include="fastmp3enclib\transform.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fastmp3enclib\adj_thr.h" />
+    <ClInclude Include="fastmp3enclib\band_nrg.h" />
+    <ClInclude Include="fastmp3enclib\bitenc.h" />
+    <ClInclude Include="fastmp3enclib\bitres.h" />
+    <ClInclude Include="fastmp3enclib\bit_cnt.h" />
+    <ClInclude Include="fastmp3enclib\block_switch.h" />
+    <ClInclude Include="fastmp3enclib\cfftl3.h" />
+    <ClInclude Include="fastmp3enclib\channelelement.h" />
+    <ClInclude Include="fastmp3enclib\cmdct.h" />
+    <ClInclude Include="fastmp3enclib\dyn_bits.h" />
+    <ClInclude Include="fastmp3enclib\framctrl.h" />
+    <ClInclude Include="fastmp3enclib\huff_cnt.h" />
+    <ClInclude Include="fastmp3enclib\interface.h" />
+    <ClInclude Include="fastmp3enclib\is_stereo.h" />
+    <ClInclude Include="fastmp3enclib\lean_psy.h" />
+    <ClInclude Include="fastmp3enclib\libmp3Prefix.h" />
+    <ClInclude Include="fastmp3enclib\line_pe.h" />
+    <ClInclude Include="fastmp3enclib\mathmac.h" />
+    <ClInclude Include="fastmp3enclib\mconfig.h" />
+    <ClInclude Include="fastmp3enclib\mp3alloc.h" />
+    <ClInclude Include="fastmp3enclib\mp3bitbuf.h" />
+    <ClInclude Include="fastmp3enclib\mp3bitmux.h" />
+    <ClInclude Include="fastmp3enclib\mp3crc.h" />
+    <ClInclude Include="fastmp3enclib\mp3enc.h" />
+    <ClInclude Include="fastmp3enclib\mp3ifc.h" />
+    <ClInclude Include="fastmp3enclib\ms_stereo.h" />
+    <ClInclude Include="fastmp3enclib\pe.h" />
+    <ClInclude Include="fastmp3enclib\polyana.h" />
+    <ClInclude Include="fastmp3enclib\pre_echo_control.h" />
+    <ClInclude Include="fastmp3enclib\psy_configuration.h" />
+    <ClInclude Include="fastmp3enclib\psy_const.h" />
+    <ClInclude Include="fastmp3enclib\psy_data.h" />
+    <ClInclude Include="fastmp3enclib\psy_main.h" />
+    <ClInclude Include="fastmp3enclib\psy_types.h" />
+    <ClInclude Include="fastmp3enclib\qc_data.h" />
+    <ClInclude Include="fastmp3enclib\qc_main.h" />
+    <ClInclude Include="fastmp3enclib\quantize.h" />
+    <ClInclude Include="fastmp3enclib\ratectrl.h" />
+    <ClInclude Include="fastmp3enclib\resort_spec.h" />
+    <ClInclude Include="fastmp3enclib\scf.h" />
+    <ClInclude Include="fastmp3enclib\sf_cmprs.h" />
+    <ClInclude Include="fastmp3enclib\sf_estim.h" />
+    <ClInclude Include="fastmp3enclib\spreading.h" />
+    <ClInclude Include="fastmp3enclib\stat_bits.h" />
+    <ClInclude Include="fastmp3enclib\stprepro.h" />
+    <ClInclude Include="fastmp3enclib\time_buffer.h" />
+    <ClInclude Include="fastmp3enclib\transform.h" />
+    <ClInclude Include="fastmp3enclib\transport.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DE8E8180-3F6F-4320-9AE2-3C044BADEE4D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libfastmp3enc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;P4_CODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>utillib/include;mathlib/include;fastmp3enclib</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;P4_CODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

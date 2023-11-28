@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "in_mp4", "in_mp4.vcproj", "{9F6D17FA-6DFD-436F-B54E-1B63D012D1A2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmp4v2", "..\libmp4v2\libmp4v2.vcproj", "{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F6D17FA-6DFD-436F-B54E-1B63D012D1A2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9F6D17FA-6DFD-436F-B54E-1B63D012D1A2}.Debug|Win32.Build.0 = Debug|Win32
+		{9F6D17FA-6DFD-436F-B54E-1B63D012D1A2}.Release|Win32.ActiveCfg = Release|Win32
+		{9F6D17FA-6DFD-436F-B54E-1B63D012D1A2}.Release|Win32.Build.0 = Release|Win32
+		{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}.Debug|Win32.Build.0 = Debug|Win32
+		{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}.Release|Win32.ActiveCfg = Release|Win32
+		{EFB9B882-6A8B-463D-A8E3-A2807AFC5D9F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

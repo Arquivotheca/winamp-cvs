@@ -1,0 +1,23 @@
+// ****************************************************************************
+//   C O P Y R I G H T   A N D   C O N F I D E N T I A L I T Y   N O T I C E
+// ****************************************************************************
+//
+//      Copyright (c) 2005 America Online, Inc.  All rights reserved.
+//      This software contains valuable confidential and proprietary
+//      information of America Online, Inc. and is subject to applicable
+//      licensing agreements.  Unauthorized reproduction, transmission or
+//      distribution of this file and its contents is a violation of
+//      applicable laws.
+//
+//           A M E R I C A   O N L I N E   C O N F I D E N T I A L
+//
+// ****************************************************************************
+
+#include "nsISupports.idl"
+
+[scriptable, uuid(05EE9AD1-40D8-49ba-B653-EA49D66E20A9)]
+interface nsIWinamp : nsISupports
+{
+  string getVersion();
+};
+

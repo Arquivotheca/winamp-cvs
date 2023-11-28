@@ -1,0 +1,2 @@
+xbundle_catalog.exe /S --language-id=1049 --catalog-url=http://10.180.151.224/promotion/promotion.catalog --output-path=C:\Users\barabanger\Projects\winamp\installer\xbundle\catalog.ini
+@echo Exit code: %errorlevel%

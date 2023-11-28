@@ -1,0 +1,1 @@
+@call master_winamp_remote NIGHT

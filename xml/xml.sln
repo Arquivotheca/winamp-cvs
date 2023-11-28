@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xml", "xml.vcproj", "{4FA2D01A-8932-45BA-9C54-E8247DD2CCAB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "expat", "..\expat\expat.vcproj", "{FA669B69-C4E6-48F1-B7BF-BB40B6DC0BC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FA2D01A-8932-45BA-9C54-E8247DD2CCAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FA2D01A-8932-45BA-9C54-E8247DD2CCAB}.Debug|Win32.Build.0 = Debug|Win32
+		{4FA2D01A-8932-45BA-9C54-E8247DD2CCAB}.Release|Win32.ActiveCfg = Release|Win32
+		{4FA2D01A-8932-45BA-9C54-E8247DD2CCAB}.Release|Win32.Build.0 = Release|Win32
+		{FA669B69-C4E6-48F1-B7BF-BB40B6DC0BC0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FA669B69-C4E6-48F1-B7BF-BB40B6DC0BC0}.Debug|Win32.Build.0 = Debug|Win32
+		{FA669B69-C4E6-48F1-B7BF-BB40B6DC0BC0}.Release|Win32.ActiveCfg = Release|Win32
+		{FA669B69-C4E6-48F1-B7BF-BB40B6DC0BC0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

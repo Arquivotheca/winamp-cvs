@@ -1,0 +1,246 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		00DC1331150723CE007F9D73 /* service */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 00DC1332150723CE007F9D73 /* Build configuration list for PBXAggregateTarget "service" */;
+			buildPhases = (
+				00DC1335150723E9007F9D73 /* CopyFiles */,
+				00B73303151ABDF200A8251C /* Install Public Headers */,
+			);
+			dependencies = (
+				00B73309151ABE3900A8251C /* PBXTargetDependency */,
+			);
+			name = service;
+			productName = service;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00DC1336150723F8007F9D73 /* api_service.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883F6415016A4700625F51 /* api_service.h */; };
+		00DC1337150723F8007F9D73 /* ifc_servicefactory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883F6515016A4700625F51 /* ifc_servicefactory.h */; };
+		00DC1338150723F8007F9D73 /* svccb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883F6915016A4700625F51 /* svccb.h */; };
+		00DC1339150723F8007F9D73 /* types.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00883F6A15016A4700625F51 /* types.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00B73308151ABE3900A8251C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00883F48150169B500625F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B73304151ABE3100A8251C;
+			remoteInfo = "service-cleanup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00DC1335150723E9007F9D73 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				00DC1336150723F8007F9D73 /* api_service.h in CopyFiles */,
+				00DC1337150723F8007F9D73 /* ifc_servicefactory.h in CopyFiles */,
+				00DC1338150723F8007F9D73 /* svccb.h in CopyFiles */,
+				00DC1339150723F8007F9D73 /* types.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00883F6415016A4700625F51 /* api_service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = api_service.h; sourceTree = "<group>"; };
+		00883F6515016A4700625F51 /* ifc_servicefactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ifc_servicefactory.h; sourceTree = "<group>"; };
+		00883F6915016A4700625F51 /* svccb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = svccb.h; sourceTree = "<group>"; };
+		00883F6A15016A4700625F51 /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00883F46150169B500625F51 = {
+			isa = PBXGroup;
+			children = (
+				00883F6415016A4700625F51 /* api_service.h */,
+				00883F6515016A4700625F51 /* ifc_servicefactory.h */,
+				00883F6915016A4700625F51 /* svccb.h */,
+				00883F6A15016A4700625F51 /* types.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		00B73304151ABE3100A8251C /* service-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(PUBLIC_HEADERS_DIR)\"";
+			buildConfigurationList = 00B73305151ABE3100A8251C /* Build configuration list for PBXLegacyTarget "service-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "service-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "service-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		00883F48150169B500625F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Nullsoft, Inc.";
+			};
+			buildConfigurationList = 00883F4B150169B500625F51 /* Build configuration list for PBXProject "service" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 00883F46150169B500625F51;
+			productRefGroup = 00883F46150169B500625F51;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00DC1331150723CE007F9D73 /* service */,
+				00B73304151ABE3100A8251C /* service-cleanup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00B73303151ABDF200A8251C /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00B73309151ABE3900A8251C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B73304151ABE3100A8251C /* service-cleanup */;
+			targetProxy = 00B73308151ABE3900A8251C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00883F53150169B500625F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		00883F54150169B500625F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				INSTALL_PATH_PREFIX = /usr/local;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH_AMD64 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-amd64";
+				PUBLIC_HEADERS_FOLDER_PATH_X86 = "$(PUBLIC_HEADERS_FOLDER_PATH)/osx-x86";
+				SDKROOT = macosx;
+				SHARE_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/share/$(PROJECT_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		00B73306151ABE3100A8251C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		00B73307151ABE3100A8251C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		00DC1333150723CE007F9D73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		00DC1334150723CE007F9D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00883F4B150169B500625F51 /* Build configuration list for PBXProject "service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00883F53150169B500625F51 /* Debug */,
+				00883F54150169B500625F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B73305151ABE3100A8251C /* Build configuration list for PBXLegacyTarget "service-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B73306151ABE3100A8251C /* Debug */,
+				00B73307151ABE3100A8251C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00DC1332150723CE007F9D73 /* Build configuration list for PBXAggregateTarget "service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DC1333150723CE007F9D73 /* Debug */,
+				00DC1334150723CE007F9D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00883F48150169B500625F51 /* Project object */;
+}

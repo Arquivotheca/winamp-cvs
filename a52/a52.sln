@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a52", "a52.vcproj", "{17547154-6810-4865-99BD-A76B8907EE47}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a52dec", "..\a52dec\a52dec.vcproj", "{A6810FCF-D231-407A-892A-A1EE98FEEB13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17547154-6810-4865-99BD-A76B8907EE47}.Debug|Win32.ActiveCfg = Debug|Win32
+		{17547154-6810-4865-99BD-A76B8907EE47}.Debug|Win32.Build.0 = Debug|Win32
+		{17547154-6810-4865-99BD-A76B8907EE47}.Release|Win32.ActiveCfg = Release|Win32
+		{17547154-6810-4865-99BD-A76B8907EE47}.Release|Win32.Build.0 = Release|Win32
+		{A6810FCF-D231-407A-892A-A1EE98FEEB13}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6810FCF-D231-407A-892A-A1EE98FEEB13}.Debug|Win32.Build.0 = Debug|Win32
+		{A6810FCF-D231-407A-892A-A1EE98FEEB13}.Release|Win32.ActiveCfg = Release|Win32
+		{A6810FCF-D231-407A-892A-A1EE98FEEB13}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

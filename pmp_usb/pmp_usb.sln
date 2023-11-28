@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmp_usb", "pmp_usb.vcproj", "{A03BFF28-ACE9-4B11-ACBB-840C6EF5668B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nde", "..\nde\nde.vcproj", "{4D25C321-7F8B-424E-9899-D80A364BAF1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Profiling|Win32 = Profiling|Win32
+		Release 64|Win32 = Release 64|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A03BFF28-ACE9-4B11-ACBB-840C6EF5668B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A03BFF28-ACE9-4B11-ACBB-840C6EF5668B}.Debug|Win32.Build.0 = Debug|Win32
+		{A03BFF28-ACE9-4B11-ACBB-840C6EF5668B}.Profiling|Win32.ActiveCfg = Release|Win32
+		{A03BFF28-ACE9-4B11-ACBB-840C6EF5668B}.Release 64|Win32.ActiveCfg = Release|Win32
+		{A03BFF28-ACE9-4B11-ACBB-840C6EF5668B}.Release|Win32.ActiveCfg = Release|Win32
+		{A03BFF28-ACE9-4B11-ACBB-840C6EF5668B}.Release|Win32.Build.0 = Release|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Debug|Win32.Build.0 = Debug|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Profiling|Win32.ActiveCfg = Release|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Profiling|Win32.Build.0 = Release|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Release 64|Win32.ActiveCfg = Release|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Release 64|Win32.Build.0 = Release|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Release|Win32.ActiveCfg = Release|Win32
+		{4D25C321-7F8B-424E-9899-D80A364BAF1A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C1143520BC08A3A00478325 /* api_connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143430BC08A3A00478325 /* api_connection.h */; };
+		0C1143530BC08A3A00478325 /* api_dns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C1143440BC08A3A00478325 /* api_dns.cpp */; };
+		0C1143540BC08A3A00478325 /* api_dns.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143450BC08A3A00478325 /* api_dns.h */; };
+		0C1143550BC08A3A00478325 /* api_httpget.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143460BC08A3A00478325 /* api_httpget.h */; };
+		0C1143560BC08A3A00478325 /* api_httpserv.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143470BC08A3A00478325 /* api_httpserv.h */; };
+		0C1143570BC08A3A00478325 /* api_onconncb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143480BC08A3A00478325 /* api_onconncb.h */; };
+		0C1143580BC08A3A00478325 /* api_pagegenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143490BC08A3A00478325 /* api_pagegenerator.h */; };
+		0C1143590BC08A3A00478325 /* api_webserv.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11434A0BC08A3A00478325 /* api_webserv.h */; };
+		0C11435A0BC08A3A00478325 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11434B0BC08A3A00478325 /* api.h */; };
+		0C11435B0BC08A3A00478325 /* factory_connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11434C0BC08A3A00478325 /* factory_connection.h */; };
+		0C11435C0BC08A3A00478325 /* factory_dns.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11434D0BC08A3A00478325 /* factory_dns.h */; };
+		0C11435E0BC08A3A00478325 /* httpget_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11434F0BC08A3A00478325 /* httpget_factory.h */; };
+		0C11435F0BC08A3A00478325 /* httpget.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143500BC08A3A00478325 /* httpget.h */; };
+		0C1143600BC08A3A00478325 /* httpserv_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143510BC08A3A00478325 /* httpserv_factory.h */; };
+		0C11436F0BC08B7400478325 /* httpserv.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143640BC08B7400478325 /* httpserv.h */; };
+		0C1143700BC08B7400478325 /* jnetlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143650BC08B7400478325 /* jnetlib.h */; };
+		0C1143710BC08B7400478325 /* listen.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143660BC08B7400478325 /* listen.h */; };
+		0C1143720BC08B7400478325 /* netinc.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1143670BC08B7400478325 /* netinc.h */; };
+		0C1143750BC08B7400478325 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11436A0BC08B7400478325 /* util.h */; };
+		0C1143760BC08B7400478325 /* wa5_jnetlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11436B0BC08B7400478325 /* wa5_jnetlib.h */; };
+		0C1143770BC08B7400478325 /* wasabicfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11436C0BC08B7400478325 /* wasabicfg.h */; };
+		0C1143780BC08B7400478325 /* webserv_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11436D0BC08B7400478325 /* webserv_factory.h */; };
+		0C1143790BC08B7400478325 /* webserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C11436E0BC08B7400478325 /* webserver.h */; };
+		0C6FCA6F0BBCAC97009EB089 /* webserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA6A0BBCAC97009EB089 /* webserver.cpp */; };
+		0C6FCA700BBCAC97009EB089 /* webserv_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA6B0BBCAC97009EB089 /* webserv_factory.cpp */; };
+		0C6FCA710BBCAC97009EB089 /* W5S.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA6C0BBCAC97009EB089 /* W5S.cpp */; };
+		0C6FCA720BBCAC97009EB089 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA6D0BBCAC97009EB089 /* util.cpp */; };
+		0C6FCA750BBCACA9009EB089 /* listen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA740BBCACA9009EB089 /* listen.cpp */; };
+		0C6FCA790BBCACB4009EB089 /* httpserv_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA760BBCACB4009EB089 /* httpserv_factory.cpp */; };
+		0C6FCA7A0BBCACB4009EB089 /* httpget_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA770BBCACB4009EB089 /* httpget_factory.cpp */; };
+		0C6FCA7B0BBCACB4009EB089 /* httpget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA780BBCACB4009EB089 /* httpget.cpp */; };
+		0C6FCA800BBCACC1009EB089 /* factory_dns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA7C0BBCACC1009EB089 /* factory_dns.cpp */; };
+		0C6FCA820BBCACC1009EB089 /* factory_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA7E0BBCACC1009EB089 /* factory_connection.cpp */; };
+		0C6FCA830BBCACC1009EB089 /* connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA7F0BBCACC1009EB089 /* connection.cpp */; };
+		0C6FCA8A0BBCACD0009EB089 /* asyncdns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA840BBCACD0009EB089 /* asyncdns.cpp */; };
+		0C6FCA8B0BBCACD0009EB089 /* api_pagegenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA850BBCACD0009EB089 /* api_pagegenerator.cpp */; };
+		0C6FCA8C0BBCACD0009EB089 /* api_onconncb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA860BBCACD0009EB089 /* api_onconncb.cpp */; };
+		0C6FCA8D0BBCACD0009EB089 /* api_webserv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA870BBCACD0009EB089 /* api_webserv.cpp */; };
+		0C6FCA8E0BBCACD0009EB089 /* api_httpserv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA880BBCACD0009EB089 /* api_httpserv.cpp */; };
+		0C6FCA8F0BBCACD0009EB089 /* api_httpget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA890BBCACD0009EB089 /* api_httpget.cpp */; };
+		0C6FCA920BBCACD8009EB089 /* api_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA900BBCACD8009EB089 /* api_connection.cpp */; };
+		0C6FCA930BBCACD8009EB089 /* api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCA910BBCACD8009EB089 /* api.cpp */; };
+		0C6FCAC20BBCADA6009EB089 /* httpserv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FCAC10BBCADA6009EB089 /* httpserv.cpp */; };
+		0C6FCAC40BBCADCD009EB089 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6FCAC30BBCADCD009EB089 /* libz.dylib */; };
+		0CBF3F6B0BBCCD4D00C29649 /* connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CBF3F6A0BBCCD4D00C29649 /* connection.h */; };
+		0CCF5E470BBD418E00042E81 /* asyncdns.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CCF5E460BBD418E00042E81 /* asyncdns.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C1143430BC08A3A00478325 /* api_connection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = api_connection.h; sourceTree = "<group>"; };
+		0C1143440BC08A3A00478325 /* api_dns.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = api_dns.cpp; sourceTree = "<group>"; };
+		0C1143450BC08A3A00478325 /* api_dns.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = api_dns.h; sourceTree = "<group>"; };
+		0C1143460BC08A3A00478325 /* api_httpget.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = api_httpget.h; sourceTree = "<group>"; };
+		0C1143470BC08A3A00478325 /* api_httpserv.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = api_httpserv.h; sourceTree = "<group>"; };
+		0C1143480BC08A3A00478325 /* api_onconncb.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = api_onconncb.h; sourceTree = "<group>"; };
+		0C1143490BC08A3A00478325 /* api_pagegenerator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = api_pagegenerator.h; sourceTree = "<group>"; };
+		0C11434A0BC08A3A00478325 /* api_webserv.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = api_webserv.h; sourceTree = "<group>"; };
+		0C11434B0BC08A3A00478325 /* api.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		0C11434C0BC08A3A00478325 /* factory_connection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = factory_connection.h; sourceTree = "<group>"; };
+		0C11434D0BC08A3A00478325 /* factory_dns.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = factory_dns.h; sourceTree = "<group>"; };
+		0C11434F0BC08A3A00478325 /* httpget_factory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = httpget_factory.h; sourceTree = "<group>"; };
+		0C1143500BC08A3A00478325 /* httpget.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = httpget.h; sourceTree = "<group>"; };
+		0C1143510BC08A3A00478325 /* httpserv_factory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = httpserv_factory.h; sourceTree = "<group>"; };
+		0C1143640BC08B7400478325 /* httpserv.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = httpserv.h; sourceTree = "<group>"; };
+		0C1143650BC08B7400478325 /* jnetlib.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = jnetlib.h; sourceTree = "<group>"; };
+		0C1143660BC08B7400478325 /* listen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = listen.h; sourceTree = "<group>"; };
+		0C1143670BC08B7400478325 /* netinc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = netinc.h; sourceTree = "<group>"; };
+		0C11436A0BC08B7400478325 /* util.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		0C11436B0BC08B7400478325 /* wa5_jnetlib.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wa5_jnetlib.h; sourceTree = "<group>"; };
+		0C11436C0BC08B7400478325 /* wasabicfg.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = wasabicfg.h; sourceTree = "<group>"; };
+		0C11436D0BC08B7400478325 /* webserv_factory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = webserv_factory.h; sourceTree = "<group>"; };
+		0C11436E0BC08B7400478325 /* webserver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = webserver.h; sourceTree = "<group>"; };
+		0C6FCA6A0BBCAC97009EB089 /* webserver.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = webserver.cpp; sourceTree = "<group>"; };
+		0C6FCA6B0BBCAC97009EB089 /* webserv_factory.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = webserv_factory.cpp; sourceTree = "<group>"; };
+		0C6FCA6C0BBCAC97009EB089 /* W5S.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = W5S.cpp; sourceTree = "<group>"; };
+		0C6FCA6D0BBCAC97009EB089 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		0C6FCA740BBCACA9009EB089 /* listen.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = listen.cpp; sourceTree = "<group>"; };
+		0C6FCA760BBCACB4009EB089 /* httpserv_factory.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = httpserv_factory.cpp; sourceTree = "<group>"; };
+		0C6FCA770BBCACB4009EB089 /* httpget_factory.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = httpget_factory.cpp; sourceTree = "<group>"; };
+		0C6FCA780BBCACB4009EB089 /* httpget.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = httpget.cpp; sourceTree = "<group>"; };
+		0C6FCA7C0BBCACC1009EB089 /* factory_dns.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = factory_dns.cpp; sourceTree = "<group>"; };
+		0C6FCA7E0BBCACC1009EB089 /* factory_connection.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = factory_connection.cpp; sourceTree = "<group>"; };
+		0C6FCA7F0BBCACC1009EB089 /* connection.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = connection.cpp; sourceTree = "<group>"; };
+		0C6FCA840BBCACD0009EB089 /* asyncdns.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = asyncdns.cpp; sourceTree = "<group>"; };
+		0C6FCA850BBCACD0009EB089 /* api_pagegenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = api_pagegenerator.cpp; sourceTree = "<group>"; };
+		0C6FCA860BBCACD0009EB089 /* api_onconncb.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = api_onconncb.cpp; sourceTree = "<group>"; };
+		0C6FCA870BBCACD0009EB089 /* api_webserv.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = api_webserv.cpp; sourceTree = "<group>"; };
+		0C6FCA880BBCACD0009EB089 /* api_httpserv.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = api_httpserv.cpp; sourceTree = "<group>"; };
+		0C6FCA890BBCACD0009EB089 /* api_httpget.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = api_httpget.cpp; sourceTree = "<group>"; };
+		0C6FCA900BBCACD8009EB089 /* api_connection.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = api_connection.cpp; sourceTree = "<group>"; };
+		0C6FCA910BBCACD8009EB089 /* api.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = api.cpp; sourceTree = "<group>"; };
+		0C6FCAC10BBCADA6009EB089 /* httpserv.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = httpserv.cpp; sourceTree = "<group>"; };
+		0C6FCAC30BBCADCD009EB089 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
+		0CBF3F6A0BBCCD4D00C29649 /* connection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = connection.h; sourceTree = "<group>"; };
+		0CCF5E460BBD418E00042E81 /* asyncdns.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = asyncdns.h; sourceTree = "<group>"; };
+		D2AAC0630554660B00DB518D /* jnetlib.w5s */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = jnetlib.w5s; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289988505E68E00004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C6FCAC40BBCADCD009EB089 /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* jnetlib */ = {
+			isa = PBXGroup;
+			children = (
+				0C6FCAC30BBCADCD009EB089 /* libz.dylib */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = jnetlib;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0C11436B0BC08B7400478325 /* wa5_jnetlib.h */,
+				0C11436C0BC08B7400478325 /* wasabicfg.h */,
+				0C11433B0BC0895200478325 /* JNetLib objects */,
+				0C6FCA6C0BBCAC97009EB089 /* W5S.cpp */,
+				0C6FCA910BBCACD8009EB089 /* api.cpp */,
+				0C11434B0BC08A3A00478325 /* api.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		0C11433B0BC0895200478325 /* JNetLib objects */ = {
+			isa = PBXGroup;
+			children = (
+				0C1143C10BC08F8A00478325 /* Listen */,
+				0C1143C00BC08F6300478325 /* Web Server */,
+				0C1143BC0BC08F3400478325 /* HTTPServ */,
+				0C1143650BC08B7400478325 /* jnetlib.h */,
+				0C1143670BC08B7400478325 /* netinc.h */,
+				0C11436A0BC08B7400478325 /* util.h */,
+				0C6FCA6D0BBCAC97009EB089 /* util.cpp */,
+				0C1143610BC08A6200478325 /* DNS */,
+				0C1143420BC089CA00478325 /* Connection */,
+				0C1143410BC089A500478325 /* HTTPGet */,
+			);
+			name = "JNetLib objects";
+			sourceTree = "<group>";
+		};
+		0C1143410BC089A500478325 /* HTTPGet */ = {
+			isa = PBXGroup;
+			children = (
+				0C6FCA890BBCACD0009EB089 /* api_httpget.cpp */,
+				0C1143460BC08A3A00478325 /* api_httpget.h */,
+				0C11434F0BC08A3A00478325 /* httpget_factory.h */,
+				0C1143500BC08A3A00478325 /* httpget.h */,
+				0C6FCA770BBCACB4009EB089 /* httpget_factory.cpp */,
+				0C6FCA780BBCACB4009EB089 /* httpget.cpp */,
+			);
+			name = HTTPGet;
+			sourceTree = "<group>";
+		};
+		0C1143420BC089CA00478325 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				0C1143430BC08A3A00478325 /* api_connection.h */,
+				0C6FCA900BBCACD8009EB089 /* api_connection.cpp */,
+				0C6FCA7F0BBCACC1009EB089 /* connection.cpp */,
+				0CBF3F6A0BBCCD4D00C29649 /* connection.h */,
+				0C6FCA7E0BBCACC1009EB089 /* factory_connection.cpp */,
+				0C11434C0BC08A3A00478325 /* factory_connection.h */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		0C1143610BC08A6200478325 /* DNS */ = {
+			isa = PBXGroup;
+			children = (
+				0C6FCA7C0BBCACC1009EB089 /* factory_dns.cpp */,
+				0C6FCA840BBCACD0009EB089 /* asyncdns.cpp */,
+				0CCF5E460BBD418E00042E81 /* asyncdns.h */,
+				0C1143440BC08A3A00478325 /* api_dns.cpp */,
+				0C1143450BC08A3A00478325 /* api_dns.h */,
+				0C11434D0BC08A3A00478325 /* factory_dns.h */,
+			);
+			name = DNS;
+			sourceTree = "<group>";
+		};
+		0C1143BC0BC08F3400478325 /* HTTPServ */ = {
+			isa = PBXGroup;
+			children = (
+				0C1143470BC08A3A00478325 /* api_httpserv.h */,
+				0C6FCA880BBCACD0009EB089 /* api_httpserv.cpp */,
+				0C6FCA760BBCACB4009EB089 /* httpserv_factory.cpp */,
+				0C6FCAC10BBCADA6009EB089 /* httpserv.cpp */,
+				0C1143640BC08B7400478325 /* httpserv.h */,
+				0C1143510BC08A3A00478325 /* httpserv_factory.h */,
+			);
+			name = HTTPServ;
+			sourceTree = "<group>";
+		};
+		0C1143C00BC08F6300478325 /* Web Server */ = {
+			isa = PBXGroup;
+			children = (
+				0C11436D0BC08B7400478325 /* webserv_factory.h */,
+				0C11436E0BC08B7400478325 /* webserver.h */,
+				0C11434A0BC08A3A00478325 /* api_webserv.h */,
+				0C6FCA6A0BBCAC97009EB089 /* webserver.cpp */,
+				0C6FCA6B0BBCAC97009EB089 /* webserv_factory.cpp */,
+				0C6FCA870BBCACD0009EB089 /* api_webserv.cpp */,
+				0C1143490BC08A3A00478325 /* api_pagegenerator.h */,
+				0C6FCA850BBCACD0009EB089 /* api_pagegenerator.cpp */,
+				0C1143480BC08A3A00478325 /* api_onconncb.h */,
+				0C6FCA860BBCACD0009EB089 /* api_onconncb.cpp */,
+			);
+			name = "Web Server";
+			sourceTree = "<group>";
+		};
+		0C1143C10BC08F8A00478325 /* Listen */ = {
+			isa = PBXGroup;
+			children = (
+				0C1143660BC08B7400478325 /* listen.h */,
+				0C6FCA740BBCACA9009EB089 /* listen.cpp */,
+			);
+			name = Listen;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC0630554660B00DB518D /* jnetlib.w5s */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC0600554660B00DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CBF3F6B0BBCCD4D00C29649 /* connection.h in Headers */,
+				0CCF5E470BBD418E00042E81 /* asyncdns.h in Headers */,
+				0C1143520BC08A3A00478325 /* api_connection.h in Headers */,
+				0C1143540BC08A3A00478325 /* api_dns.h in Headers */,
+				0C1143550BC08A3A00478325 /* api_httpget.h in Headers */,
+				0C1143560BC08A3A00478325 /* api_httpserv.h in Headers */,
+				0C1143570BC08A3A00478325 /* api_onconncb.h in Headers */,
+				0C1143580BC08A3A00478325 /* api_pagegenerator.h in Headers */,
+				0C1143590BC08A3A00478325 /* api_webserv.h in Headers */,
+				0C11435A0BC08A3A00478325 /* api.h in Headers */,
+				0C11435B0BC08A3A00478325 /* factory_connection.h in Headers */,
+				0C11435C0BC08A3A00478325 /* factory_dns.h in Headers */,
+				0C11435E0BC08A3A00478325 /* httpget_factory.h in Headers */,
+				0C11435F0BC08A3A00478325 /* httpget.h in Headers */,
+				0C1143600BC08A3A00478325 /* httpserv_factory.h in Headers */,
+				0C11436F0BC08B7400478325 /* httpserv.h in Headers */,
+				0C1143700BC08B7400478325 /* jnetlib.h in Headers */,
+				0C1143710BC08B7400478325 /* listen.h in Headers */,
+				0C1143720BC08B7400478325 /* netinc.h in Headers */,
+				0C1143750BC08B7400478325 /* util.h in Headers */,
+				0C1143760BC08B7400478325 /* wa5_jnetlib.h in Headers */,
+				0C1143770BC08B7400478325 /* wasabicfg.h in Headers */,
+				0C1143780BC08B7400478325 /* webserv_factory.h in Headers */,
+				0C1143790BC08B7400478325 /* webserver.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC0620554660B00DB518D /* jnetlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "jnetlib" */;
+			buildPhases = (
+				D2AAC0600554660B00DB518D /* Headers */,
+				D2AAC0610554660B00DB518D /* Sources */,
+				D289988505E68E00004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jnetlib;
+			productName = jnetlib;
+			productReference = D2AAC0630554660B00DB518D /* jnetlib.w5s */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "jnetlib" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* jnetlib */;
+			projectDirPath = "";
+			targets = (
+				D2AAC0620554660B00DB518D /* jnetlib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC0610554660B00DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C6FCA6F0BBCAC97009EB089 /* webserver.cpp in Sources */,
+				0C6FCA700BBCAC97009EB089 /* webserv_factory.cpp in Sources */,
+				0C6FCA710BBCAC97009EB089 /* W5S.cpp in Sources */,
+				0C6FCA720BBCAC97009EB089 /* util.cpp in Sources */,
+				0C6FCA750BBCACA9009EB089 /* listen.cpp in Sources */,
+				0C6FCA790BBCACB4009EB089 /* httpserv_factory.cpp in Sources */,
+				0C6FCA7A0BBCACB4009EB089 /* httpget_factory.cpp in Sources */,
+				0C6FCA7B0BBCACB4009EB089 /* httpget.cpp in Sources */,
+				0C6FCA800BBCACC1009EB089 /* factory_dns.cpp in Sources */,
+				0C6FCA820BBCACC1009EB089 /* factory_connection.cpp in Sources */,
+				0C6FCA830BBCACC1009EB089 /* connection.cpp in Sources */,
+				0C6FCA8A0BBCACD0009EB089 /* asyncdns.cpp in Sources */,
+				0C6FCA8B0BBCACD0009EB089 /* api_pagegenerator.cpp in Sources */,
+				0C6FCA8C0BBCACD0009EB089 /* api_onconncb.cpp in Sources */,
+				0C6FCA8D0BBCACD0009EB089 /* api_webserv.cpp in Sources */,
+				0C6FCA8E0BBCACD0009EB089 /* api_httpserv.cpp in Sources */,
+				0C6FCA8F0BBCACD0009EB089 /* api_httpget.cpp in Sources */,
+				0C6FCA920BBCACD8009EB089 /* api_connection.cpp in Sources */,
+				0C6FCA930BBCACD8009EB089 /* api.cpp in Sources */,
+				0C6FCAC20BBCADA6009EB089 /* httpserv.cpp in Sources */,
+				0C1143530BC08A3A00478325 /* api_dns.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB914B08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_EXTENSION = w5s;
+				EXECUTABLE_PREFIX = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = jnetlib;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB914C08733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				EXECUTABLE_EXTENSION = w5s;
+				EXECUTABLE_PREFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = jnetlib;
+			};
+			name = Release;
+		};
+		1DEB914F08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Wasabi;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		1DEB915008733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Wasabi;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "jnetlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914B08733D8E0010E9CD /* Debug */,
+				1DEB914C08733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "jnetlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914F08733D8E0010E9CD /* Debug */,
+				1DEB915008733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

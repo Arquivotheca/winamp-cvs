@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dca", "dca.vcproj", "{42289AEA-8870-4954-AD1C-BC441457BD73}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libdca", "..\libdca\vc++\libdca.vcproj", "{0AB38016-05F2-4EC5-B9AE-D66B9BC71741}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42289AEA-8870-4954-AD1C-BC441457BD73}.Debug|Win32.ActiveCfg = Debug|Win32
+		{42289AEA-8870-4954-AD1C-BC441457BD73}.Debug|Win32.Build.0 = Debug|Win32
+		{42289AEA-8870-4954-AD1C-BC441457BD73}.Release|Win32.ActiveCfg = Release|Win32
+		{42289AEA-8870-4954-AD1C-BC441457BD73}.Release|Win32.Build.0 = Release|Win32
+		{0AB38016-05F2-4EC5-B9AE-D66B9BC71741}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0AB38016-05F2-4EC5-B9AE-D66B9BC71741}.Debug|Win32.Build.0 = Debug|Win32
+		{0AB38016-05F2-4EC5-B9AE-D66B9BC71741}.Release|Win32.ActiveCfg = Release|Win32
+		{0AB38016-05F2-4EC5-B9AE-D66B9BC71741}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

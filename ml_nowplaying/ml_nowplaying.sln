@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ml_nowplaying", "ml_nowplaying.vcproj", "{CB59733D-8D69-4DC4-AB67-C831DAE5A80F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB59733D-8D69-4DC4-AB67-C831DAE5A80F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CB59733D-8D69-4DC4-AB67-C831DAE5A80F}.Debug|Win32.Build.0 = Debug|Win32
+		{CB59733D-8D69-4DC4-AB67-C831DAE5A80F}.Release|Win32.ActiveCfg = Release|Win32
+		{CB59733D-8D69-4DC4-AB67-C831DAE5A80F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{44dcf088-32ac-48ee-b782-7bdba6c27772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{c7bdbd53-91ef-482f-a050-16ecb1dfc04f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decoder">
+      <UniqueIdentifier>{c20a7639-4ab0-40b9-b3e3-ed92ab5d60c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Metadata">
+      <UniqueIdentifier>{9f1df1df-416f-4669-ab0c-c2c325ce181c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MP4">
+      <UniqueIdentifier>{204fabec-e2fc-4db4-be0e-6b706a8f9eae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HTTP">
+      <UniqueIdentifier>{4e698caa-a63f-456d-bbb4-ed1b87e40161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SHOUTcast">
+      <UniqueIdentifier>{75bfe974-2141-4431-845a-f4f1061bfff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ultravox">
+      <UniqueIdentifier>{3077508e-dccb-4381-9be1-6c3a584461ac}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gioicy.cpp">
+      <Filter>SHOUTcast</Filter>
+    </ClCompile>
+    <ClCompile Include="ICYMP3.cpp">
+      <Filter>SHOUTcast</Filter>
+    </ClCompile>
+    <ClCompile Include="ICYMP3Service.cpp">
+      <Filter>SHOUTcast</Filter>
+    </ClCompile>
+    <ClCompile Include="UltravoxMP3Service.cpp">
+      <Filter>Ultravox</Filter>
+    </ClCompile>
+    <ClCompile Include="UltravoxMP3.cpp">
+      <Filter>Ultravox</Filter>
+    </ClCompile>
+    <ClCompile Include="gioultravox.cpp">
+      <Filter>Ultravox</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3PlaybackService.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="MPEGHeader.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="LAMEInfo.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="CVbriHeader.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="OFL.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3HTTPService.cpp">
+      <Filter>HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3HTTP.cpp">
+      <Filter>HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="giojnet.cpp">
+      <Filter>HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="giofile_crt.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3Playback.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3RawReader.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="GioReplicant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3DecoderPacket.cpp">
+      <Filter>Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3DecoderCallback.cpp">
+      <Filter>Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3Decoder.cpp">
+      <Filter>Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3MetadataService.cpp">
+      <Filter>Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="MP4MP3Decoder.cpp">
+      <Filter>MP4</Filter>
+    </ClCompile>
+    <ClCompile Include="MP4DecoderService.cpp">
+      <Filter>MP4</Filter>
+    </ClCompile>
+    <ClCompile Include="GioFileRead.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CVbriHeader.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="MPEGHeader.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="OFL.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="ICYMP3.h">
+      <Filter>SHOUTcast</Filter>
+    </ClInclude>
+    <ClInclude Include="ICYMP3Service.h">
+      <Filter>SHOUTcast</Filter>
+    </ClInclude>
+    <ClInclude Include="gioicy.h">
+      <Filter>SHOUTcast</Filter>
+    </ClInclude>
+    <ClInclude Include="gioultravox.h">
+      <Filter>Ultravox</Filter>
+    </ClInclude>
+    <ClInclude Include="UltravoxMP3.h">
+      <Filter>Ultravox</Filter>
+    </ClInclude>
+    <ClInclude Include="UltravoxMP3Service.h">
+      <Filter>Ultravox</Filter>
+    </ClInclude>
+    <ClInclude Include="MP3PlaybackService.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="LAMEInfo.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="giojnet.h">
+      <Filter>HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="MP3HTTPService.h">
+      <Filter>HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="MP3HTTP.h">
+      <Filter>HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="giofile_crt.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="MP3Playback.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="MP3RawReader.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="GioReplicant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MP3DecoderPacket.h">
+      <Filter>Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="MP3DecoderCallback.h">
+      <Filter>Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="MP3Decoder.h">
+      <Filter>Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="MP3MetadataService.h">
+      <Filter>Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="MP4MP3Decoder.h">
+      <Filter>MP4</Filter>
+    </ClInclude>
+    <ClInclude Include="MP4DecoderService.h">
+      <Filter>MP4</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

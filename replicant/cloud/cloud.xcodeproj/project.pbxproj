@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		005D4F3D167FAF0D00F58775 /* cloud-prepare */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 005D4F3E167FAF0D00F58775 /* Build configuration list for PBXAggregateTarget "cloud-prepare" */;
+			buildPhases = (
+				005D4F47167FAF3B00F58775 /* Generate Version Info */,
+			);
+			dependencies = (
+				005D4F42167FAF2A00F58775 /* PBXTargetDependency */,
+			);
+			name = "cloud-prepare";
+			productName = "cloud-prepare";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		005D4E41167F8AFD00F58775 /* api_cloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E10167F8AFD00F58775 /* api_cloud.h */; };
+		005D4E42167F8AFD00F58775 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E11167F8AFD00F58775 /* api.h */; };
+		005D4E43167F8AFD00F58775 /* Attributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E12167F8AFD00F58775 /* Attributes.h */; };
+		005D4E44167F8AFD00F58775 /* AutoNormalize.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E13167F8AFD00F58775 /* AutoNormalize.h */; };
+		005D4E45167F8AFD00F58775 /* cb_cloudevents.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E14167F8AFD00F58775 /* cb_cloudevents.h */; };
+		005D4E46167F8AFD00F58775 /* CloudAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E15167F8AFD00F58775 /* CloudAPI.cpp */; };
+		005D4E47167F8AFD00F58775 /* CloudAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E16167F8AFD00F58775 /* CloudAPI.h */; };
+		005D4E48167F8AFD00F58775 /* CloudCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E17167F8AFD00F58775 /* CloudCallback.h */; };
+		005D4E49167F8AFD00F58775 /* CloudClient-Upload.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E18167F8AFD00F58775 /* CloudClient-Upload.cpp */; };
+		005D4E4A167F8AFD00F58775 /* CloudDB-Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E19167F8AFD00F58775 /* CloudDB-Helper.h */; };
+		005D4E4B167F8AFD00F58775 /* CloudDB-IDMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E1A167F8AFD00F58775 /* CloudDB-IDMap.cpp */; };
+		005D4E4C167F8AFD00F58775 /* CloudDB-Media.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E1B167F8AFD00F58775 /* CloudDB-Media.cpp */; };
+		005D4E4D167F8AFD00F58775 /* CloudDB-Step.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E1C167F8AFD00F58775 /* CloudDB-Step.cpp */; };
+		005D4E4E167F8AFD00F58775 /* CloudDB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E1D167F8AFD00F58775 /* CloudDB.cpp */; };
+		005D4E4F167F8AFD00F58775 /* CloudDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E1E167F8AFD00F58775 /* CloudDB.h */; };
+		005D4E50167F8AFD00F58775 /* CloudSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E1F167F8AFD00F58775 /* CloudSocket.cpp */; };
+		005D4E51167F8AFD00F58775 /* CloudSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E20167F8AFD00F58775 /* CloudSocket.h */; };
+		005D4E52167F8AFD00F58775 /* CloudThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E21167F8AFD00F58775 /* CloudThread.cpp */; };
+		005D4E53167F8AFD00F58775 /* CloudThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E22167F8AFD00F58775 /* CloudThread.h */; };
+		005D4E54167F8AFD00F58775 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E23167F8AFD00F58775 /* Config.cpp */; };
+		005D4E55167F8AFD00F58775 /* device.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E24167F8AFD00F58775 /* device.h */; };
+		005D4E56167F8AFD00F58775 /* DevicesList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E25167F8AFD00F58775 /* DevicesList.cpp */; };
+		005D4E57167F8AFD00F58775 /* ifc_cloudclient.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E26167F8AFD00F58775 /* ifc_cloudclient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		005D4E58167F8AFD00F58775 /* ifc_clouddb.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E27167F8AFD00F58775 /* ifc_clouddb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		005D4E59167F8AFD00F58775 /* JSON-Builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E28167F8AFD00F58775 /* JSON-Builder.cpp */; };
+		005D4E5A167F8AFD00F58775 /* JSON-Builder.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E29167F8AFD00F58775 /* JSON-Builder.h */; };
+		005D4E5B167F8AFD00F58775 /* JSON-Container.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E2A167F8AFD00F58775 /* JSON-Container.h */; };
+		005D4E5C167F8AFD00F58775 /* JSON-KeyValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E2B167F8AFD00F58775 /* JSON-KeyValue.cpp */; };
+		005D4E5D167F8AFD00F58775 /* JSON-KeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E2C167F8AFD00F58775 /* JSON-KeyValue.h */; };
+		005D4E5E167F8AFD00F58775 /* JSON-Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E2D167F8AFD00F58775 /* JSON-Tree.cpp */; };
+		005D4E5F167F8AFD00F58775 /* JSON-Tree.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E2E167F8AFD00F58775 /* JSON-Tree.h */; };
+		005D4E60167F8AFD00F58775 /* JSON-Types.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E2F167F8AFD00F58775 /* JSON-Types.h */; };
+		005D4E61167F8AFD00F58775 /* JSON-Value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E30167F8AFD00F58775 /* JSON-Value.cpp */; };
+		005D4E62167F8AFD00F58775 /* JSON-Value.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E31167F8AFD00F58775 /* JSON-Value.h */; };
+		005D4E63167F8AFD00F58775 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E32167F8AFD00F58775 /* Logger.cpp */; };
+		005D4E64167F8AFD00F58775 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E33167F8AFD00F58775 /* Logger.h */; };
+		005D4E65167F8AFD00F58775 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E34167F8AFD00F58775 /* main.cpp */; };
+		005D4E66167F8AFD00F58775 /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E35167F8AFD00F58775 /* main.h */; };
+		005D4E67167F8AFD00F58775 /* post.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E36167F8AFD00F58775 /* post.cpp */; };
+		005D4E68167F8AFD00F58775 /* Pull-Announce.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E37167F8AFD00F58775 /* Pull-Announce.cpp */; };
+		005D4E69167F8AFD00F58775 /* Pull.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E38167F8AFD00F58775 /* Pull.h */; };
+		005D4E6A167F8AFD00F58775 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E39167F8AFD00F58775 /* sha1.c */; };
+		005D4E6B167F8AFD00F58775 /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E3A167F8AFD00F58775 /* sha1.h */; };
+		005D4E6C167F8AFD00F58775 /* Transaction-Announce.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E3B167F8AFD00F58775 /* Transaction-Announce.cpp */; };
+		005D4E6D167F8AFD00F58775 /* Transaction-Delete.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E3C167F8AFD00F58775 /* Transaction-Delete.cpp */; };
+		005D4E6E167F8AFD00F58775 /* Transaction-Reset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E3D167F8AFD00F58775 /* Transaction-Reset.cpp */; };
+		005D4E6F167F8AFD00F58775 /* TransactionQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 005D4E3E167F8AFD00F58775 /* TransactionQueue.cpp */; };
+		005D4E70167F8AFD00F58775 /* TransactionQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4E3F167F8AFD00F58775 /* TransactionQueue.h */; };
+		005D4E88167F979100F58775 /* libjnetlib-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 005D4E85167F979100F58775 /* libjnetlib-1.dylib */; };
+		005D4E89167F979100F58775 /* libnswasabi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005D4E86167F979100F58775 /* libnswasabi.a */; };
+		005D4E8A167F979100F58775 /* libnx-1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 005D4E87167F979100F58775 /* libnx-1.dylib */; };
+		005D4F22167F9A0C00F58775 /* libyajl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005D4F21167F9A0C00F58775 /* libyajl.a */; };
+		005D4F24167F9A1800F58775 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005D4F23167F9A1800F58775 /* CoreFoundation.framework */; };
+		005D4F62167FB0F300F58775 /* libnu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005D4F61167FB0F300F58775 /* libnu.a */; };
+		005D4F65167FB19200F58775 /* precomp.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4F64167FB19200F58775 /* precomp.h */; };
+		005D4F6E1680C6D700F58775 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 005D4F6B1680C6D700F58775 /* sqlite3.c */; };
+		005D4F6F1680C6D700F58775 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4F6C1680C6D700F58775 /* sqlite3.h */; };
+		005D4F701680C6D700F58775 /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4F6D1680C6D700F58775 /* sqlite3ext.h */; };
+		005D4F7A1680F47000F58775 /* version-mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 005D4F781680F47000F58775 /* version-mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00695D1016E6F7DA009CB115 /* Transaction-Update.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00695D0F16E6F7DA009CB115 /* Transaction-Update.cpp */; };
+		00695D3316E84369009CB115 /* CloudDB-Devices.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00695D3116E84369009CB115 /* CloudDB-Devices.cpp */; };
+		00695D3416E84369009CB115 /* CloudDB-Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00695D3216E84369009CB115 /* CloudDB-Info.cpp */; };
+		00695D3916E84383009CB115 /* CloudClient-Download.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00695D3516E84383009CB115 /* CloudClient-Download.cpp */; };
+		00695D3A16E84383009CB115 /* JSONMetadata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00695D3616E84383009CB115 /* JSONMetadata.cpp */; };
+		00695D3B16E84383009CB115 /* JSONMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 00695D3716E84383009CB115 /* JSONMetadata.h */; };
+		00695D3C16E84383009CB115 /* Pull-Update.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00695D3816E84383009CB115 /* Pull-Update.cpp */; };
+		0071D7C5168202AD00A95E2D /* version-mac.c in Sources */ = {isa = PBXBuildFile; fileRef = 005D4F771680F47000F58775 /* version-mac.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		005D4F41167FAF2A00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005D4DFB167F8A5600F58775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005D4F39167FAE0200F58775;
+			remoteInfo = "cloud-cleanup";
+		};
+		005D4F43167FAF2C00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005D4DFB167F8A5600F58775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005D4F39167FAE0200F58775;
+			remoteInfo = "cloud-cleanup";
+		};
+		005D4F45167FAF2D00F58775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005D4DFB167F8A5600F58775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005D4F3D167FAF0D00F58775;
+			remoteInfo = "cloud-prepare";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005D4E04167F8A5600F58775 /* libcloud.w6c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcloud.w6c; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D4E10167F8AFD00F58775 /* api_cloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api_cloud.h; sourceTree = "<group>"; };
+		005D4E11167F8AFD00F58775 /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		005D4E12167F8AFD00F58775 /* Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attributes.h; sourceTree = "<group>"; };
+		005D4E13167F8AFD00F58775 /* AutoNormalize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoNormalize.h; sourceTree = "<group>"; };
+		005D4E14167F8AFD00F58775 /* cb_cloudevents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cb_cloudevents.h; sourceTree = "<group>"; };
+		005D4E15167F8AFD00F58775 /* CloudAPI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudAPI.cpp; sourceTree = "<group>"; };
+		005D4E16167F8AFD00F58775 /* CloudAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudAPI.h; sourceTree = "<group>"; };
+		005D4E17167F8AFD00F58775 /* CloudCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudCallback.h; sourceTree = "<group>"; };
+		005D4E18167F8AFD00F58775 /* CloudClient-Upload.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "CloudClient-Upload.cpp"; sourceTree = "<group>"; };
+		005D4E19167F8AFD00F58775 /* CloudDB-Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CloudDB-Helper.h"; sourceTree = "<group>"; };
+		005D4E1A167F8AFD00F58775 /* CloudDB-IDMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "CloudDB-IDMap.cpp"; sourceTree = "<group>"; };
+		005D4E1B167F8AFD00F58775 /* CloudDB-Media.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "CloudDB-Media.cpp"; sourceTree = "<group>"; };
+		005D4E1C167F8AFD00F58775 /* CloudDB-Step.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "CloudDB-Step.cpp"; sourceTree = "<group>"; };
+		005D4E1D167F8AFD00F58775 /* CloudDB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudDB.cpp; sourceTree = "<group>"; };
+		005D4E1E167F8AFD00F58775 /* CloudDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudDB.h; sourceTree = "<group>"; };
+		005D4E1F167F8AFD00F58775 /* CloudSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudSocket.cpp; sourceTree = "<group>"; };
+		005D4E20167F8AFD00F58775 /* CloudSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudSocket.h; sourceTree = "<group>"; };
+		005D4E21167F8AFD00F58775 /* CloudThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CloudThread.cpp; sourceTree = "<group>"; };
+		005D4E22167F8AFD00F58775 /* CloudThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudThread.h; sourceTree = "<group>"; };
+		005D4E23167F8AFD00F58775 /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
+		005D4E24167F8AFD00F58775 /* device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = device.h; sourceTree = "<group>"; };
+		005D4E25167F8AFD00F58775 /* DevicesList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DevicesList.cpp; sourceTree = "<group>"; };
+		005D4E26167F8AFD00F58775 /* ifc_cloudclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_cloudclient.h; sourceTree = "<group>"; };
+		005D4E27167F8AFD00F58775 /* ifc_clouddb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifc_clouddb.h; sourceTree = "<group>"; };
+		005D4E28167F8AFD00F58775 /* JSON-Builder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "JSON-Builder.cpp"; sourceTree = "<group>"; };
+		005D4E29167F8AFD00F58775 /* JSON-Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSON-Builder.h"; sourceTree = "<group>"; };
+		005D4E2A167F8AFD00F58775 /* JSON-Container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSON-Container.h"; sourceTree = "<group>"; };
+		005D4E2B167F8AFD00F58775 /* JSON-KeyValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "JSON-KeyValue.cpp"; sourceTree = "<group>"; };
+		005D4E2C167F8AFD00F58775 /* JSON-KeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSON-KeyValue.h"; sourceTree = "<group>"; };
+		005D4E2D167F8AFD00F58775 /* JSON-Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "JSON-Tree.cpp"; sourceTree = "<group>"; };
+		005D4E2E167F8AFD00F58775 /* JSON-Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSON-Tree.h"; sourceTree = "<group>"; };
+		005D4E2F167F8AFD00F58775 /* JSON-Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSON-Types.h"; sourceTree = "<group>"; };
+		005D4E30167F8AFD00F58775 /* JSON-Value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "JSON-Value.cpp"; sourceTree = "<group>"; };
+		005D4E31167F8AFD00F58775 /* JSON-Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSON-Value.h"; sourceTree = "<group>"; };
+		005D4E32167F8AFD00F58775 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
+		005D4E33167F8AFD00F58775 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		005D4E34167F8AFD00F58775 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		005D4E35167F8AFD00F58775 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		005D4E36167F8AFD00F58775 /* post.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = post.cpp; sourceTree = "<group>"; };
+		005D4E37167F8AFD00F58775 /* Pull-Announce.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Pull-Announce.cpp"; sourceTree = "<group>"; };
+		005D4E38167F8AFD00F58775 /* Pull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pull.h; sourceTree = "<group>"; };
+		005D4E39167F8AFD00F58775 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		005D4E3A167F8AFD00F58775 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		005D4E3B167F8AFD00F58775 /* Transaction-Announce.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Transaction-Announce.cpp"; sourceTree = "<group>"; };
+		005D4E3C167F8AFD00F58775 /* Transaction-Delete.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Transaction-Delete.cpp"; sourceTree = "<group>"; };
+		005D4E3D167F8AFD00F58775 /* Transaction-Reset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Transaction-Reset.cpp"; sourceTree = "<group>"; };
+		005D4E3E167F8AFD00F58775 /* TransactionQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransactionQueue.cpp; sourceTree = "<group>"; };
+		005D4E3F167F8AFD00F58775 /* TransactionQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionQueue.h; sourceTree = "<group>"; };
+		005D4E85167F979100F58775 /* libjnetlib-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libjnetlib-1.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D4E86167F979100F58775 /* libnswasabi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnswasabi.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D4E87167F979100F58775 /* libnx-1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libnx-1.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D4F21167F9A0C00F58775 /* libyajl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libyajl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D4F23167F9A1800F58775 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		005D4F61167FB0F300F58775 /* libnu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		005D4F64167FB19200F58775 /* precomp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precomp.h; sourceTree = "<group>"; };
+		005D4F6B1680C6D700F58775 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sqlite3.c; path = sqlite/sqlite3.c; sourceTree = "<group>"; };
+		005D4F6C1680C6D700F58775 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = sqlite/sqlite3.h; sourceTree = "<group>"; };
+		005D4F6D1680C6D700F58775 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqlite3ext.h; path = sqlite/sqlite3ext.h; sourceTree = "<group>"; };
+		005D4F771680F47000F58775 /* version-mac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "version-mac.c"; path = "/$PROJECT_DERIVED_FILE_DIR/version-mac.c"; sourceTree = "<absolute>"; };
+		005D4F781680F47000F58775 /* version-mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "version-mac.h"; path = "/$PROJECT_DERIVED_FILE_DIR/version-mac.h"; sourceTree = "<absolute>"; };
+		005D4F931681070200F58775 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		00695D0F16E6F7DA009CB115 /* Transaction-Update.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Transaction-Update.cpp"; sourceTree = "<group>"; };
+		00695D3116E84369009CB115 /* CloudDB-Devices.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "CloudDB-Devices.cpp"; sourceTree = "<group>"; };
+		00695D3216E84369009CB115 /* CloudDB-Info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "CloudDB-Info.cpp"; sourceTree = "<group>"; };
+		00695D3516E84383009CB115 /* CloudClient-Download.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "CloudClient-Download.cpp"; sourceTree = "<group>"; };
+		00695D3616E84383009CB115 /* JSONMetadata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JSONMetadata.cpp; sourceTree = "<group>"; };
+		00695D3716E84383009CB115 /* JSONMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONMetadata.h; sourceTree = "<group>"; };
+		00695D3816E84383009CB115 /* Pull-Update.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Pull-Update.cpp"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		005D4E01167F8A5600F58775 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005D4F22167F9A0C00F58775 /* libyajl.a in Frameworks */,
+				005D4E88167F979100F58775 /* libjnetlib-1.dylib in Frameworks */,
+				005D4E89167F979100F58775 /* libnswasabi.a in Frameworks */,
+				005D4E8A167F979100F58775 /* libnx-1.dylib in Frameworks */,
+				005D4F62167FB0F300F58775 /* libnu.a in Frameworks */,
+				005D4F24167F9A1800F58775 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		005D4DF9167F8A5600F58775 = {
+			isa = PBXGroup;
+			children = (
+				005D4E10167F8AFD00F58775 /* api_cloud.h */,
+				005D4E11167F8AFD00F58775 /* api.h */,
+				005D4E12167F8AFD00F58775 /* Attributes.h */,
+				005D4E13167F8AFD00F58775 /* AutoNormalize.h */,
+				005D4E14167F8AFD00F58775 /* cb_cloudevents.h */,
+				005D4E15167F8AFD00F58775 /* CloudAPI.cpp */,
+				005D4E16167F8AFD00F58775 /* CloudAPI.h */,
+				005D4E17167F8AFD00F58775 /* CloudCallback.h */,
+				00695D3516E84383009CB115 /* CloudClient-Download.cpp */,
+				005D4E18167F8AFD00F58775 /* CloudClient-Upload.cpp */,
+				005D4E1F167F8AFD00F58775 /* CloudSocket.cpp */,
+				005D4E20167F8AFD00F58775 /* CloudSocket.h */,
+				005D4E21167F8AFD00F58775 /* CloudThread.cpp */,
+				005D4E22167F8AFD00F58775 /* CloudThread.h */,
+				005D4E23167F8AFD00F58775 /* Config.cpp */,
+				005D4E24167F8AFD00F58775 /* device.h */,
+				005D4E25167F8AFD00F58775 /* DevicesList.cpp */,
+				005D4E26167F8AFD00F58775 /* ifc_cloudclient.h */,
+				005D4E27167F8AFD00F58775 /* ifc_clouddb.h */,
+				005D4E32167F8AFD00F58775 /* Logger.cpp */,
+				005D4E33167F8AFD00F58775 /* Logger.h */,
+				005D4E34167F8AFD00F58775 /* main.cpp */,
+				005D4E35167F8AFD00F58775 /* main.h */,
+				005D4E36167F8AFD00F58775 /* post.cpp */,
+				005D4E37167F8AFD00F58775 /* Pull-Announce.cpp */,
+				00695D3816E84383009CB115 /* Pull-Update.cpp */,
+				005D4E38167F8AFD00F58775 /* Pull.h */,
+				005D4E39167F8AFD00F58775 /* sha1.c */,
+				005D4E3A167F8AFD00F58775 /* sha1.h */,
+				005D4F64167FB19200F58775 /* precomp.h */,
+				005D4E75167F8B8A00F58775 /* CloudDB */,
+				005D4E73167F8B6100F58775 /* Transaction */,
+				005D4E72167F8B2200F58775 /* JSON */,
+				005D4F6A1680C67900F58775 /* SQLite */,
+				005D4E74167F8B7400F58775 /* Version */,
+				005D4E0E167F8AB000F58775 /* Libraries */,
+				005D4F25167F9A2800F58775 /* Frameworks */,
+				005D4E05167F8A5600F58775 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		005D4E05167F8A5600F58775 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				005D4E04167F8A5600F58775 /* libcloud.w6c */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		005D4E0E167F8AB000F58775 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				005D4F61167FB0F300F58775 /* libnu.a */,
+				005D4F21167F9A0C00F58775 /* libyajl.a */,
+				005D4E85167F979100F58775 /* libjnetlib-1.dylib */,
+				005D4E86167F979100F58775 /* libnswasabi.a */,
+				005D4E87167F979100F58775 /* libnx-1.dylib */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		005D4E72167F8B2200F58775 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				005D4E28167F8AFD00F58775 /* JSON-Builder.cpp */,
+				005D4E29167F8AFD00F58775 /* JSON-Builder.h */,
+				005D4E2A167F8AFD00F58775 /* JSON-Container.h */,
+				005D4E2B167F8AFD00F58775 /* JSON-KeyValue.cpp */,
+				005D4E2C167F8AFD00F58775 /* JSON-KeyValue.h */,
+				005D4E2D167F8AFD00F58775 /* JSON-Tree.cpp */,
+				005D4E2E167F8AFD00F58775 /* JSON-Tree.h */,
+				005D4E2F167F8AFD00F58775 /* JSON-Types.h */,
+				005D4E30167F8AFD00F58775 /* JSON-Value.cpp */,
+				005D4E31167F8AFD00F58775 /* JSON-Value.h */,
+				00695D3616E84383009CB115 /* JSONMetadata.cpp */,
+				00695D3716E84383009CB115 /* JSONMetadata.h */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		005D4E73167F8B6100F58775 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				00695D0F16E6F7DA009CB115 /* Transaction-Update.cpp */,
+				005D4E3B167F8AFD00F58775 /* Transaction-Announce.cpp */,
+				005D4E3C167F8AFD00F58775 /* Transaction-Delete.cpp */,
+				005D4E3D167F8AFD00F58775 /* Transaction-Reset.cpp */,
+				005D4E3E167F8AFD00F58775 /* TransactionQueue.cpp */,
+				005D4E3F167F8AFD00F58775 /* TransactionQueue.h */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
+		005D4E74167F8B7400F58775 /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				005D4F931681070200F58775 /* version.h */,
+				005D4F771680F47000F58775 /* version-mac.c */,
+				005D4F781680F47000F58775 /* version-mac.h */,
+			);
+			name = Version;
+			sourceTree = "<group>";
+		};
+		005D4E75167F8B8A00F58775 /* CloudDB */ = {
+			isa = PBXGroup;
+			children = (
+				00695D3116E84369009CB115 /* CloudDB-Devices.cpp */,
+				00695D3216E84369009CB115 /* CloudDB-Info.cpp */,
+				005D4E19167F8AFD00F58775 /* CloudDB-Helper.h */,
+				005D4E1A167F8AFD00F58775 /* CloudDB-IDMap.cpp */,
+				005D4E1B167F8AFD00F58775 /* CloudDB-Media.cpp */,
+				005D4E1C167F8AFD00F58775 /* CloudDB-Step.cpp */,
+				005D4E1D167F8AFD00F58775 /* CloudDB.cpp */,
+				005D4E1E167F8AFD00F58775 /* CloudDB.h */,
+			);
+			name = CloudDB;
+			sourceTree = "<group>";
+		};
+		005D4F25167F9A2800F58775 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				005D4F23167F9A1800F58775 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		005D4F6A1680C67900F58775 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				005D4F6B1680C6D700F58775 /* sqlite3.c */,
+				005D4F6C1680C6D700F58775 /* sqlite3.h */,
+				005D4F6D1680C6D700F58775 /* sqlite3ext.h */,
+			);
+			name = SQLite;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		005D4E02167F8A5600F58775 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005D4E41167F8AFD00F58775 /* api_cloud.h in Headers */,
+				005D4E42167F8AFD00F58775 /* api.h in Headers */,
+				005D4E43167F8AFD00F58775 /* Attributes.h in Headers */,
+				005D4E44167F8AFD00F58775 /* AutoNormalize.h in Headers */,
+				005D4E45167F8AFD00F58775 /* cb_cloudevents.h in Headers */,
+				005D4E47167F8AFD00F58775 /* CloudAPI.h in Headers */,
+				005D4E48167F8AFD00F58775 /* CloudCallback.h in Headers */,
+				005D4E4A167F8AFD00F58775 /* CloudDB-Helper.h in Headers */,
+				005D4E4F167F8AFD00F58775 /* CloudDB.h in Headers */,
+				005D4E51167F8AFD00F58775 /* CloudSocket.h in Headers */,
+				005D4E53167F8AFD00F58775 /* CloudThread.h in Headers */,
+				005D4E55167F8AFD00F58775 /* device.h in Headers */,
+				005D4E57167F8AFD00F58775 /* ifc_cloudclient.h in Headers */,
+				005D4E58167F8AFD00F58775 /* ifc_clouddb.h in Headers */,
+				005D4E5A167F8AFD00F58775 /* JSON-Builder.h in Headers */,
+				005D4E5B167F8AFD00F58775 /* JSON-Container.h in Headers */,
+				005D4E5D167F8AFD00F58775 /* JSON-KeyValue.h in Headers */,
+				005D4E5F167F8AFD00F58775 /* JSON-Tree.h in Headers */,
+				005D4E60167F8AFD00F58775 /* JSON-Types.h in Headers */,
+				005D4E62167F8AFD00F58775 /* JSON-Value.h in Headers */,
+				005D4E64167F8AFD00F58775 /* Logger.h in Headers */,
+				005D4E66167F8AFD00F58775 /* main.h in Headers */,
+				005D4E69167F8AFD00F58775 /* Pull.h in Headers */,
+				005D4E6B167F8AFD00F58775 /* sha1.h in Headers */,
+				005D4E70167F8AFD00F58775 /* TransactionQueue.h in Headers */,
+				005D4F65167FB19200F58775 /* precomp.h in Headers */,
+				005D4F6F1680C6D700F58775 /* sqlite3.h in Headers */,
+				005D4F701680C6D700F58775 /* sqlite3ext.h in Headers */,
+				005D4F7A1680F47000F58775 /* version-mac.h in Headers */,
+				00695D3B16E84383009CB115 /* JSONMetadata.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		005D4F39167FAE0200F58775 /* cloud-cleanup */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(NSBUILD_TOOLS_BIN_DIR)/cleanbuild --xcode-mode \"$(LIBRARY_PATH)\" \"$(PUBLIC_HEADERS_DIR)\" \"$(DWARF_DSYM_PATH)\" \"$(PROJECT_DERIVED_FILE_DIR)/version.*\"";
+			buildConfigurationList = 005D4F3A167FAE0200F58775 /* Build configuration list for PBXLegacyTarget "cloud-cleanup" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "cloud-cleanup";
+			passBuildSettingsInEnvironment = 1;
+			productName = "cloud-cleanup";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		005D4E03167F8A5600F58775 /* cloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 005D4E08167F8A5600F58775 /* Build configuration list for PBXNativeTarget "cloud" */;
+			buildPhases = (
+				005D4E00167F8A5600F58775 /* Sources */,
+				005D4E01167F8A5600F58775 /* Frameworks */,
+				005D4F741680F3A200F58775 /* Create Symbolic Links */,
+				005D4E02167F8A5600F58775 /* Headers */,
+				0071D7C61682051100A95E2D /* Rename Version Header */,
+				005D4F751680F3E300F58775 /* Install Public Headers */,
+				005D4F761680F41C00F58775 /* Install Debug Symbols */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				005D4F44167FAF2C00F58775 /* PBXTargetDependency */,
+				005D4F46167FAF2D00F58775 /* PBXTargetDependency */,
+			);
+			name = cloud;
+			productName = cloud;
+			productReference = 005D4E04167F8A5600F58775 /* libcloud.w6c */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		005D4DFB167F8A5600F58775 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Nullsoft, Inc";
+			};
+			buildConfigurationList = 005D4DFE167F8A5600F58775 /* Build configuration list for PBXProject "cloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 005D4DF9167F8A5600F58775;
+			productRefGroup = 005D4E05167F8A5600F58775 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				005D4E03167F8A5600F58775 /* cloud */,
+				005D4F39167FAE0200F58775 /* cloud-cleanup */,
+				005D4F3D167FAF0D00F58775 /* cloud-prepare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		005D4F47167FAF3B00F58775 /* Generate Version Info */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/version.h",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.h",
+				"$(NSBUILD_TOOLS_SHARE_DIR)/nvgtool/dylib-version.template.c",
+			);
+			name = "Generate Version Info";
+			outputPaths = (
+				"$(PROJECT_DERIVED_FILE_DIR)/version-mac.h",
+				"$(PROJECT_DERIVED_FILE_DIR)/version-mac.c",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# PRODUCT_VERSION=$(cat \"$SCRIPT_INPUT_FILE_0\")\nPRODUCT_VERSION=$(sed -n -e 's/.*cloud_build_number *= *//' -e 's/ *;.*//p' \"$SCRIPT_INPUT_FILE_0\")\nif [ ! -d \"$PROJECT_DERIVED_FILE_DIR\" ]; then\n    mkdir -p \"$PROJECT_DERIVED_FILE_DIR\"\nfi\n\nNVGTOOL=\"$NSBUILD_TOOLS_BIN_DIR/nvgtool\"\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_1\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_0\"\n\n$NVGTOOL --product-name \"$PRODUCT_NAME\" \\\n         --product-version \"$PRODUCT_VERSION\" \\\n         --input-file \"$SCRIPT_INPUT_FILE_2\" \\\n         --output-file \"$SCRIPT_OUTPUT_FILE_1\"";
+			showEnvVarsInLog = 0;
+		};
+		005D4F741680F3A200F58775 /* Create Symbolic Links */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_NAME)",
+			);
+			name = "Create Symbolic Links";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIBLN=\"$NSBUILD_TOOLS_BIN_DIR/libln\"\ncd $TARGET_BUILD_DIR; \\\n$LIBLN \"$EXECUTABLE_NAME\"\n\nif [ \"$DEPLOYMENT_LOCATION\" == \"YES\" ]; then\n    cd \"$BUILT_PRODUCTS_DIR\"; \\\n    $LIBLN \"$EXECUTABLE_NAME\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+		005D4F751680F3E300F58775 /* Install Public Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			name = "Install Public Headers";
+			outputPaths = (
+				"$(DSTROOT)$(PUBLIC_HEADERS_FOLDER_PATH)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL --headers-only \\\n             \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"\n\nif [ -f \"$SCRIPT_OUTPUT_FILE_0/version-mac.h\" ]; then\n    mv -f \"$SCRIPT_OUTPUT_FILE_0/version-mac.h\" \"$SCRIPT_OUTPUT_FILE_0/version.h\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+		005D4F761680F41C00F58775 /* Install Debug Symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			name = "Install Debug Symbols";
+			outputPaths = (
+				"$(DWARF_DSYM_INSTALL_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "INSTALLTOOL=\"$NSBUILD_TOOLS_BIN_DIR/installtool\"\n$INSTALLTOOL \"$SCRIPT_INPUT_FILE_0/\" \\\n             \"$SCRIPT_OUTPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+		0071D7C61682051100A95E2D /* Rename Version Header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)/version-mac.h",
+			);
+			name = "Rename Version Header";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)/version.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f \"$SCRIPT_INPUT_FILE_0\" ]; then\n    mv -f \"$SCRIPT_INPUT_FILE_0\" \"$SCRIPT_OUTPUT_FILE_0\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		005D4E00167F8A5600F58775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005D4E46167F8AFD00F58775 /* CloudAPI.cpp in Sources */,
+				005D4E49167F8AFD00F58775 /* CloudClient-Upload.cpp in Sources */,
+				005D4E4B167F8AFD00F58775 /* CloudDB-IDMap.cpp in Sources */,
+				005D4E4C167F8AFD00F58775 /* CloudDB-Media.cpp in Sources */,
+				005D4E4D167F8AFD00F58775 /* CloudDB-Step.cpp in Sources */,
+				005D4E4E167F8AFD00F58775 /* CloudDB.cpp in Sources */,
+				005D4E50167F8AFD00F58775 /* CloudSocket.cpp in Sources */,
+				005D4E52167F8AFD00F58775 /* CloudThread.cpp in Sources */,
+				005D4E54167F8AFD00F58775 /* Config.cpp in Sources */,
+				005D4E56167F8AFD00F58775 /* DevicesList.cpp in Sources */,
+				005D4E59167F8AFD00F58775 /* JSON-Builder.cpp in Sources */,
+				005D4E5C167F8AFD00F58775 /* JSON-KeyValue.cpp in Sources */,
+				005D4E5E167F8AFD00F58775 /* JSON-Tree.cpp in Sources */,
+				005D4E61167F8AFD00F58775 /* JSON-Value.cpp in Sources */,
+				005D4E63167F8AFD00F58775 /* Logger.cpp in Sources */,
+				005D4E65167F8AFD00F58775 /* main.cpp in Sources */,
+				005D4E67167F8AFD00F58775 /* post.cpp in Sources */,
+				005D4E68167F8AFD00F58775 /* Pull-Announce.cpp in Sources */,
+				005D4E6A167F8AFD00F58775 /* sha1.c in Sources */,
+				005D4E6C167F8AFD00F58775 /* Transaction-Announce.cpp in Sources */,
+				005D4E6D167F8AFD00F58775 /* Transaction-Delete.cpp in Sources */,
+				005D4E6E167F8AFD00F58775 /* Transaction-Reset.cpp in Sources */,
+				005D4E6F167F8AFD00F58775 /* TransactionQueue.cpp in Sources */,
+				005D4F6E1680C6D700F58775 /* sqlite3.c in Sources */,
+				0071D7C5168202AD00A95E2D /* version-mac.c in Sources */,
+				00695D1016E6F7DA009CB115 /* Transaction-Update.cpp in Sources */,
+				00695D3316E84369009CB115 /* CloudDB-Devices.cpp in Sources */,
+				00695D3416E84369009CB115 /* CloudDB-Info.cpp in Sources */,
+				00695D3916E84383009CB115 /* CloudClient-Download.cpp in Sources */,
+				00695D3A16E84383009CB115 /* JSONMetadata.cpp in Sources */,
+				00695D3C16E84383009CB115 /* Pull-Update.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		005D4F42167FAF2A00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005D4F39167FAE0200F58775 /* cloud-cleanup */;
+			targetProxy = 005D4F41167FAF2A00F58775 /* PBXContainerItemProxy */;
+		};
+		005D4F44167FAF2C00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005D4F39167FAE0200F58775 /* cloud-cleanup */;
+			targetProxy = 005D4F43167FAF2C00F58775 /* PBXContainerItemProxy */;
+		};
+		005D4F46167FAF2D00F58775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005D4F3D167FAF0D00F58775 /* cloud-prepare */;
+			targetProxy = 005D4F45167FAF2D00F58775 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		005D4E06167F8A5600F58775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = w6c;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_NAME)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				ONLY_ACTIVE_ARCH = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Debug;
+		};
+		005D4E07167F8A5600F58775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DWARF_DSYM_INSTALL_FOLDER_PATH = "$(INSTALL_ROOT)$(INSTALL_PATH_PREFIX)/symbols";
+				DYLIB_COMPATIBILITY_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				EXECUTABLE_EXTENSION = w6c;
+				EXECUTABLE_NAME = "$(EXECUTABLE_PREFIX)$(PRODUCT_NAME).$(EXECUTABLE_EXTENSION)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = precomp.h;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)/lib";
+				INSTALL_PATH_PREFIX = /usr/local;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_NAME)";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				NSBUILD_TOOLS_BIN_DIR = "$(NSBUILD_TOOLS_DIR)/bin";
+				NSBUILD_TOOLS_DIR = "$(SRCROOT)/../../build-tools";
+				NSBUILD_TOOLS_SHARE_DIR = "$(NSBUILD_TOOLS_DIR)/share";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(INSTALL_PATH_PREFIX)/include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = ".. $(BUILT_PRODUCTS_DIR)$(INSTALL_PATH_PREFIX)/include";
+			};
+			name = Release;
+		};
+		005D4E09167F8A5600F58775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../nu/build/Release\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		005D4E0A167F8A5600F58775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../nu/build/Release\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		005D4F3B167FAE0200F58775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Debug;
+		};
+		005D4F3C167FAE0200F58775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DWARF_DSYM_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME).dSYM";
+				LIBRARY_PATH = "$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_NAME)";
+				PUBLIC_HEADERS_DIR = "$(BUILT_PRODUCTS_DIR)$(PUBLIC_HEADERS_FOLDER_PATH)";
+			};
+			name = Release;
+		};
+		005D4F3F167FAF0D00F58775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		005D4F40167FAF0D00F58775 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		005D4DFE167F8A5600F58775 /* Build configuration list for PBXProject "cloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D4E06167F8A5600F58775 /* Debug */,
+				005D4E07167F8A5600F58775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005D4E08167F8A5600F58775 /* Build configuration list for PBXNativeTarget "cloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D4E09167F8A5600F58775 /* Debug */,
+				005D4E0A167F8A5600F58775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005D4F3A167FAE0200F58775 /* Build configuration list for PBXLegacyTarget "cloud-cleanup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D4F3B167FAE0200F58775 /* Debug */,
+				005D4F3C167FAE0200F58775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005D4F3E167FAF0D00F58775 /* Build configuration list for PBXAggregateTarget "cloud-prepare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005D4F3F167FAF0D00F58775 /* Debug */,
+				005D4F40167FAF0D00F58775 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 005D4DFB167F8A5600F58775 /* Project object */;
+}

@@ -1,0 +1,3 @@
+@echo off
+echo Starting QA build locally...
+start cmd /E:ON /V:ON /T:02 /K "master_winamp QA"
